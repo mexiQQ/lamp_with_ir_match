@@ -1,0 +1,797 @@
+
+
+
+Command: attack2.py --dataset sst2 --split test --loss cos --n_inputs 100 -b 4 --coeff_perplexity 0.2 --coeff_reg 1 --lr 0.01 --lr_decay 0.89 --bert_path /hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2 --n_steps 2000 
+
+
+
+
+
+Attacking..
+
+Running input #0 of 100.
+reference: 
+========================
+slightly disappointed 
+========================
+splendidly 
+========================
+gaining much momentum 
+========================
+flawless film 
+========================
+Debug: ids_shape = 5, pads = [4, 4, 5, 4]
+Debug: input ids = tensor([[  101,  3621,  9364,   102,     0],
+        [  101, 21459,  2135,   102,     0],
+        [  101,  8550,  2172, 11071,   102],
+        [  101, 27503,  2143,   102,     0]], device='cuda:0')
+Debug: ref = ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] splendidly [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[Init] best rec loss: 0.9303998947143555 for ['[CLS] study showing [SEP] [PAD]', '[CLS] same bryant [SEP] [PAD]', '[CLS] stars merits you [SEP]', '[CLS]lary fell [SEP] [PAD]']
+[Init] best rec loss: 0.9038949608802795 for ['[CLS] ronnie huff [SEP] [PAD]', '[CLS] maturity counties [SEP] [PAD]', '[CLS]duction communications groves [SEP]', '[CLS] trading exchange [SEP] [PAD]']
+[Init] best rec loss: 0.8838967680931091 for ['[CLS] volume warrant [SEP] [PAD]', '[CLS]qui family [SEP] [PAD]', '[CLS] filming method local [SEP]', '[CLS] mass volatile [SEP] [PAD]']
+[Init] best rec loss: 0.8552538156509399 for ['[CLS] stocknen [SEP] [PAD]', '[CLS] exist noelle [SEP] [PAD]', '[CLS] famine fangs policy [SEP]', '[CLS] inchcit [SEP] [PAD]']
+[Init] best rec loss: 0.8206232190132141 for ['[CLS] bombing ball [SEP] [PAD]', '[CLS] located second [SEP] [PAD]', '[CLS] ¹⁄₂ wing °f [SEP]', '[CLS] formula a [SEP] [PAD]']
+[Init] best rec loss: 0.8190319538116455 for ['[CLS] talent window [SEP] [PAD]', '[CLS] chapel to [SEP] [PAD]', '[CLS] thinking personal shepherd [SEP]', '[CLS] locomotives mark [SEP] [PAD]']
+[Init] best rec loss: 0.7513355016708374 for ['[CLS] destroyed teeth [SEP] [PAD]', '[CLS] maxim mark [SEP] [PAD]', '[CLS] and inscribed shooter [SEP]', '[CLS]cend because [SEP] [PAD]']
+[Init] best perm rec loss: 0.7481115460395813 for ['[CLS] teeth [SEP] destroyed [PAD]', '[CLS] mark [SEP] maxim [PAD]', '[CLS] inscribed shooter and [SEP]', '[CLS] because [SEP]cend [PAD]']
+[Init] best perm rec loss: 0.7441314458847046 for ['[CLS] destroyed [SEP] teeth [PAD]', '[CLS] maxim [SEP] mark [PAD]', '[CLS] and shooter inscribed [SEP]', '[CLS]cend [SEP] because [PAD]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.008 (perp=13.791, rec=0.250), tot_loss_proj:3.277 [t=0.31s]
+prediction: ['[CLS] disappointed [SEP] [SEP] [PAD]', '[CLS] successful [SEP] [SEP] [PAD]', '[CLS] of gaining better [SEP]', '[CLS] perfection [SEP] [SEP] [PAD]']
+[ 100/2000] tot_loss=2.996 (perp=14.099, rec=0.177), tot_loss_proj:3.174 [t=0.32s]
+prediction: ['[CLS] disappointed [SEP] [SEP] [PAD]', '[CLS] enjoyed [SEP] [SEP] [PAD]', '[CLS] having momentum gaining [SEP]', '[CLS] flawless [SEP] [SEP] [PAD]']
+[ 150/2000] tot_loss=2.795 (perp=13.261, rec=0.143), tot_loss_proj:2.897 [t=0.32s]
+prediction: ['[CLS] disappointed [SEP] [SEP] [PAD]', '[CLS] wonderful [SEP] [SEP] [PAD]', '[CLS] much momentum gaining [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 200/2000] tot_loss=2.819 (perp=13.528, rec=0.113), tot_loss_proj:3.020 [t=0.33s]
+prediction: ['[CLS] disappointed slightly [SEP] [PAD]', '[CLS] splendid [SEP] [SEP] [PAD]', '[CLS] much momentum gaining [SEP]', '[CLS] flawless [SEP] [SEP] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 250/2000] tot_loss=2.474 (perp=11.855, rec=0.103), tot_loss_proj:2.570 [t=0.31s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] much momentum gaining [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 300/2000] tot_loss=2.468 (perp=11.855, rec=0.097), tot_loss_proj:2.564 [t=0.29s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] much momentum gaining [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+Put prefix at the end
+Put prefix at the end
+[ 350/2000] tot_loss=2.343 (perp=11.261, rec=0.091), tot_loss_proj:2.364 [t=0.30s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 400/2000] tot_loss=2.345 (perp=11.261, rec=0.093), tot_loss_proj:2.376 [t=0.29s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 450/2000] tot_loss=2.338 (perp=11.261, rec=0.086), tot_loss_proj:2.371 [t=0.29s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 500/2000] tot_loss=2.337 (perp=11.261, rec=0.084), tot_loss_proj:2.374 [t=0.30s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 550/2000] tot_loss=2.335 (perp=11.261, rec=0.082), tot_loss_proj:2.382 [t=0.29s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 600/2000] tot_loss=2.349 (perp=11.261, rec=0.097), tot_loss_proj:2.371 [t=0.31s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 650/2000] tot_loss=2.335 (perp=11.261, rec=0.083), tot_loss_proj:2.377 [t=0.31s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 700/2000] tot_loss=2.334 (perp=11.261, rec=0.082), tot_loss_proj:2.373 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 750/2000] tot_loss=2.332 (perp=11.261, rec=0.080), tot_loss_proj:2.372 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 800/2000] tot_loss=2.332 (perp=11.261, rec=0.080), tot_loss_proj:2.368 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 850/2000] tot_loss=2.328 (perp=11.261, rec=0.075), tot_loss_proj:2.371 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[ 900/2000] tot_loss=2.330 (perp=11.261, rec=0.078), tot_loss_proj:2.370 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[ 950/2000] tot_loss=2.331 (perp=11.261, rec=0.078), tot_loss_proj:2.374 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1000/2000] tot_loss=2.325 (perp=11.261, rec=0.072), tot_loss_proj:2.363 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1050/2000] tot_loss=2.322 (perp=11.261, rec=0.070), tot_loss_proj:2.368 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1100/2000] tot_loss=2.322 (perp=11.261, rec=0.070), tot_loss_proj:2.375 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1150/2000] tot_loss=2.324 (perp=11.261, rec=0.072), tot_loss_proj:2.369 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1200/2000] tot_loss=2.323 (perp=11.261, rec=0.071), tot_loss_proj:2.375 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1250/2000] tot_loss=2.335 (perp=11.261, rec=0.083), tot_loss_proj:2.365 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1300/2000] tot_loss=2.330 (perp=11.261, rec=0.078), tot_loss_proj:2.373 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1350/2000] tot_loss=2.328 (perp=11.261, rec=0.075), tot_loss_proj:2.372 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1400/2000] tot_loss=2.320 (perp=11.261, rec=0.068), tot_loss_proj:2.378 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1450/2000] tot_loss=2.324 (perp=11.261, rec=0.072), tot_loss_proj:2.375 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1500/2000] tot_loss=2.326 (perp=11.261, rec=0.073), tot_loss_proj:2.375 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1550/2000] tot_loss=2.327 (perp=11.261, rec=0.074), tot_loss_proj:2.379 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1600/2000] tot_loss=2.324 (perp=11.261, rec=0.072), tot_loss_proj:2.378 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1650/2000] tot_loss=2.322 (perp=11.261, rec=0.070), tot_loss_proj:2.375 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1700/2000] tot_loss=2.330 (perp=11.261, rec=0.078), tot_loss_proj:2.371 [t=0.28s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1750/2000] tot_loss=2.325 (perp=11.261, rec=0.073), tot_loss_proj:2.365 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1800/2000] tot_loss=2.333 (perp=11.261, rec=0.081), tot_loss_proj:2.377 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1850/2000] tot_loss=2.314 (perp=11.261, rec=0.062), tot_loss_proj:2.382 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[1900/2000] tot_loss=2.329 (perp=11.261, rec=0.077), tot_loss_proj:2.373 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[1950/2000] tot_loss=2.322 (perp=11.261, rec=0.070), tot_loss_proj:2.374 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Attempt swap
+[2000/2000] tot_loss=2.320 (perp=11.261, rec=0.067), tot_loss_proj:2.374 [t=0.26s]
+prediction: ['[CLS] slightly disappointed [SEP] [PAD]', '[CLS] [SEP] splendid [SEP] [PAD]', '[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+Done with input #0 of 100.
+reference: 
+========================
+[CLS] slightly disappointed [SEP]
+========================
+[CLS] splendidly [SEP]
+========================
+[CLS] gaining much momentum [SEP]
+========================
+[CLS] flawless film [SEP]
+========================
+predicted: 
+========================
+[CLS] slightly disappointed [SEP]
+========================
+[CLS] [SEP] splendid [SEP]
+========================
+[CLS] gaining much momentum [SEP]
+========================
+[CLS] flawless film [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 89.286 | p: 87.500 | r: 91.667
+rouge2     | fm: 75.000 | p: 75.000 | r: 75.000
+rougeL     | fm: 89.286 | p: 87.500 | r: 91.667
+rougeLsum  | fm: 89.286 | p: 87.500 | r: 91.667
+r1fm+r2fm = 164.286
+
+[Aggregate metrics]:
+rouge1     | fm: 89.286 | p: 87.500 | r: 91.667
+rouge2     | fm: 75.000 | p: 75.000 | r: 75.000
+rougeL     | fm: 89.286 | p: 87.500 | r: 91.667
+rougeLsum  | fm: 89.286 | p: 87.500 | r: 91.667
+r1fm+r2fm = 164.286
+
+input #0 time: 0:29:09 | total time: 0:29:09
+
+
+Running input #1 of 100.
+reference: 
+========================
+tiresomely 
+========================
+enjoyable ease 
+========================
+grayish 
+========================
+no cute factor here ... not that i mind ugly ; the problem is he has no character , loveable or otherwise . 
+========================
+Debug: ids_shape = 28, pads = [5, 4, 4, 28]
+Debug: input ids = tensor([[  101, 13310,  8462,  2135,   102,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0],
+        [  101, 22249,  7496,   102,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0],
+        [  101,  3897,  4509,   102,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0],
+        [  101,  2053, 10140,  5387,  2182,  1012,  1012,  1012,  2025,  2008,
+          1045,  2568,  9200,  1025,  1996,  3291,  2003,  2002,  2038,  2053,
+          2839,  1010,  2293,  3085,  2030,  4728,  1012,   102]],
+       device='cuda:0')
+Debug: ref = ['[CLS] tiresomely [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] enjoyable ease [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] grayish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] no cute factor here... not that i mind ugly ; the problem is he has no character, loveable or otherwise. [SEP]']
+[Init] best rec loss: 0.717835545539856 for ['[CLS] top rune ave [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] beyond paris [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] still surreal [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tierneyhood inhabitants selected stand can macywee_ sour perhaps so out cook identity ph [CLS] quickly existing became finishing platinum segment advise holds of [SEP]']
+[Init] best rec loss: 0.6961653828620911 for ['[CLS] proceeds movement south [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] smart ea [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] red watched [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]child forecast emeritus pocket dani wu widespread malls warden tens consecrated favor orbit stereoicing possible ł special knuckles mckenzie sageses moth yearly through hungry [SEP]']
+[Init] best rec loss: 0.6815420389175415 for ['[CLS] else use singers [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] silentpartisan [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] branched we [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] det apart need today presidential merchant kat library also test customer our imprisonment mountain connecting science throat wake noelorg groupsour district holster bloodhta [SEP]']
+[Init] best rec loss: 0.646356463432312 for ['[CLS] david i aviv [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] mr gil [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]able pmid [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]व over reporter chet grant construction alsosi gary access equipped feat outside shippingnging relay dat drake stillismuna us pro death geo arena [SEP]']
+[Init] best rec loss: 0.6320368647575378 for ['[CLS] character not cab [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]coatled [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] dh surprising [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] foreign tenure denyweight cycling meadows sebastianinates spelled whose strongest letron o intense europa indoorsair wake snow wayell live rating sealsused [SEP]']
+[Init] best rec loss: 0.6090649366378784 for ['[CLS] falls orchestra damp [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]¦ madame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] we columbian [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] : canton complaint version pilgrimage ap muddy nonetheless collar ten sporting surged odor conduct rm goethe resulted mcc susie folded perpetual families trick each pure anymore [SEP]']
+[Init] best rec loss: 0.5883955955505371 for ['[CLS] several distant drops [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lifewerk [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] grand { [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]mament influence graz turning safeimeter bats stock prophecy representrith bid hampton sr wardoc intophine gaulle delegation flame pushed indo information mediterranean fee [SEP]']
+[Init] best rec loss: 0.5753873586654663 for ['[CLS] tag words anywhere [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] management project [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] injurysk [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] head himself telegraph francis maybelez electro division sienna last turnout one mercy afbcockrew littleencies function mla internal break edge deck streak even [SEP]']
+[Init] best perm rec loss: 0.5735293626785278 for ['[CLS] anywhere [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] tag words [PAD] [PAD] [PAD]', '[CLS] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] management project [PAD] [PAD] [PAD]', '[CLS] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] injurysk [PAD] [PAD] [PAD]', '[CLS] telegraph francis deck even little turnout division electro oneencieslez mla streakrew maybecock afb break internal sienna function edge head himself mercy last [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.341 (perp=15.214, rec=0.299), tot_loss_proj:3.593 [t=0.28s]
+prediction: ['[CLS] bad [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] opposite axel [SEP] virginia pathetic calculate reduced idiot off [SEP] equivalent [SEP] ruined conor snailscock safety thin toward stokes toward storage skinny shale shall meant [SEP]']
+[ 100/2000] tot_loss=3.218 (perp=15.009, rec=0.217), tot_loss_proj:3.523 [t=0.29s]
+prediction: ['[CLS]ed [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] stimulating [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] poor axel [SEP]torycala discretion degradation probably partial [SEP] equivalent cerambycidaevating domain losers condom material or flap organizing or storage °f shale iucn meant [SEP]']
+[ 150/2000] tot_loss=3.214 (perp=15.044, rec=0.205), tot_loss_proj:3.449 [t=0.28s]
+prediction: ['[CLS]ly [SEP] tires [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] ease [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] yellowish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse axel [SEP]torycala discretion degradation probably partial [SEP] equivalent typicalvating domain losers condom material or flap rope or storage °f shale iucn meant [SEP]']
+[ 200/2000] tot_loss=3.189 (perp=14.943, rec=0.200), tot_loss_proj:3.413 [t=0.34s]
+prediction: ['[CLS]ly [SEP] tires [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] ease [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] yellowish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse axel [SEP]tory pathetic discretion degradation probably partial [SEP] equivalent typical gross domain snails condom material or flap rope or storage °f shale iucn wasted [SEP]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 250/2000] tot_loss=3.128 (perp=14.740, rec=0.180), tot_loss_proj:3.360 [t=0.28s]
+prediction: ['[CLS] [SEP] tires least [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] ease [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP]ish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse axel [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross domain snails condom surface or flap rope or storage °f shale iucn meant [SEP]']
+[ 300/2000] tot_loss=3.156 (perp=14.858, rec=0.185), tot_loss_proj:3.355 [t=0.29s]
+prediction: ['[CLS] [CLS] tiresly [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] ease [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP]ish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse axel [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross domain snails condom surface or flap rope or storage °f shale iucn meant [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=3.120 (perp=14.718, rec=0.177), tot_loss_proj:3.264 [t=0.29s]
+prediction: ['[CLS] [CLS] tiresly [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP]ish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross domain snails condom surface or flap rope or storage °f shale axel meant [SEP]']
+Attempt swap
+Moved token
+[ 400/2000] tot_loss=3.113 (perp=14.680, rec=0.177), tot_loss_proj:3.251 [t=0.30s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP]ish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross domain snails condom or flap rope or surface storage °f shale axel meant [SEP]']
+[ 450/2000] tot_loss=3.124 (perp=14.762, rec=0.171), tot_loss_proj:3.249 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] worse iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross bart snails condom or genevieve rope or surface storage °f shale axel meant [SEP]']
+Attempt swap
+Put prefix at the end
+[ 500/2000] tot_loss=3.107 (perp=14.690, rec=0.169), tot_loss_proj:3.238 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross bart snails condom or genevieve rope or surface storage °f shale axel meant worse [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=3.077 (perp=14.599, rec=0.158), tot_loss_proj:3.220 [t=0.30s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross bart snails condom or °f rope or surface storage genevieve shale axel meant worse [SEP]']
+[ 600/2000] tot_loss=3.088 (perp=14.618, rec=0.165), tot_loss_proj:3.233 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic discretion degradation probably incomplete [SEP] equivalent towards gross bart snails condom or °f rope or surface storage genevievecellular axel meant worse [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=3.097 (perp=14.685, rec=0.160), tot_loss_proj:3.239 [t=0.32s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] kindly enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation cause probably incomplete [SEP] equivalent towards gross domain snailspants or °f rope or protection storage genevievecellular axel meant worse [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=3.086 (perp=14.608, rec=0.164), tot_loss_proj:3.224 [t=0.33s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] kindly enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation cause probably incomplete [SEP] equivalent towards gross domain snailspants or °f rope meant protection storage genevievecellular axel or worse [SEP]']
+[ 750/2000] tot_loss=3.089 (perp=14.637, rec=0.162), tot_loss_proj:3.241 [t=0.32s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] experiences enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation shelter probably incomplete [SEP] equivalent towards gross domain snailspants or °f rope meant protection storage genevievecellular axel or worse [SEP]']
+Attempt swap
+Moved token
+[ 800/2000] tot_loss=3.094 (perp=14.674, rec=0.159), tot_loss_proj:3.245 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] experiences enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation shelter probably incomplete severe [SEP] equivalent towards gross mothspants or tires rope meant surface storage genevieve shale axel or worse [SEP]']
+Attempt swap
+Moved token
+[ 850/2000] tot_loss=3.080 (perp=14.610, rec=0.158), tot_loss_proj:3.233 [t=0.30s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] experiences enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation shelter probably incomplete severe [SEP] equivalent towards gross mothspants or tires meant protection rope storage genevieve shale axel or worse [SEP]']
+[ 900/2000] tot_loss=3.090 (perp=14.653, rec=0.160), tot_loss_proj:3.245 [t=0.31s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] experiences enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] aish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic degradation shelter probably incomplete severe [SEP] equivalent towards gross mothspants or tires meant protection rope storage genevievecellular axel or worse [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=3.120 (perp=14.846, rec=0.151), tot_loss_proj:3.304 [t=0.32s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] experiences enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic cheap shelter equivalent probably incomplete severe [SEP] towards gross mothspants or tires meant protection rope storage genevievecellular axel or worse [SEP]']
+Attempt swap
+Moved sequence
+[1000/2000] tot_loss=3.128 (perp=14.862, rec=0.156), tot_loss_proj:3.334 [t=0.32s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]lves enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic cheap shelter equivalent probably incomplete severe towards gross moths [SEP]pants or tires meant protection rope storage genevievecellular axel or worse [SEP]']
+[1050/2000] tot_loss=3.133 (perp=14.875, rec=0.158), tot_loss_proj:3.402 [t=0.32s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] joyah enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic cheap shelter equivalent probably incomplete severe towards gross moths [SEP]pants or tires meant protection rope storage genevievecellular axel or worse [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=3.102 (perp=14.714, rec=0.159), tot_loss_proj:3.263 [t=0.35s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic cheap shelter equivalent probablycellular severe towards gross moths [SEP]pants or tires meant protection rope storage genevieve incomplete axel or worse [SEP]']
+Attempt swap
+Swapped tokens
+[1150/2000] tot_loss=3.096 (perp=14.685, rec=0.158), tot_loss_proj:3.262 [t=0.31s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter equivalent probablycellular severe towards gross moths [SEP]pants or tires meant protection rope storage genevieve incomplete axel or degradation [SEP]']
+[1200/2000] tot_loss=3.094 (perp=14.685, rec=0.157), tot_loss_proj:3.271 [t=0.31s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter equivalent probablycellular severe towards gross moths [SEP]pants or tires meant protection rope storage genevieve incomplete axel or degradation [SEP]']
+Attempt swap
+Moved sequence
+[1250/2000] tot_loss=3.083 (perp=14.620, rec=0.159), tot_loss_proj:3.255 [t=0.31s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter towards gross moths [SEP]pants or tires meant protection rope storage genevieve incomplete axel or equivalent probablycellular severe degradation [SEP]']
+Attempt swap
+Moved token
+[1300/2000] tot_loss=3.076 (perp=14.630, rec=0.150), tot_loss_proj:3.258 [t=0.31s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter towards gross moths [SEP]pants orcellular tires meant protection rope storage genevieve incomplete axel or equivalent probably severe cheap [SEP]']
+[1350/2000] tot_loss=3.088 (perp=14.630, rec=0.162), tot_loss_proj:3.253 [t=0.33s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter towards gross moths [SEP]pants orcellular tires meant protection rope storage genevieve incomplete axel or equivalent probably severe cheap [SEP]']
+Attempt swap
+Moved token
+[1400/2000] tot_loss=3.069 (perp=14.592, rec=0.151), tot_loss_proj:3.250 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse shelter towards gross moths [SEP]pants orcellular tires meant severe protection rope storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Moved token
+[1450/2000] tot_loss=3.074 (perp=14.573, rec=0.159), tot_loss_proj:3.241 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse gross shelter towards moths [SEP]pants orcellular tires meant severe protection rope storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+[1500/2000] tot_loss=3.072 (perp=14.573, rec=0.157), tot_loss_proj:3.238 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse gross shelter towards moths [SEP]pants orcellular tires meant severe protection rope storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=3.069 (perp=14.566, rec=0.156), tot_loss_proj:3.241 [t=0.30s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] [SEP] enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse protection shelter towards moths [SEP]pants orcellular tires meant severe gross rope storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Moved token
+[1600/2000] tot_loss=3.091 (perp=14.729, rec=0.145), tot_loss_proj:3.268 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse protection shelter towards moths [SEP] ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+[1650/2000] tot_loss=3.109 (perp=14.729, rec=0.163), tot_loss_proj:3.271 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse protection shelter towards moths [SEP] ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Swapped tokens
+[1700/2000] tot_loss=3.103 (perp=14.709, rec=0.161), tot_loss_proj:3.267 [t=0.28s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory pathetic worse [SEP] shelter towards moths protection ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Moved token
+[1750/2000] tot_loss=3.091 (perp=14.683, rec=0.154), tot_loss_proj:3.259 [t=0.28s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards moths protection ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+[1800/2000] tot_loss=3.091 (perp=14.683, rec=0.154), tot_loss_proj:3.260 [t=0.28s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards moths protection ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+[1850/2000] tot_loss=3.094 (perp=14.683, rec=0.157), tot_loss_proj:3.260 [t=0.28s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards moths protection ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+Moved token
+[1900/2000] tot_loss=3.084 (perp=14.676, rec=0.149), tot_loss_proj:3.265 [t=0.29s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards mothscellular protection ropepants or tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+[1950/2000] tot_loss=3.092 (perp=14.676, rec=0.156), tot_loss_proj:3.259 [t=0.28s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards mothscellular protection ropepants or tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Attempt swap
+[2000/2000] tot_loss=3.097 (perp=14.676, rec=0.162), tot_loss_proj:3.266 [t=0.27s]
+prediction: ['[CLS] [CLS] tires problem [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] surreal enjoyable [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] lbish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards mothscellular protection ropepants or tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]']
+Done with input #1 of 100.
+reference: 
+========================
+[CLS] tiresomely [SEP]
+========================
+[CLS] enjoyable ease [SEP]
+========================
+[CLS] grayish [SEP]
+========================
+[CLS] no cute factor here... not that i mind ugly ; the problem is he has no character, loveable or otherwise. [SEP]
+========================
+predicted: 
+========================
+[CLS] [CLS] tires problem [SEP]
+========================
+[CLS] surreal enjoyable [SEP]
+========================
+[CLS] lbish [SEP]
+========================
+[CLS] iucn [SEP]tory worse pathetic [SEP] shelter towards moths protection ropepants orcellular tires meant severe gross storage genevieve incomplete axel or equivalent probably cheap [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 51.108 | p: 48.301 | r: 55.655
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 51.108 | p: 48.301 | r: 55.655
+rougeLsum  | fm: 51.108 | p: 48.301 | r: 55.655
+r1fm+r2fm = 51.108
+
+[Aggregate metrics]:
+rouge1     | fm: 70.685 | p: 68.229 | r: 73.661
+rouge2     | fm: 37.500 | p: 37.500 | r: 37.500
+rougeL     | fm: 70.759 | p: 68.333 | r: 73.958
+rougeLsum  | fm: 70.536 | p: 68.109 | r: 73.958
+r1fm+r2fm = 108.185
+
+input #1 time: 0:30:20 | total time: 0:59:29
+
+
+Running input #2 of 100.
+reference: 
+========================
+'s a frightful vanity film that , no doubt , pays off what debt miramax felt they owed to benigni 
+========================
+of softheaded metaphysical claptrap 
+========================
+ably balances real-time rhythms with propulsive incident . 
+========================
+was being attempted here that stubbornly refused to gel 
+========================
+Debug: ids_shape = 26, pads = [26, 10, 15, 12]
+Debug: input ids = tensor([[  101,  1005,  1055,  1037, 25966,  3993, 18736,  2143,  2008,  1010,
+          2053,  4797,  1010, 12778,  2125,  2054,  7016, 18062, 17848,  2371,
+          2027, 12232,  2000, 28378,  2072,   102],
+        [  101,  1997,  3730,  4974,  2098, 29081, 28618,  6494,  2361,   102,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0],
+        [  101, 11113,  2135,  5703,  2015,  2613,  1011,  2051, 17900,  2007,
+         17678, 23004,  5043,  1012,   102,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0],
+        [  101,  2001,  2108,  4692,  2182,  2008, 14205,  2135,  4188,  2000,
+         21500,   102,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0]], device='cuda:0')
+Debug: ref = ["[CLS]'s a frightful vanity film that, no doubt, pays off what debt miramax felt they owed to benigni [SEP]", '[CLS] of softheaded metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ably balances real - time rhythms with propulsive incident. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] was being attempted here that stubbornly refused to gel [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 1.026652455329895 for ['[CLS] no lensesghless minutes municipal internalst gerry politicalred into coffin otherwise nanny bitch common officer scottish word idol locationław yards [SEP]', '[CLS] fixed didn core neutralpaper positive pulse dutch [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] wars flats delta ut every guitar boom stands mitch cradle current over fish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] dream billion equity rockdine charityur teethlusion nasal [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9868772029876709 for ['[CLS] prize coast spike members fellores friendly due expense shortly superliga another abuzong either papers holding gladyszzle troubles serie challenge smart cheer [SEP]', '[CLS] for controlabyvos route tonight conduct die [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] dancer explained introduced redding expert ibn sea knockout stage fishing 101 angus just [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] boston cl disorder serious play whomience races titled david [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9427329301834106 for ['[CLS] palm later predecessorifying tony⊕ cavern cheer kat trial non salmon kitchenen fit caught breakfast george overhead signalgate scientology republic lgbt [SEP]', '[CLS] imaginationative caught which considered insideper concert [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] disappeared ethnic video mainstream shovel level cape light (uis those there loan [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] canada dell hall ortha that continental disperse mo while [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9422079920768738 for ['[CLS] ten baron again drama departure parts worldwide right tennisgonal res link along tales base loan what pius ultra takensts scoffedɪ retrospective [SEP]', '[CLS] passing society bedroomyearppet offset ready script [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] orgasm ranks poverty metric document viewasi possessions see japanese collection favor amherst [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ray council epidemic suspension compete special tea patented toronto twilight [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9109501242637634 for ['[CLS] divided mark * ft service negative at waitthal downs anywhere clyde turnby robin & your schwartz resting grade phase feltdan spin [SEP]', '[CLS] spoke well firearms october geoagedqual division [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] natalie turns herselfzcz replica liberal nelson siren involveyou years stripes police [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] american ground ufc [CLS] twice valuable appeh seminary education [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8836330771446228 for ['[CLS] goods went royce treaty mine whichlter anyone repeating hawke cruz four fraser since convinced provider extremequil bydrive unless headed aviv ne [SEP]', '[CLS] rutherford [MASK] usc tuned what civil forever km [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]sur twenties component cartwright architecture s besides lane satellite career listed womb temple [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] not cultural segmenteva kitchen title william look blurted viewed [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8767074942588806 for ['[CLS] sake greg que newspapers oxford00 lowestdding delilah so input thousand containing hers none lamesm scientifichip pocket reached summit darryl second [SEP]', '[CLS] southeast describes gross chilled located thanks scrutiny caden [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] vision period pressure transporting best universal sad bat merged wild honest take asteroids [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ropes no plus warren shaping privilege mitch ever aggregator guts [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8602104187011719 for ['[CLS] debated costa short zone bungalow $ last something crossedno by quarterssperoes still winner dec william bass artificial saw documentary kept * [SEP]', '[CLS] winkler history rosie bonus slipn held honolulu [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] loyal corporation light mission closer myself earlier display on christmasr fit following [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] trustees partner needed augustus sky gothic united settlement maritime slowly [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8260082006454468 for ['[CLS] donovanmetric kolkata synthetic offices bad international marc valve names driveˈ super students intervention survivalwives prague obviously but freudxideela reaching [SEP]', '[CLS] spin deliveractic thrust statute may lev home [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] affiliation chinese song priestnting more kettle hm football college jean how consonant [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] removed teach ran provincepolis advisory army ak arrangement specifically [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best perm rec loss: 0.8254244923591614 for ['[CLS] synthetic survivalxide donovan driveela kolkata officesmetric marc valve badwives obviously students but intervention internationalˈ super prague freud reaching names [SEP]', '[CLS] thrust [PAD] [PAD] spin [PAD] [PAD]actic statute deliver home [SEP] may [PAD] [PAD] [PAD] [PAD] [PAD] lev [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] priest [PAD] [PAD] affiliation jean [PAD] songnting chinese hm football more [PAD] [PAD] [SEP] [PAD] [PAD] kettle how consonant [PAD] [PAD] [PAD] college [PAD]', '[CLS] province [PAD] [PAD] removed [SEP] [PAD] ranpolis teach ak arrangement advisory [PAD] [PAD] [PAD] [PAD] [PAD] army [PAD] [PAD] [PAD] [PAD] [PAD] specifically [PAD]']
+[Init] best perm rec loss: 0.8249525427818298 for ['[CLS] synthetic offices donovan valvexide reaching freudmetric names driveˈ students intervention kolkata bad butwivesela prague international marc obviously super survival [SEP]', '[CLS] thrust statute spin [SEP] [PAD] [PAD] [PAD] deliver [PAD] [PAD] [PAD] [PAD] [PAD]actic may [PAD] [PAD] [PAD] [PAD] lev home [PAD] [PAD] [PAD] [PAD]', '[CLS] priestnting affiliation football [PAD] [PAD] [PAD] chinese college jean how [SEP] [PAD] song more [PAD] [PAD] [PAD] [PAD] kettle hm [PAD] consonant [PAD] [PAD]', '[CLS] provincepolis removed arrangement [PAD] [PAD] [PAD] teach specifically [SEP] [PAD] [PAD] [PAD] ran advisory [PAD] [PAD] [PAD] [PAD] army ak [PAD] [PAD] [PAD] [PAD]']
+[Init] best perm rec loss: 0.8247296214103699 for ['[CLS] valve driveˈ bad namesxidewives super offices marc kolkata international reaching survival obviously freudmetric intervention synthetic pragueela students but donovan [SEP]', '[CLS] [SEP] [PAD] [PAD] may [PAD] [PAD] [PAD] [PAD] statute homeactic lev [PAD] [PAD] [PAD] [PAD] deliver [PAD] thrust [PAD] [PAD] [PAD] [PAD] spin [PAD]', '[CLS] football jean how more college [PAD] [PAD] consonantnting hm song kettle [PAD] [PAD] [PAD] [PAD] chinese [PAD] priest [PAD] [PAD] [SEP] [PAD] affiliation [PAD]', '[CLS] arrangement [SEP] [PAD] advisory specifically [PAD] [PAD] [PAD]polis ak ran army [PAD] [PAD] [PAD] [PAD] teach [PAD] province [PAD] [PAD] [PAD] [PAD] removed [PAD]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.291 (perp=14.573, rec=0.377), tot_loss_proj:3.767 [t=0.28s]
+prediction: ['[CLS] domesday hidden, spider shepard finance by gland sigma fund britain horror thought gaining precise recordingsmax weekend acting prague neither specifications butmarket [SEP]', '[CLS] [SEP] [PAD] [PAD] may [PAD] [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] football overnight orab redding [PAD] [PAD] dip jamest crew orb [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] cannot [SEP] [PAD] waste part [PAD] [PAD] [PAD] attention rights [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 100/2000] tot_loss=3.286 (perp=14.954, rec=0.295), tot_loss_proj:3.824 [t=0.28s]
+prediction: ['[CLS] hotspur 2018, worse shepard annual depthacious sigma russia britain horror seedation attending wellesmax finished pharmaceuticals bo m defect butmarket [SEP]', '[CLS] [SEP] [PAD] [PAD] may [PAD] [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob overnight or charlotte intro [PAD] [PAD] dip james mp rotation style [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refuses [SEP] [PAD] waste order gel [PAD] [PAD] tour g [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 150/2000] tot_loss=3.164 (perp=14.607, rec=0.243), tot_loss_proj:3.731 [t=0.28s]
+prediction: ['[CLS] hotspur sport, fright crowley lust depth fright sigma affair british horror seeurgent specimens wellesmax pay sabine unexpectedly m defect butmarket [SEP]', '[CLS] [SEP] [PAD] [PAD]er cyber clap 士 [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob in balance charlotte redding [PAD] [PAD] characters james coordinates rotation style [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] money order gel [PAD] stubborn hue attempt [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 200/2000] tot_loss=3.082 (perp=14.337, rec=0.214), tot_loss_proj:3.696 [t=0.31s]
+prediction: ['[CLS] hotspur sport ; fright myself lust depth fright sigma affair british horror paysdation palatinate wellesmax pay omnibus unexpectedly m defect butmarket [SEP]', '[CLS] [SEP] [PAD]ণer cyber claptra theorists [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob controversial balance charlotte redding [PAD] [PAD] drops charles coordinates rotation, [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence particularly gel stalled stubborn to attempt [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 250/2000] tot_loss=3.060 (perp=14.299, rec=0.200), tot_loss_proj:3.652 [t=0.27s]
+prediction: ['[CLS] sportfahan fright owed attendant lust depth fright sigma filmasse horror pays divorced glimpse wellesmax pay omnibus unexpectedly m defect butmarket [SEP]', '[CLS] [SEP] [PAD]ণer cyber claptra metaphysical [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob ab balance charlotte redding [PAD] [PAD] drops david coordinates rotation, [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence particularly gel stubborn stubborn to attempt [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 300/2000] tot_loss=3.019 (perp=14.196, rec=0.179), tot_loss_proj:3.622 [t=0.29s]
+prediction: ['[CLS] sport ) fright owed doubt documentaryred fright sigma film reacher horror pays divorced glimpse wellesmax pay sterling both m defect make built [SEP]', '[CLS] [SEP] [PAD]ণer cyber claptraᄑ [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob ab balance charlotte routine [PAD] [PAD] drops david coordinates burns, [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence particularly gel stubborn stubborn to attempt [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 350/2000] tot_loss=2.951 (perp=13.880, rec=0.175), tot_loss_proj:3.616 [t=0.28s]
+prediction: ['[CLS] sport ) fright either doubt documentaryred fright sigma filmasse horror pays ᵘ whose hawkinsmax pay sterling debt m defect making built [SEP]', '[CLS] [SEP] [PAD]ণer cyber claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] ob ab balance charlotte routine [PAD] [PAD] drops david wicket ab, lauded [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence particularly gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 400/2000] tot_loss=2.839 (perp=13.389, rec=0.161), tot_loss_proj:3.484 [t=0.28s]
+prediction: ['[CLS] sport ) fright either doubt narrativered vanity : film potentially a pays ᵘ whose laylamax pay appealed debt m vitaaur built [SEP]', '[CLS] [SEP] [PAD]ণer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balance equilibrium routine [PAD] [PAD] drops imaginaryp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 450/2000] tot_loss=2.910 (perp=13.759, rec=0.158), tot_loss_proj:3.548 [t=0.28s]
+prediction: ['[CLS] sport? fright either doubt narrativered vanitytf film potentially a pays ᵘ whose laylamax pays appealed debt m defect horror built [SEP]', '[CLS] [SEP] [PAD]ণer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balance charlotte routine [PAD] [PAD] drops imaginaryp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] [PAD] evidence too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 500/2000] tot_loss=2.897 (perp=13.740, rec=0.149), tot_loss_proj:3.516 [t=0.29s]
+prediction: ['[CLS] sport? fright either doubt narrative is vanitytf film potentially a pays ᵘmax quinlanmax pays appealed debt what defect horror built [SEP]', '[CLS] [SEP] [PAD]ᄑer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balance charlotte routine [PAD] [PAD] drops realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] ˡ evidence too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.873 (perp=13.614, rec=0.150), tot_loss_proj:3.501 [t=0.34s]
+prediction: ['[CLS] vanity? fright either doubt narrative is vanity horror film potentially a pays [SEP]max quinlanmax paysbolic debt what vita wanting built [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balance manner routine [PAD] [PAD] drops realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] ˡ evidence too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 600/2000] tot_loss=2.812 (perp=13.316, rec=0.149), tot_loss_proj:3.458 [t=0.30s]
+prediction: ['[CLS] vanity? fright either doubt vanity is vanity incredibly film potentially a pays thatmax quinlanmax paysbolic debt what films wanting built [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] drops realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 650/2000] tot_loss=2.779 (perp=13.197, rec=0.140), tot_loss_proj:3.396 [t=0.28s]
+prediction: ['[CLS] built? fright either doubt vanity a vanity incredibly film potentially a pays thatmaxsukamax paysbolic debt what films wanting vanity [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused [SEP] ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.747 (perp=13.037, rec=0.139), tot_loss_proj:3.353 [t=0.27s]
+prediction: ['[CLS] built? fright either doubt vanity a vanity incredibly film reacherbolic pays thatmaxsukamax pays a debt what films wanting vanity [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused was ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 750/2000] tot_loss=2.748 (perp=13.072, rec=0.133), tot_loss_proj:3.374 [t=0.28s]
+prediction: ['[CLS] built? fright either doubt vanity a vanity incredibly film reacherbolic pays thatmaxsukamax pays a debt what films wanting vanity [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused been ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 800/2000] tot_loss=2.758 (perp=13.116, rec=0.134), tot_loss_proj:3.389 [t=0.28s]
+prediction: ['[CLS] built? unexpectedly fright doubt vanity a vanity incredibly film reacherbolic pays thatmaxsukamax pays a debt what filmsious vanity [SEP]', '[CLS] [SEP] [PAD] ofer metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused been ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Moved token
+Moved token
+Moved token
+[ 850/2000] tot_loss=2.740 (perp=13.049, rec=0.130), tot_loss_proj:3.371 [t=0.26s]
+prediction: ['[CLS] built? unexpectedly fright doubt vanity a vanity incredibly film reacher stared pays thatmaxmax benign pays a debt what filmsious vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused been ˡ material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 900/2000] tot_loss=2.719 (perp=12.990, rec=0.121), tot_loss_proj:3.364 [t=0.26s]
+prediction: ['[CLS] built ; either fright doubt vanity a vanity incredibly film reacher stared pays thatmaxmax benign pays a debt what filmsious vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused been 名 material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 950/2000] tot_loss=2.706 (perp=12.920, rec=0.122), tot_loss_proj:3.355 [t=0.28s]
+prediction: ['[CLS], either fright doubt built vanity a vanity everything film reacher stared pays thatmaxmax benign pays a debt what filmsious vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] entertained realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] refused been 名 material too gel stubborn stubborn to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.704 (perp=12.858, rec=0.132), tot_loss_proj:3.365 [t=0.28s]
+prediction: ['[CLS], either fright doubt a vanity a vanity a film reacher stared pays thatmaxmax benign pays incredibly debt what filmsious vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] phrases realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubborn been 名 material too gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1050/2000] tot_loss=2.725 (perp=13.014, rec=0.122), tot_loss_proj:3.372 [t=0.28s]
+prediction: ['[CLS], unexpectedly fright doubt a vanity a vanity a film reacher stared pays thatmaxmax benign pays incredibly debt what filmsious vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] phrases realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubborn been 名 material simply gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1100/2000] tot_loss=2.700 (perp=12.902, rec=0.120), tot_loss_proj:3.356 [t=0.28s]
+prediction: ['[CLS], unexpectedly frightmax a vanity a vanity a film reacher stared pays that doubtmax benign pays incredibly debt what films hoped vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] phrases realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubborn been 名 material simply gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1150/2000] tot_loss=2.630 (perp=12.553, rec=0.120), tot_loss_proj:3.293 [t=0.30s]
+prediction: ['[CLS], unexpectedly frightmax incredibly vanity a vanity a film apparently stared pays that doubtmax benign pays a debt what films felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] phrases realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubbornly 名 material simply gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1200/2000] tot_loss=2.680 (perp=12.744, rec=0.131), tot_loss_proj:3.332 [t=0.29s]
+prediction: ['[CLS], unexpectedly frightmax incrediblyful a vanity a film reacher stared pays that doubtmax benign pays a debt what films felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tissue ab balancely routine [PAD] [PAD] phrases realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubbornly 名 material simply gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.658 (perp=12.669, rec=0.124), tot_loss_proj:3.307 [t=0.31s]
+prediction: ['[CLS] no unexpectedly frightful incrediblymax a vanity a film apparently stared pays that doubtmax benign pays a debt what films felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] logic realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] stubbornly 名 evidence simply gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Swapped tokens
+[1300/2000] tot_loss=2.642 (perp=12.649, rec=0.112), tot_loss_proj:3.353 [t=0.26s]
+prediction: ['[CLS] incredibly no unexpectedly frightfulmax a vanity a film reacher stared pays that doubtmax benign pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] logic realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1350/2000] tot_loss=2.637 (perp=12.552, rec=0.126), tot_loss_proj:3.328 [t=0.28s]
+prediction: ['[CLS] incredibly no unexpectedly frightfulmax a vanity a film apparently stared pays that doubtmax benign pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] logic realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[1400/2000] tot_loss=2.611 (perp=12.473, rec=0.116), tot_loss_proj:3.356 [t=0.27s]
+prediction: ['[CLS] incredibly unexpectedly no frightfulmax a vanity a film apparently stared pays that doubtmax benign pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] rhythms realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1450/2000] tot_loss=2.602 (perp=12.433, rec=0.116), tot_loss_proj:3.330 [t=0.26s]
+prediction: ['[CLS] incredibly unexpectedly no frightfulmax a vanity a film apparently stared pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] rhythms realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1500/2000] tot_loss=2.616 (perp=12.504, rec=0.115), tot_loss_proj:3.369 [t=0.26s]
+prediction: ['[CLS] incredibly unexpectedly no frightfulmax s vanity a film apparently stared pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]er [PAD] of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD] [PAD] rhythms realp ab,. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1550/2000] tot_loss=2.613 (perp=12.445, rec=0.125), tot_loss_proj:3.397 [t=0.26s]
+prediction: ['[CLS] incredibly unexpectedly no frightfulmax s vanity a film apparentlyudged pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]erhead of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially 名 stubborn, gel stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Moved token
+[1600/2000] tot_loss=2.630 (perp=12.532, rec=0.123), tot_loss_proj:3.370 [t=0.27s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a film apparently stared pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]erhead of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn simply gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1650/2000] tot_loss=2.629 (perp=12.549, rec=0.119), tot_loss_proj:3.378 [t=0.30s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a film apparentlyudged pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]erhead of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn simply gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+[1700/2000] tot_loss=2.620 (perp=12.516, rec=0.117), tot_loss_proj:3.388 [t=0.28s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a film apparentlyudged pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]header of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn simply gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[1750/2000] tot_loss=2.574 (perp=12.298, rec=0.114), tot_loss_proj:3.383 [t=0.29s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]header of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1800/2000] tot_loss=2.582 (perp=12.298, rec=0.123), tot_loss_proj:3.386 [t=0.29s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vita felt vanity [SEP]', '[CLS] [SEP]header of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1850/2000] tot_loss=2.566 (perp=12.233, rec=0.120), tot_loss_proj:3.382 [t=0.28s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vanity felt vita [SEP]', '[CLS] [SEP]header of metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1900/2000] tot_loss=2.563 (perp=12.213, rec=0.120), tot_loss_proj:3.375 [t=0.28s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vanity felt vita [SEP]', '[CLS] ofheader [SEP] metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1950/2000] tot_loss=2.563 (perp=12.213, rec=0.120), tot_loss_proj:3.374 [t=0.28s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vanity felt vita [SEP]', '[CLS] ofheader [SEP] metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[2000/2000] tot_loss=2.554 (perp=12.150, rec=0.124), tot_loss_proj:3.373 [t=0.28s]
+prediction: ['[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vanity felt vita [SEP]', '[CLS] ofheader [SEP] metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accompany ab balancely routine rhythms, [PAD] realp ab [PAD]. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Done with input #2 of 100.
+reference: 
+========================
+[CLS]'s a frightful vanity film that, no doubt, pays off what debt miramax felt they owed to benigni [SEP]
+========================
+[CLS] of softheaded metaphysical claptrap [SEP]
+========================
+[CLS] ably balances real - time rhythms with propulsive incident. [SEP]
+========================
+[CLS] was being attempted here that stubbornly refused to gel [SEP]
+========================
+predicted: 
+========================
+[CLS] incredibly unexpectedly no frightful smax vanity a filmudged apparently pays that doubt benignmax pays a debt what vanity felt vita [SEP]
+========================
+[CLS] [SEP]header of metaphysical claptrap [SEP]
+========================
+[CLS] accompany ab balancely routine [PAD], rhythms realp ab [PAD]. [SEP]
+========================
+[CLS] materially stubborn, gel 名 stubborn refused to attempted [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 55.659 | p: 54.978 | r: 56.970
+rouge2     | fm: 11.869 | p: 11.458 | r: 12.500
+rougeL     | fm: 47.088 | p: 46.014 | r: 48.674
+rougeLsum  | fm: 47.088 | p: 46.014 | r: 48.674
+r1fm+r2fm = 67.528
+
+[Aggregate metrics]:
+rouge1     | fm: 65.845 | p: 64.327 | r: 68.394
+rouge2     | fm: 28.620 | p: 28.472 | r: 28.750
+rougeL     | fm: 62.548 | p: 60.672 | r: 65.280
+rougeLsum  | fm: 62.660 | p: 60.683 | r: 65.414
+r1fm+r2fm = 94.464
+
+input #2 time: 0:28:42 | total time: 1:28:12
+
+
+Running input #3 of 100.
+reference: 
+========================
+that will be seen to better advantage on cable , especially considering its barely 
+========================
+point at things that explode into flame 
+========================
+undeniably intriguing film 
+========================
+efficient , suitably anonymous chiller . 
+========================
+Debug: ids_shape = 16, pads = [16, 9, 7, 10]
+Debug: input ids = tensor([[  101,  2008,  2097,  2022,  2464,  2000,  2488,  5056,  2006,  5830,
+          1010,  2926,  6195,  2049,  4510,   102],
+        [  101,  2391,  2012,  2477,  2008, 15044,  2046,  8457,   102,     0,
+             0,     0,     0,     0,     0,     0],
+        [  101,  6151, 19825,  6321, 23824,  2143,   102,     0,     0,     0,
+             0,     0,     0,     0,     0,     0],
+        [  101,  8114,  1010,  4848,  8231, 10812, 10720,  2121,  1012,   102,
+             0,     0,     0,     0,     0,     0]], device='cuda:0')
+Debug: ref = ['[CLS] that will be seen to better advantage on cable, especially considering its barely [SEP]', '[CLS] point at things that explode into flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undeniably intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] efficient, suitably anonymous chiller. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 1.0773066282272339 for ['[CLS] celebrity over t somequin rob terrible immortal college worldwide u collective swords bureau [SEP]', '[CLS] aires ct ina dial whilesing bases [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] dig scene them pound personal [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accent speaking ›meister rod experiment oh prove [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 1.034645915031433 for ['[CLS] maids littlearding cornell slavery ice equivalentglyative possibly studied diego helicopterspes [SEP]', '[CLS] ; through specigate horsenat american [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] did femme colony taingly [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] kc inexperienced jalan lights unit amphibious flesh noise [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9343132376670837 for ['[CLS] getting broadcast emi german resort spur was mary when important armor reform drama car [SEP]', '[CLS] winning timeization projected organism peer shifters [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] idea 27tic panel being [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] accurate imagesdar returnedmonium shrimpgrate security [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8070263266563416 for ['[CLS] along " alignment potential greaves necessary una ya olympics skipped trolley sin clubs mounted [SEP]', '[CLS]gre pc containment damage always screaming hands [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2010 patriarch appreciate disorders clerk [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] hands underworld through leg directedlative selfjack [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.806647539138794 for ['[CLS] ghost abandon loosellation separated propaganda opinions wiseton debut sec suffix theo anne [SEP]', '[CLS] reluctance b pass tidesys sources kemp [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] convinceciency assembly real profession [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] bayfly circuit off did lead plant communist [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7951045632362366 for ['[CLS]rise friday august jumping behalf him reform stadium mcdonald hundredsface shore ellis foundation [SEP]', '[CLS] through [CLS] murray acting child scholar calculus [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tor frank zoeship train [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]year navigation pdflved way rolling [UNK] astoria [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7900934219360352 for ['[CLS] subjects cardinal military happen end sincex helicoptersville charitable scored tail cavalry interstate [SEP]', '[CLS]firmedelle british alias bien 4 means [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] special in agent security museum [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] canonical fictional opening voivodeship ballroom from bce cr [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7200576663017273 for ['[CLS] drunk distinctive else thee contract award lungs big critics pastoral carried tv part laid [SEP]', '[CLS] dun dream thighs homer isolated affected spur [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]ume formerly thousands property six [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]plicity difference jace mutual cedar anonymous centre canadian [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.964 (perp=13.534, rec=0.258), tot_loss_proj:3.404 [t=0.26s]
+prediction: ['[CLS] anyway went volvo ; barely prove to down protect criminals shown label overtime barrel [SEP]', '[CLS] occur rage bubble homeron fall rico [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 shortly present interesting common [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] finally national marie efficient.. times gentle [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 100/2000] tot_loss=2.707 (perp=12.549, rec=0.198), tot_loss_proj:3.087 [t=0.30s]
+prediction: ['[CLS] but controversial cable ; barely provedfirm better under cable until nevada cable their [SEP]', '[CLS] avenue fire bubble!on fall rico [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 shortly indeed interesting idea [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and later marie efficient.. times sympathetic [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 150/2000] tot_loss=2.677 (perp=12.545, rec=0.168), tot_loss_proj:3.074 [t=0.27s]
+prediction: ['[CLS] especially determine fines ; barely argument capture better on cable seen either cable its [SEP]', '[CLS] point fire things wheneveron fall rico [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 shortly indeed interesting story [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and later marie efficient.. times sympathetic [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 200/2000] tot_loss=2.647 (perp=12.574, rec=0.132), tot_loss_proj:3.111 [t=0.27s]
+prediction: ['[CLS] especially determine scouts that barely will to better on cable seen seen flame its [SEP]', '[CLS] point fire things wheneveron fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 immediately indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and later marie efficient.. times jerome [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 250/2000] tot_loss=2.627 (perp=12.476, rec=0.131), tot_loss_proj:2.979 [t=0.26s]
+prediction: ['[CLS] especially iona that barely will closely to better on cable seen seen advantage its [SEP]', '[CLS] point fire things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 immediately indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and later marie efficient.. times efficient [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 300/2000] tot_loss=2.615 (perp=12.504, rec=0.114), tot_loss_proj:2.963 [t=0.27s]
+prediction: ['[CLS] especially iona that barely will closely to better on cable seen seen advantage its [SEP]', '[CLS] point flame things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] 2008 immediately indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and so marie efficient.. : efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 350/2000] tot_loss=2.549 (perp=12.196, rec=0.110), tot_loss_proj:2.872 [t=0.28s]
+prediction: ['[CLS] especially that barely will advantage although to better on cable seen seen advantage its [SEP]', '[CLS] point flame things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film immediately indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and so marie efficient.. : efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 400/2000] tot_loss=2.479 (perp=11.900, rec=0.099), tot_loss_proj:2.810 [t=0.27s]
+prediction: ['[CLS] especially that barely will advantage although seen better on cable to seen advantage its [SEP]', '[CLS] point flame things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film equally indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and so marie efficient.. : efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 450/2000] tot_loss=2.461 (perp=11.872, rec=0.087), tot_loss_proj:2.830 [t=0.27s]
+prediction: ['[CLS] especially that barely will be although seen better on cable to seen advantage its [SEP]', '[CLS] point flame things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film equally indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and so marie efficient.. times efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Moved token
+[ 500/2000] tot_loss=2.454 (perp=11.807, rec=0.093), tot_loss_proj:2.809 [t=0.26s]
+prediction: ['[CLS] especially that barely will that seen although seen better on cable to advantage its [SEP]', '[CLS] point flame things aton fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film equally indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] and so marie efficient.. times efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.383 (perp=11.484, rec=0.086), tot_loss_proj:2.747 [t=0.29s]
+prediction: ['[CLS] especially that seen barely will that although seen better on cable to advantage its [SEP]', '[CLS] pointon things at flame fall flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film equally indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]. so marie efficient.. times efficiency [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 600/2000] tot_loss=2.398 (perp=11.542, rec=0.090), tot_loss_proj:2.810 [t=0.28s]
+prediction: ['[CLS] especially that seen barely will that although seen better on cable to advantage its [SEP]', '[CLS] pointon things at flame into flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] film equally indeed intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]. now marie efficient., timesably [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Swapped tokens
+Moved sequence
+[ 650/2000] tot_loss=2.373 (perp=11.454, rec=0.083), tot_loss_proj:2.724 [t=0.27s]
+prediction: ['[CLS] especially that seen barely will that although seen better on cable advantage to its [SEP]', '[CLS] pointon things at flame into flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] filmblyming intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS].. now marie efficient, primeably [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.365 (perp=11.421, rec=0.081), tot_loss_proj:2.716 [t=0.28s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon things at flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undmingbly intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS].. now marie efficient, primeably [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 750/2000] tot_loss=2.436 (perp=11.747, rec=0.086), tot_loss_proj:2.798 [t=0.28s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon things at flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] und equallybly intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]. as now marie efficient, primeably [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+[ 800/2000] tot_loss=2.405 (perp=11.631, rec=0.079), tot_loss_proj:2.856 [t=0.29s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] und undbly intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]. as now marie efficient, primeably [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 850/2000] tot_loss=2.377 (perp=11.468, rec=0.083), tot_loss_proj:2.981 [t=0.26s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] - now marie efficient, prime suit. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 900/2000] tot_loss=2.376 (perp=11.478, rec=0.080), tot_loss_proj:2.966 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] - now marie efficient, primeably. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+[ 950/2000] tot_loss=2.371 (perp=11.434, rec=0.084), tot_loss_proj:2.958 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable advantage to its [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marie - now efficient, prime suit. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+Moved token
+Swapped tokens
+[1000/2000] tot_loss=2.316 (perp=11.140, rec=0.088), tot_loss_proj:2.855 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable to its advantage [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marie - now efficient, suitably. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1050/2000] tot_loss=2.387 (perp=11.480, rec=0.091), tot_loss_proj:2.929 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable to its advantage [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marie - prominent efficient,ablyably. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Swapped tokens
+[1100/2000] tot_loss=2.323 (perp=11.253, rec=0.073), tot_loss_proj:2.882 [t=0.26s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable to its advantage [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marie -ably efficient,ably prominent. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+Swapped tokens
+Moved token
+[1150/2000] tot_loss=2.332 (perp=11.235, rec=0.085), tot_loss_proj:2.873 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable to its advantage [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marieably efficient, -ably prominent. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1200/2000] tot_loss=2.334 (perp=11.235, rec=0.087), tot_loss_proj:2.873 [t=0.27s]
+prediction: ['[CLS] considering that barely seen will that although seen better on cable to its advantage [SEP]', '[CLS] pointon at things flame explode flame [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] undbly und intriguing film [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] marieably efficient, -ably prominent. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
