@@ -287,10 +287,10 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/home/fourteen/workspace/Recover_Text/lamp_with_ir_match/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
-        model.bert.pooler.dense.bias.data[:] = state_dict["bert.pooler.dense.bias"] 
+        model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
         model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
