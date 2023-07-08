@@ -112,13 +112,10 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     else:
         sub_dimension = 100 
 
-        
-    #######################
-    #######################
     m = 30000-768
     d = sub_dimension
     B = 1
-    Beta = 2 
+    Beta = 1 
     
     # if cheat:
     #     return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
@@ -182,12 +179,6 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     rec_X, _, misc = no_tenfact(T, 100, B)
     new_recX = V @ rec_X
 
-    #######################
-    #######################
-    
-    
-    
-    
     ######################################################################
     # 768 => 1
     input = ori_pooler_dense_input[:, :sub_dimension]
@@ -222,7 +213,6 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
         return gradients, pooler_target
     else:
         return gradients, None
-    pooler_target = torch.from_numpy(new_recXX).cuda()
 
 def compute_grads_new(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False):
     from attack_sheng.no_tenfact import no_tenfact
@@ -248,7 +238,7 @@ def compute_grads_new(model, x_embeds, y_labels, create_graph=False, return_pool
     m = 30000-768
     d = sub_dimension
     B = 1
-    Beta = 2 
+    Beta = 1
     
     if cheat:
         return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
@@ -332,7 +322,6 @@ def compute_grads_new(model, x_embeds, y_labels, create_graph=False, return_pool
         return gradients, pooler_target
     else:
         return gradients, None
-    pooler_target = torch.from_numpy(new_recXX).cuda()
 
 def grad_dist(grads1, grads2, args):
     ret = 0.0

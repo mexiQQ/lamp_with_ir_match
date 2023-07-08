@@ -12,6 +12,7 @@ from transformers import AdamW, AutoConfig, AutoModel, AutoTokenizer, AutoModelF
 from init import get_init
 from constants import BERT_CLS_TOKEN, BERT_SEP_TOKEN, BERT_PAD_TOKEN
 from utilities import compute_grads, get_closest_tokens, get_reconstruction_loss, get_perplexity, fix_special_tokens, remove_padding, compute_pooler
+from tmp import compute_grads
 from data_utils import TextDataset
 from args_factory import get_args
 import time
@@ -102,7 +103,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     #################
     #################
     # approximation_pooler = compute_pooler(model, true_embeds, true_labels)
-    true_grads, approximation_pooler = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
+    true_grads, approximation_pooler, cosine_similarity = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
 
     if args.defense_pct_mask is not None:
         for grad in true_grads:
@@ -259,7 +260,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         new_prediction += [prediction[ids[i]]]
     prediction = new_prediction
 
-    return prediction, reference
+    return prediction, reference, cosine_similarity
 
 def print_metrics(res, suffix, use_neptune):
     for metric in ['rouge1', 'rouge2', 'rougeL', 'rougeLsum']:
@@ -286,18 +287,21 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load("/home/fourteen/workspace/Recover_Text/lamp_with_ir_match/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
-        model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
+        model.bert.pooler.dense.bias.data[:] = 0 #state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
-        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,))
+        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
         model.bert.pooler.dense.weight.data[768:, 100:] = 0
         
-        model.classifier.weight.data = torch.full((2, 30000), 1/30000).cuda()
+        model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
+        model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
-        model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        # model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        model.classifier.bias.data.copy_(torch.full((2,), 0))
+        # import pdb; pdb.set_trace()
 
     model.eval()
     
@@ -307,6 +311,7 @@ def main():
     print('\n\nAttacking..\n', flush=True)
     predictions, references = [], []
     t_start = time.time()
+    cosine_similarity = 0
     for i in range(args.n_inputs):
         
         # if i < 2:
@@ -326,7 +331,8 @@ def main():
 
         print('========================', flush=True)
 
-        prediction, reference = reconstruct(args, device, sample, metric, tokenizer, lm, model)
+        prediction, reference, cosine_sim = reconstruct(args, device, sample, metric, tokenizer, lm, model)
+        cosine_similarity += cosine_sim 
         predictions += prediction
         references += reference
 
@@ -355,6 +361,7 @@ def main():
         # total_time = str(datetime.timedelta(seconds=time.time() - t_start)).split(".")[0]
         # print(f'input #{i} time: {input_time} | total time: {total_time}\n\n', flush=True)
 
+    print("Average Cosine Similarity:", cosine_similarity/args.n_inputs)
     print('Done with all.', flush=True)
     if args.neptune:
         neptune.log_metric('curr_input', args.n_inputs)

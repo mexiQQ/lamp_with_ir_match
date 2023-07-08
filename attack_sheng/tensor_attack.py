@@ -11,7 +11,7 @@ def tensor_feature(g,W,L,B,m,d):
     
     for i in range(0, d):
         for j in range(0, d):
-            M[i, j] = (np.sum(g * W[:, j])+np.sum(g*W[:,i]))/2
+            M[i, j] = (np.sum(g[:, i] * W[:, j])+np.sum(g[:,j]*W[:,i]))/2
     M=M/m
 
     # largest absolute eigenvalues
@@ -19,7 +19,6 @@ def tensor_feature(g,W,L,B,m,d):
     D2 = np.abs(D1).tolist()
     D_index = list(map(D2.index, nlargest(B, D2)))
     V = V1[:, D_index]
-
 
     WV = np.matmul(W, V)  # m x B
     gV=np.matmul(g,V) # m X B
