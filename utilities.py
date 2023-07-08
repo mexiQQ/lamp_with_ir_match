@@ -362,10 +362,12 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
     grads, pooler_first_token = compute_grads(model, x_embeds, y_labels, create_graph=create_graph, 
         return_first_token_tensor=True)
     if true_pooler is not None:
+        input = pooler_first_token[:, :100]
+        input = input / torch.linalg.norm(input, ord=2, dim=1, keepdim=True)
         if debug:
-            cosine_loss = COSINE_LOSS(pooler_first_token[:, :100], true_pooler)
+            cosine_loss = COSINE_LOSS(input, true_pooler)
         else:
-            cosine_loss = COSINE_LOSS(pooler_first_token[:, :100], true_pooler) 
+            cosine_loss = COSINE_LOSS(input, true_pooler) 
         gradient_loss = grad_dist(true_grads, grads, args)
         # print(gradient_loss, cosine_loss)
         return gradient_loss, cosine_loss

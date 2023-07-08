@@ -43,7 +43,7 @@ def get_init(args, model, unused_tokens, shape, true_labels, true_grads, bert_em
             best_x_embeds = tmp_embeds
             _, cos_ids = get_closest_tokens(tmp_embeds, unused_tokens, bert_embeddings_weight, metric='cos')
             sen = tokenizer.batch_decode(cos_ids)
-            # print(f'[Init] best rec loss: {best_rec_loss.item()} for {sen}', flush=True)
+            print(f'[Init] best rec loss: {best_rec_loss.item()} for {sen}', flush=True)
     
     # Pick best permutation of candidates
     for i in range(args.init_candidates):
@@ -61,7 +61,7 @@ def get_init(args, model, unused_tokens, shape, true_labels, true_grads, bert_em
             best_x_embeds = tmp_embeds
             _, cos_ids = get_closest_tokens(tmp_embeds, unused_tokens, bert_embeddings_weight, metric='cos')
             sen = tokenizer.batch_decode(cos_ids)
-            # print(f'[Init] best perm rec loss: {best_rec_loss.item()} for {sen}', flush=True)
+            print(f'[Init] best perm rec loss: {best_rec_loss.item()} for {sen}', flush=True)
     
     # Scale inital embeddings to args.init_size (e.g., avg of BERT embeddings ~1.4)
     if args.init_size >= 0:

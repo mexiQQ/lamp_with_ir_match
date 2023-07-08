@@ -30,8 +30,8 @@ if args.neptune:
 
 def get_loss(args, lm, model, ids, x_embeds, true_labels, true_grads, create_graph=False, true_pooler=None):
     perplexity = lm(input_ids=ids, labels=ids).loss
-    rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph, true_pooler=true_pooler)
-    return perplexity, rec_loss, rec_loss + args.coeff_perplexity * perplexity
+    rec_loss, cosine_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph, true_pooler=true_pooler)
+    return perplexity, rec_loss, cosine_loss, rec_loss + args.coeff_perplexity * perplexity + cosine_loss
 
 def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None):
     print('Attempt swap', flush=True)
@@ -75,7 +75,7 @@ def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_g
             new_x_embeds = x_embeds.clone()
             new_x_embeds[sen_id] = x_embeds[sen_id, perm_ids, :]
             
-            _, _, new_tot_loss = get_loss(args, lm, model, new_ids, new_x_embeds, true_labels, true_grads, true_pooler=true_pooler)
+            _, _, _, new_tot_loss = get_loss(args, lm, model, new_ids, new_x_embeds, true_labels, true_grads, true_pooler=true_pooler)
 
             if (best_tot_loss is None) or (new_tot_loss < best_tot_loss):
                 best_x_embeds = new_x_embeds
@@ -172,9 +172,9 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             opt.zero_grad()
             #################
             #################
-            rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, debug=True)
+            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
-            tot_loss = rec_loss + args.coeff_reg * reg_loss
+            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss
             tot_loss.backward(retain_graph=True)
             with torch.no_grad():
                 if args.grad_clip is not None:
@@ -207,13 +207,13 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
             #################
             #################
-            _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
-            perplexity, rec_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, true_pooler=approximation_pooler)
+            _, _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
+            perplexity, rec_loss, cosine_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, true_pooler=approximation_pooler)
 
             step_time = time.time() - t_start
             
-            print('[%4d/%4d] tot_loss=%.3f (perp=%.3f, rec=%.3f), tot_loss_proj:%.3f [t=%.2fs]' % (
-                steps_done, args.n_steps, tot_loss.item(), perplexity.item(), rec_loss.item(), tot_loss_proj.item(), step_time), flush=True)
+            print('[%4d/%4d] tot_loss=%.3f (perp=%.3f, rec=%.3f, cos=%.3f), tot_loss_proj:%.3f [t=%.2fs]' % (
+                steps_done, args.n_steps, tot_loss.item(), perplexity.item(), rec_loss.item(), cosine_loss.item(), tot_loss_proj.item(), step_time), flush=True)
             print('prediction: %s'% (tokenizer.batch_decode(cos_ids)), flush=True)
             
             tokenizer.batch_decode(cos_ids)
@@ -236,7 +236,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
     #################
     #################
-    _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
+    _, _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
     best_ids = cos_ids
     best_x_embeds_proj = x_embeds_proj
     
@@ -312,10 +312,6 @@ def main():
     t_start = time.time()
     cosine_similarity = 0
     for i in range(args.n_inputs):
-        
-        # if i < 2:
-        #     continue
-        
         t_input_start = time.time()
         sample = dataset[i] # (seqs, labels)
 
