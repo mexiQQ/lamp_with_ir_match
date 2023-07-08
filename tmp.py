@@ -6,11 +6,17 @@ from scipy.spatial import distance
 from attack_sheng.tensor_attack import tensor_feature
 
 def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False):
-    outs, ori_pooler_dense_input, pooled_output, pooled_output_before_activation = model(
-        inputs_embeds=x_embeds, 
-        labels=y_labels, 
-        return_first_token_tensor=True,
-        return_pooled_output=True)
+    # outs, ori_pooler_dense_input, pooled_output, pooled_output_before_activation = model(
+    #     inputs_embeds=x_embeds, 
+    #     labels=y_labels, 
+    #     return_first_token_tensor=True,
+    #     return_pooled_output=True)
+
+    outs, ori_pooler_dense_input = model(
+    inputs_embeds=x_embeds, 
+    labels=y_labels, 
+    return_first_token_tensor=True,
+    return_pooled_output=True)
         
     # 1. a = w1*x, where a is a 30000-dimensional vector.
     # 2. h = f(a) = a^2 + a^3, where h is also a 30000-dimensional vector.

@@ -133,14 +133,14 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
                     pads[sen_id] = i
                 else:
                     break
-    # print(f'Debug: ids_shape = {orig_batch["input_ids"].shape[1]}, pads = {pads}', flush=True)
-    # print(f'Debug: input ids = {orig_batch["input_ids"]}', flush=True)
-    # print(f'Debug: ref = {tokenizer.batch_decode(orig_batch["input_ids"])}', flush=True)
+    print(f'Debug: ids_shape = {orig_batch["input_ids"].shape[1]}, pads = {pads}', flush=True)
+    print(f'Debug: input ids = {orig_batch["input_ids"]}', flush=True)
+    print(f'Debug: ref = {tokenizer.batch_decode(orig_batch["input_ids"])}', flush=True)
 
     # Get initial embeddings + set up opt
     #################
     #################
-    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None)
+    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=approximation_pooler)
 
     bert_embeddings_weight = bert_embeddings.weight.unsqueeze(0)
     if args.opt_alg == 'adam':
@@ -172,7 +172,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             opt.zero_grad()
             #################
             #################
-            rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=None, debug=True)
+            rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, debug=True)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
             tot_loss = rec_loss + args.coeff_reg * reg_loss
             tot_loss.backward(retain_graph=True)
@@ -199,7 +199,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         if args.use_swaps and it >= args.swap_burnin * args.n_steps and it % args.swap_every == 1:
             #################
             #################
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
+            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
 
         steps_done = it+1
         if steps_done % args.print_every == 0:
@@ -207,8 +207,8 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
             #################
             #################
-            _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=None)
-            perplexity, rec_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, true_pooler=None)
+            _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
+            perplexity, rec_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, true_pooler=approximation_pooler)
 
             step_time = time.time() - t_start
             
@@ -226,7 +226,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         #################
         #################
         for i in range( swap_at_end_it ):
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
+            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
         
     # Postprocess
     x_embeds.data = best_final_x
@@ -236,7 +236,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
     #################
     #################
-    _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=None)
+    _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
     best_ids = cos_ids
     best_x_embeds_proj = x_embeds_proj
     
@@ -290,7 +290,7 @@ def main():
         state_dict = torch.load("/home/fourteen/workspace/Recover_Text/lamp_with_ir_match/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
-        model.bert.pooler.dense.bias.data[:] = 0 #state_dict["bert.pooler.dense.bias"] 
+        model.bert.pooler.dense.bias.data[:] = state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
         model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
@@ -299,9 +299,8 @@ def main():
         model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
         model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
-        # model.classifier.bias.data.copy_(state_dict["classifier.bias"])
-        model.classifier.bias.data.copy_(torch.full((2,), 0))
-        # import pdb; pdb.set_trace()
+        model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        # model.classifier.bias.data.copy_(torch.full((2,), 0))
 
     model.eval()
     
@@ -336,30 +335,30 @@ def main():
         predictions += prediction
         references += reference
 
-        # print(f'Done with input #{i} of {args.n_inputs}.')
-        # print('reference: ')
-        # for seq in reference:
-        #     print('========================')
-        #     print(seq)
-        # print('========================')
+        print(f'Done with input #{i} of {args.n_inputs}.')
+        print('reference: ')
+        for seq in reference:
+            print('========================')
+            print(seq)
+        print('========================')
 
-        # print('predicted: ')
-        # for seq in prediction:
-        #     print('========================')
-        #     print(seq)
-        # print('========================', flush=True)
+        print('predicted: ')
+        for seq in prediction:
+            print('========================')
+            print(seq)
+        print('========================', flush=True)
 
-        # print('[Curr input metrics]:')
-        # res = metric.compute(predictions=prediction, references=reference)
-        # print_metrics(res, suffix='curr', use_neptune=args.neptune is not None)
+        print('[Curr input metrics]:')
+        res = metric.compute(predictions=prediction, references=reference)
+        print_metrics(res, suffix='curr', use_neptune=args.neptune is not None)
 
-        # print('[Aggregate metrics]:')
-        # res = metric.compute(predictions=predictions, references=references)
-        # print_metrics(res, suffix='agg', use_neptune=args.neptune is not None)
+        print('[Aggregate metrics]:')
+        res = metric.compute(predictions=predictions, references=references)
+        print_metrics(res, suffix='agg', use_neptune=args.neptune is not None)
 
-        # input_time = str(datetime.timedelta(seconds=time.time() - t_input_start)).split(".")[0]
-        # total_time = str(datetime.timedelta(seconds=time.time() - t_start)).split(".")[0]
-        # print(f'input #{i} time: {input_time} | total time: {total_time}\n\n', flush=True)
+        input_time = str(datetime.timedelta(seconds=time.time() - t_input_start)).split(".")[0]
+        total_time = str(datetime.timedelta(seconds=time.time() - t_start)).split(".")[0]
+        print(f'input #{i} time: {input_time} | total time: {total_time}\n\n', flush=True)
 
     print("Average Cosine Similarity:", cosine_similarity/args.n_inputs)
     print('Done with all.', flush=True)
