@@ -372,7 +372,7 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
         # print(gradient_loss, cosine_loss)
         return gradient_loss, cosine_loss
     else:
-        return grad_dist(true_grads, grads, args) 
+        return grad_dist(true_grads, grads, args), 0 
 
 
 def get_perplexity(gpt2, x_embeds, bert_embeddings_weight, gpt2_embeddings_weight, c=0.1):

@@ -32,11 +32,11 @@ def get_init(args, model, unused_tokens, shape, true_labels, true_grads, bert_em
         tmp_embeds = embeds[i*num_inits:(i+1)*num_inits]
         fix_special_tokens(tmp_embeds, bert_embeddings.weight, pads)
         
-        if true_pooler is not None:
-            rec_loss, cosin_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
-            rec_loss += cosin_loss
-        else:
-            rec_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
+        # if true_pooler is not None:
+        rec_loss, cosin_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
+        rec_loss += cosin_loss
+        # else:
+        #     rec_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
             
         if (best_rec_loss is None) or (rec_loss < best_rec_loss):
             best_rec_loss = rec_loss
@@ -50,11 +50,11 @@ def get_init(args, model, unused_tokens, shape, true_labels, true_grads, bert_em
         idx = torch.cat((torch.tensor([0], dtype=torch.int32), torch.randperm(shape[1]-2)+1, torch.tensor([shape[1]-1], dtype=torch.int32) ))
         tmp_embeds = best_x_embeds[:, idx].detach()
         
-        if true_pooler is not None:
-            rec_loss, cosin_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
-            rec_loss += cosin_loss
-        else:
-            rec_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
+        # if true_pooler is not None:
+        rec_loss, cosin_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
+        rec_loss += cosin_loss
+        # else:
+        #     rec_loss = get_reconstruction_loss(model, tmp_embeds, true_labels, true_grads, args, true_pooler=true_pooler)
             
         if (rec_loss < best_rec_loss):
             best_rec_loss = rec_loss

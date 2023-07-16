@@ -140,7 +140,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     # Get initial embeddings + set up opt
     #################
     #################
-    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=approximation_pooler)
+    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None)
 
     bert_embeddings_weight = bert_embeddings.weight.unsqueeze(0)
     if args.opt_alg == 'adam':
@@ -165,14 +165,18 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     
     # Main loop
     best_final_error, best_final_x = None, x_embeds.detach().clone()
+    sequence_length = x_embeds.shape[1]
+    if sequence_length > 10:
+        args.n_steps = 2000
+
     for it in range(args.n_steps):
         t_start = time.time()
-
+        
         def closure():
             opt.zero_grad()
             #################
             #################
-            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler)
+            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=None)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
             tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss
             tot_loss.backward(retain_graph=True)
@@ -236,9 +240,9 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
     #################
     #################
-    _, _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
+    # _, _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
     best_ids = cos_ids
-    best_x_embeds_proj = x_embeds_proj
+    # best_x_embeds_proj = x_embeds_proj
     
     prediction, reference = [], []
     for i in range(best_ids.shape[0]):
