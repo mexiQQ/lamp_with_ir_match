@@ -30,7 +30,7 @@ if args.neptune:
 
 def get_loss(args, lm, model, ids, x_embeds, true_labels, true_grads, create_graph=False):
     perplexity = lm(input_ids=ids, labels=ids).loss
-    rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph)
+    rec_loss,_ = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph)
     return perplexity, rec_loss, rec_loss + args.coeff_perplexity * perplexity
 
 def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads ):
@@ -165,7 +165,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
 
         def closure():
             opt.zero_grad()
-            rec_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True)
+            rec_loss, _ = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
             tot_loss = rec_loss + args.coeff_reg * reg_loss
             tot_loss.backward(retain_graph=True)
@@ -272,7 +272,7 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/home/fourteen/workspace/Recover_Text/lamp_with_ir_match/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
         model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 

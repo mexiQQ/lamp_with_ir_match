@@ -140,7 +140,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     # Get initial embeddings + set up opt
     #################
     #################
-    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None)
+    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=approximation_pooler)
 
     bert_embeddings_weight = bert_embeddings.weight.unsqueeze(0)
     if args.opt_alg == 'adam':

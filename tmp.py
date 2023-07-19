@@ -110,6 +110,8 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     print("highest", highest)
 
     pooler_target = torch.from_numpy(new_recX.transpose()).cuda()
+    pooler_target = pooler_target[torch.tensor(highest_index)]
+
     return gradients, pooler_target, sum(highest)/B 
 
 def check_cosine_similarity_for_1_sample(recover, target):
