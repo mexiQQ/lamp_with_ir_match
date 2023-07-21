@@ -369,7 +369,7 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
         else:
             cosine_loss = COSINE_LOSS(input, true_pooler)
 
-        cosine_loss = torch.max(cosine_loss - 0.01, 0)[0] 
+        # cosine_loss = torch.maximum(cosine_loss - 0.001, torch.tensor(0.0))
 
         gradient_loss = grad_dist(true_grads, grads, args)
         # print(gradient_loss, cosine_loss)

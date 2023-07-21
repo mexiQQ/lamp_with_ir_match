@@ -140,7 +140,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     # Get initial embeddings + set up opt
     #################
     #################
-    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=approximation_pooler)
+    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings,  bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None)
 
     bert_embeddings_weight = bert_embeddings.weight.unsqueeze(0)
     if args.opt_alg == 'adam':
@@ -176,7 +176,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             opt.zero_grad()
             #################
             #################
-            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=None)
+            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
             tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss
             tot_loss.backward(retain_graph=True)
@@ -203,7 +203,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         if args.use_swaps and it >= args.swap_burnin * args.n_steps and it % args.swap_every == 1:
             #################
             #################
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
+            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
 
         steps_done = it+1
         if steps_done % args.print_every == 0:
@@ -230,7 +230,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         #################
         #################
         for i in range( swap_at_end_it ):
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
+            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
         
     # Postprocess
     x_embeds.data = best_final_x

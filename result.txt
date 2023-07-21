@@ -1,0 +1,17 @@
+
+bz = 1, total=100, opt steps=5000, IR only for optimization, weight sst2, margin=0 =>> output6.txt
+bz = 1, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.01 =>> output8.txt
+bz = 1, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1 =>> output9.txt
+bz = 1, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.001 =>> output7.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0 =>> x1_output.txt
+
+bz = 2, total=100, opt steps=2000, No IR Match at all, weight sst2, margin=0 => x2_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1 => x3_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=lower 0.1, uper 0.5 => x4_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0 => x5_output.txt
+===
+
+bz = 1, total=100, opt steps=2000, IR only for optimization, weight random, margin=0 =>> output10.txt
+bz = 1, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0 =>> output11.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random, margin=0 => x6_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0 => x7_output.txt
