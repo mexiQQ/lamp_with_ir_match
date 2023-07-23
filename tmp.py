@@ -85,31 +85,16 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     else:
         W = model.bert.pooler.dense.weight.data[:, :d].cpu().numpy() #m, d
 
-    new_recX = tensor_feature(g, W, 100, B, m, d)
-    ######################################################################    
-    # import pdb; pdb.set_trace()
-    highest = [0] * B
-    highest_index = [0] * B
-    for i in range(B):
-        for j in range(B):
-            recover = new_recX[:, j:j+1]
-            target = ori_pooler_dense_input[i:i+1, :]
-            cosine_similarity = check_cosine_similarity_for_1_sample(
-                recover,
-                target
-            )
-            if highest[i] < cosine_similarity:
-                highest[i] = cosine_similarity
-                highest_index[i] = j
-
-        print("*********************************")
-        print("*********************************")
-
+    new_recX = tensor_feature(g, W, 100, B, m, d).transpose()
+    ######################################################################
+    highest, highest_index = find_highest_indices(new_recX, ori_pooler_dense_input)
     print("average of cosine similarity",sum(highest)/B)
     print("highest_index", highest_index)
     print("highest", highest)
+    import pdb
+    pdb.set_trace()
 
-    pooler_target = torch.from_numpy(new_recX.transpose()).cuda()
+    pooler_target = torch.from_numpy(new_recX).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]
 
     return gradients, pooler_target, sum(highest)/B 
@@ -139,3 +124,30 @@ def check_cosine_similarity_for_1_sample(recover, target):
     ######################################################################
     return abs(cosin_sim)
 
+def find_highest_indices(new_recX, ori_pooler_dense_input):
+    B = len(new_recX)
+    highest = [0] * B
+    highest_index = [-1] * B
+    index_score_list = []
+    index_assignments = {}  # dictionary to keep track of which i an index j was assigned to
+
+    for i in range(B):
+        for j in range(B):
+            recover = new_recX[j:j+1, :]
+            target = ori_pooler_dense_input[i:i+1, :]
+            cosine_similarity = check_cosine_similarity_for_1_sample(
+                recover,
+                target
+            )
+            index_score_list.append((cosine_similarity, i, j))
+
+    index_score_list.sort(reverse=True)  # sort in decreasing order
+
+    for score, i, j in index_score_list:
+        # if j not in index_assignments and highest_index[i] == -1:
+        if highest_index[i] == -1: 
+            highest[i] = score
+            highest_index[i] = j
+            index_assignments[j] = i  # record the assignment of j to i
+
+    return highest, highest_index

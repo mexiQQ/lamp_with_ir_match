@@ -1,0 +1,8 @@
+Namespace(adam_epsilon=1e-08, bias_correction=True, bsz=32, ckpt_dir=PosixPath('outputs'), dataset_name='glue', debug=False, do_lower_case=True, epochs=1, eval_size=32, force_overwrite='1', lr=2e-05, max_seq_length=128, model_name='bert-base-uncased', num_examples=872, num_labels=2, result_file='attack_result.csv', seed=302, task_name='sst2', warmup_ratio=0.1, weight_decay=0.01)
+Making checkpoint directory: outputs/finetune_glue-sst2_lr2e-05_epochs1_seed302_time1690088507223
+Epoch: 0, Loss:  0.7854, Lr:  1.901e-06, Dev_Accuracy: 0.5091743119266054
+**** Test Accuracy: 0.5091743119266054, Test_Loss: 0.7423101727451571
+**** Best dev metric: 0.5091743119266054 in Epoch: 0
+**** Best Test metric: 0.5091743119266054 in Epoch: 0
+Last epoch test_accuracy: 0.5091743119266054, test_loss: 0.7423101727451571
+Spend time: 0.005277777777777778

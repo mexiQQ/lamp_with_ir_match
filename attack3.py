@@ -294,7 +294,7 @@ def main():
         state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
-        model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
+        model.bert.pooler.dense.bias.data[:768] = 0 #state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
         model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
@@ -303,8 +303,8 @@ def main():
         model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
         model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
-        model.classifier.bias.data.copy_(state_dict["classifier.bias"])
-        # model.classifier.bias.data.copy_(torch.full((2,), 0))
+        # model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        model.classifier.bias.data.copy_(torch.full((2,), 0))
 
     model.eval()
     
@@ -316,6 +316,7 @@ def main():
     t_start = time.time()
     cosine_similarity = 0
     for i in range(args.n_inputs):
+
         t_input_start = time.time()
         sample = dataset[i] # (seqs, labels)
 

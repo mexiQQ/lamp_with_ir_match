@@ -357,7 +357,7 @@ def get_closest_tokens(inputs_embeds, unused_tokens, embeddings_weight, metric='
     d[:, :, unused_tokens] = 1e9
     return d, d.min(dim=2)[1]
 
-
+global_door = [False]
 def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_graph=False, true_pooler=None, debug=False):
     grads, pooler_first_token = compute_grads(model, x_embeds, y_labels, create_graph=create_graph, 
         return_first_token_tensor=True)
@@ -369,7 +369,19 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
         else:
             cosine_loss = COSINE_LOSS(input, true_pooler)
 
-        # cosine_loss = torch.maximum(cosine_loss - 0.001, torch.tensor(0.0))
+        cosine_loss = torch.maximum(cosine_loss - 0.1, torch.tensor(0.0))
+
+        # global global_door
+        # lower_bound = 0.1
+        # upper_bound = 0.2
+        # if cosine_loss < lower_bound:
+        #     global_door[0] = True
+
+        # if cosine_loss > upper_bound:
+        #     global_door[0] = False
+        
+        # if global_door[0]:
+        #    csine_loss = torch.tensor(0.0)
 
         gradient_loss = grad_dist(true_grads, grads, args)
         # print(gradient_loss, cosine_loss)
