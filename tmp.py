@@ -91,8 +91,6 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     print("average of cosine similarity",sum(highest)/B)
     print("highest_index", highest_index)
     print("highest", highest)
-    import pdb
-    pdb.set_trace()
 
     pooler_target = torch.from_numpy(new_recX).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]

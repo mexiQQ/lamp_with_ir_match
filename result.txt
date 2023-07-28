@@ -13,10 +13,19 @@ bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=lower 0.1, uper 0.2 => x4_output.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0 => x5_output.txt
 
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 1 => x_bias1.txt
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 1 => x_bias2.txt
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 0.1 => x_bias3.txt
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 0.1 => x_bias4.txt
+i > 18 # 跑错对比 Data 了 
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.1, biasscale = 1 => x_bias1.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.3, biasscale = 1 => x_bias2.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.1, biasscale = 0.1 => x_bias3.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.3, biasscale = 0.1 => x_bias4.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 0.1 => x_bias5.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 0.1 => x_bias6.txt
+
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 0.1 => x_bias7.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 0.1 => x_bias8.txt
+
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.1, biasscale = 0.1 => x_bias9.txt =》 x9_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0.1, biasscale = 0.1 => x_bias10.txt
 
 =====
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0.1 => x6_output.txt
