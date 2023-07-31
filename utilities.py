@@ -14,9 +14,19 @@ class CosineSimilarityLoss(torch.nn.Module):
         super(CosineSimilarityLoss, self).__init__()
         self.cosine_similarity = torch.nn.CosineSimilarity(dim=1, eps=1e-6)
 
-    def forward(self, input, target):
-        cos_sim = self.cosine_similarity(input, target)
-        loss = 1 - cos_sim.mean() ** 2  # You can also use: (1 - cos_sim).mean()
+    def forward(self, input, target, thresholds=None):
+        cos_sim = self.cosine_similarity(input, target).abs()
+        if thresholds != None: 
+            thresholds = torch.tensor(thresholds, device=cos_sim.device)
+            # print("origin_cos", cos_sim)
+            # print("thresholds", thresholds)
+
+            margin = 0.7 # Define your constant value here
+            cos_sim = cos_sim + margin
+            cos_sim = torch.where(cos_sim >= thresholds, 1.0, cos_sim)
+            # print("updated cos", cos_sim)
+
+        loss = 1 - (cos_sim ** 2).mean()  # You can also use: (1 - cos_sim).mean()
         return loss
     
 COSINE_LOSS = CosineSimilarityLoss()
@@ -117,8 +127,8 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     B = 1
     Beta = 1 
     
-    # if cheat:
-    #     return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
+    if cheat:
+        return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
             
     # activarteion
     # even => even => 特殊处理
@@ -358,18 +368,18 @@ def get_closest_tokens(inputs_embeds, unused_tokens, embeddings_weight, metric='
     return d, d.min(dim=2)[1]
 
 global_door = [False]
-def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_graph=False, true_pooler=None, debug=False):
+def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_graph=False, true_pooler=None, debug=False, thresholds=None):
     grads, pooler_first_token = compute_grads(model, x_embeds, y_labels, create_graph=create_graph, 
         return_first_token_tensor=True)
     if true_pooler is not None:
         input = pooler_first_token[:, :100]
         input = input / torch.linalg.norm(input, ord=2, dim=1, keepdim=True)
         if debug:
-            cosine_loss = COSINE_LOSS(input, true_pooler)
+            cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
         else:
-            cosine_loss = COSINE_LOSS(input, true_pooler)
+            cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
 
-        cosine_loss = torch.maximum(cosine_loss - 0.1, torch.tensor(0.0))
+        # cosine_loss = torch.maximum(cosine_loss - 0.1, torch.tensor(0.0))
 
         # global global_door
         # lower_bound = 0.1

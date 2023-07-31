@@ -103,7 +103,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     #################
     #################
     # approximation_pooler = compute_pooler(model, true_embeds, true_labels)
-    true_grads, approximation_pooler, cosine_similarity = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
+    true_grads, approximation_pooler, cosine_similarity, thresholds = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
 
     if args.defense_pct_mask is not None:
         for grad in true_grads:
@@ -176,7 +176,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             opt.zero_grad()
             #################
             #################
-            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler)
+            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
             tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss
             tot_loss.backward(retain_graph=True)
@@ -294,7 +294,7 @@ def main():
         state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
-        model.bert.pooler.dense.bias.data[:768] = 0 #state_dict["bert.pooler.dense.bias"] 
+        model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
         model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
@@ -303,8 +303,8 @@ def main():
         model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
         model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
-        # model.classifier.bias.data.copy_(state_dict["classifier.bias"])
-        model.classifier.bias.data.copy_(torch.full((2,), 0))
+        model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        #model.classifier.bias.data.copy_(torch.full((2,), 0))
 
     model.eval()
     

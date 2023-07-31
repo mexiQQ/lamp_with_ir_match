@@ -10,6 +10,19 @@ bz = 2, total=100, opt steps=5000, No IR Match at all, weight sst2, margin=0 => 
 bz = 2, total=100, opt steps=2000, No IR Match at all, weight sst2, margin=0 => x2_2000_output.txt
 bz = 2, total=100, opt steps=1000/2000, IR only for optimization, weight sst2, margin=0.1 => x3_output.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1 => x3_2000_output.txt
+
+******
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, new greedy => x3_2000_2_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3 => x3_2000_3_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, 1-by-1 => x3_2000_4_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, no search for highest index => x3_2000_5_output.txt
+
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.1, 1-by-1 => x3_2000_6_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.3, 1-by-1 => x3_2000_7_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.5, 1-by-1 => x3_2000_8_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.7, 1-by-1 => x3_2000_9_output.txt
+******
+
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=lower 0.1, uper 0.2 => x4_output.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0 => x5_output.txt
 
@@ -21,12 +34,8 @@ bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + fin
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 0.1 => x_bias5.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 0.1 => x_bias6.txt
 
+# n 个 sample greedy 对应 1 个 recover result
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.1, biasscale = 0.1 => x_bias7.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=0.3, biasscale = 0.1 => x_bias8.txt
-
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.1, biasscale = 0.1 => x_bias9.txt =》 x9_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0.1, biasscale = 0.1 => x_bias9.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0.1, biasscale = 0.1 => x_bias10.txt
-
-=====
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0.1 => x6_output.txt
-bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + finetune, margin=0 => x7_output.txt

@@ -55,8 +55,8 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     d = sub_dimension
     B = len(x_embeds)
     
-    # if cheat:
-    #     return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
+    if cheat:
+        return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
             
     # activarteion
     
@@ -95,7 +95,7 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     pooler_target = torch.from_numpy(new_recX).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]
 
-    return gradients, pooler_target, sum(highest)/B 
+    return gradients, pooler_target, sum(highest)/B, highest 
 
 def check_cosine_similarity_for_1_sample(recover, target):
     ######################################################################
@@ -122,6 +122,10 @@ def check_cosine_similarity_for_1_sample(recover, target):
     ######################################################################
     return abs(cosin_sim)
 
+# ground truth
+# recovered truth cosine sim 0.6, 0.7 => loss 1-0.36=0.64 1-0.49=0.51
+# training feature if (training feature and recover truth 间loss高于 0.64 才优化，other wise 不优化)
+
 def find_highest_indices(new_recX, ori_pooler_dense_input):
     B = len(new_recX)
     highest = [0] * B
@@ -131,8 +135,8 @@ def find_highest_indices(new_recX, ori_pooler_dense_input):
 
     for i in range(B):
         for j in range(B):
-            recover = new_recX[j:j+1, :]
             target = ori_pooler_dense_input[i:i+1, :]
+            recover = new_recX[j:j+1, :]
             cosine_similarity = check_cosine_similarity_for_1_sample(
                 recover,
                 target
@@ -142,8 +146,8 @@ def find_highest_indices(new_recX, ori_pooler_dense_input):
     index_score_list.sort(reverse=True)  # sort in decreasing order
 
     for score, i, j in index_score_list:
-        # if j not in index_assignments and highest_index[i] == -1:
-        if highest_index[i] == -1: 
+        if j not in index_assignments and highest_index[i] == -1:
+        # if highest_index[i] == -1: 
             highest[i] = score
             highest_index[i] = j
             index_assignments[j] = i  # record the assignment of j to i
