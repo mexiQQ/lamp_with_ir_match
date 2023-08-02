@@ -178,7 +178,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             #################
             rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
-            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss
+            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss * 0.1
             tot_loss.backward(retain_graph=True)
             with torch.no_grad():
                 if args.grad_clip is not None:
@@ -279,6 +279,13 @@ def print_metrics(res, suffix, use_neptune):
         neptune.log_metric(f'r1fm+r2fm_{suffix}', sum_12_fm*100)
     print(f'r1fm+r2fm = {sum_12_fm*100:.3f}\n', flush=True)
 
+def add_noise_to_model(model, variance):
+    with torch.no_grad():  # We don't want these operations to be tracked for gradients
+        for name, param in model.named_parameters():
+            if 'classifier' not in name and 'pooler' not in name:  # Exclude classifier and pooler layers
+                noise = torch.randn(param.size()).to(param.device) * variance**0.5
+                param.add_(noise)
+
 def main():
     print( '\n\n\nCommand:', ' '.join( sys.argv ), '\n\n\n', flush=True)
 
@@ -297,7 +304,7 @@ def main():
         model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
 
         distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
-        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,)) 
+        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,))
         model.bert.pooler.dense.weight.data[768:, 100:] = 0
         
         model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
@@ -305,6 +312,8 @@ def main():
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
         model.classifier.bias.data.copy_(state_dict["classifier.bias"])
         #model.classifier.bias.data.copy_(torch.full((2,), 0))
+
+        # add_noise_to_model(model, 0.00001)
 
     model.eval()
     

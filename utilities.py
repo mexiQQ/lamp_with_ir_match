@@ -21,7 +21,7 @@ class CosineSimilarityLoss(torch.nn.Module):
             # print("origin_cos", cos_sim)
             # print("thresholds", thresholds)
 
-            margin = 0.7 # Define your constant value here
+            margin = 0.0 # Define your constant value here
             cos_sim = cos_sim + margin
             cos_sim = torch.where(cos_sim >= thresholds, 1.0, cos_sim)
             # print("updated cos", cos_sim)
@@ -378,6 +378,7 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
             cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
         else:
             cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
+        # cosine_loss = torch.tensor(0.0)
 
         # cosine_loss = torch.maximum(cosine_loss - 0.1, torch.tensor(0.0))
 

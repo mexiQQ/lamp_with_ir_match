@@ -31,6 +31,10 @@ Debug: ref = ['[CLS] slightly disappointed [SEP]', '[CLS] splendidly [SEP]']
 [Init] best rec loss: 0.9039775133132935 for ['[CLS] panel officer [SEP]', '[CLS] lords kendra [SEP]']
 [Init] best rec loss: 0.8638851046562195 for ['[CLS] maxtre [SEP]', '[CLS] copies behind [SEP]']
 Nsteps: 2000
+
+cos_sime + margin(0.3) < [0.9605485150273105, 0.9984119606199818]
+
+
 [  50/2000] tot_loss=2.757 (perp=10.862, rec=0.300, cos=0.284), tot_loss_proj:3.252 [t=0.31s]
 prediction: ['[CLS] slightly disappointed [SEP]', '[CLS] oval bitch [SEP]']
 [ 100/2000] tot_loss=2.628 (perp=10.591, rec=0.231, cos=0.279), tot_loss_proj:3.214 [t=0.36s]

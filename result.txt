@@ -21,6 +21,17 @@ bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new ma
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.3, 1-by-1 => x3_2000_7_output.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.5, 1-by-1 => x3_2000_8_output.txt
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.7, 1-by-1 => x3_2000_9_output.txt
+
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.9, 1-by-1, regular_ratio 0.1 => x3_2000_15_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.3, 1-by-1, regular_ratio 0.1 => x3_2000_16_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.0, 1-by-1, regular_ratio 0.1 => x3_2000_17_output.txt
+
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.15, 1-by-1 => x3_2000_10_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.2, 1-by-1 => x3_2000_11_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.25, 1-by-1 => x3_2000_12_output.txt
+bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0.35, 1-by-1 => x3_2000_13_output.txt
+
+bz = 2, total=100, opt steps=2000, NO IR match, weight sst2 => x3_2000_14_output.txt
 ******
 
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight sst2, margin=lower 0.1, uper 0.2 => x4_output.txt

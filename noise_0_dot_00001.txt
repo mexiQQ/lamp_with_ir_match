@@ -1,0 +1,328 @@
+
+
+
+Command: attack3.py --dataset sst2 --split test --loss cos --n_inputs 5 -b 2 --coeff_perplexity 0.2 --coeff_reg 1 --lr 0.01 --lr_decay 0.89 --bert_path /hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2 --n_steps 100 
+
+
+
+
+
+Attacking..
+
+Running input #0 of 5.
+reference: 
+========================
+slightly disappointed 
+========================
+splendidly 
+========================
+average of cosine similarity 0.98212408143334
+highest_index [0, 1]
+highest [0.9652153450365992, 0.9990328178300807]
+Debug: ids_shape = 4, pads = [4, 4]
+Debug: input ids = tensor([[  101,  3621,  9364,   102],
+        [  101, 21459,  2135,   102]], device='cuda:0')
+Debug: ref = ['[CLS] slightly disappointed [SEP]', '[CLS] splendidly [SEP]']
+[Init] best rec loss: 1.0237473249435425 for ['[CLS] unless freshwater [SEP]', '[CLS] nowhere julian [SEP]']
+[Init] best rec loss: 1.0229824781417847 for ['[CLS] no acts [SEP]', '[CLS] reserve challenge [SEP]']
+[Init] best rec loss: 1.014147400856018 for ['[CLS] laced dodge [SEP]', '[CLS] neither screw [SEP]']
+[Init] best rec loss: 0.9881212115287781 for ['[CLS] pure truth [SEP]', '[CLS] assign served [SEP]']
+[Init] best rec loss: 0.9598566293716431 for ['[CLS] hang threat [SEP]', '[CLS] once drag [SEP]']
+[Init] best rec loss: 0.9475940465927124 for ['[CLS] nor should [SEP]', '[CLS] stake maid [SEP]']
+[Init] best rec loss: 0.9423846006393433 for ['[CLS] midsummer practices [SEP]', '[CLS] doesnhear [SEP]']
+[Init] best rec loss: 0.9418202042579651 for ['[CLS] juliet strong [SEP]', '[CLS] longest maine [SEP]']
+[Init] best rec loss: 0.9400359988212585 for ['[CLS] auto an [SEP]', '[CLS] 9 holy [SEP]']
+[Init] best rec loss: 0.9252598881721497 for ['[CLS]ly camp [SEP]', '[CLS] changed parted [SEP]']
+[Init] best rec loss: 0.9173611998558044 for ['[CLS] score resume [SEP]', '[CLS] grand latter [SEP]']
+[Init] best rec loss: 0.9060546159744263 for ['[CLS]landergical [SEP]', '[CLS] scheduled mr [SEP]']
+Nsteps: 100
+[  50/ 100] tot_loss=2.328 (perp=10.566, rec=0.185, cos=0.030), tot_loss_proj:2.467 [t=0.31s]
+prediction: ['[CLS] disappointed disappointed [SEP]', '[CLS]ly splendid [SEP]']
+Attempt swap
+Put prefix at the end
+[ 100/ 100] tot_loss=2.050 (perp=9.711, rec=0.089, cos=0.019), tot_loss_proj:2.040 [t=0.27s]
+prediction: ['[CLS] slightly disappointed [SEP]', '[CLS] splendidly [SEP]']
+Done with input #0 of 5.
+reference: 
+========================
+[CLS] slightly disappointed [SEP]
+========================
+[CLS] splendidly [SEP]
+========================
+predicted: 
+========================
+[CLS] slightly disappointed [SEP]
+========================
+[CLS] splendidly [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+[Aggregate metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+input #0 time: 0:01:46 | total time: 0:01:46
+
+
+Running input #1 of 5.
+reference: 
+========================
+gaining much momentum 
+========================
+flawless film 
+========================
+average of cosine similarity 0.9356424739706689
+highest_index [0, 1]
+highest [0.9478968341609488, 0.923388113780389]
+Debug: ids_shape = 5, pads = [5, 4]
+Debug: input ids = tensor([[  101,  8550,  2172, 11071,   102],
+        [  101, 27503,  2143,   102,     0]], device='cuda:0')
+Debug: ref = ['[CLS] gaining much momentum [SEP]', '[CLS] flawless film [SEP] [PAD]']
+[Init] best rec loss: 0.9854145646095276 for ['[CLS] posted uina [SEP]', '[CLS] tran charlotte [SEP] [PAD]']
+[Init] best rec loss: 0.9464739561080933 for ['[CLS] noelle decommissioned mortal [SEP]', '[CLS] mention because [SEP] [PAD]']
+[Init] best rec loss: 0.8950411081314087 for ['[CLS] released icelandhorpe [SEP]', '[CLS] now assessment [SEP] [PAD]']
+[Init] best rec loss: 0.8621839880943298 for ['[CLS] race sultan son [SEP]', '[CLS] anti lay [SEP] [PAD]']
+[Init] best rec loss: 0.8529196977615356 for ['[CLS] abandonpper clubhouse [SEP]', '[CLS] managed barely [SEP] [PAD]']
+[Init] best rec loss: 0.8152167201042175 for ['[CLS] [CLS]grapher board [SEP]', '[CLS] consulate march [SEP] [PAD]']
+Nsteps: 100
+[  50/ 100] tot_loss=2.730 (perp=11.080, rec=0.352, cos=0.163), tot_loss_proj:3.533 [t=0.36s]
+prediction: ['[CLS] current cleared. [SEP]', '[CLS] anniversary excellence [SEP] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 100/ 100] tot_loss=2.738 (perp=11.357, rec=0.304, cos=0.163), tot_loss_proj:3.609 [t=0.29s]
+prediction: ['[CLS] late finally current [SEP]', '[CLS] winning momentum [SEP] [PAD]']
+Done with input #1 of 5.
+reference: 
+========================
+[CLS] gaining much momentum [SEP]
+========================
+[CLS] flawless film [SEP]
+========================
+predicted: 
+========================
+[CLS] winning momentum [SEP]
+========================
+[CLS] current gettingri [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 58.333 | p: 62.500 | r: 55.000
+rouge2     | fm: 14.286 | p: 16.667 | r: 12.500
+rougeL     | fm: 58.333 | p: 62.500 | r: 55.000
+rougeLsum  | fm: 58.333 | p: 62.500 | r: 55.000
+r1fm+r2fm = 72.619
+
+[Aggregate metrics]:
+rouge1     | fm: 79.167 | p: 81.250 | r: 77.500
+rouge2     | fm: 57.143 | p: 58.333 | r: 56.250
+rougeL     | fm: 79.167 | p: 81.250 | r: 77.500
+rougeLsum  | fm: 79.167 | p: 81.250 | r: 77.500
+r1fm+r2fm = 136.310
+
+input #1 time: 0:01:44 | total time: 0:03:31
+
+
+Running input #2 of 5.
+reference: 
+========================
+tiresomely 
+========================
+enjoyable ease 
+========================
+average of cosine similarity 0.5712109210442585
+highest_index [0, 1]
+highest [0.9387989200388327, 0.20362292204968435]
+Debug: ids_shape = 5, pads = [5, 4]
+Debug: input ids = tensor([[  101, 13310,  8462,  2135,   102],
+        [  101, 22249,  7496,   102,     0]], device='cuda:0')
+Debug: ref = ['[CLS] tiresomely [SEP]', '[CLS] enjoyable ease [SEP] [PAD]']
+[Init] best rec loss: 1.0095210075378418 for ['[CLS] residenceα grid [SEP]', '[CLS] expired octave [SEP] [PAD]']
+[Init] best rec loss: 0.9790651202201843 for ['[CLS] loose³ sanctuary [SEP]', '[CLS] your are [SEP] [PAD]']
+[Init] best rec loss: 0.9740812182426453 for ['[CLS] runawaynow fancy [SEP]', '[CLS] estate mhz [SEP] [PAD]']
+[Init] best rec loss: 0.9572751522064209 for ['[CLS] were method continue [SEP]', '[CLS]balift [SEP] [PAD]']
+[Init] best rec loss: 0.9372897744178772 for ['[CLS] legends constance defamation [SEP]', '[CLS] was medium [SEP] [PAD]']
+[Init] best rec loss: 0.9255918860435486 for ['[CLS] crisis worth disease [SEP]', '[CLS] represented enemies [SEP] [PAD]']
+[Init] best rec loss: 0.9066616892814636 for ['[CLS] ignenger [SEP]', '[CLS] couples curt [SEP] [PAD]']
+[Init] best rec loss: 0.8947438597679138 for ['[CLS] have world nat [SEP]', '[CLS] aria lance [SEP] [PAD]']
+Nsteps: 100
+[  50/ 100] tot_loss=4.167 (perp=13.611, rec=0.696, cos=0.749), tot_loss_proj:4.560 [t=0.32s]
+prediction: ['[CLS] areitaire met [SEP]', '[CLS] hurricaneuddin [SEP] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 100/ 100] tot_loss=3.926 (perp=13.027, rec=0.636, cos=0.685), tot_loss_proj:4.461 [t=0.29s]
+prediction: ['[CLS] hawaiiled rescued [SEP]', '[CLS] pulitzer manuscripts [SEP] [PAD]']
+Done with input #2 of 5.
+reference: 
+========================
+[CLS] tiresomely [SEP]
+========================
+[CLS] enjoyable ease [SEP]
+========================
+predicted: 
+========================
+[CLS] leighuddin [SEP]
+========================
+[CLS] polymerled gravity [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 58.333 | p: 58.333 | r: 58.333
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 58.333 | p: 58.333 | r: 58.333
+rougeLsum  | fm: 58.333 | p: 58.333 | r: 58.333
+r1fm+r2fm = 58.333
+
+[Aggregate metrics]:
+rouge1     | fm: 72.222 | p: 73.611 | r: 71.111
+rouge2     | fm: 38.095 | p: 38.889 | r: 37.500
+rougeL     | fm: 72.222 | p: 73.611 | r: 71.111
+rougeLsum  | fm: 72.222 | p: 73.611 | r: 70.000
+r1fm+r2fm = 110.317
+
+input #2 time: 0:01:46 | total time: 0:05:17
+
+
+Running input #3 of 5.
+reference: 
+========================
+grayish 
+========================
+no cute factor here ... not that i mind ugly ; the problem is he has no character , loveable or otherwise . 
+========================
+average of cosine similarity 0.8139721574028986
+highest_index [0, 1]
+highest [0.9433251321226899, 0.6846191826831074]
+Debug: ids_shape = 28, pads = [4, 28]
+Debug: input ids = tensor([[  101,  3897,  4509,   102,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0],
+        [  101,  2053, 10140,  5387,  2182,  1012,  1012,  1012,  2025,  2008,
+          1045,  2568,  9200,  1025,  1996,  3291,  2003,  2002,  2038,  2053,
+          2839,  1010,  2293,  3085,  2030,  4728,  1012,   102]],
+       device='cuda:0')
+Debug: ref = ['[CLS] grayish [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] no cute factor here... not that i mind ugly ; the problem is he has no character, loveable or otherwise. [SEP]']
+[Init] best rec loss: 0.49950265884399414 for ['[CLS] com guitar [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] love subdividedcup i $ play occupants studio somali reporter than # ya draw by electric bar cachethest career face or value proposals warrant county [SEP]']
+[Init] best rec loss: 0.4479638934135437 for ['[CLS] islam book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] own anna position dotssmanert ross parallel chrome feet isolated ryan halfway because dec suicidal over onlyrt mr passeswords anywhere deng in ra [SEP]']
+[Init] best rec loss: 0.4335489273071289 for ['[CLS] hate closer [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] concludedrcekell mean whistle bent grove conspiracy deadline magic weapons walls block beerified adamicative compared petty note includesass around scenic staff sequel [SEP]']
+[Init] best rec loss: 0.41899001598358154 for ['[CLS] tia grounds [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] self multiple change limbs joy skye disaster prince tons connector between rick labelulation pia victorian us orzer historical stall busy lincoln （ discuss while [SEP]']
+[Init] best perm rec loss: 0.41092649102211 for ['[CLS] [PAD] [PAD] [PAD] grounds tia [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] between discuss stall multiple self lincoln prince connector change rick disaster us label tonsulation orzer （ pia historical busy while joy victorian skye limbs [SEP]']
+[Init] best perm rec loss: 0.4039463400840759 for ['[CLS] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] grounds [PAD] [PAD] [PAD] [PAD] [PAD] [SEP] tia [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] orulation prince rick connector tons stall limbs pia while us （ disaster between multiple historical labelzer skye discuss change self joy lincoln victorian busy [SEP]']
+[Init] best perm rec loss: 0.40095287561416626 for ['[CLS] tia [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [SEP] [PAD] grounds [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] self historical skye disaster rick between （ or lincolnzer joy discuss change limbs multiple victorian us while prince connector stall piaulation tons label busy [SEP]']
+[Init] best perm rec loss: 0.40008899569511414 for ['[CLS] grounds [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] tia [PAD] [PAD] [PAD] [PAD]', '[CLS] multipleulation tons skye change piazer or stall lincoln （ busy between rick discuss disaster prince joy limbs while label victorian self historical connector us [SEP]']
+[Init] best perm rec loss: 0.3997896909713745 for ['[CLS] tia [PAD] [PAD] [PAD] [PAD] [PAD] grounds [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] self label busy skye or tons multiple stall historical while between （ joyulation pia lincoln prince connector disaster us change limbs discuss rick victorianzer [SEP]']
+[Init] best perm rec loss: 0.3982076644897461 for ['[CLS] [SEP] [PAD] [PAD] [PAD] grounds [PAD] [PAD] [PAD] tia [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] change connector or limbs multiple skye tons historical self prince lincoln pia us joy betweenulation disaster discuss （ while rick stall labelzer victorian busy [SEP]']
+[Init] best perm rec loss: 0.39545339345932007 for ['[CLS] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] grounds [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] tia [PAD] [PAD] [PAD]', '[CLS] change or connector discussulation disaster skye limbs multiple （ lincoln historical prince tons joy while between label rick busy stall pia us self victorianzer [SEP]']
+[Init] best perm rec loss: 0.39434635639190674 for ['[CLS] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] grounds [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] tia [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] change discuss or while prince tons us limbs piazer lincoln （ulation multiple stall victorian rick connector label between self joy disaster busy historical skye [SEP]']
+[Init] best perm rec loss: 0.39311426877975464 for ['[CLS] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] grounds [PAD] tia [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] change joy victorian while limbs historical rick discuss （ label us disasterulation connector tonszer stall lincoln multiple skye self busy or between prince pia [SEP]']
+Nsteps: 100
+[  50/ 100] tot_loss=3.607 (perp=14.701, rec=0.177, cos=0.490), tot_loss_proj:3.942 [t=0.31s]
+prediction: ['[CLS] [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] sinkstypic syriac pretending yellow 2008 user williams taxpayer bald petty wilsonis bulgarian catcher corridorlellan minus fiyas entitledail none truck buck welfare [SEP]']
+Attempt swap
+Swapped tokens
+[ 100/ 100] tot_loss=3.398 (perp=14.396, rec=0.140, cos=0.379), tot_loss_proj:3.883 [t=0.29s]
+prediction: ['[CLS] [SEP] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] except gray tehran sack gray problems user actual taxpayer 2008 petty stationis asshole [UNK] hallway thesis minus fi refuge entitled shrubs junior truck buck troupe [SEP]']
+Done with input #3 of 5.
+reference: 
+========================
+[CLS] grayish [SEP]
+========================
+[CLS] no cute factor here... not that i mind ugly ; the problem is he has no character, loveable or otherwise. [SEP]
+========================
+predicted: 
+========================
+[CLS] [SEP] [PAD] [SEP]
+========================
+[CLS] except gray tehran sack gray problems user actual taxpayer 2008 petty stationis asshole [UNK] hallway thesis minus fi refuge entitled shrubs junior truck buck troupe [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 32.738 | p: 28.704 | r: 38.095
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 32.738 | p: 28.704 | r: 38.095
+rougeLsum  | fm: 32.738 | p: 28.704 | r: 38.095
+r1fm+r2fm = 32.738
+
+[Aggregate metrics]:
+rouge1     | fm: 62.202 | p: 62.384 | r: 62.798
+rouge2     | fm: 28.571 | p: 29.167 | r: 28.125
+rougeL     | fm: 62.351 | p: 62.384 | r: 62.857
+rougeLsum  | fm: 61.458 | p: 62.384 | r: 62.024
+r1fm+r2fm = 90.774
+
+input #3 time: 0:01:46 | total time: 0:07:03
+
+
+Running input #4 of 5.
+reference: 
+========================
+'s a frightful vanity film that , no doubt , pays off what debt miramax felt they owed to benigni 
+========================
+of softheaded metaphysical claptrap 
+========================
+average of cosine similarity 0.9602963694049896
+highest_index [1, 0]
+highest [0.9848350559465076, 0.9357576828634717]
+Debug: ids_shape = 26, pads = [26, 10]
+Debug: input ids = tensor([[  101,  1005,  1055,  1037, 25966,  3993, 18736,  2143,  2008,  1010,
+          2053,  4797,  1010, 12778,  2125,  2054,  7016, 18062, 17848,  2371,
+          2027, 12232,  2000, 28378,  2072,   102],
+        [  101,  1997,  3730,  4974,  2098, 29081, 28618,  6494,  2361,   102,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0]], device='cuda:0')
+Debug: ref = ["[CLS]'s a frightful vanity film that, no doubt, pays off what debt miramax felt they owed to benigni [SEP]", '[CLS] of softheaded metaphysical claptrap [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.791126012802124 for ['[CLS] association fantasyible moe secret building wantphy industrial purpose aspiringnaire decade jay rebecca pagan blocks skating frozen leading from powder lock oath [SEP]', '[CLS] iran flavor bridges enough off stage perennial see [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.777435302734375 for ['[CLS] is endless records special foodgie version newspaper club yours ″ found best now governor bothteadforce attractivener reindeer immediately thoughts dream [SEP]', '[CLS]sso equivalent bell insurance kids trade shamedrick [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7637485265731812 for ['[CLS] resembling member monument court stringsrial persistent strongly brought le southern s extentosing holland mug england less revised act university sally spiritfulness [SEP]', '[CLS] spirit arrow musclestraße traffic kill voyage activity [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7636622190475464 for ['[CLS]rmed but button infection wellhet consultation producer com salt population sidechang offering help hand periodsive bidriated ma koppenlore spaced [SEP]', '[CLS] latestidernk fled chicks marbleriety loire [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7589831352233887 for ['[CLS]otericificationraph ball motions heat turner contained area exchange abc for drawfirm willing perrincopic growth bret who deserve crimson true died [SEP]', '[CLS] respectively right lifestyleicus anywheretens ball claims [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7573527097702026 for ['[CLS] centuries toy shut rjiti rooms india divine chiefs character in study consecratedsperyana where abciter forward source w dash rather [SEP]', '[CLS]ɛ full beyond kg finish city once falcon [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7479820847511292 for ['[CLS] treaties magnum right child moses facerates most nobel crap outside painting versus era where givenure baggage point level qu by terrestrial weight [SEP]', '[CLS] distress barely jp britain link reading shelvesurities [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best perm rec loss: 0.7437414526939392 for ['[CLS] magnum terrestrial given weight level treaties era qu face painting versusrates child nobel moses right baggage byure most outside where point crap [SEP]', '[CLS] barely [PAD] [PAD] [PAD] [PAD] distress [PAD] [PAD] reading [PAD] [PAD] shelves britain [SEP] link jp [PAD] [PAD] [PAD]urities [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best perm rec loss: 0.7431023120880127 for ['[CLS] most nobel treatiesure point weight versus by rightrates outside moses painting crap baggage face child given where terrestrial qu magnum level era [SEP]', '[CLS]urities [SEP] distress [PAD] [PAD] [PAD] [PAD] [PAD] jp shelves [PAD] link [PAD] [PAD] [PAD] reading britain [PAD] [PAD] [PAD] [PAD] barely [PAD] [PAD] [PAD]']
+Nsteps: 100
+[  50/ 100] tot_loss=3.463 (perp=14.740, rec=0.385, cos=0.130), tot_loss_proj:4.345 [t=0.27s]
+prediction: ['[CLS] arthur haven owed paid vanity bit souls mood right vanity flynn necessarily only recruiting murderkeeper gambling wrestling knocking from convention filming valerie identified [SEP]', '[CLS] pit [SEP] shortage [PAD] [PAD] [PAD] [PAD] [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Moved token
+[ 100/ 100] tot_loss=3.201 (perp=13.971, rec=0.300, cos=0.107), tot_loss_proj:4.178 [t=0.27s]
+prediction: ['[CLS] oweee payments debt vanity feel vanity literary vanity,‰nh film vanity debt vanity wolf latinbly what convention debt supervisors identified [SEP]', '[CLS] 37th series [SEP]plate [PAD] [PAD] armagh stereotypes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Done with input #4 of 5.
+reference: 
+========================
+[CLS]'s a frightful vanity film that, no doubt, pays off what debt miramax felt they owed to benigni [SEP]
+========================
+[CLS] of softheaded metaphysical claptrap [SEP]
+========================
+predicted: 
+========================
+[CLS] oweee payments debt vanity feel vanity literary vanity,‰nh film vanity debt vanity wolf latinbly what convention debt supervisors identified [SEP]
+========================
+[CLS] 37th series [SEP]plate [PAD] [PAD] armagh stereotypes [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 26.786 | p: 23.636 | r: 31.667
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 26.786 | p: 23.636 | r: 31.667
+rougeLsum  | fm: 26.786 | p: 23.636 | r: 31.667
+r1fm+r2fm = 26.786
+
+[Aggregate metrics]:
+rouge1     | fm: 54.762 | p: 53.907 | r: 56.000
+rouge2     | fm: 22.857 | p: 23.333 | r: 22.500
+rougeL     | fm: 54.881 | p: 54.407 | r: 56.286
+rougeLsum  | fm: 55.238 | p: 54.231 | r: 56.619
+r1fm+r2fm = 77.619
+
+input #4 time: 0:01:44 | total time: 0:08:48
+
+
+Average Cosine Similarity: 0.8526492006512312
+Done with all.
