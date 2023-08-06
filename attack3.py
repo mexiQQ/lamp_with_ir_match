@@ -178,7 +178,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             #################
             rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
-            tot_loss = rec_loss + args.coeff_reg * reg_loss #+ cosin_loss * 0.1
+            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss * 0.1
             tot_loss.backward(retain_graph=True)
             with torch.no_grad():
                 if args.grad_clip is not None:
