@@ -50,11 +50,6 @@ bz = 2, total=100, opt steps=2000, IR only for optimization, weight random + fin
 bz = 2, total=100, opt steps=2000, IR only for optimization, weight bert, margin=0.1, biasscale = 0.1 => x_bias10.txt
 
 
-
-
-
-
-
 bz = 4, total=100, opt steps=2000, IR only for optimization, weight sst2, new margin = 0, 1-by-1,regular_ratio 0.1 => x6_2000_1_output.txt
 bz = 4, total=100, opt steps=2000, NO IR match, weight sst2 => x6_2000_output.txt
 

@@ -1,0 +1,5 @@
+
+bz = 1, total=100, opt steps=2000, loss tag, IR only for optimization, weight sst2, coeff_cos 0.1, margin=0.0 =>> l1l2_bz1_1.txt
+bz = 1, total=100, opt steps=2000, loss tag, IR only for optimization, weight sst2, coeff_cos 1, margin=0.0 =>> l1l2_bz1_2.txt
+bz = 1, total=100, opt steps=2000, loss tag, IR only for optimization, weight sst2, coeff_cos 5, margin=0.0 =>> l1l2_bz1_3.txt
+bz = 1, total=100, opt steps=2000, loss tag, No IR =>> l1l2_bz1_4.txt

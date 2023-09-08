@@ -37,6 +37,8 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     # w1_manual_grad = (((F.softmax(outs.logits, dim=1) - y) @ model.classifier.weight.data) * (2 * pooled_output_before_activation + 3 * pooled_output_before_activation ** 2)).T @ ori_pooler_dense_input
 
     gradients = torch.autograd.grad(outs.loss, model.parameters(), create_graph=create_graph, allow_unused=True)
+    # loss = outs.loss
+    # loss.backward()
 
     if not return_pooler:
         if return_first_token_tensor:
@@ -53,18 +55,24 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     d = sub_dimension
     B = len(x_embeds)
     
-    if cheat:
-        return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
+    # if cheat:
+    #     return gradients, ori_pooler_dense_input[:, :sub_dimension].detach()
             
-    # activation
+    # activarteion
+    
     # even => relu => 特殊处理
     # odd => sigmoid => 特殊处理
-    # squar + cubic => no 特殊处理
+    # squer + cubic => no 特殊处理
     
+    # g = model.classifier.weight.grad.cpu().numpy()[1].reshape(m) #1 x m
     if debug:
-        # g = model.classifier.weight.grad.cpu().numpy()[1].reshape(m) #1 x m
+        # classification
+        # regression
+        # 30000 x 2 (:768 x 2) (768:, 2) => 1/30000 => (1/(30000-768))
+        # -1 bias -2 weights
         # g = gradients[-2].cpu().numpy()[1][768:].reshape(m)
         g = gradients[-4].cpu().numpy()[768:, :d]
+        # => gradient of W => 100
     else:
         g = gradients[-2].cpu().numpy()[1].reshape(m) #1xm
     
@@ -78,16 +86,33 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
         W = model.bert.pooler.dense.weight.data[:, :d].cpu().numpy() #m, d
 
     new_recX = tensor_feature(g, W, 100, B, m, d)
-    ######################################################################
-    highest, highest_index = find_highest_indices(B, new_recX, ori_pooler_dense_input)
+    ######################################################################    
+    # import pdb; pdb.set_trace()
+    highest = [0] * B
+    highest_index = [0] * B
+    for i in range(B):
+        for j in range(B):
+            recover = new_recX[:, j:j+1]
+            target = ori_pooler_dense_input[i:i+1, :]
+            cosine_similarity = check_cosine_similarity_for_1_sample(
+                recover,
+                target
+            )
+            if highest[i] < cosine_similarity:
+                highest[i] = cosine_similarity
+                highest_index[i] = j
+
+        print("*********************************")
+        print("*********************************")
+
     print("average of cosine similarity",sum(highest)/B)
     print("highest_index", highest_index)
     print("highest", highest)
 
-    pooler_target = torch.from_numpy(new_recX).cuda()
+    pooler_target = torch.from_numpy(new_recX.transpose()).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]
 
-    return gradients, pooler_target, sum(highest)/B, highest 
+    return gradients, pooler_target, sum(highest)/B, 0
 
 def check_cosine_similarity_for_1_sample(recover, target):
     ######################################################################
@@ -98,7 +123,7 @@ def check_cosine_similarity_for_1_sample(recover, target):
 
     # 100 => 1
     # new_recXX = (new_recX / np.linalg.norm(new_recX, ord=2, axis=0)).transpose()
-    new_recXX = recover.transpose()
+    new_recXX = recover.transpose() 
     cosin_sim = 1-distance.cosine(new_recXX.reshape(-1), input.reshape(-1))
     # print(f"cosin similarity: {cosin_sim}",
     #     f"normalized error: {np.sum((new_recXX.reshape(-1) - input.reshape(-1))**2)}")
@@ -113,34 +138,3 @@ def check_cosine_similarity_for_1_sample(recover, target):
     #     f"normalized error: {np.sum((new_recXX.reshape(-1) - input.reshape(-1))**2)}")
     ######################################################################
     return abs(cosin_sim)
-
-# ground truth
-# recovered truth cosine sim 0.6, 0.7 => loss 1-0.36=0.64 1-0.49=0.51
-# training feature if (training feature and recover truth 间loss高于 0.64 才优化，other wise 不优化)
-
-def find_highest_indices(B, new_recX, ori_pooler_dense_input):
-    highest = [0] * B
-    highest_index = [-1] * B
-    index_score_list = []
-    index_assignments = {}  # dictionary to keep track of which i an index j was assigned to
-
-    for i in range(B):
-        for j in range(B):
-            target = ori_pooler_dense_input[i:i+1, :]
-            recover = new_recX[:, j:j+1]
-            cosine_similarity = check_cosine_similarity_for_1_sample(
-                recover,
-                target
-            )
-            index_score_list.append((cosine_similarity, i, j))
-
-    index_score_list.sort(reverse=True)  # sort in decreasing order
-
-    for score, i, j in index_score_list:
-        if j not in index_assignments and highest_index[i] == -1:
-        # if highest_index[i] == -1: 
-            highest[i] = score
-            highest_index[i] = j
-            index_assignments[j] = i  # record the assignment of j to i
-
-    return highest, highest_index

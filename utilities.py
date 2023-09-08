@@ -232,8 +232,6 @@ def compute_grads_new(model, x_embeds, y_labels, create_graph=False, return_pool
         labels=y_labels, 
         return_first_token_tensor=True)
     gradients = torch.autograd.grad(outs.loss, model.parameters(), create_graph=create_graph, allow_unused=True)
-    # loss = outs.loss
-    # loss.backward()
 
     if not return_pooler:
         if return_first_token_tensor:
@@ -378,8 +376,8 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
             cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
         else:
             cosine_loss = COSINE_LOSS(input, true_pooler, thresholds)
+        
         # cosine_loss = torch.tensor(0.0)
-
         # cosine_loss = torch.maximum(cosine_loss - 0.1, torch.tensor(0.0))
 
         # global global_door
@@ -395,7 +393,6 @@ def get_reconstruction_loss(model, x_embeds, y_labels, true_grads, args, create_
         #    csine_loss = torch.tensor(0.0)
 
         gradient_loss = grad_dist(true_grads, grads, args)
-        # print(gradient_loss, cosine_loss)
         return gradient_loss, cosine_loss
     else:
         return grad_dist(true_grads, grads, args), 0 

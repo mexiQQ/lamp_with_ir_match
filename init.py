@@ -1,7 +1,6 @@
 import torch
 from utilities import get_reconstruction_loss, get_closest_tokens, fix_special_tokens
 
-
 def get_init(args, model, unused_tokens, shape, true_labels, true_grads, bert_embeddings, bert_embeddings_weight, tokenizer, lm, lm_tokenizer, ids, pads, true_pooler=None):
     device = lm.device
     num_inits = shape[0]
