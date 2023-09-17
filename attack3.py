@@ -178,7 +178,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             #################
             rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
-            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss * 0.1
+            tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss 
             tot_loss.backward(retain_graph=True)
             with torch.no_grad():
                 if args.grad_clip is not None:
@@ -298,17 +298,17 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load(f"{args.bert_path}/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
         model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
 
-        distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
-        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,))
-        model.bert.pooler.dense.weight.data[768:, 100:] = 0
+        distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(args.rd), covariance_matrix=torch.eye(args.rd))
+        model.bert.pooler.dense.weight.data[768:, :args.rd] = distribution.sample((args.hd-768,))
+        model.bert.pooler.dense.weight.data[768:, args.rd:] = 0
         
-        model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
-        model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
+        model.classifier.weight.data[0, :] = torch.full((1, args.hd), 1/args.hd).cuda()
+        model.classifier.weight.data[1, :] = torch.full((1, args.hd), 2/args.hd).cuda()
         model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
         model.classifier.bias.data.copy_(state_dict["classifier.bias"])
         #model.classifier.bias.data.copy_(torch.full((2,), 0))

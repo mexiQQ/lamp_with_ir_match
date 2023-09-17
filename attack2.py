@@ -286,7 +286,7 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/home/fourteen/workspace/Recover_Text/lamp_with_ir_match/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load(f"{args.bert_path}/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
         model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 

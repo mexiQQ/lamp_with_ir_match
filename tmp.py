@@ -5,7 +5,7 @@ import numpy as np
 from scipy.spatial import distance
 from attack_sheng.tensor_attack import tensor_feature
 
-def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False):
+def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False, args=None):
     # outs, ori_pooler_dense_input, pooled_output, pooled_output_before_activation = model(
     #     inputs_embeds=x_embeds, 
     #     labels=y_labels, 
@@ -44,12 +44,9 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
         else:
             return gradients
         
-    if debug:
-        sub_dimension = 100 
-    else:
-        sub_dimension = 100 
+    sub_dimension = args.rd 
 
-    m = 30000 - 768
+    m = args.hd - args.rd 
     d = sub_dimension
     B = len(x_embeds)
     
@@ -77,14 +74,14 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     else:
         W = model.bert.pooler.dense.weight.data[:, :d].cpu().numpy() #m, d
 
-    new_recX = tensor_feature(g, W, 100, B, m, d)
+    new_recX, V = tensor_feature(g, W, 100, B, m, d)
     ######################################################################
     highest, highest_index = find_highest_indices(B, new_recX, ori_pooler_dense_input)
     print("average of cosine similarity",sum(highest)/B)
     print("highest_index", highest_index)
     print("highest", highest)
 
-    pooler_target = torch.from_numpy(new_recX).cuda()
+    pooler_target = torch.from_numpy(new_recX.transpose()).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]
 
     return gradients, pooler_target, sum(highest)/B, highest 
@@ -128,6 +125,7 @@ def find_highest_indices(B, new_recX, ori_pooler_dense_input):
         for j in range(B):
             target = ori_pooler_dense_input[i:i+1, :]
             recover = new_recX[:, j:j+1]
+           
             cosine_similarity = check_cosine_similarity_for_1_sample(
                 recover,
                 target

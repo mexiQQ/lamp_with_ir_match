@@ -53,4 +53,18 @@ def tensor_feature(g,W,L,B,m,d):
     rec_X, _, misc = no_tenfact(T, L, B)
 
     new_recX = np.matmul(V, rec_X)
-    return new_recX
+
+    return new_recX, V
+
+
+    # E = np.zeros((n, n, n))
+    # for i in range(0, n):
+    #     for j in range(0, n):
+    #         for k in range(0, n):
+    #             E[i, j, k] = np.sum(g * Xi * Xj * Xk)
+    #             if i==j:
+    #                 E[i,j,k]=E[i,j,k]-np.sum(g, Xk)
+    #             if j==k:
+    #                 E[i,j,k]=E[i,j,k]-np.sum(g * Xi)
+    #             if i==k:
+    #                 E[i,j,k]=E[i,j,k]-np.sum(g * Xj)

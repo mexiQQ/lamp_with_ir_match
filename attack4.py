@@ -13,7 +13,6 @@ from init import get_init
 from constants import BERT_CLS_TOKEN, BERT_SEP_TOKEN, BERT_PAD_TOKEN
 from utilities import get_closest_tokens, get_reconstruction_loss, get_perplexity, fix_special_tokens, remove_padding, compute_pooler
 from tmp import compute_grads
-# from test import compute_grads
 from data_utils import TextDataset
 from args_factory import get_args
 import time
@@ -104,7 +103,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     #################
     #################
     # approximation_pooler = compute_pooler(model, true_embeds, true_labels)
-    true_grads, approximation_pooler, cosine_similarity, thresholds = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
+    true_grads, approximation_pooler, cosine_similarity, thresholds = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True, args=args) 
 
     if args.defense_pct_mask is not None:
         for grad in true_grads:
@@ -141,7 +140,10 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     # Get initial embeddings + set up opt
     #################
     #################
-    x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings, bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None)
+    if args.pooler_match_for_init == "yes":
+        x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings, bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=approximation_pooler)
+    else:
+        x_embeds = get_init(args, model, unused_tokens, true_embeds.shape, true_labels, true_grads, bert_embeddings, bert_embeddings_weight, tokenizer, lm, lm_tokenizer, orig_batch['input_ids'], pads, true_pooler=None) 
 
     bert_embeddings_weight = bert_embeddings.weight.unsqueeze(0)
     if args.opt_alg == 'adam':
@@ -178,8 +180,13 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             #################
             #################
             rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
-            reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square() 
-            tot_loss = rec_loss + args.coeff_reg * reg_loss #+ cosin_loss * 10
+            reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square()
+
+            if args.pooler_match_for_optimization == "yes":
+                tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss * args.coeff_pooler_match
+            else:
+                tot_loss = rec_loss + args.coeff_reg * reg_loss
+
             tot_loss.backward(retain_graph=True)
             with torch.no_grad():
                 if args.grad_clip is not None:
@@ -204,7 +211,10 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         if args.use_swaps and it >= args.swap_burnin * args.n_steps and it % args.swap_every == 1:
             #################
             #################
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
+            if args.pooler_match_for_swap == "yes":
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
+            else:
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None) 
 
         steps_done = it+1
         if steps_done % args.print_every == 0:
@@ -230,8 +240,11 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         print('Trying %i swaps' % swap_at_end_it, flush=True )
         #################
         #################
-        for i in range( swap_at_end_it ):
-            swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
+        for i in range( swap_at_end_it):
+            if args.pooler_match_for_swap == "yes":
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
+            else:
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
         
     # Postprocess
     x_embeds.data = best_final_x
@@ -299,19 +312,24 @@ def main():
 
     model = AutoModelForSequenceClassification.from_pretrained(args.bert_path, ignore_mismatched_sizes=True).to(device)
     if True:
-        state_dict = torch.load("/hdd1/jianwei/workspace/lamp/models/bert-base-finetuned-sst2/pytorch_model.bin", map_location="cpu")
+        state_dict = torch.load(f"{args.bert_path}/pytorch_model.bin", map_location="cpu")
         
         model.bert.pooler.dense.weight.data[:768, :] = state_dict["bert.pooler.dense.weight"]
         model.bert.pooler.dense.bias.data[:768] = state_dict["bert.pooler.dense.bias"] 
 
-        distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(100), covariance_matrix=torch.eye(100))
-        model.bert.pooler.dense.weight.data[768:, :100] = distribution.sample((30000-768,))
-        model.bert.pooler.dense.weight.data[768:, 100:] = 0
+        distribution = torch.distributions.MultivariateNormal(loc=torch.zeros(args.rd), covariance_matrix=torch.eye(args.rd))
+        model.bert.pooler.dense.weight.data[768:, :args.rd] = distribution.sample((args.hd-768,))
+        model.bert.pooler.dense.weight.data[768:, args.rd:] = 0
         
-        model.classifier.weight.data[0, :] = torch.full((1, 30000), 1/30000).cuda()
-        model.classifier.weight.data[1, :] = torch.full((1, 30000), 2/30000).cuda()
-        model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
-        model.classifier.bias.data.copy_(state_dict["classifier.bias"])
+        model.classifier.weight.data[0, :] = torch.full((1, args.hd), 1/args.hd).cuda()
+        model.classifier.weight.data[1, :] = torch.full((1, args.hd), 2/args.hd).cuda()
+
+        if args.pretraining_weights == "yes":
+            model.classifier.weight.data[:, :768] = state_dict["cls.predictions.transform.dense.weight"][:2, :]
+            model.classifier.bias.data.copy_(state_dict["cls.predictions.bias"][:2])
+        else:
+            model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
+            model.classifier.bias.data.copy_(state_dict["classifier.bias"])
         #model.classifier.bias.data.copy_(torch.full((2,), 0))
 
         # add_noise_to_model(model, 0.00001)
