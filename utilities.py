@@ -107,12 +107,13 @@ def get_reconstruction_loss_new(model, x_embeds, y_labels, true_grads, args, cre
     if projection is not None:
         input = pooler_first_token[:, :args.rd]
         input = input / torch.linalg.norm(input, ord=2, dim=1, keepdim=True)
+        
         X = input.T
         P = torch.matmul(torch.matmul(X, torch.linalg.inv(torch.matmul(X.T,X))), X.T) 
         feat_reg = ((projection - torch.matmul(P, projection))**2).mean()
 
         gradient_loss = grad_dist(true_grads, grads, args)
-        return gradient_loss, feat_rTT
+        return gradient_loss, feat_reg
     else:
         return grad_dist(true_grads, grads, args), 0 
 

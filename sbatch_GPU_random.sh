@@ -2,8 +2,8 @@
 #SBATCH --job-name=attack_job
 #SBATCH --output=job_logs/logs_%j.out
 #SBATCH --error=job_logs/logs_%j.err
-#SBATCH --partition=rtx3060ti
-#SBATCH --nodelist=c77
+#SBATCH --partition=rtx4060ti
+#SBATCH --nodelist=c28
 #SBATCH --exclusive
 
 cd /home/jli265/projects/lamp_with_ir_match
@@ -21,7 +21,7 @@ run_on_gpu() {
     local batch_size="$8"
     local n_input="$9"
 
-    MODE=tanh CUDA_VISIBLE_DEVICES=0 python3 attack4.py \
+    MODE=selu CUDA_VISIBLE_DEVICES=0 python3 attack4.py \
         --dataset $dataset --split test --loss cos --n_inputs $n_input \
         -b $batch_size --coeff_perplexity 0.2 --coeff_reg 1 --lr 0.01 \
         --lr_decay 0.89 --tag_factor 0.01 \
@@ -35,7 +35,59 @@ run_on_gpu() {
 mkdir -p logs_random 
 
 # Run the command on GPU 0
-run_on_gpu sst2 "logs_random/output1.log" 0.1 0.0 "no" "yes" "no" 1 100 
+
+# Tanh activation
+# run_on_gpu sst2 "logs_random/output1.log" 0.1 0.0 "no" "yes" "no" 1 100 
+
+# run_on_gpu cola "logs_random/output2.log" 0.02 0.0 "no" "yes" "no" 1 100 
+
+# run_on_gpu rotten_tomatoes "logs_random/output3.log" 0.05 0.0 "no" "yes" "no" 4 25 
+
+# run_on_gpu cola "logs_random/output3.log" 0.05 0.0 "no" "yes" "no" 4 25 
+
+# run_on_gpu cola "logs_random/output4.log" 0.05 0.0 "no" "yes" "no" 8 13
+
+# relu activation
+# run_on_gpu sst2 "logs_random/output5-2.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+# relu activation
+# run_on_gpu cola "logs_random/output6-2.log" 0.05 0.0 "no" "yes" "no" 1 100 
+
+# relu activation
+# run_on_gpu rotten_tomatoes "logs_random/output7-2.log" 0.05 0.0 "no" "yes" "no" 1 100 
+
+# relu activation
+# run_on_gpu sst2 "logs_random/output8-2.log" 0.0 0.0 "no" "no" "no" 1 100
+
+# relu activation
+# run_on_gpu cola "logs_random/output9-2.log" 0.0 0.0 "no" "no" "no" 1 100
+
+# relu activation
+# run_on_gpu rotten_tomatoes "logs_random/output10-2.log" 0.0 0.0 "no" "no" "no" 1 100
+
+# relu activation
+# run_on_gpu sst2 "logs_random/output11-2.log" 0.05 0.0 "no" "yes" "no" 2 50
+
+# selu activation
+# run_on_gpu sst2 "logs_random/output12.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+# selu activation
+# run_on_gpu sst2 "logs_random/output13.log" 0.5 0.0 "no" "yes" "no" 1 100
+
+# elu activation
+# run_on_gpu sst2 "logs_random/output14.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+# selu activation
+# run_on_gpu cola "logs_random/output15.log" 0.1 0.0 "no" "yes" "no" 1 100
+
+# selu activation
+# run_on_gpu cola "logs_random/output16.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+# selu activation
+# run_on_gpu rotten_tomatoes "logs_random/output17.log" 0.1 0.0 "no" "yes" "no" 1 100
+
+# selu activation
+run_on_gpu rotten_tomatoes "logs_random/output18.log" 0.05 0.0 "no" "yes" "no" 1 100
 
 wait
 

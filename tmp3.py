@@ -8,8 +8,9 @@ from b import (
     matlab_eigs,
     matlab_eigs2
 )
+# from attack_sheng.no_tenfact import no_tenfact
 
-def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False):
+def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=False, return_first_token_tensor=False, cheat=False, debug=False, args=None):
     outs, ori_pooler_dense_input = model(
         inputs_embeds=x_embeds, 
         labels=y_labels, 
@@ -22,47 +23,102 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
         else:
             return gradients
         
-    sub_dimension = 100 
-    m = 30000-768
+    sub_dimension = args.rd  
+    m = args.hd - 768 
     d = sub_dimension
     B = len(x_embeds)
     
-    # activarteion
-    # even => even => 特殊处理
-    # odd => sigmoid/odd => 特殊处理 
+    # activation
+    # even => relu/leakey relu => 特殊处理
+    # odd => sigmoid/tanh => 特殊处理 
     # squer + cubic => no 特殊处理
     
+    # second layer gradient
     g = gradients[-2].cpu().numpy()[1][768:].reshape(m)
-    W = model.bert.pooler.dense.weight.data[768:, :100].cpu().numpy() # W => m x d
+    # first layer gradient
+    g_hat = gradients[-4].cpu().numpy()[768:, :d]
+    W = model.bert.pooler.dense.weight.data[768:, :d].cpu().numpy() # W => m x d
 
-    M = np.zeros((d, d))     
-    import pdb; pdb.set_trace()
 
+    # T1 = np.zeros((d, d, d))
+    # T2 = np.zeros((d, d, d))
+    # T3 = np.zeros((d, d, d))
+    # for i in range(0, d):
+    #     for j in range(0, d):
+    #         for k in range(0, d):
+    #             T1[i, j, k] = np.sum(g_hat[:, i] * W[:, j] * W[:, k])
+    #             if j==k:
+    #                 T1[i,j,k]=T1[i,j,k]-np.sum(g_hat[:, i])
+
+    # for i in range(0,d):
+    #     for j in range(0,d):
+    #         for k in range(0,d):
+    #             T2[i,j,k]=T1[j,k,i]
+    #             T3[i,j,k]=T1[k,i,j]
+
+    # T = (T1 + T2 + T3)/3
+    # M = np.sum(T, 2)/np.sqrt(d)
+    # M = M/m
+
+
+    M = np.zeros((d, d))
+    A = np.ones(d)
+    A = A / np.linalg.norm(A)
+    sum_ak_wk = np.dot(W, A) # m x d, d
+    for i in range(0, d):
+        for j in range(0, d):
+            M[i, j] = np.sum((g_hat[:, i] * W[:, j] + g_hat[:,j] * W[:,i]) * sum_ak_wk)
+    M=M/m
+
+
+    # M = np.zeros((d, d))
     # for i in range(d): #768
     #     for j in range(d): #768
     #         M[i, j] = np.sum(g * W[:, i] * W[:, j])
     #         if i == j:
     #             M[i, i] = M[i, i] - np.sum(g)
 
+
+    # M = np.zeros((d, d))     
     # A = np.zeros(d)
-    # A[0] = 1
+    # A[0] = 1.0
+    # A = np.ones(d)
+    # A = A / np.linalg.norm(A)
     # sum_ak_wk = np.dot(W, A) # mxd, d => m
     # for i in range(d):
     #     for j in range(d):
-    #         M[i, j] = np.sum(g * W[:, i] * W[:, j] * sum_ak_wk)
+    #         # Compute the tensor product contribution
+    #         tensor_prod_contribution = np.sum(g * W[:, i] * W[:, j] * sum_ak_wk)
+            
+    #         # Compute the corrections from Xtilde{otimes}I
+    #         correction = 0
     #         if i == j:
-    #             M[i, j] -= np.sum(g * sum_ak_wk)
-    #         if i != j:
-    #             M[i, j] += np.sum(g * W[:, i] * A[j])
-    #             M[i, j] += np.sum(g * W[:, j] * A[i])
+    #             correction += np.sum(g * sum_ak_wk)
+    #         correction += np.sum(g * W[:, i] * A[j])
+    #         correction += np.sum(g * W[:, j] * A[i])
+            
+    #         # Update M[i, j]
+    #         M[i, j] = tensor_prod_contribution - correction
 
-    # A = np.zeros(m)
-    # A[0] = 1
-    # for i in rangej:j:
+
+    # import pdb; pdb.set_trace()
+    # M = np.zeros((d, d))     
+    # A = np.zeros(d)
+    # A[0] = 1.0
+    # A = np.ones(d)
+    # A = A / np.linalg.norm(A)
+    # sum_ak_wk = np.dot(W, A) # m x d, d
+    # sum_ak_gk = np.dot(g_hat, A) # m x d, d
+    # for i in range(d):
     #     for j in range(d):
-    #         M[i, j] = np.sum(g * np.dot(W[:, i], W[:, j]) * np.dot(A, W[:, j]))
+    #         tensor_prod_contribution = np.sum(sum_ak_wk * (g_hat[:, i] * W[:, j] + g_hat[:, j] * W[:, i] + W[:, i] * W[:, j]))
+
+    #         correction = 0
     #         if i == j:
-    #             M[i, j] -= np.sum(g * (np.dot(W[:, j], A) + np.dot(W[:, i], A) + np.dot(A, W[:, j])))
+    #             correction = np.sum(sum_ak_gk)
+    #         correction += np.sum(g_hat[:, j] * A[i] + g_hat[:, j] * A[j])
+
+    #         M[i, j] = tensor_prod_contribution - correction
 
     # F = np.zeros((d, d, d))    
     # for i in range(d): #768
@@ -70,7 +126,7 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     #         for k in range(d): #768
     #             F[i, j, k] = np.sum(g * W[:, i] * W[:, j] * W[:, k])
     #             if i == j:
-    #                 F[i, j, k] = F[i, j, k] - np.sum(g * W[:, k])
+    #                 F[i, j, k] = F[i, j, k] - np.sum(gWW W[:, k])
     #             if i == k:
     #                 F[i, j, k] = F[i, j, k] - np.sum(g * W[:, j])
     #             if j == k:
@@ -78,31 +134,18 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     
     # M = np.zeros((d, d))     
     # A = np.zeros(d)
-    # A[0] = 1
+    # A[0] = 1.0
     # for i in range(d):
     #     for j in range(d):
     #         M[i, j] = np.sum(F[i, j, :] * A) 
 
-    A = np.zeros(d)
-    A[0] = 1
-    sum_ak_wk = np.dot(W, A) # mxd, d => m
-    for i in range(d):
-        for j in range(d):
-            # Compute the tensor product contribution
-            tensor_prod_contribution = np.sum(g * W[:, i] * W[:, j] * sum_ak_wk)
-            
-            # Compute the corrections from Xtilde{otimes}I
-            correction = 0
-            if i == j:
-                correction += np.sum(g * sum_ak_wk)
-            correction += np.sum(g * W[:, i] * A[j])
-            correction += np.sum(g * W[:, j] * A[i])
-            
-            # Update M[i, j]
-            M[i, j] = tensor_prod_contribution - correction
-
+    # import pdb; pdb.set_trace()
     V, D = matlab_eigs(M, B)
-    WV = W @ V
+    # P_M = M @ np.linalg.pinv(M.T @ M) @ M.T
+    # P_V = V @ np.linalg.inv(V.T @ V) @ V.T
+
+    WV = W @ V # m x B
+    gV = g_hat @ V # m X B  =>  m x d, d x B
 
     # T = np.zeros((B, B, B))
     # for i in range(B):
@@ -121,27 +164,52 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     #         T[i, j, j] = T[i, j, j] - aa
     #         T[j, i, j] = T[j, i, j] - aa
     #         T[j, j, i] = T[j, j, i] - aa
-
     # T = T / m
 
+    # T = np.zeros((B, B, B))
+    # for i in range(0, B):
+    #     for j in range(0, B):
+    #         for k in range(0, B):
+    #             T[i, j, k] = np.sum(g * WV[:, i] * WV[:, j] * WV[:, k])
+    #             if j==k:
+    #                 T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, i])
+    #             if i==j:
+    #                 T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, k])
+    #             if i==k:
+    #                 T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, j])
+    # T=T/m
 
-    # tensor
-    import pdb; pdb.set_trace()
-    T = np.zeros((B, B, B))
+    T1 = np.zeros((B, B, B))
+    T2 = np.zeros((B, B, B))
+    T3 = np.zeros((B, B, B))
     for i in range(0, B):
         for j in range(0, B):
             for k in range(0, B):
-                T[i, j, k] = np.sum(g * WV[:, i] * WV[:, j] * WV[:, k])
+                T1[i, j, k] = np.sum(gV[:, i] * WV[:, j] * WV[:, k])
                 if j==k:
-                    T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, i])
-                if i==j:
-                    T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, k])
-                if i==k:
-                    T[i,j,k]=T[i,j,k]-np.sum(g*WV[:, j])
+                    T1[i,j,k]=T1[i,j,k]-np.sum(gV[:, i] * np.sum(np.dot(V.T, V)))
+
+    for i in range(0,B):
+        for j in range(0,B):
+            for k in range(0,B):
+                T2[i,j,k]=T1[j,k,i]
+                T3[i,j,k]=T1[k,i,j]
+
+    T = (T1 + T2 + T3)/3
     T=T/m
 
-    rec_X, _, misc = no_tenfact(T, 100, B)
-    new_recX = V @ rec_X
+    rec_X, _, misc = no_tenfact(T, 100, B) # 1 x 1
+    new_recX = V @ rec_X # 100, 1
+
+    # real_inputs = ori_pooler_dense_input[:, :100].cpu().detach().T.numpy()
+    # for i in range(B):
+    #     real_input = real_inputs[:, i]
+    #     error_vector = (np.eye(M.shape[0]) - P_M) @ real_input
+    #     norm_error_M = np.linalg.norm(error_vector)
+    #     error_vector = (np.eye(V.shape[0]) - P_V) @ real_input
+    #     norm_error_V = np.linalg.norm(error_vector)
+    #     norm_xi = np.linalg.norm(real_input)
+    #     print(f"Sample: {i}", norm_error_M, norm_error_V, norm_xi)
 
     ######################################################################
     highest, highest_index = find_highest_indices(B, new_recX, ori_pooler_dense_input)
@@ -152,8 +220,7 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
     pooler_target = torch.from_numpy(new_recX.transpose()).cuda()
     pooler_target = pooler_target[torch.tensor(highest_index)]
 
-    import pdb; pdb.set_trace()
-    return gradients, pooler_target, sum(highest)/B, highest 
+    return gradients, pooler_target, sum(highest)/B, highest
 
 def check_cosine_similarity_for_1_sample(recover, target):
     ######################################################################

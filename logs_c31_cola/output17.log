@@ -14760,3 +14760,1496 @@ prediction: ['[CLS] moya anyway s football team loved her [SEP]']
 [1650/2000] tot_loss=1.894 (perp=9.033, rec=0.085, cos=0.002), tot_loss_proj:3.538 [t=0.17s]
 prediction: ['[CLS] moya anyway s football team loved her [SEP]']
 Attempt swap
+[1700/2000] tot_loss=1.895 (perp=9.033, rec=0.086, cos=0.002), tot_loss_proj:3.537 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.887 (perp=9.033, rec=0.078, cos=0.002), tot_loss_proj:3.536 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+[1800/2000] tot_loss=1.885 (perp=9.033, rec=0.076, cos=0.002), tot_loss_proj:3.531 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.891 (perp=9.033, rec=0.082, cos=0.002), tot_loss_proj:3.538 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.891 (perp=9.033, rec=0.082, cos=0.002), tot_loss_proj:3.537 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+[1950/2000] tot_loss=1.885 (perp=9.033, rec=0.076, cos=0.002), tot_loss_proj:3.536 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.887 (perp=9.033, rec=0.079, cos=0.002), tot_loss_proj:3.539 [t=0.17s]
+prediction: ['[CLS] moya anyway s football team loved her [SEP]']
+Done with input #90 of 100.
+reference: 
+========================
+[CLS] moya's football team loved her [SEP]
+========================
+predicted: 
+========================
+[CLS] moyabound s football team loved her [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 87.500 | p: 87.500 | r: 87.500
+rouge2     | fm: 71.429 | p: 71.429 | r: 71.429
+rougeL     | fm: 87.500 | p: 87.500 | r: 87.500
+rougeLsum  | fm: 87.500 | p: 87.500 | r: 87.500
+r1fm+r2fm = 158.929
+
+[Aggregate metrics]:
+rouge1     | fm: 74.745 | p: 74.451 | r: 75.194
+rouge2     | fm: 28.280 | p: 28.083 | r: 28.512
+rougeL     | fm: 61.528 | p: 61.376 | r: 61.916
+rougeLsum  | fm: 61.642 | p: 61.442 | r: 61.989
+r1fm+r2fm = 103.025
+
+input #90 time: 0:06:55 | total time: 12:09:48
+
+
+Running input #91 of 100.
+reference: 
+========================
+They investigated the problem.
+========================
+average of cosine similarity 0.9994048200497065
+highest_index [0]
+highest [0.9994048200497065]
+Debug: ids_shape = 7, pads = [7]
+Debug: input ids = tensor([[  101,  2027, 10847,  1996,  3291,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] they investigated the problem. [SEP]']
+[Init] best rec loss: 1.0008985996246338 for ['[CLS] non trap brackets opposite mbe [SEP]']
+[Init] best rec loss: 0.9636040925979614 for ['[CLS] nope rare chief steveyon [SEP]']
+[Init] best rec loss: 0.9533264636993408 for ['[CLS] new award assistant river ce [SEP]']
+[Init] best rec loss: 0.946533203125 for ['[CLS] 3 solid property video cane [SEP]']
+[Init] best rec loss: 0.9368292093276978 for ['[CLS] communication seat professional delivery lankan [SEP]']
+[Init] best rec loss: 0.9343482255935669 for ['[CLS] tongue ways na flush region [SEP]']
+[Init] best rec loss: 0.9309041500091553 for ['[CLS] central rosen fashion rounds be [SEP]']
+[Init] best rec loss: 0.8867634534835815 for ['[CLS]w czech real mrference [SEP]']
+[Init] best rec loss: 0.8775110244750977 for ['[CLS] log hitler heath belgium lynne [SEP]']
+[Init] best perm rec loss: 0.8742671608924866 for ['[CLS] lynne log heath belgium hitler [SEP]']
+[Init] best perm rec loss: 0.8742567300796509 for ['[CLS] hitler lynne belgium heath log [SEP]']
+[Init] best perm rec loss: 0.8719561696052551 for ['[CLS] hitler belgium lynne log heath [SEP]']
+[Init] best perm rec loss: 0.8709571361541748 for ['[CLS] hitler log belgium heath lynne [SEP]']
+[Init] best perm rec loss: 0.8697481155395508 for ['[CLS] belgium log hitler lynne heath [SEP]']
+[Init] best perm rec loss: 0.8682686686515808 for ['[CLS] belgium log heath hitler lynne [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.811 (perp=11.300, rec=0.425, cos=0.126), tot_loss_proj:4.075 [t=0.17s]
+prediction: ['[CLS] criticized william been. corey [SEP]']
+[ 100/2000] tot_loss=2.704 (perp=12.044, rec=0.268, cos=0.027), tot_loss_proj:4.126 [t=0.17s]
+prediction: ['[CLS] investigated william investigated. problem [SEP]']
+[ 150/2000] tot_loss=2.179 (perp=10.080, rec=0.151, cos=0.012), tot_loss_proj:3.743 [t=0.17s]
+prediction: ['[CLS] they william investigated. problem [SEP]']
+[ 200/2000] tot_loss=1.729 (perp=7.970, rec=0.123, cos=0.012), tot_loss_proj:3.593 [t=0.17s]
+prediction: ['[CLS] they william investigated the problem [SEP]']
+Attempt swap
+[ 250/2000] tot_loss=2.173 (perp=10.307, rec=0.102, cos=0.009), tot_loss_proj:3.807 [t=0.17s]
+prediction: ['[CLS] they hmm investigated. problem [SEP]']
+[ 300/2000] tot_loss=2.178 (perp=10.307, rec=0.107, cos=0.009), tot_loss_proj:3.808 [t=0.17s]
+prediction: ['[CLS] they hmm investigated. problem [SEP]']
+Attempt swap
+[ 350/2000] tot_loss=2.374 (perp=11.291, rec=0.106, cos=0.011), tot_loss_proj:3.981 [t=0.17s]
+prediction: ['[CLS] theyfounded investigated. problem [SEP]']
+Attempt swap
+Moved sequence
+[ 400/2000] tot_loss=1.979 (perp=9.343, rec=0.104, cos=0.006), tot_loss_proj:3.645 [t=0.17s]
+prediction: ['[CLS] theyfounded problem investigated. [SEP]']
+[ 450/2000] tot_loss=1.962 (perp=9.343, rec=0.089, cos=0.004), tot_loss_proj:3.648 [t=0.17s]
+prediction: ['[CLS] theyfounded problem investigated. [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=1.960 (perp=9.343, rec=0.088, cos=0.004), tot_loss_proj:3.642 [t=0.17s]
+prediction: ['[CLS] theyfounded problem investigated. [SEP]']
+Attempt swap
+[ 550/2000] tot_loss=2.040 (perp=9.724, rec=0.092, cos=0.002), tot_loss_proj:3.682 [t=0.19s]
+prediction: ['[CLS] they estimated problem investigated. [SEP]']
+[ 600/2000] tot_loss=1.599 (perp=7.652, rec=0.068, cos=0.001), tot_loss_proj:3.423 [t=0.19s]
+prediction: ['[CLS] they the problem investigated. [SEP]']
+Attempt swap
+Moved sequence
+[ 650/2000] tot_loss=1.009 (perp=4.684, rec=0.071, cos=0.001), tot_loss_proj:1.064 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=1.002 (perp=4.684, rec=0.064, cos=0.001), tot_loss_proj:1.060 [t=0.19s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[ 750/2000] tot_loss=1.009 (perp=4.684, rec=0.071, cos=0.001), tot_loss_proj:1.065 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=0.991 (perp=4.684, rec=0.053, cos=0.001), tot_loss_proj:1.053 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.007 (perp=4.684, rec=0.068, cos=0.001), tot_loss_proj:1.061 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[ 900/2000] tot_loss=0.997 (perp=4.684, rec=0.059, cos=0.001), tot_loss_proj:1.067 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=0.991 (perp=4.684, rec=0.052, cos=0.001), tot_loss_proj:1.066 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=0.996 (perp=4.684, rec=0.058, cos=0.001), tot_loss_proj:1.066 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1050/2000] tot_loss=1.002 (perp=4.684, rec=0.064, cos=0.001), tot_loss_proj:1.055 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=0.991 (perp=4.684, rec=0.053, cos=0.001), tot_loss_proj:1.064 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.005 (perp=4.684, rec=0.067, cos=0.001), tot_loss_proj:1.066 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1200/2000] tot_loss=1.009 (perp=4.684, rec=0.071, cos=0.001), tot_loss_proj:1.058 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.007 (perp=4.684, rec=0.068, cos=0.001), tot_loss_proj:1.058 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=0.992 (perp=4.684, rec=0.054, cos=0.001), tot_loss_proj:1.071 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1350/2000] tot_loss=0.999 (perp=4.684, rec=0.061, cos=0.001), tot_loss_proj:1.063 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=0.997 (perp=4.684, rec=0.059, cos=0.001), tot_loss_proj:1.057 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.000 (perp=4.684, rec=0.062, cos=0.001), tot_loss_proj:1.045 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1500/2000] tot_loss=1.000 (perp=4.684, rec=0.062, cos=0.001), tot_loss_proj:1.066 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.001 (perp=4.684, rec=0.063, cos=0.001), tot_loss_proj:1.057 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=0.998 (perp=4.684, rec=0.059, cos=0.001), tot_loss_proj:1.066 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1650/2000] tot_loss=0.994 (perp=4.684, rec=0.056, cos=0.001), tot_loss_proj:1.064 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.003 (perp=4.684, rec=0.065, cos=0.001), tot_loss_proj:1.060 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=0.996 (perp=4.684, rec=0.058, cos=0.001), tot_loss_proj:1.065 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1800/2000] tot_loss=1.003 (perp=4.684, rec=0.065, cos=0.001), tot_loss_proj:1.059 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.005 (perp=4.684, rec=0.067, cos=0.001), tot_loss_proj:1.051 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.009 (perp=4.684, rec=0.071, cos=0.001), tot_loss_proj:1.064 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+[1950/2000] tot_loss=1.000 (perp=4.684, rec=0.062, cos=0.001), tot_loss_proj:1.060 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=0.988 (perp=4.684, rec=0.050, cos=0.001), tot_loss_proj:1.069 [t=0.17s]
+prediction: ['[CLS] they investigated the problem. [SEP]']
+Done with input #91 of 100.
+reference: 
+========================
+[CLS] they investigated the problem. [SEP]
+========================
+predicted: 
+========================
+[CLS] they investigated the problem. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+[Aggregate metrics]:
+rouge1     | fm: 75.015 | p: 74.784 | r: 75.523
+rouge2     | fm: 28.954 | p: 28.763 | r: 29.248
+rougeL     | fm: 61.926 | p: 61.775 | r: 62.346
+rougeLsum  | fm: 62.025 | p: 61.813 | r: 62.432
+r1fm+r2fm = 103.969
+
+input #91 time: 0:06:53 | total time: 12:16:41
+
+
+Running input #92 of 100.
+reference: 
+========================
+Andy promised that we would go.
+========================
+average of cosine similarity 0.99925545607284
+highest_index [0]
+highest [0.99925545607284]
+Debug: ids_shape = 9, pads = [9]
+Debug: input ids = tensor([[ 101, 5557, 5763, 2008, 2057, 2052, 2175, 1012,  102]],
+       device='cuda:0')
+Debug: ref = ['[CLS] andy promised that we would go. [SEP]']
+[Init] best rec loss: 1.0239042043685913 for ['[CLS] church shade features forwardlateral one ⟨ [SEP]']
+[Init] best rec loss: 0.998636782169342 for ['[CLS] parental expected chase years fighting ego in [SEP]']
+[Init] best rec loss: 0.9670264720916748 for ['[CLS] mateo namely there electronics resort with knows [SEP]']
+[Init] best rec loss: 0.9609618782997131 for ['[CLS] municipal over ahead hoping proved energy ui [SEP]']
+[Init] best rec loss: 0.9385711550712585 for ['[CLS] internal fulfillinghel church hanging choice heath [SEP]']
+[Init] best rec loss: 0.9254687428474426 for ['[CLS] bearerfor game trade suit conference bailey [SEP]']
+[Init] best rec loss: 0.9024503231048584 for ['[CLS] deputy clint node ra measured wonders light [SEP]']
+[Init] best perm rec loss: 0.9020792841911316 for ['[CLS] clint light deputy ra node wonders measured [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.597 (perp=12.255, rec=0.609, cos=0.537), tot_loss_proj:4.263 [t=0.17s]
+prediction: ['[CLS] abby. absolute we promisedorough damn [SEP]']
+[ 100/2000] tot_loss=3.075 (perp=10.494, rec=0.588, cos=0.389), tot_loss_proj:3.909 [t=0.17s]
+prediction: ['[CLS] mia. which promised promisedoroughtake [SEP]']
+[ 150/2000] tot_loss=3.365 (perp=12.546, rec=0.511, cos=0.345), tot_loss_proj:4.240 [t=0.17s]
+prediction: ['[CLS] connie were it promised promisedoroughtake [SEP]']
+[ 200/2000] tot_loss=3.052 (perp=11.454, rec=0.493, cos=0.269), tot_loss_proj:4.209 [t=0.17s]
+prediction: ['[CLS] connie promised that promised promisedoroughtake [SEP]']
+Attempt swap
+[ 250/2000] tot_loss=3.213 (perp=11.676, rec=0.473, cos=0.405), tot_loss_proj:4.322 [t=0.17s]
+prediction: ['[CLS] andy promised that promised promised seminartake [SEP]']
+[ 300/2000] tot_loss=3.546 (perp=12.359, rec=0.601, cos=0.472), tot_loss_proj:4.256 [t=0.17s]
+prediction: ['[CLS] andy would fled insufficient promised if hey [SEP]']
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=3.133 (perp=11.179, rec=0.523, cos=0.374), tot_loss_proj:4.041 [t=0.17s]
+prediction: ['[CLS] andy would gesture if promised promised hey [SEP]']
+Attempt swap
+[ 400/2000] tot_loss=3.150 (perp=11.254, rec=0.487, cos=0.412), tot_loss_proj:4.114 [t=0.17s]
+prediction: ['[CLS] andy would chevrolet if promised promised hey [SEP]']
+[ 450/2000] tot_loss=3.040 (perp=11.254, rec=0.454, cos=0.335), tot_loss_proj:4.119 [t=0.17s]
+prediction: ['[CLS] andy would chevrolet if promised promised hey [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=3.191 (perp=12.589, rec=0.446, cos=0.227), tot_loss_proj:4.375 [t=0.17s]
+prediction: ['[CLS] andy would gesture anyone assumptions promised hey [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=3.109 (perp=11.223, rec=0.434, cos=0.430), tot_loss_proj:4.252 [t=0.17s]
+prediction: ['[CLS] andy would gesture assumptions anyone promised shortly [SEP]']
+[ 600/2000] tot_loss=2.798 (perp=11.016, rec=0.418, cos=0.176), tot_loss_proj:3.974 [t=0.17s]
+prediction: ['[CLS] andy would gesture we anyone promised shortly [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=2.651 (perp=10.200, rec=0.415, cos=0.197), tot_loss_proj:3.878 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=2.711 (perp=10.387, rec=0.413, cos=0.220), tot_loss_proj:4.045 [t=0.17s]
+prediction: ['[CLS] andy would gesture anyone we promised shortly [SEP]']
+[ 750/2000] tot_loss=2.703 (perp=10.200, rec=0.412, cos=0.251), tot_loss_proj:3.880 [t=0.22s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=2.634 (perp=10.200, rec=0.408, cos=0.186), tot_loss_proj:3.875 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=2.856 (perp=10.200, rec=0.395, cos=0.422), tot_loss_proj:3.880 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+[ 900/2000] tot_loss=2.718 (perp=10.200, rec=0.392, cos=0.286), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=2.788 (perp=10.200, rec=0.378, cos=0.369), tot_loss_proj:3.876 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1000/2000] tot_loss=2.659 (perp=10.200, rec=0.381, cos=0.238), tot_loss_proj:3.875 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+[1050/2000] tot_loss=2.767 (perp=10.200, rec=0.382, cos=0.345), tot_loss_proj:3.874 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1100/2000] tot_loss=2.742 (perp=10.200, rec=0.372, cos=0.330), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1150/2000] tot_loss=2.847 (perp=10.926, rec=0.370, cos=0.291), tot_loss_proj:4.039 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+[1200/2000] tot_loss=2.613 (perp=10.200, rec=0.382, cos=0.191), tot_loss_proj:3.873 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1250/2000] tot_loss=2.699 (perp=10.200, rec=0.375, cos=0.284), tot_loss_proj:3.873 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1300/2000] tot_loss=2.971 (perp=10.926, rec=0.372, cos=0.413), tot_loss_proj:4.042 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+[1350/2000] tot_loss=2.869 (perp=10.926, rec=0.369, cos=0.315), tot_loss_proj:4.048 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+Attempt swap
+[1400/2000] tot_loss=2.788 (perp=10.926, rec=0.375, cos=0.228), tot_loss_proj:4.044 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+Attempt swap
+[1450/2000] tot_loss=2.731 (perp=10.926, rec=0.373, cos=0.173), tot_loss_proj:4.045 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+[1500/2000] tot_loss=2.848 (perp=10.926, rec=0.371, cos=0.292), tot_loss_proj:4.042 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+Attempt swap
+[1550/2000] tot_loss=2.703 (perp=10.926, rec=0.359, cos=0.158), tot_loss_proj:4.044 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.730 (perp=10.926, rec=0.363, cos=0.182), tot_loss_proj:4.044 [t=0.17s]
+prediction: ['[CLS] andy would we anywhere we promised shortly [SEP]']
+[1650/2000] tot_loss=2.605 (perp=10.200, rec=0.376, cos=0.189), tot_loss_proj:3.879 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.588 (perp=10.200, rec=0.365, cos=0.183), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.570 (perp=10.200, rec=0.360, cos=0.170), tot_loss_proj:3.874 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+[1800/2000] tot_loss=2.797 (perp=10.200, rec=0.356, cos=0.401), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.596 (perp=10.200, rec=0.366, cos=0.190), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.778 (perp=10.200, rec=0.353, cos=0.385), tot_loss_proj:3.879 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+[1950/2000] tot_loss=2.567 (perp=10.200, rec=0.356, cos=0.171), tot_loss_proj:3.877 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.589 (perp=10.200, rec=0.365, cos=0.185), tot_loss_proj:3.878 [t=0.17s]
+prediction: ['[CLS] andy would we anyone we promised shortly [SEP]']
+Done with input #92 of 100.
+reference: 
+========================
+[CLS] andy promised that we would go. [SEP]
+========================
+predicted: 
+========================
+[CLS] andy would we anyone we promised shortly [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 70.588 | p: 66.667 | r: 75.000
+rouge2     | fm: 13.333 | p: 12.500 | r: 14.286
+rougeL     | fm: 47.059 | p: 44.444 | r: 50.000
+rougeLsum  | fm: 47.059 | p: 44.444 | r: 50.000
+r1fm+r2fm = 83.922
+
+[Aggregate metrics]:
+rouge1     | fm: 74.913 | p: 74.649 | r: 75.452
+rouge2     | fm: 28.936 | p: 28.738 | r: 29.135
+rougeL     | fm: 61.780 | p: 61.642 | r: 62.154
+rougeLsum  | fm: 61.799 | p: 61.579 | r: 62.257
+r1fm+r2fm = 103.848
+
+input #92 time: 0:06:54 | total time: 12:23:36
+
+
+Running input #93 of 100.
+reference: 
+========================
+I saw these dancers and those musicians smoking something.
+========================
+average of cosine similarity 0.999405837791129
+highest_index [0]
+highest [0.999405837791129]
+Debug: ids_shape = 12, pads = [12]
+Debug: input ids = tensor([[  101,  1045,  2387,  2122, 10487,  1998,  2216,  5389,  9422,  2242,
+          1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] i saw these dancers and those musicians smoking something. [SEP]']
+[Init] best rec loss: 0.9399735331535339 for ['[CLS] choir torque titled uttar 25 tell even hitch encounter choosing [SEP]']
+[Init] best rec loss: 0.9395652413368225 for ['[CLS] version ltd blur ringinghs chip astro bandrized federal [SEP]']
+[Init] best rec loss: 0.9121893048286438 for ['[CLS] globe ~ titled scoredна japanese lynne they hardly lucas [SEP]']
+[Init] best rec loss: 0.9106736779212952 for ['[CLS] existing ten exposurekti understandvirus beyond appear cubs planted [SEP]']
+[Init] best rec loss: 0.9029486775398254 for ['[CLS] married formora wrong [CLS] enoughoft unanimouscturing spring [SEP]']
+[Init] best rec loss: 0.8923229575157166 for ['[CLS] depending little you criteria remarriedmy within local flame conversion [SEP]']
+[Init] best rec loss: 0.8887438774108887 for ['[CLS] sulfate basball shit begin collapse say full matches ems [SEP]']
+[Init] best rec loss: 0.8878989219665527 for ['[CLS] applied ze milwaukee sharks though goods taken hour yin apps [SEP]']
+[Init] best rec loss: 0.8873622417449951 for ['[CLS] aerospacelore no scheme ground overhead coach clearance under cal [SEP]']
+[Init] best perm rec loss: 0.8865259289741516 for ['[CLS] aerospace scheme clearancelore ground overhead no coach cal under [SEP]']
+[Init] best perm rec loss: 0.8864747285842896 for ['[CLS] coach clearance no scheme underlore aerospace cal overhead ground [SEP]']
+[Init] best perm rec loss: 0.88502037525177 for ['[CLS] cal aerospace scheme overhead ground clearance nolore coach under [SEP]']
+[Init] best perm rec loss: 0.8849398493766785 for ['[CLS] overheadlore ground aerospace no cal clearance coach scheme under [SEP]']
+[Init] best perm rec loss: 0.8823032379150391 for ['[CLS] ground callore scheme clearance coach no aerospace overhead under [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.796 (perp=12.671, rec=0.652, cos=0.610), tot_loss_proj:4.300 [t=0.17s]
+prediction: ['[CLS] followed reuben reflecting those presence their group musicians smoking something [SEP]']
+[ 100/2000] tot_loss=2.911 (perp=10.508, rec=0.546, cos=0.263), tot_loss_proj:3.854 [t=0.17s]
+prediction: ['[CLS] kitty ultimate musicians those besides some. musicians smoking something [SEP]']
+[ 150/2000] tot_loss=2.823 (perp=10.271, rec=0.481, cos=0.288), tot_loss_proj:3.807 [t=0.17s]
+prediction: ['[CLS] itemsarians musicians these and some. musicians smoking something [SEP]']
+[ 200/2000] tot_loss=2.881 (perp=10.775, rec=0.464, cos=0.262), tot_loss_proj:3.949 [t=0.17s]
+prediction: ['[CLS] itemsheardians those and those. musicians smoking something [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=3.069 (perp=10.497, rec=0.617, cos=0.353), tot_loss_proj:4.016 [t=0.17s]
+prediction: ['[CLS]ゆrup carly these and those. musicians smoking something [SEP]']
+[ 300/2000] tot_loss=3.059 (perp=11.601, rec=0.499, cos=0.240), tot_loss_proj:4.097 [t=0.17s]
+prediction: ['[CLS] whitman slit carly these and those ; dancers smoking someone [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.784 (perp=10.258, rec=0.462, cos=0.270), tot_loss_proj:3.891 [t=0.17s]
+prediction: ['[CLS] these slit carly callie and those ; dancers smoking something [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.658 (perp=9.747, rec=0.441, cos=0.267), tot_loss_proj:3.745 [t=0.17s]
+prediction: ['[CLS] these slit callie carly and those ; dancers smoking something [SEP]']
+[ 450/2000] tot_loss=2.877 (perp=11.003, rec=0.424, cos=0.252), tot_loss_proj:4.100 [t=0.17s]
+prediction: ['[CLS] those slitwives carly and those ; dancers smoking something [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=2.777 (perp=10.463, rec=0.482, cos=0.202), tot_loss_proj:3.968 [t=0.17s]
+prediction: ['[CLS] those 49ers november ; and thosedice dancers smoking whatever [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=2.381 (perp=8.504, rec=0.426, cos=0.254), tot_loss_proj:3.765 [t=0.17s]
+prediction: ['[CLS] those cut poses ; and those dancers smoking somethingdice [SEP]']
+[ 600/2000] tot_loss=2.427 (perp=8.549, rec=0.417, cos=0.300), tot_loss_proj:3.646 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingdice [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=2.436 (perp=8.868, rec=0.395, cos=0.267), tot_loss_proj:3.904 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=2.459 (perp=8.868, rec=0.393, cos=0.293), tot_loss_proj:3.906 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[ 750/2000] tot_loss=2.431 (perp=8.868, rec=0.395, cos=0.262), tot_loss_proj:3.903 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=2.479 (perp=8.868, rec=0.375, cos=0.331), tot_loss_proj:3.901 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=2.451 (perp=8.868, rec=0.378, cos=0.299), tot_loss_proj:3.900 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[ 900/2000] tot_loss=2.443 (perp=8.868, rec=0.382, cos=0.287), tot_loss_proj:3.903 [t=0.18s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=2.437 (perp=8.868, rec=0.368, cos=0.295), tot_loss_proj:3.906 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1000/2000] tot_loss=2.505 (perp=8.868, rec=0.373, cos=0.358), tot_loss_proj:3.903 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[1050/2000] tot_loss=2.537 (perp=8.868, rec=0.364, cos=0.399), tot_loss_proj:3.899 [t=0.18s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1100/2000] tot_loss=2.466 (perp=8.868, rec=0.365, cos=0.327), tot_loss_proj:3.900 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1150/2000] tot_loss=2.426 (perp=8.868, rec=0.362, cos=0.290), tot_loss_proj:3.903 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[1200/2000] tot_loss=2.417 (perp=8.868, rec=0.364, cos=0.279), tot_loss_proj:3.905 [t=0.18s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1250/2000] tot_loss=2.418 (perp=8.868, rec=0.360, cos=0.284), tot_loss_proj:3.904 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1300/2000] tot_loss=2.420 (perp=8.868, rec=0.361, cos=0.286), tot_loss_proj:3.900 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[1350/2000] tot_loss=2.454 (perp=8.868, rec=0.353, cos=0.327), tot_loss_proj:3.905 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1400/2000] tot_loss=2.450 (perp=8.868, rec=0.358, cos=0.319), tot_loss_proj:3.900 [t=0.18s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1450/2000] tot_loss=2.449 (perp=8.868, rec=0.361, cos=0.314), tot_loss_proj:3.902 [t=0.17s]
+prediction: ['[CLS] those cut singer ; and those dancers smoking somethingamp [SEP]']
+[1500/2000] tot_loss=2.484 (perp=8.904, rec=0.364, cos=0.339), tot_loss_proj:3.935 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1550/2000] tot_loss=2.486 (perp=8.904, rec=0.355, cos=0.350), tot_loss_proj:3.938 [t=0.18s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.464 (perp=8.904, rec=0.356, cos=0.327), tot_loss_proj:3.926 [t=0.18s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+[1650/2000] tot_loss=2.493 (perp=8.904, rec=0.354, cos=0.358), tot_loss_proj:3.929 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.494 (perp=8.904, rec=0.357, cos=0.356), tot_loss_proj:3.929 [t=0.18s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.470 (perp=8.904, rec=0.351, cos=0.338), tot_loss_proj:3.932 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+[1800/2000] tot_loss=2.476 (perp=8.904, rec=0.352, cos=0.344), tot_loss_proj:3.933 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.501 (perp=8.904, rec=0.353, cos=0.367), tot_loss_proj:3.933 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.483 (perp=8.904, rec=0.355, cos=0.347), tot_loss_proj:3.930 [t=0.18s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+[1950/2000] tot_loss=2.481 (perp=8.904, rec=0.356, cos=0.344), tot_loss_proj:3.938 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.487 (perp=8.904, rec=0.355, cos=0.351), tot_loss_proj:3.936 [t=0.17s]
+prediction: ['[CLS] those cut singer. and those dancers smoking somethingamp [SEP]']
+Done with input #93 of 100.
+reference: 
+========================
+[CLS] i saw these dancers and those musicians smoking something. [SEP]
+========================
+predicted: 
+========================
+[CLS] those cut singer. and those dancers smoking somethingamp [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 57.143 | p: 60.000 | r: 54.545
+rouge2     | fm: 10.526 | p: 11.111 | r: 10.000
+rougeL     | fm: 47.619 | p: 50.000 | r: 45.455
+rougeLsum  | fm: 47.619 | p: 50.000 | r: 45.455
+r1fm+r2fm = 67.669
+
+[Aggregate metrics]:
+rouge1     | fm: 74.758 | p: 74.511 | r: 75.226
+rouge2     | fm: 28.770 | p: 28.598 | r: 28.950
+rougeL     | fm: 61.643 | p: 61.441 | r: 62.095
+rougeLsum  | fm: 61.649 | p: 61.489 | r: 62.047
+r1fm+r2fm = 103.528
+
+input #93 time: 0:07:02 | total time: 12:30:38
+
+
+Running input #94 of 100.
+reference: 
+========================
+Ayala sent back her cousin the diamond necklace.
+========================
+average of cosine similarity 0.9992840849473748
+highest_index [0]
+highest [0.9992840849473748]
+Debug: ids_shape = 12, pads = [12]
+Debug: input ids = tensor([[  101,  1037, 28617,  2741,  2067,  2014,  5542,  1996,  6323, 13016,
+          1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] ayala sent back her cousin the diamond necklace. [SEP]']
+[Init] best rec loss: 1.0233622789382935 for ['[CLS] universe car flight volume stem? fangs naturally port produced [SEP]']
+[Init] best rec loss: 0.810341477394104 for ['[CLS] c2 guysament means tucker indicated corresponding likes instead shifters [SEP]']
+[Init] best rec loss: 0.8015455603599548 for ['[CLS] crocodile potter entertainment nearlaw chapel issues dive mohamedistle [SEP]']
+[Init] best rec loss: 0.753000020980835 for ['[CLS] nina weights micah economy ladyaciesffled feeling harbor mt [SEP]']
+[Init] best rec loss: 0.7525247931480408 for ['[CLS] commander system country ca young orleans facial yhaus boring [SEP]']
+[Init] best rec loss: 0.7276646494865417 for ['[CLS] chartered cult4chment boat six cinder bothered eminentacies [SEP]']
+[Init] best rec loss: 0.7244107127189636 for ['[CLS] henrytrip rs earlier ranks tr countries collection eye going [SEP]']
+[Init] best rec loss: 0.7231367230415344 for ['[CLS] relegation unincorporated q hang separated arrive place settled up drawing [SEP]']
+[Init] best rec loss: 0.7114856839179993 for ['[CLS]edge awareness champions being herself h derek label missions fits [SEP]']
+[Init] best rec loss: 0.7034398317337036 for ['[CLS] o planned emirates fra conditioned simpsonlund client regulations friendly [SEP]']
+[Init] best perm rec loss: 0.7031844854354858 for ['[CLS] simpsonlund conditioned planned emirates fra o client regulations friendly [SEP]']
+[Init] best perm rec loss: 0.7023455500602722 for ['[CLS] client planned conditionedlund fra friendly regulations o simpson emirates [SEP]']
+[Init] best perm rec loss: 0.7006390690803528 for ['[CLS] clientlund fra planned conditioned o friendly emirates simpson regulations [SEP]']
+[Init] best perm rec loss: 0.699734091758728 for ['[CLS] fra emirates o conditioned simpson regulations planned clientlund friendly [SEP]']
+[Init] best perm rec loss: 0.6980162858963013 for ['[CLS]lund regulations o client conditioned fra simpson planned emirates friendly [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.031 (perp=12.702, rec=0.414, cos=0.077), tot_loss_proj:3.639 [t=0.18s]
+prediction: ['[CLS] your callum door bail toyota cell sofia gottarrard her [SEP]']
+[ 100/2000] tot_loss=2.976 (perp=13.263, rec=0.292, cos=0.031), tot_loss_proj:3.653 [t=0.19s]
+prediction: ['[CLS] sentyala back ships diamond sent necklace dane renovated her [SEP]']
+[ 150/2000] tot_loss=2.641 (perp=11.263, rec=0.319, cos=0.069), tot_loss_proj:3.837 [t=0.19s]
+prediction: ['[CLS] sent marissa back went diamond sister diamond finally fingers. [SEP]']
+[ 200/2000] tot_loss=2.642 (perp=11.522, rec=0.293, cos=0.045), tot_loss_proj:3.284 [t=0.19s]
+prediction: ['[CLS] sentyala back. cousin sister diamond haired fingers cousin [SEP]']
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=2.526 (perp=11.398, rec=0.216, cos=0.031), tot_loss_proj:3.272 [t=0.19s]
+prediction: ['[CLS] sent back. cousin sister diamond cousin during cousinyala [SEP]']
+[ 300/2000] tot_loss=2.429 (perp=11.235, rec=0.166, cos=0.016), tot_loss_proj:3.157 [t=0.19s]
+prediction: ['[CLS] sent back the cousin sister diamond cousin during cousinyala [SEP]']
+Attempt swap
+Moved sequence
+[ 350/2000] tot_loss=2.068 (perp=9.497, rec=0.149, cos=0.019), tot_loss_proj:3.288 [t=0.19s]
+prediction: ['[CLS] diamond cousin sent back the cousin the necklace cousinyala [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.017 (perp=9.321, rec=0.141, cos=0.013), tot_loss_proj:2.559 [t=0.19s]
+prediction: ['[CLS] cousin cousin sent back the cousin diamond necklace cousinyala [SEP]']
+[ 450/2000] tot_loss=1.972 (perp=9.192, rec=0.123, cos=0.010), tot_loss_proj:2.562 [t=0.19s]
+prediction: ['[CLS] cousin. sent back the cousin diamond necklace cousinyala [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=1.939 (perp=9.031, rec=0.123, cos=0.009), tot_loss_proj:2.545 [t=0.19s]
+prediction: ['[CLS]. cousin sent back the cousin diamond necklace cousinyala [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=1.808 (perp=8.383, rec=0.121, cos=0.011), tot_loss_proj:2.896 [t=0.19s]
+prediction: ['[CLS] cousin cousin sent back the cousin diamond necklace.yala [SEP]']
+[ 600/2000] tot_loss=1.788 (perp=8.383, rec=0.103, cos=0.009), tot_loss_proj:2.892 [t=0.20s]
+prediction: ['[CLS] cousin cousin sent back the cousin diamond necklace.yala [SEP]']
+Attempt swap
+Moved token
+[ 650/2000] tot_loss=1.791 (perp=8.383, rec=0.106, cos=0.009), tot_loss_proj:2.873 [t=0.17s]
+prediction: ['[CLS] cousin cousin sent back the cousin diamond necklace.yala [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=1.808 (perp=8.510, rec=0.098, cos=0.008), tot_loss_proj:2.950 [t=0.17s]
+prediction: ['[CLS] cousin sister sent back the cousin diamond necklace.yala [SEP]']
+[ 750/2000] tot_loss=1.815 (perp=8.510, rec=0.105, cos=0.008), tot_loss_proj:2.942 [t=0.17s]
+prediction: ['[CLS] cousin sister sent back the cousin diamond necklace.yala [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=1.624 (perp=7.552, rec=0.106, cos=0.008), tot_loss_proj:2.180 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.614 (perp=7.552, rec=0.096, cos=0.008), tot_loss_proj:2.182 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+[ 900/2000] tot_loss=1.618 (perp=7.552, rec=0.100, cos=0.008), tot_loss_proj:2.188 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.612 (perp=7.552, rec=0.094, cos=0.008), tot_loss_proj:2.189 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.609 (perp=7.552, rec=0.091, cos=0.008), tot_loss_proj:2.189 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+[1050/2000] tot_loss=1.616 (perp=7.552, rec=0.098, cos=0.007), tot_loss_proj:2.186 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.612 (perp=7.552, rec=0.094, cos=0.007), tot_loss_proj:2.182 [t=0.17s]
+prediction: ['[CLS] her cousin sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.571 (perp=7.366, rec=0.090, cos=0.007), tot_loss_proj:2.042 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1200/2000] tot_loss=1.577 (perp=7.366, rec=0.097, cos=0.007), tot_loss_proj:2.029 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.573 (perp=7.366, rec=0.092, cos=0.007), tot_loss_proj:2.039 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.576 (perp=7.366, rec=0.096, cos=0.007), tot_loss_proj:2.032 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1350/2000] tot_loss=1.585 (perp=7.366, rec=0.104, cos=0.007), tot_loss_proj:2.038 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.572 (perp=7.366, rec=0.091, cos=0.007), tot_loss_proj:2.038 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.578 (perp=7.366, rec=0.097, cos=0.007), tot_loss_proj:2.037 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1500/2000] tot_loss=1.568 (perp=7.366, rec=0.088, cos=0.007), tot_loss_proj:2.029 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.574 (perp=7.366, rec=0.094, cos=0.007), tot_loss_proj:2.036 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.576 (perp=7.366, rec=0.096, cos=0.007), tot_loss_proj:2.033 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1650/2000] tot_loss=1.578 (perp=7.366, rec=0.097, cos=0.007), tot_loss_proj:2.034 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.572 (perp=7.366, rec=0.092, cos=0.007), tot_loss_proj:2.026 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.576 (perp=7.366, rec=0.095, cos=0.007), tot_loss_proj:2.030 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1800/2000] tot_loss=1.566 (perp=7.366, rec=0.086, cos=0.007), tot_loss_proj:2.043 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.580 (perp=7.366, rec=0.099, cos=0.007), tot_loss_proj:2.031 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.574 (perp=7.366, rec=0.094, cos=0.007), tot_loss_proj:2.038 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+[1950/2000] tot_loss=1.575 (perp=7.366, rec=0.095, cos=0.007), tot_loss_proj:2.034 [t=0.21s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.574 (perp=7.366, rec=0.093, cos=0.007), tot_loss_proj:2.034 [t=0.17s]
+prediction: ['[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]']
+Done with input #94 of 100.
+reference: 
+========================
+[CLS] ayala sent back her cousin the diamond necklace. [SEP]
+========================
+predicted: 
+========================
+[CLS] her sister sent back the cousin diamond necklaceyala. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 80.000 | p: 80.000 | r: 80.000
+rouge2     | fm: 11.111 | p: 11.111 | r: 11.111
+rougeL     | fm: 60.000 | p: 60.000 | r: 60.000
+rougeLsum  | fm: 60.000 | p: 60.000 | r: 60.000
+r1fm+r2fm = 91.111
+
+[Aggregate metrics]:
+rouge1     | fm: 74.784 | p: 74.514 | r: 75.273
+rouge2     | fm: 28.602 | p: 28.440 | r: 28.842
+rougeL     | fm: 61.680 | p: 61.466 | r: 62.007
+rougeLsum  | fm: 61.731 | p: 61.500 | r: 62.112
+r1fm+r2fm = 103.386
+
+input #94 time: 0:07:05 | total time: 12:37:44
+
+
+Running input #95 of 100.
+reference: 
+========================
+Brenda met.
+========================
+average of cosine similarity 0.9992582990211568
+highest_index [0]
+highest [0.9992582990211568]
+Debug: ids_shape = 5, pads = [5]
+Debug: input ids = tensor([[  101, 15507,  2777,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] brenda met. [SEP]']
+[Init] best rec loss: 0.9856793880462646 for ['[CLS]eptive day less [SEP]']
+[Init] best rec loss: 0.931098461151123 for ['[CLS]fall few why [SEP]']
+[Init] best rec loss: 0.8573922514915466 for ['[CLS] princess horses domesday [SEP]']
+[Init] best rec loss: 0.826335608959198 for ['[CLS]ave recorded head [SEP]']
+[Init] best rec loss: 0.753989040851593 for ['[CLS] boss back michigan [SEP]']
+[Init] best rec loss: 0.7457810044288635 for ['[CLS] pseudonym mill joyah [SEP]']
+[Init] best rec loss: 0.728053867816925 for ['[CLS] mary scott pending [SEP]']
+[Init] best perm rec loss: 0.7271443605422974 for ['[CLS] scott mary pending [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.417 (perp=11.444, rec=0.654, cos=0.474), tot_loss_proj:3.750 [t=0.17s]
+prediction: ['[CLS] jessica met tonight [SEP]']
+[ 100/2000] tot_loss=3.510 (perp=12.643, rec=0.561, cos=0.420), tot_loss_proj:4.102 [t=0.18s]
+prediction: ['[CLS] met meteed [SEP]']
+[ 150/2000] tot_loss=2.950 (perp=10.332, rec=0.544, cos=0.340), tot_loss_proj:3.024 [t=0.17s]
+prediction: ['[CLS] met met carly [SEP]']
+[ 200/2000] tot_loss=3.011 (perp=10.332, rec=0.566, cos=0.378), tot_loss_proj:3.079 [t=0.18s]
+prediction: ['[CLS] met met carly [SEP]']
+Attempt swap
+[ 250/2000] tot_loss=3.507 (perp=12.993, rec=0.589, cos=0.319), tot_loss_proj:3.457 [t=0.17s]
+prediction: ['[CLS] woke met carly [SEP]']
+[ 300/2000] tot_loss=3.418 (perp=12.993, rec=0.502, cos=0.317), tot_loss_proj:3.459 [t=0.17s]
+prediction: ['[CLS] woke met carly [SEP]']
+Attempt swap
+[ 350/2000] tot_loss=3.906 (perp=14.319, rec=0.449, cos=0.593), tot_loss_proj:4.043 [t=0.17s]
+prediction: ['[CLS] woke met ª [SEP]']
+Attempt swap
+Put prefix at the end
+[ 400/2000] tot_loss=2.480 (perp=10.041, rec=0.416, cos=0.055), tot_loss_proj:3.479 [t=0.17s]
+prediction: ['[CLS] met. brenda [SEP]']
+[ 450/2000] tot_loss=2.195 (perp=10.041, rec=0.174, cos=0.013), tot_loss_proj:3.476 [t=0.17s]
+prediction: ['[CLS] met. brenda [SEP]']
+Attempt swap
+Put prefix at the end
+[ 500/2000] tot_loss=1.621 (perp=7.451, rec=0.125, cos=0.006), tot_loss_proj:1.601 [t=0.22s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 550/2000] tot_loss=1.585 (perp=7.451, rec=0.092, cos=0.003), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[ 600/2000] tot_loss=1.590 (perp=7.451, rec=0.097, cos=0.002), tot_loss_proj:1.580 [t=0.18s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=1.582 (perp=7.451, rec=0.090, cos=0.002), tot_loss_proj:1.590 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=1.579 (perp=7.451, rec=0.087, cos=0.002), tot_loss_proj:1.588 [t=0.18s]
+prediction: ['[CLS] brenda met. [SEP]']
+[ 750/2000] tot_loss=1.569 (perp=7.451, rec=0.077, cos=0.002), tot_loss_proj:1.586 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=1.566 (perp=7.451, rec=0.074, cos=0.002), tot_loss_proj:1.589 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.568 (perp=7.451, rec=0.077, cos=0.002), tot_loss_proj:1.587 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[ 900/2000] tot_loss=1.569 (perp=7.451, rec=0.077, cos=0.002), tot_loss_proj:1.589 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.554 (perp=7.451, rec=0.062, cos=0.002), tot_loss_proj:1.591 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.564 (perp=7.451, rec=0.072, cos=0.002), tot_loss_proj:1.577 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1050/2000] tot_loss=1.562 (perp=7.451, rec=0.071, cos=0.002), tot_loss_proj:1.589 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.564 (perp=7.451, rec=0.072, cos=0.002), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.562 (perp=7.451, rec=0.071, cos=0.001), tot_loss_proj:1.595 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1200/2000] tot_loss=1.546 (perp=7.451, rec=0.054, cos=0.001), tot_loss_proj:1.591 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.561 (perp=7.451, rec=0.069, cos=0.001), tot_loss_proj:1.579 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.555 (perp=7.451, rec=0.063, cos=0.001), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1350/2000] tot_loss=1.548 (perp=7.451, rec=0.057, cos=0.001), tot_loss_proj:1.587 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.556 (perp=7.451, rec=0.065, cos=0.001), tot_loss_proj:1.593 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.547 (perp=7.451, rec=0.056, cos=0.001), tot_loss_proj:1.586 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1500/2000] tot_loss=1.557 (perp=7.451, rec=0.065, cos=0.001), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.561 (perp=7.451, rec=0.070, cos=0.001), tot_loss_proj:1.586 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.556 (perp=7.451, rec=0.064, cos=0.001), tot_loss_proj:1.583 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1650/2000] tot_loss=1.550 (perp=7.451, rec=0.059, cos=0.001), tot_loss_proj:1.606 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.545 (perp=7.451, rec=0.053, cos=0.001), tot_loss_proj:1.578 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.554 (perp=7.451, rec=0.062, cos=0.001), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1800/2000] tot_loss=1.558 (perp=7.451, rec=0.066, cos=0.001), tot_loss_proj:1.586 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.566 (perp=7.451, rec=0.074, cos=0.001), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.547 (perp=7.451, rec=0.056, cos=0.001), tot_loss_proj:1.577 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+[1950/2000] tot_loss=1.560 (perp=7.451, rec=0.068, cos=0.001), tot_loss_proj:1.585 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.555 (perp=7.451, rec=0.063, cos=0.001), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] brenda met. [SEP]']
+Done with input #95 of 100.
+reference: 
+========================
+[CLS] brenda met. [SEP]
+========================
+predicted: 
+========================
+[CLS] brenda met. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+[Aggregate metrics]:
+rouge1     | fm: 75.055 | p: 74.795 | r: 75.570
+rouge2     | fm: 29.273 | p: 29.077 | r: 29.527
+rougeL     | fm: 61.938 | p: 61.839 | r: 62.297
+rougeLsum  | fm: 62.005 | p: 61.878 | r: 62.425
+r1fm+r2fm = 104.328
+
+input #95 time: 0:07:01 | total time: 12:44:45
+
+
+Running input #96 of 100.
+reference: 
+========================
+Today there is little or no official harassment of lesbians and gays by the national government, although autonomous governments might.
+========================
+average of cosine similarity 0.9994474553270568
+highest_index [0]
+highest [0.9994474553270568]
+Debug: ids_shape = 26, pads = [26]
+Debug: input ids = tensor([[  101,  2651,  2045,  2003,  2210,  2030,  2053,  2880, 16011,  1997,
+         11690,  2015,  1998,  5637,  2015,  2011,  1996,  2120,  2231,  1010,
+          2348,  8392,  6867,  2453,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] today there is little or no official harassment of lesbians and gays by the national government, although autonomous governments might. [SEP]']
+[Init] best rec loss: 0.9376290440559387 for ['[CLS] typeilised exiary radha legislative spotlight latter jesse wonder passing opened church charm dropping santa authorities loan youth firm regarding 1930s border kirk [SEP]']
+[Init] best rec loss: 0.930988609790802 for ['[CLS] library could quicknco quicklylerrradoum prose biology over spencer dirty? ebony room ltd laugh fiber 」 berlin twinned joe lucas [SEP]']
+[Init] best rec loss: 0.9283707141876221 for ['[CLS] including viifactory spot mom avatar terms sikhcentric brandч hilton policemen hiding similarity extension press starring hold by upon were flood duc [SEP]']
+[Init] best rec loss: 0.926461398601532 for ['[CLS]ed prepared aloud much directions department kendra wearing imperialism being software idea dyer bet and warner mu 30 bud prem happened operations napoleon silence [SEP]']
+[Init] best rec loss: 0.9054527878761292 for ['[CLS] period roster assured disc guess proved au column three kapoor caesar regretphyator sometimes radical patel strait below recognition lori apparatus christiangration [SEP]']
+[Init] best rec loss: 0.8999266624450684 for ['[CLS] radio ontogoing ammunition sleep sea invitation or abroad turkey stoneuringuidacious if lexington altar quality plus sum shower license o handy [SEP]']
+[Init] best perm rec loss: 0.8994612097740173 for ['[CLS] plusacious if ouid or ammunition stone sleep invitation abroad altar radio license sea sumuring showergoing quality handy onto lexington turkey [SEP]']
+[Init] best perm rec loss: 0.8985669016838074 for ['[CLS] sum lexingtonuid stone abroad plusgoing o or turkey invitationacious onto seauring sleep license shower if radio handy altar quality ammunition [SEP]']
+[Init] best perm rec loss: 0.898284375667572 for ['[CLS] onto turkey or altar shower invitation abroad lexington qualityuid if stone ammunition ouring seagoingacious handy sleep plus sum license radio [SEP]']
+[Init] best perm rec loss: 0.8974266052246094 for ['[CLS]going ontouringuid invitation sleep quality or sea if altar sum radio stone lexington turkey license ammunition o plus shower abroad handyacious [SEP]']
+[Init] best perm rec loss: 0.8958510160446167 for ['[CLS] lexingtonuringuidacious stone sleep ammunition ifgoing license invitation radio shower sum onto abroad turkey o altar plus handy quality sea or [SEP]']
+[Init] best perm rec loss: 0.8948376178741455 for ['[CLS]uring turkey onto lexington plus qualityuid if license altar sea handy stone ogoing sum or sleep radio abroad invitation shower ammunitionacious [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.789 (perp=12.609, rec=0.623, cos=0.644), tot_loss_proj:4.317 [t=0.18s]
+prediction: ['[CLS]talk sherry became inning your independence literature whom sidewalk rather 1971 from later became harry whisky popular of society birth cow legs their payment [SEP]']
+[ 100/2000] tot_loss=3.278 (perp=12.182, rec=0.508, cos=0.333), tot_loss_proj:4.336 [t=0.18s]
+prediction: ['[CLS] blog sherry into lesbian government ˈ merely any colonial increased z marche converted became national ( prisoner and cells lesbian cow cows othervati [SEP]']
+[ 150/2000] tot_loss=2.998 (perp=11.026, rec=0.453, cos=0.340), tot_loss_proj:4.127 [t=0.18s]
+prediction: ['[CLS] blog sherry was lesbian national lesbian days each governments increased 1975 marche converted became national ( government lesbian national lesbian images lesbian their today [SEP]']
+[ 200/2000] tot_loss=3.031 (perp=11.603, rec=0.410, cos=0.300), tot_loss_proj:4.200 [t=0.18s]
+prediction: ['[CLS] investigativeshire against lesbian national lesbian days behalf governments issuedrk with converted today national ( [CLS] lesbian national although statements lesbian few today [SEP]']
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=2.999 (perp=11.485, rec=0.396, cos=0.306), tot_loss_proj:4.143 [t=0.18s]
+prediction: ['[CLS] todayshire against lesbian national lesbian days behalf governments issuedrk with converted today national facto [CLS] lesbian nations although lesbian speech few today [SEP]']
+[ 300/2000] tot_loss=3.208 (perp=12.135, rec=0.384, cos=0.397), tot_loss_proj:4.275 [t=0.18s]
+prediction: ['[CLS] todayshire into lesbian national lesbian days whether governmentshy no without jordan today national facto madame lesbians although lesbian violatedhopper today [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=3.134 (perp=12.113, rec=0.372, cos=0.339), tot_loss_proj:4.265 [t=0.18s]
+prediction: ['[CLS] todayshire into advances national lesbian dayshopper governmentshy ( % ( today government facto madame lesbian overly although lesbian harassment whether today [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.822 (perp=11.325, rec=0.341, cos=0.216), tot_loss_proj:4.118 [t=0.18s]
+prediction: ['[CLS] today federer government advances national lesbian dayshopper governmentshy ( as ( today government facto population lesbian overly although lesbian harassment today whether [SEP]']
+[ 450/2000] tot_loss=3.128 (perp=12.129, rec=0.334, cos=0.368), tot_loss_proj:4.290 [t=0.18s]
+prediction: ['[CLS] today federer government advances national lesbian days cummings governmentshy ( % twice today government facto population lesbian necessarily although lesbian harassment today whether [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=2.970 (perp=11.834, rec=0.328, cos=0.276), tot_loss_proj:4.216 [t=0.18s]
+prediction: ['[CLS] however lesbian government advances national federer days cummings governmentshy no % learned today government facto employees lesbian necessarily although lesbian harassment today whether [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=2.951 (perp=11.750, rec=0.321, cos=0.280), tot_loss_proj:4.170 [t=0.18s]
+prediction: ['[CLS] however lesbian government advances national days federer cummings governments sexuality no of learned today government facto employees lesbian overly although lesbian harassment meantime whether [SEP]']
+[ 600/2000] tot_loss=3.733 (perp=11.914, rec=0.599, cos=0.751), tot_loss_proj:4.207 [t=0.19s]
+prediction: ['[CLS] however lesbian government advances national radio helpedhopper governments italia ( byerland today governments and aground lesbian ox although lesbian amongst meantimejo [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=3.172 (perp=11.780, rec=0.472, cos=0.344), tot_loss_proj:4.146 [t=0.20s]
+prediction: ['[CLS] today lesbian against subsequently national radio senthopper governmental regional ( byerland lesbian governments and whose lesbian ox ) today amongst meantimejo [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=2.999 (perp=11.312, rec=0.433, cos=0.304), tot_loss_proj:4.103 [t=0.20s]
+prediction: ['[CLS] today lesbian against subsequently national radio senthopper amongst national and byerland lesbian governments and whose lesbian ox ) today governmental meantimejo [SEP]']
+[ 750/2000] tot_loss=3.221 (perp=12.140, rec=0.401, cos=0.392), tot_loss_proj:4.256 [t=0.18s]
+prediction: ['[CLS] chamber lesbian against subsequently national radio sent titles amongst national ( fromerland lesbian governments and whose lesbian ox ) today governmental meantimejo [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=2.864 (perp=11.036, rec=0.385, cos=0.271), tot_loss_proj:4.062 [t=0.18s]
+prediction: ['[CLS] chamber lesbian were and national radio shifted titles amongst national ( fromerland lesbian government and subsequently lesbianso ) today governmental meantimejo [SEP]']
+Attempt swap
+Swapped tokens
+[ 850/2000] tot_loss=2.696 (perp=10.216, rec=0.390, cos=0.263), tot_loss_proj:3.840 [t=0.17s]
+prediction: ['[CLS] chamber lesbian were and national days shifted titles amongst national ( fromerland lesbian government and subsequently lesbiansojo today governmental meantime ) [SEP]']
+[ 900/2000] tot_loss=2.661 (perp=9.976, rec=0.374, cos=0.292), tot_loss_proj:3.765 [t=0.17s]
+prediction: ['[CLS] chamber lesbian were whose national days should titles amongst national ( from wearing lesbian government and subsequently lesbiansojo today governmental meantime ) [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=2.847 (perp=10.734, rec=0.371, cos=0.329), tot_loss_proj:3.944 [t=0.18s]
+prediction: ['[CLS] chamber lesbian were whose national days shifted titles amongst national ( from todayerland lesbian governments and subsequently lesbian siblingjo governmental meantime ) [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.758 (perp=10.112, rec=0.368, cos=0.367), tot_loss_proj:3.757 [t=0.17s]
+prediction: ['[CLS] chamber lesbian were whose national days should titleserland cyprus ( from today amongst lesbian government and subsequently lesbian sibling mothers governmental meantime. [SEP]']
+[1050/2000] tot_loss=2.745 (perp=10.112, rec=0.356, cos=0.367), tot_loss_proj:3.755 [t=0.18s]
+prediction: ['[CLS] chamber lesbian were whose national days should titleserland cyprus ( from today amongst lesbian government and subsequently lesbian sibling mothers governmental meantime. [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=2.588 (perp=9.841, rec=0.354, cos=0.266), tot_loss_proj:3.705 [t=0.18s]
+prediction: ['[CLS] chamber lesbian were whose national days should titles mothers cyprus ( from today amongst lesbian government and subsequently lesbian siblingerland governmental meantime. [SEP]']
+Attempt swap
+Moved token
+[1150/2000] tot_loss=2.581 (perp=9.600, rec=0.363, cos=0.298), tot_loss_proj:3.672 [t=0.17s]
+prediction: ['[CLS] lesbian chamber were whose national days should titles mothers cyprus ( from today amongst lesbian government and subsequently lesbian siblingerland governmental meantime. [SEP]']
+[1200/2000] tot_loss=2.589 (perp=9.420, rec=0.351, cos=0.354), tot_loss_proj:3.645 [t=0.17s]
+prediction: ['[CLS] lesbian chamber were whose national days should titles mothers national ( from today amongst lesbian government and subsequently lesbian siblingerland governmental meantime. [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=2.482 (perp=9.164, rec=0.356, cos=0.293), tot_loss_proj:3.572 [t=0.18s]
+prediction: ['[CLS] lesbian chamber were whose national days should titles mothers sibling ( from today amongst lesbian government and subsequently lesbian nationalerland governmental meantime. [SEP]']
+Attempt swap
+Swapped tokens
+[1300/2000] tot_loss=2.548 (perp=9.302, rec=0.358, cos=0.330), tot_loss_proj:3.617 [t=0.18s]
+prediction: ['[CLS] lesbian cyprus were whose national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+[1350/2000] tot_loss=2.529 (perp=9.302, rec=0.349, cos=0.320), tot_loss_proj:3.615 [t=0.18s]
+prediction: ['[CLS] lesbian cyprus were whose national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=2.538 (perp=9.302, rec=0.346, cos=0.332), tot_loss_proj:3.617 [t=0.17s]
+prediction: ['[CLS] lesbian cyprus were whose national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=2.536 (perp=9.302, rec=0.339, cos=0.337), tot_loss_proj:3.619 [t=0.18s]
+prediction: ['[CLS] lesbian cyprus were whose national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+[1500/2000] tot_loss=2.551 (perp=9.335, rec=0.339, cos=0.344), tot_loss_proj:3.608 [t=0.17s]
+prediction: ['[CLS] lesbian cyprus were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=2.520 (perp=9.335, rec=0.334, cos=0.320), tot_loss_proj:3.612 [t=0.18s]
+prediction: ['[CLS] lesbian cyprus were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.541 (perp=9.237, rec=0.340, cos=0.353), tot_loss_proj:3.589 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+[1650/2000] tot_loss=2.514 (perp=9.237, rec=0.342, cos=0.325), tot_loss_proj:3.589 [t=0.17s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.552 (perp=9.237, rec=0.339, cos=0.366), tot_loss_proj:3.587 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.524 (perp=9.237, rec=0.339, cos=0.338), tot_loss_proj:3.590 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+[1800/2000] tot_loss=2.526 (perp=9.237, rec=0.334, cos=0.344), tot_loss_proj:3.590 [t=0.17s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.531 (perp=9.237, rec=0.336, cos=0.347), tot_loss_proj:3.589 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.526 (perp=9.237, rec=0.335, cos=0.344), tot_loss_proj:3.590 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+[1950/2000] tot_loss=2.531 (perp=9.237, rec=0.329, cos=0.355), tot_loss_proj:3.588 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.522 (perp=9.237, rec=0.332, cos=0.342), tot_loss_proj:3.590 [t=0.18s]
+prediction: ['[CLS] lesbian countries were and national days should titles behalf sibling ( from today amongst lesbian government. subsequently lesbian chambererland governmental meantime. [SEP]']
+Done with input #96 of 100.
+reference: 
+========================
+[CLS] today there is little or no official harassment of lesbians and gays by the national government, although autonomous governments might. [SEP]
+========================
+predicted: 
+========================
+[CLS] however lesbian government advances national days federer cummings governments sexuality no of learned today government facto employees lesbian overly although lesbian harassment meantime whether [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 41.667 | p: 38.462 | r: 45.455
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 25.000 | p: 23.077 | r: 27.273
+rougeLsum  | fm: 25.000 | p: 23.077 | r: 27.273
+r1fm+r2fm = 41.667
+
+[Aggregate metrics]:
+rouge1     | fm: 74.785 | p: 74.532 | r: 75.241
+rouge2     | fm: 28.885 | p: 28.741 | r: 29.158
+rougeL     | fm: 61.614 | p: 61.481 | r: 62.064
+rougeLsum  | fm: 61.626 | p: 61.434 | r: 62.040
+r1fm+r2fm = 103.669
+
+input #96 time: 0:07:05 | total time: 12:51:50
+
+
+Running input #97 of 100.
+reference: 
+========================
+This oven cooks well.
+========================
+average of cosine similarity 0.999361289301567
+highest_index [0]
+highest [0.999361289301567]
+Debug: ids_shape = 7, pads = [7]
+Debug: input ids = tensor([[  101,  2023, 17428, 26929,  2092,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] this oven cooks well. [SEP]']
+[Init] best rec loss: 1.0609800815582275 for ['[CLS] representing savedm ft dynasty [SEP]']
+[Init] best rec loss: 1.0057979822158813 for ['[CLS] diagnosed timothy besides jump lab [SEP]']
+[Init] best rec loss: 0.9389415383338928 for ['[CLS]gence charity g rain plain [SEP]']
+[Init] best rec loss: 0.9305325150489807 for ['[CLS] tre river wil chamberlain donkey [SEP]']
+[Init] best rec loss: 0.9199353456497192 for ['[CLS] emotional lara renewed [CLS] ve [SEP]']
+[Init] best rec loss: 0.9128320813179016 for ['[CLS] alive sas mass fall why [SEP]']
+[Init] best rec loss: 0.8864938020706177 for ['[CLS] led pure simulations lester junior [SEP]']
+[Init] best rec loss: 0.8652690052986145 for ['[CLS] gael gearbox deserve enough air [SEP]']
+[Init] best perm rec loss: 0.8601428866386414 for ['[CLS] gearbox enough deserve air gael [SEP]']
+[Init] best perm rec loss: 0.8588325381278992 for ['[CLS] enough gearbox air gael deserve [SEP]']
+[Init] best perm rec loss: 0.8585264682769775 for ['[CLS] enough deserve air gael gearbox [SEP]']
+[Init] best perm rec loss: 0.8566455841064453 for ['[CLS] air deserve gael gearbox enough [SEP]']
+[Init] best perm rec loss: 0.8556789755821228 for ['[CLS] gael air deserve gearbox enough [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.361 (perp=8.151, rec=0.766, cos=0.964), tot_loss_proj:3.631 [t=0.17s]
+prediction: ['[CLS] cooks. county losses. [SEP]']
+[ 100/2000] tot_loss=4.022 (perp=12.108, rec=0.601, cos=0.999), tot_loss_proj:4.333 [t=0.17s]
+prediction: ['[CLS] cooks. episode abs probably [SEP]']
+[ 150/2000] tot_loss=3.799 (perp=11.393, rec=0.523, cos=0.997), tot_loss_proj:4.111 [t=0.17s]
+prediction: ['[CLS] cooks. episode °f oven [SEP]']
+[ 200/2000] tot_loss=3.483 (perp=10.105, rec=0.467, cos=0.995), tot_loss_proj:3.895 [t=0.17s]
+prediction: ['[CLS] cooks. oven hands oven [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=4.328 (perp=13.576, rec=0.613, cos=1.000), tot_loss_proj:4.440 [t=0.17s]
+prediction: ['[CLS]ignant what dry cooks romanized [SEP]']
+[ 300/2000] tot_loss=3.177 (perp=12.935, rec=0.446, cos=0.143), tot_loss_proj:4.652 [t=0.17s]
+prediction: ['[CLS] registers which dry cooks coverage [SEP]']
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=2.389 (perp=10.578, rec=0.247, cos=0.027), tot_loss_proj:3.870 [t=0.17s]
+prediction: ['[CLS] sick this cooks well dry [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.261 (perp=10.255, rec=0.195, cos=0.015), tot_loss_proj:2.815 [t=0.17s]
+prediction: ['[CLS] this oven cooks well ¹ [SEP]']
+[ 450/2000] tot_loss=1.627 (perp=7.419, rec=0.135, cos=0.009), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=1.602 (perp=7.419, rec=0.110, cos=0.009), tot_loss_proj:1.592 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 550/2000] tot_loss=1.593 (perp=7.419, rec=0.101, cos=0.008), tot_loss_proj:1.589 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[ 600/2000] tot_loss=1.591 (perp=7.419, rec=0.099, cos=0.008), tot_loss_proj:1.585 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=1.592 (perp=7.419, rec=0.100, cos=0.008), tot_loss_proj:1.577 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=1.579 (perp=7.419, rec=0.088, cos=0.008), tot_loss_proj:1.580 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[ 750/2000] tot_loss=1.577 (perp=7.419, rec=0.086, cos=0.008), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=1.586 (perp=7.419, rec=0.095, cos=0.007), tot_loss_proj:1.570 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.576 (perp=7.419, rec=0.086, cos=0.007), tot_loss_proj:1.583 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[ 900/2000] tot_loss=1.579 (perp=7.419, rec=0.088, cos=0.007), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.569 (perp=7.419, rec=0.079, cos=0.007), tot_loss_proj:1.579 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.580 (perp=7.419, rec=0.090, cos=0.006), tot_loss_proj:1.584 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1050/2000] tot_loss=1.574 (perp=7.419, rec=0.084, cos=0.006), tot_loss_proj:1.585 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.571 (perp=7.419, rec=0.082, cos=0.006), tot_loss_proj:1.585 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.581 (perp=7.419, rec=0.091, cos=0.006), tot_loss_proj:1.579 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1200/2000] tot_loss=1.578 (perp=7.419, rec=0.089, cos=0.006), tot_loss_proj:1.578 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.570 (perp=7.419, rec=0.080, cos=0.006), tot_loss_proj:1.583 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.572 (perp=7.419, rec=0.082, cos=0.006), tot_loss_proj:1.580 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1350/2000] tot_loss=1.578 (perp=7.419, rec=0.089, cos=0.005), tot_loss_proj:1.578 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.565 (perp=7.419, rec=0.076, cos=0.005), tot_loss_proj:1.585 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.566 (perp=7.419, rec=0.077, cos=0.005), tot_loss_proj:1.582 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1500/2000] tot_loss=1.574 (perp=7.419, rec=0.084, cos=0.005), tot_loss_proj:1.580 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.575 (perp=7.419, rec=0.085, cos=0.005), tot_loss_proj:1.588 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.578 (perp=7.419, rec=0.089, cos=0.005), tot_loss_proj:1.583 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1650/2000] tot_loss=1.565 (perp=7.419, rec=0.076, cos=0.005), tot_loss_proj:1.580 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.563 (perp=7.419, rec=0.074, cos=0.005), tot_loss_proj:1.580 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.571 (perp=7.419, rec=0.082, cos=0.005), tot_loss_proj:1.582 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1800/2000] tot_loss=1.572 (perp=7.419, rec=0.083, cos=0.005), tot_loss_proj:1.581 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.562 (perp=7.419, rec=0.074, cos=0.005), tot_loss_proj:1.594 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.567 (perp=7.419, rec=0.079, cos=0.005), tot_loss_proj:1.581 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+[1950/2000] tot_loss=1.562 (perp=7.419, rec=0.073, cos=0.005), tot_loss_proj:1.591 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.573 (perp=7.419, rec=0.084, cos=0.005), tot_loss_proj:1.579 [t=0.17s]
+prediction: ['[CLS] this oven cooks well. [SEP]']
+Done with input #97 of 100.
+reference: 
+========================
+[CLS] this oven cooks well. [SEP]
+========================
+predicted: 
+========================
+[CLS] this oven cooks well. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+[Aggregate metrics]:
+rouge1     | fm: 75.040 | p: 74.770 | r: 75.494
+rouge2     | fm: 29.556 | p: 29.446 | r: 29.744
+rougeL     | fm: 62.121 | p: 61.908 | r: 62.534
+rougeLsum  | fm: 62.090 | p: 61.898 | r: 62.526
+r1fm+r2fm = 104.596
+
+input #97 time: 0:06:51 | total time: 12:58:41
+
+
+Running input #98 of 100.
+reference: 
+========================
+Sarah devoured the cakes in the kitchen last night.
+========================
+average of cosine similarity 0.9993452529147651
+highest_index [0]
+highest [0.9993452529147651]
+Debug: ids_shape = 13, pads = [13]
+Debug: input ids = tensor([[  101,  4532, 16475, 16777,  1996, 22619,  1999,  1996,  3829,  2197,
+          2305,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] sarah devoured the cakes in the kitchen last night. [SEP]']
+[Init] best rec loss: 0.9987524151802063 for ['[CLS] socialced coordination umbrella louder require paper plank parallel hi dame [SEP]']
+[Init] best rec loss: 0.9721340537071228 for ['[CLS]mission instruments overnton _ revenge touch cole palettescent die [SEP]']
+[Init] best rec loss: 0.9537109732627869 for ['[CLS] agreed cold indexed clip troops crazy basic methodology low mai burns [SEP]']
+[Init] best rec loss: 0.9328851103782654 for ['[CLS] excited hadley coverage theatreere schoolhouse then scored point carpenter nature [SEP]']
+[Init] best perm rec loss: 0.932117760181427 for ['[CLS] point schoolhouse theatre scored hadleyere nature excited carpenter then coverage [SEP]']
+[Init] best perm rec loss: 0.9296472668647766 for ['[CLS] schoolhouse excited carpenterere hadley theatre coverage nature scored point then [SEP]']
+[Init] best perm rec loss: 0.9284753203392029 for ['[CLS]ere excited nature carpenter scored theatre then hadley schoolhouse point coverage [SEP]']
+[Init] best perm rec loss: 0.9283377528190613 for ['[CLS] carpenter hadley theatre coverage then excited scored natureere point schoolhouse [SEP]']
+[Init] best perm rec loss: 0.9256162047386169 for ['[CLS] nature coverageere excited theatre schoolhouse then hadley scored point carpenter [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.892 (perp=13.189, rec=0.717, cos=0.538), tot_loss_proj:4.550 [t=0.18s]
+prediction: ['[CLS]for syndrome companion vintage the sheriff escape shortly available tracker uncredited [SEP]']
+[ 100/2000] tot_loss=3.299 (perp=11.727, rec=0.623, cos=0.330), tot_loss_proj:4.103 [t=0.19s]
+prediction: ['[CLS] dog care 5 research whom hangul day. find tracker completed [SEP]']
+[ 150/2000] tot_loss=3.054 (perp=11.453, rec=0.536, cos=0.227), tot_loss_proj:4.207 [t=0.19s]
+prediction: ['[CLS] dog healthcare graham research the flashed day. harry cafeteria reconnaissance [SEP]']
+[ 200/2000] tot_loss=3.334 (perp=13.104, rec=0.488, cos=0.225), tot_loss_proj:4.465 [t=0.19s]
+prediction: ['[CLS] knife healthcare graham night having prototype day. remember cafeteria dagger [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=3.127 (perp=12.114, rec=0.461, cos=0.244), tot_loss_proj:4.316 [t=0.19s]
+prediction: ['[CLS] knife healthcare breakfast explorer amongst cafeteria day. schuster kevin pierce [SEP]']
+[ 300/2000] tot_loss=3.186 (perp=12.945, rec=0.434, cos=0.163), tot_loss_proj:4.552 [t=0.19s]
+prediction: ['[CLS] knife % cakes mission tasted cafeteria day glad dresser through nevada [SEP]']
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=3.113 (perp=11.868, rec=0.431, cos=0.308), tot_loss_proj:4.257 [t=0.19s]
+prediction: ['[CLS] legislature knife % cakes mission tasted last. timetable sarah nevada [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=3.282 (perp=13.225, rec=0.431, cos=0.206), tot_loss_proj:4.610 [t=0.19s]
+prediction: ['[CLS] legislature knife % cakes mission tasted last sarah towns pointless upcoming [SEP]']
+[ 450/2000] tot_loss=3.160 (perp=12.700, rec=0.406, cos=0.214), tot_loss_proj:4.476 [t=0.19s]
+prediction: ['[CLS] legislature knife % cakes mission eating last sarah towns prize upcoming [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=3.361 (perp=12.892, rec=0.383, cos=0.400), tot_loss_proj:4.337 [t=0.19s]
+prediction: ['[CLS] legislature knife % cakes intake eating last sarah homeless. upcoming [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=3.381 (perp=11.872, rec=0.386, cos=0.620), tot_loss_proj:4.188 [t=0.19s]
+prediction: ['[CLS] sarah knife gogh cakes intake eating last settler timetable. upcoming [SEP]']
+[ 600/2000] tot_loss=3.094 (perp=12.673, rec=0.367, cos=0.193), tot_loss_proj:4.457 [t=0.19s]
+prediction: ['[CLS] sarah knife gogh cakesbersoured last settlerisance. upcoming [SEP]']
+Attempt swap
+Moved token
+[ 650/2000] tot_loss=3.326 (perp=13.352, rec=0.380, cos=0.276), tot_loss_proj:4.514 [t=0.19s]
+prediction: ['[CLS] sarah edit % cakesbersoured last enters settlerisance pointless [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=3.077 (perp=12.521, rec=0.352, cos=0.220), tot_loss_proj:4.602 [t=0.17s]
+prediction: ['[CLS] sarah patience goghisancebersoured last upcoming settler cakes prize [SEP]']
+[ 750/2000] tot_loss=3.192 (perp=13.687, rec=0.351, cos=0.104), tot_loss_proj:4.784 [t=0.17s]
+prediction: ['[CLS] sarah patience goghisanceodesoured last upcoming settler cakes prize [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=3.101 (perp=13.194, rec=0.331, cos=0.131), tot_loss_proj:4.714 [t=0.22s]
+prediction: ['[CLS] sarah patience co₂oured kitchenisance last upcoming settler cakes prize [SEP]']
+Attempt swap
+Moved sequence
+[ 850/2000] tot_loss=3.041 (perp=12.664, rec=0.346, cos=0.163), tot_loss_proj:4.494 [t=0.17s]
+prediction: ['[CLS] sarah patience nominationouredisance last © settler cakes kitchen prize [SEP]']
+[ 900/2000] tot_loss=3.192 (perp=12.664, rec=0.334, cos=0.325), tot_loss_proj:4.492 [t=0.17s]
+prediction: ['[CLS] sarah patience nominationouredisance last © settler cakes kitchen prize [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=2.799 (perp=11.151, rec=0.327, cos=0.242), tot_loss_proj:4.109 [t=0.17s]
+prediction: ['[CLS] sarahoured patience nominationisance last © academie cakes kitchen. [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.937 (perp=11.515, rec=0.329, cos=0.305), tot_loss_proj:4.288 [t=0.17s]
+prediction: ['[CLS] sarahoured settler goghisance last © patience cakes kitchen prize [SEP]']
+[1050/2000] tot_loss=2.497 (perp=10.445, rec=0.309, cos=0.099), tot_loss_proj:3.999 [t=0.17s]
+prediction: ['[CLS] sarahoured settler goghisance last © patience cakes kitchen. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=2.678 (perp=11.021, rec=0.310, cos=0.165), tot_loss_proj:4.080 [t=0.17s]
+prediction: ['[CLS] sarahoured settler goghisance last ©cup cakes kitchen. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=2.631 (perp=11.075, rec=0.305, cos=0.112), tot_loss_proj:4.012 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last participatedcup cakes kitchen. [SEP]']
+[1200/2000] tot_loss=2.613 (perp=11.075, rec=0.309, cos=0.089), tot_loss_proj:4.011 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last participatedcup cakes kitchen. [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=2.710 (perp=10.991, rec=0.313, cos=0.199), tot_loss_proj:3.985 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last participated cakescup kitchen. [SEP]']
+Attempt swap
+Swapped tokens
+[1300/2000] tot_loss=2.668 (perp=10.978, rec=0.303, cos=0.169), tot_loss_proj:4.006 [t=0.17s]
+prediction: ['[CLS] sarahoured co₂ academieisance last participated cakescup kitchen. [SEP]']
+[1350/2000] tot_loss=2.740 (perp=10.978, rec=0.304, cos=0.241), tot_loss_proj:4.006 [t=0.17s]
+prediction: ['[CLS] sarahoured co₂ academieisance last participated cakescup kitchen. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=2.553 (perp=10.536, rec=0.290, cos=0.156), tot_loss_proj:3.934 [t=0.17s]
+prediction: ['[CLS] sarahoured co₂ academieisance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=2.575 (perp=10.536, rec=0.289, cos=0.179), tot_loss_proj:3.935 [t=0.17s]
+prediction: ['[CLS] sarahoured co₂ academieisance last whore cakescup kitchen. [SEP]']
+[1500/2000] tot_loss=2.617 (perp=10.536, rec=0.293, cos=0.217), tot_loss_proj:3.934 [t=0.17s]
+prediction: ['[CLS] sarahoured co₂ academieisance last whore cakescup kitchen. [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=2.524 (perp=10.484, rec=0.291, cos=0.136), tot_loss_proj:3.910 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.824 (perp=10.484, rec=0.288, cos=0.440), tot_loss_proj:3.909 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+[1650/2000] tot_loss=2.645 (perp=10.484, rec=0.287, cos=0.261), tot_loss_proj:3.910 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.555 (perp=10.484, rec=0.287, cos=0.171), tot_loss_proj:3.914 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.618 (perp=10.484, rec=0.285, cos=0.236), tot_loss_proj:3.911 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+[1800/2000] tot_loss=2.538 (perp=10.484, rec=0.286, cos=0.154), tot_loss_proj:3.915 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.732 (perp=10.484, rec=0.285, cos=0.351), tot_loss_proj:3.914 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.615 (perp=10.484, rec=0.291, cos=0.226), tot_loss_proj:3.914 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+[1950/2000] tot_loss=2.461 (perp=10.484, rec=0.286, cos=0.078), tot_loss_proj:3.910 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.493 (perp=10.484, rec=0.284, cos=0.113), tot_loss_proj:3.912 [t=0.17s]
+prediction: ['[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]']
+Done with input #98 of 100.
+reference: 
+========================
+[CLS] sarah devoured the cakes in the kitchen last night. [SEP]
+========================
+predicted: 
+========================
+[CLS] sarahoured academie co₂isance last whore cakescup kitchen. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 38.095 | p: 40.000 | r: 36.364
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 28.571 | p: 30.000 | r: 27.273
+rougeLsum  | fm: 28.571 | p: 30.000 | r: 27.273
+r1fm+r2fm = 38.095
+
+[Aggregate metrics]:
+rouge1     | fm: 74.593 | p: 74.335 | r: 75.084
+rouge2     | fm: 29.303 | p: 29.145 | r: 29.523
+rougeL     | fm: 61.793 | p: 61.581 | r: 62.191
+rougeLsum  | fm: 61.758 | p: 61.552 | r: 62.182
+r1fm+r2fm = 103.896
+
+input #98 time: 0:07:11 | total time: 13:05:53
+
+
+Running input #99 of 100.
+reference: 
+========================
+The box contains the ball.
+========================
+average of cosine similarity 0.999440902871247
+highest_index [0]
+highest [0.999440902871247]
+Debug: ids_shape = 8, pads = [8]
+Debug: input ids = tensor([[ 101, 1996, 3482, 3397, 1996, 3608, 1012,  102]], device='cuda:0')
+Debug: ref = ['[CLS] the box contains the ball. [SEP]']
+[Init] best rec loss: 0.9730719327926636 for ['[CLS] point bono dry position nothing using [SEP]']
+[Init] best rec loss: 0.9256172180175781 for ['[CLS] tense childhood port oman mo earl [SEP]']
+[Init] best rec loss: 0.9026228785514832 for ['[CLS] storage theatergraphic scholarships africa minorities [SEP]']
+[Init] best rec loss: 0.9006547927856445 for ['[CLS] quoien hang town purse savings [SEP]']
+[Init] best rec loss: 0.897529661655426 for ['[CLS] especiallylink but merchantywood rapid [SEP]']
+[Init] best rec loss: 0.8682069182395935 for ['[CLS] [MASK] tennis reacherェ one note [SEP]']
+[Init] best rec loss: 0.8641061186790466 for ['[CLS] returned raphael2 dragon sato deco [SEP]']
+[Init] best perm rec loss: 0.8624070286750793 for ['[CLS]2 returned deco sato raphael dragon [SEP]']
+[Init] best perm rec loss: 0.8620513677597046 for ['[CLS] deco sato raphael returned2 dragon [SEP]']
+[Init] best perm rec loss: 0.8598130345344543 for ['[CLS] returned sato2 deco raphael dragon [SEP]']
+[Init] best perm rec loss: 0.8590118885040283 for ['[CLS] sato deco2 returned dragon raphael [SEP]']
+[Init] best perm rec loss: 0.8577542901039124 for ['[CLS]2 sato deco returned dragon raphael [SEP]']
+[Init] best perm rec loss: 0.8570127487182617 for ['[CLS]2 deco returned dragon raphael sato [SEP]']
+[Init] best perm rec loss: 0.8554680347442627 for ['[CLS]2 sato deco dragon returned raphael [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.109 (perp=8.086, rec=0.644, cos=0.848), tot_loss_proj:3.648 [t=0.17s]
+prediction: ['[CLS] 4 is tampa.. 2018 [SEP]']
+[ 100/2000] tot_loss=3.573 (perp=11.655, rec=0.569, cos=0.673), tot_loss_proj:4.252 [t=0.17s]
+prediction: ['[CLS] leaves contains dinamo the. allah [SEP]']
+[ 150/2000] tot_loss=4.155 (perp=13.006, rec=0.835, cos=0.719), tot_loss_proj:4.551 [t=0.17s]
+prediction: ['[CLS] enters becomes norwich club ball allah [SEP]']
+[ 200/2000] tot_loss=2.997 (perp=9.247, rec=0.637, cos=0.511), tot_loss_proj:3.733 [t=0.17s]
+prediction: ['[CLS] signals fires craven. ball. [SEP]']
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=2.779 (perp=9.183, rec=0.576, cos=0.367), tot_loss_proj:3.808 [t=0.17s]
+prediction: ['[CLS] contains ᵇ headquarters. ball. [SEP]']
+[ 300/2000] tot_loss=2.810 (perp=9.785, rec=0.504, cos=0.349), tot_loss_proj:3.956 [t=0.17s]
+prediction: ['[CLS] contains ball location ( ball. [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.869 (perp=8.949, rec=0.626, cos=0.454), tot_loss_proj:3.691 [t=0.17s]
+prediction: ['[CLS] car * headquarters contains ball ) [SEP]']
+Attempt swap
+[ 400/2000] tot_loss=2.653 (perp=8.720, rec=0.544, cos=0.365), tot_loss_proj:3.716 [t=0.17s]
+prediction: ['[CLS] disc * headquarters contains ball ; [SEP]']
+[ 450/2000] tot_loss=2.615 (perp=8.766, rec=0.499, cos=0.362), tot_loss_proj:3.742 [t=0.17s]
+prediction: ['[CLS] disc * upstairs contains ball ; [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=2.602 (perp=8.795, rec=0.477, cos=0.366), tot_loss_proj:3.729 [t=0.17s]
+prediction: ['[CLS] disc * box contains ball ; [SEP]']
+Attempt swap
+[ 550/2000] tot_loss=2.494 (perp=8.795, rec=0.452, cos=0.284), tot_loss_proj:3.725 [t=0.17s]
+prediction: ['[CLS] disc * box contains ball ; [SEP]']
+[ 600/2000] tot_loss=2.489 (perp=8.795, rec=0.435, cos=0.295), tot_loss_proj:3.730 [t=0.17s]
+prediction: ['[CLS] disc * box contains ball ; [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=3.102 (perp=11.877, rec=0.425, cos=0.302), tot_loss_proj:4.292 [t=0.19s]
+prediction: ['[CLS] olaf box box contains ball ; [SEP]']
+Attempt swap
+Moved token
+[ 700/2000] tot_loss=2.298 (perp=7.817, rec=0.456, cos=0.278), tot_loss_proj:3.463 [t=0.19s]
+prediction: ['[CLS] they * box ball contains. [SEP]']
+[ 750/2000] tot_loss=2.683 (perp=9.766, rec=0.403, cos=0.327), tot_loss_proj:3.864 [t=0.19s]
+prediction: ['[CLS] they unnoticed box ball contains ; [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=2.530 (perp=9.079, rec=0.404, cos=0.310), tot_loss_proj:3.669 [t=0.19s]
+prediction: ['[CLS] they contains box ball unnoticed ; [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=2.539 (perp=9.079, rec=0.403, cos=0.320), tot_loss_proj:3.670 [t=0.19s]
+prediction: ['[CLS] they contains box ball unnoticed ; [SEP]']
+[ 900/2000] tot_loss=2.346 (perp=8.265, rec=0.390, cos=0.303), tot_loss_proj:3.535 [t=0.19s]
+prediction: ['[CLS] they contains box ball unnoticed. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=2.393 (perp=8.756, rec=0.378, cos=0.263), tot_loss_proj:3.635 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=2.396 (perp=8.756, rec=0.373, cos=0.273), tot_loss_proj:3.646 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1050/2000] tot_loss=2.420 (perp=8.756, rec=0.372, cos=0.298), tot_loss_proj:3.636 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=2.387 (perp=8.756, rec=0.368, cos=0.268), tot_loss_proj:3.646 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=2.348 (perp=8.756, rec=0.355, cos=0.242), tot_loss_proj:3.642 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1200/2000] tot_loss=2.372 (perp=8.756, rec=0.357, cos=0.264), tot_loss_proj:3.645 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=2.405 (perp=8.756, rec=0.354, cos=0.300), tot_loss_proj:3.640 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=2.338 (perp=8.756, rec=0.347, cos=0.240), tot_loss_proj:3.647 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1350/2000] tot_loss=2.385 (perp=8.756, rec=0.345, cos=0.289), tot_loss_proj:3.638 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=2.378 (perp=8.756, rec=0.345, cos=0.282), tot_loss_proj:3.639 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=2.385 (perp=8.756, rec=0.353, cos=0.281), tot_loss_proj:3.639 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1500/2000] tot_loss=2.359 (perp=8.756, rec=0.351, cos=0.257), tot_loss_proj:3.637 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=2.380 (perp=8.756, rec=0.346, cos=0.284), tot_loss_proj:3.647 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.417 (perp=8.756, rec=0.348, cos=0.318), tot_loss_proj:3.638 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1650/2000] tot_loss=2.393 (perp=8.756, rec=0.344, cos=0.298), tot_loss_proj:3.646 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.364 (perp=8.756, rec=0.336, cos=0.277), tot_loss_proj:3.637 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.408 (perp=8.756, rec=0.352, cos=0.304), tot_loss_proj:3.640 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1800/2000] tot_loss=2.406 (perp=8.756, rec=0.347, cos=0.308), tot_loss_proj:3.639 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.365 (perp=8.756, rec=0.344, cos=0.270), tot_loss_proj:3.638 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.390 (perp=8.756, rec=0.346, cos=0.293), tot_loss_proj:3.641 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+[1950/2000] tot_loss=2.452 (perp=8.756, rec=0.341, cos=0.360), tot_loss_proj:3.645 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.431 (perp=8.756, rec=0.345, cos=0.335), tot_loss_proj:3.643 [t=0.19s]
+prediction: ['[CLS] contains contains box ball unnoticed. [SEP]']
+Done with input #99 of 100.
+reference: 
+========================
+[CLS] the box contains the ball. [SEP]
+========================
+predicted: 
+========================
+[CLS] contains contains box ball unnoticed. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 71.429 | p: 71.429 | r: 71.429
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 57.143 | p: 57.143 | r: 57.143
+rougeLsum  | fm: 57.143 | p: 57.143 | r: 57.143
+r1fm+r2fm = 71.429
+
+[Aggregate metrics]:
+rouge1     | fm: 74.592 | p: 74.296 | r: 75.082
+rouge2     | fm: 29.118 | p: 28.951 | r: 29.383
+rougeL     | fm: 61.693 | p: 61.508 | r: 62.078
+rougeLsum  | fm: 61.655 | p: 61.461 | r: 62.028
+r1fm+r2fm = 103.710
+
+input #99 time: 0:07:18 | total time: 13:13:11
+
+
+Average Cosine Similarity: 0.9993532828782739
+Done with all.

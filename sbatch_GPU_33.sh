@@ -42,6 +42,17 @@ mkdir -p logs_c33
 
 # bash run5.sh >> logs_c30/pretraining-weights-experiments-no-optimization.txt  2>&1 &
 
+# Run the command on GPU 0
+# run_on_gpu sst2 "logs_c33/output5.log" 0.05 0.0 "no" "yes" "no" 1 100 
+
+# Run the command on GPU 0
+# run_on_gpu sst2 "logs_c33/output6.log" 0.03 0.0 "no" "yes" "no" 1 100 
+
+# Run the command on GPU 0
+run_on_gpu sst2 "logs_c33/output7.log" 0.08 0.0 "no" "yes" "no" 1 100 
+
+# Run the command on GPU 0
+run_on_gpu rotten_tomatoes "logs_c33/output8.log" 0.05 0.0 "no" "yes" "no"  8 13
 
 wait
 

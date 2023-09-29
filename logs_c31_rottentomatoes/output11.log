@@ -15401,3 +15401,1960 @@ Attempt swap
 Swapped tokens
 [1250/2000] tot_loss=1.937 (perp=9.153, rec=0.103, cos=0.003), tot_loss_proj:2.499 [t=0.17s]
 prediction: ['[CLS] ancruciatingiating amateurish movie. saddle formation excr movie screenplay [SEP] aability a movie demonstration of saddled [SEP]']
+Attempt swap
+Moved token
+[1300/2000] tot_loss=1.891 (perp=8.975, rec=0.092, cos=0.004), tot_loss_proj:2.423 [t=0.17s]
+prediction: ['[CLS] ancruciatingiating amateurish movie. a saddle formation excr movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+[1350/2000] tot_loss=1.891 (perp=8.975, rec=0.093, cos=0.003), tot_loss_proj:2.419 [t=0.17s]
+prediction: ['[CLS] ancruciatingiating amateurish movie. a saddle formation excr movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+Moved token
+[1400/2000] tot_loss=1.786 (perp=8.394, rec=0.104, cos=0.003), tot_loss_proj:2.303 [t=0.17s]
+prediction: ['[CLS] ancruciating amateurish movie. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.766 (perp=8.394, rec=0.084, cos=0.003), tot_loss_proj:2.302 [t=0.17s]
+prediction: ['[CLS] ancruciating amateurish movie. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+[1500/2000] tot_loss=1.783 (perp=8.394, rec=0.101, cos=0.003), tot_loss_proj:2.307 [t=0.17s]
+prediction: ['[CLS] ancruciating amateurish movie. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=1.778 (perp=8.394, rec=0.096, cos=0.003), tot_loss_proj:2.293 [t=0.19s]
+prediction: ['[CLS] ancruciating amateurish movie. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+Moved token
+[1600/2000] tot_loss=1.756 (perp=8.250, rec=0.102, cos=0.003), tot_loss_proj:2.280 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+[1650/2000] tot_loss=1.745 (perp=8.250, rec=0.092, cos=0.003), tot_loss_proj:2.276 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.752 (perp=8.250, rec=0.099, cos=0.003), tot_loss_proj:2.274 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+Swapped tokens
+[1750/2000] tot_loss=1.752 (perp=8.250, rec=0.099, cos=0.003), tot_loss_proj:2.282 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+[1800/2000] tot_loss=1.751 (perp=8.250, rec=0.098, cos=0.003), tot_loss_proj:2.286 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.737 (perp=8.250, rec=0.084, cos=0.003), tot_loss_proj:2.287 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.747 (perp=8.250, rec=0.094, cos=0.003), tot_loss_proj:2.294 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating movie screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+[1950/2000] tot_loss=1.760 (perp=8.344, rec=0.088, cos=0.003), tot_loss_proj:2.321 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating book screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.762 (perp=8.344, rec=0.090, cos=0.003), tot_loss_proj:2.326 [t=0.17s]
+prediction: ['[CLS] ancruciating movie amateurish. a saddle formation excriating book screenplay [SEP]ability a movie demonstration of saddled [SEP]']
+Done with input #88 of 100.
+reference: 
+========================
+[CLS] an excruciating demonstration of the unsalvageability of a movie saddled with an amateurish screenplay. [SEP]
+========================
+predicted: 
+========================
+[CLS] ancruciatingiating amateurish movie. saddle formation excr movie screenplay [SEP] aability a movie demonstration of saddled [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 54.545 | p: 52.941 | r: 56.250
+rouge2     | fm: 19.355 | p: 18.750 | r: 20.000
+rougeL     | fm: 30.303 | p: 29.412 | r: 31.250
+rougeLsum  | fm: 30.303 | p: 29.412 | r: 31.250
+r1fm+r2fm = 73.900
+
+[Aggregate metrics]:
+rouge1     | fm: 71.506 | p: 70.815 | r: 72.465
+rouge2     | fm: 21.258 | p: 21.097 | r: 21.496
+rougeL     | fm: 49.461 | p: 48.934 | r: 50.163
+rougeLsum  | fm: 49.473 | p: 48.949 | r: 50.111
+r1fm+r2fm = 92.764
+
+input #88 time: 0:06:59 | total time: 12:07:31
+
+
+Running input #89 of 100.
+reference: 
+========================
+like the best of godard's movies . . . it is visually ravishing , penetrating , impenetrable .
+========================
+average of cosine similarity 0.9994091424337515
+highest_index [0]
+highest [0.9994091424337515]
+Debug: ids_shape = 27, pads = [27]
+Debug: input ids = tensor([[  101,  2066,  1996,  2190,  1997,  2643,  4232,  1005,  1055,  5691,
+          1012,  1012,  1012,  2009,  2003, 17453, 16806, 12227,  1010, 22391,
+          1010, 17727,  8625,  6494,  3468,  1012,   102]], device='cuda:0')
+Debug: ref = ["[CLS] like the best of godard's movies... it is visually ravishing, penetrating, impenetrable. [SEP]"]
+[Init] best rec loss: 1.9281156063079834 for ['[CLS] extensive drew commander matches book locality check feet jumping acoustic afrorred seablood frequentlyam choice ( task tata eatingnant voivodeship armored christmas [SEP]']
+[Init] best rec loss: 1.913780927658081 for ['[CLS] johnny tow also armed entrance merry there research license shouldn pieces rail separating she boston mistress looking offering dwelling lay abandoned retirement lexipies top [SEP]']
+[Init] best rec loss: 1.7179909944534302 for ['[CLS] chest diocese on did fork [MASK] very hands cindy boundbation baywl fund digger res cup associated especially pepper dh actor attention prosecution via [SEP]']
+[Init] best perm rec loss: 1.7159398794174194 for ['[CLS] especially bay via attention res fork dh onbation cup chest prosecution pepper diocese handswl fund did digger cindy bound [MASK] very associated actor [SEP]']
+[Init] best perm rec loss: 1.7142338752746582 for ['[CLS] actor bay pepper [MASK] associated prosecution dh on fork viabation especially hands attention cup diocesewl cindy chest digger bound very fund res did [SEP]']
+[Init] best perm rec loss: 1.7138304710388184 for ['[CLS] attention diocese didwlbation fund fork bound on digger dh bay chest actor prosecution hands very pepper especially res cup cindy via [MASK] associated [SEP]']
+[Init] best perm rec loss: 1.7118570804595947 for ['[CLS] prosecutionwl pepper cup fork viabation actor chest digger associated attention [MASK] bay very res fund bound dh cindy on did diocese especially hands [SEP]']
+[Init] best perm rec loss: 1.7115179300308228 for ['[CLS] fund actorwlbation [MASK] especially pepper dh diocese associated bound via very res digger fork bay did cindy hands chest attention prosecution on cup [SEP]']
+[Init] best perm rec loss: 1.7113301753997803 for ['[CLS] especially fundbation on [MASK] bound hands very res chest actor attention cup prosecutionwl diocese digger associated via did fork pepper cindy bay dh [SEP]']
+[Init] best perm rec loss: 1.7085808515548706 for ['[CLS]wlbation cindy fork hands pepper fund via attention associated actor bay very cup [MASK] prosecution digger bound dh diocese res did on especially chest [SEP]']
+[Init] best perm rec loss: 1.708129644393921 for ['[CLS] fork bay fund chest pepper cup attention hands associatedbation on bound very actor prosecution res did [MASK] especially via diocese diggerwl dh cindy [SEP]']
+[Init] best perm rec loss: 1.70767343044281 for ['[CLS] chest handswl [MASK] diocese actor digger cup on fund especially viabation did very cindy res fork pepper attention bound bay prosecution dh associated [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.667 (perp=11.032, rec=0.428, cos=0.033), tot_loss_proj:3.403 [t=0.17s]
+prediction: ['[CLS] when camp moral destroyed el surpassed beyond.logie because. police lafayette. affection patrolnt. american hate crore caliberframe incredible becomes [SEP]']
+[ 100/2000] tot_loss=2.365 (perp=10.052, rec=0.328, cos=0.026), tot_loss_proj:3.916 [t=0.17s]
+prediction: ['[CLS] where compound x defined. among the. treasury.. police is. eliminated structuralentation. notene overwhelming thoughulously submission. [SEP]']
+[ 150/2000] tot_loss=2.055 (perp=8.876, rec=0.265, cos=0.015), tot_loss_proj:3.082 [t=0.17s]
+prediction: ['[CLS] your concept wow defined. were the. illustrated.. records forces. pixel structuralentation. impenetra,christ feel. [SEP]']
+[ 200/2000] tot_loss=1.985 (perp=8.665, rec=0.236, cos=0.016), tot_loss_proj:2.604 [t=0.17s]
+prediction: ['[CLS] your painting wow def. among the.wl.. records forces.lusion image imp. impenetra, ensuring penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=1.961 (perp=8.717, rec=0.208, cos=0.010), tot_loss_proj:3.766 [t=0.17s]
+prediction: ['[CLS] like movies wow considered like the clients. kidding..,ous.lusionmblingrted. impenetra, disc penetrating. [SEP]']
+[ 300/2000] tot_loss=2.070 (perp=9.303, rec=0.199, cos=0.010), tot_loss_proj:3.439 [t=0.17s]
+prediction: ['[CLS] like movies hitting considered movies a despite. kidding..,ously.lusionmbling imp. impenetra,ignant penetrating. [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=1.949 (perp=8.199, rec=0.241, cos=0.068), tot_loss_proj:2.934 [t=0.17s]
+prediction: ['[CLS] like movies hitting considered movies a clients. kidding... it. visually visually imp. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 400/2000] tot_loss=1.924 (perp=8.515, rec=0.207, cos=0.014), tot_loss_proj:2.564 [t=0.17s]
+prediction: ['[CLS] like moviesˈ considers movies aoulos honored.... kelly. visually visuallyrted. impenetra is, penetrating. [SEP]']
+[ 450/2000] tot_loss=1.902 (perp=8.653, rec=0.164, cos=0.008), tot_loss_proj:2.608 [t=0.17s]
+prediction: ['[CLS] like movies bestaud movies the naughty respectively.... sample. everyone visuallyrted. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 500/2000] tot_loss=1.673 (perp=7.558, rec=0.155, cos=0.007), tot_loss_proj:2.380 [t=0.17s]
+prediction: ['[CLS] movies like best defined movies the naughty respectively.... sample. visually visuallyrted. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=1.677 (perp=7.500, rec=0.167, cos=0.009), tot_loss_proj:2.383 [t=0.17s]
+prediction: ['[CLS] movies like best proportional movies the clients.... she!. visually visuallyrted. impenetra is, penetrating. [SEP]']
+[ 600/2000] tot_loss=1.711 (perp=7.828, rec=0.138, cos=0.007), tot_loss_proj:2.391 [t=0.17s]
+prediction: ['[CLS] movies like bestaud movies the clients.... she!. visually visuallyrted. impenetra is, penetrating. [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=1.670 (perp=7.614, rec=0.141, cos=0.006), tot_loss_proj:2.460 [t=0.17s]
+prediction: ['[CLS] movies like best proportional movies the clients.....oulos she visually visuallyrted. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 700/2000] tot_loss=1.618 (perp=7.324, rec=0.147, cos=0.006), tot_loss_proj:2.410 [t=0.17s]
+prediction: ['[CLS] movies like best proportional movies the clients....oulos. she visually visuallyble. impenetra is, penetrating. [SEP]']
+[ 750/2000] tot_loss=1.609 (perp=7.324, rec=0.139, cos=0.006), tot_loss_proj:2.408 [t=0.17s]
+prediction: ['[CLS] movies like best proportional movies the clients....oulos. she visually visuallyble. impenetra is, penetrating. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=1.639 (perp=7.444, rec=0.144, cos=0.006), tot_loss_proj:2.402 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients....oulos. she visually visuallyble. impenetra is, penetrating. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.607 (perp=7.378, rec=0.126, cos=0.005), tot_loss_proj:2.387 [t=0.17s]
+prediction: ['[CLS] movies like bestlidae movies the clients....oulos. she visually visuallyble. impenetra is, penetrating. [SEP]']
+[ 900/2000] tot_loss=1.644 (perp=7.521, rec=0.134, cos=0.005), tot_loss_proj:2.431 [t=0.17s]
+prediction: ['[CLS] movies like bestlidae movies the clients....oulos. she visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=1.646 (perp=7.578, rec=0.125, cos=0.005), tot_loss_proj:2.388 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.652 (perp=7.578, rec=0.131, cos=0.005), tot_loss_proj:2.395 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+[1050/2000] tot_loss=1.658 (perp=7.578, rec=0.137, cos=0.005), tot_loss_proj:2.398 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.656 (perp=7.578, rec=0.135, cos=0.005), tot_loss_proj:2.395 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.650 (perp=7.578, rec=0.130, cos=0.005), tot_loss_proj:2.389 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+[1200/2000] tot_loss=1.650 (perp=7.578, rec=0.129, cos=0.005), tot_loss_proj:2.393 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.653 (perp=7.578, rec=0.133, cos=0.005), tot_loss_proj:2.389 [t=0.17s]
+prediction: ['[CLS] movies like best bulletin movies the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.736 (perp=8.008, rec=0.130, cos=0.005), tot_loss_proj:2.534 [t=0.17s]
+prediction: ['[CLS] movies like best bulletintarian the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+[1350/2000] tot_loss=1.808 (perp=8.331, rec=0.137, cos=0.005), tot_loss_proj:2.547 [t=0.17s]
+prediction: ['[CLS] movies like best bulletindley the clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved token
+[1400/2000] tot_loss=1.719 (perp=7.937, rec=0.127, cos=0.005), tot_loss_proj:2.389 [t=0.17s]
+prediction: ['[CLS] movies like the best bulletintarian clients.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=1.691 (perp=7.760, rec=0.134, cos=0.005), tot_loss_proj:2.348 [t=0.17s]
+prediction: ['[CLS] movies like the best clients francaisefarlane.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+[1500/2000] tot_loss=1.680 (perp=7.708, rec=0.134, cos=0.005), tot_loss_proj:2.324 [t=0.17s]
+prediction: ['[CLS] movies like the best clients francaise bulletin.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.692 (perp=7.830, rec=0.121, cos=0.005), tot_loss_proj:2.400 [t=0.17s]
+prediction: ['[CLS] movies like the best clientsdra bulletin.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+Moved sequence
+[1600/2000] tot_loss=1.672 (perp=7.748, rec=0.117, cos=0.005), tot_loss_proj:2.381 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+[1650/2000] tot_loss=1.675 (perp=7.748, rec=0.120, cos=0.005), tot_loss_proj:2.378 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.679 (perp=7.748, rec=0.124, cos=0.005), tot_loss_proj:2.382 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallygence. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.704 (perp=7.831, rec=0.132, cos=0.005), tot_loss_proj:2.366 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+[1800/2000] tot_loss=1.706 (perp=7.831, rec=0.134, cos=0.005), tot_loss_proj:2.375 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.696 (perp=7.831, rec=0.124, cos=0.005), tot_loss_proj:2.361 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.691 (perp=7.831, rec=0.119, cos=0.005), tot_loss_proj:2.365 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+[1950/2000] tot_loss=1.695 (perp=7.831, rec=0.123, cos=0.005), tot_loss_proj:2.364 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.693 (perp=7.831, rec=0.122, cos=0.005), tot_loss_proj:2.367 [t=0.17s]
+prediction: ['[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]']
+Done with input #89 of 100.
+reference: 
+========================
+[CLS] like the best of godard's movies... it is visually ravishing, penetrating, impenetrable. [SEP]
+========================
+predicted: 
+========================
+[CLS] movies like the best clients bulletindra.... sheoulos. visually visuallyght. impenetra is, penetrating. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 62.069 | p: 64.286 | r: 60.000
+rouge2     | fm: 14.815 | p: 15.385 | r: 14.286
+rougeL     | fm: 48.276 | p: 50.000 | r: 46.667
+rougeLsum  | fm: 48.276 | p: 50.000 | r: 46.667
+r1fm+r2fm = 76.884
+
+[Aggregate metrics]:
+rouge1     | fm: 71.407 | p: 70.676 | r: 72.376
+rouge2     | fm: 21.306 | p: 21.123 | r: 21.528
+rougeL     | fm: 49.455 | p: 49.016 | r: 50.089
+rougeLsum  | fm: 49.453 | p: 48.992 | r: 50.099
+r1fm+r2fm = 92.713
+
+input #89 time: 0:06:52 | total time: 12:14:24
+
+
+Running input #90 of 100.
+reference: 
+========================
+the movie is so contrived , nonsensical and formulaic that , come to think of it , the day-old shelf would be a more appropriate location to store it .
+========================
+average of cosine similarity 0.9991666738026854
+highest_index [0]
+highest [0.9991666738026854]
+Debug: ids_shape = 40, pads = [40]
+Debug: input ids = tensor([[  101,  1996,  3185,  2003,  2061,  9530, 18886,  7178,  1010,  2512,
+          5054, 19570,  2389,  1998,  5675,  2594,  2008,  1010,  2272,  2000,
+          2228,  1997,  2009,  1010,  1996,  2154,  1011,  2214, 11142,  2052,
+          2022,  1037,  2062,  6413,  3295,  2000,  3573,  2009,  1012,   102]],
+       device='cuda:0')
+Debug: ref = ['[CLS] the movie is so contrived, nonsensical and formulaic that, come to think of it, the day - old shelf would be a more appropriate location to store it. [SEP]']
+[Init] best rec loss: 1.6903260946273804 for ['[CLS]! ape analysts fly romanized association driveway steam wouldvel matternah see either preparation nara expected gotɛ if award physical -way failed jewish protest raceད celtic curseouraries looked lord air glass tires [SEP]']
+[Init] best rec loss: 1.6744911670684814 for ['[CLS] house beau elephant valvemarket mps jae workshops how performance club report willdi wear price based horde third harleyue pena either oftennumciation prayside pole diaape school litter thoughgm cassidy sick amp [SEP]']
+[Init] best rec loss: 1.6556748151779175 for ['[CLS] opponents eve housezam bal position fancy children † see " pan services livingpton acoustic entire ono ascent written unspoken celebrity silence another day anne nina... europa county davis phase folder sim brigham multiple macdonald beside [SEP]']
+[Init] best rec loss: 1.6341122388839722 for ['[CLS] reached guitars facto specializing standardssom money fan attract specimens shut father sen chong choreography knotsianioire where minutes 7iver drewleg of brush ontario scene soap ifay ll evening singapore mer buffalo foreignnikov [SEP]']
+[Init] best rec loss: 1.5174403190612793 for ['[CLS] highway foster hebrew revolt laterdav joe membership background th retrieved noah confidencely cactus federal elector mis that, covering queens if member honest sales stanley embarked draft red feat apart my nan inhumanley waste virginia [SEP]']
+[Init] best rec loss: 1.4476516246795654 for ['[CLS] annual standards split command sargent race hugo content sensors organ space sentiment westwood mile ernst ᵀ membership safe failure chance ferreira commerce mostly hatingave singh bacterial cheekboneseis analog ci bat monkey transport run automatically tons individual [SEP]']
+[Init] best rec loss: 1.3582130670547485 for ['[CLS] enough sofia fa shipyard $ officer ballot shopworking ( other wise katie j purchase few mainkingick monk kent purposes spouse sell critics celeste un gerard stray whomosis straight generally dangerpaper ltd report solomon [SEP]']
+[Init] best perm rec loss: 1.347787857055664 for ['[CLS] few katieking shipyard solomon ballot monk straight danger generally j wise report purchase shop sell celeste ltd ( whom main purposes enoughick $ officer straypaper critics un gerard otherosis spouse faworking sofia kent [SEP]']
+[Init] best perm rec loss: 1.3459906578063965 for ['[CLS] ( shop gerard main whom sofia $ick fa sell un enough other purposes generally ltd straight spouse monk solomon katie danger purchase officer kentosisking ballotpaper wise shipyard few jworking stray report celeste critics [SEP]']
+[Init] best perm rec loss: 1.3337938785552979 for ['[CLS] report $ purposes stray otherking fa sell ballot wise katie gerard monkick officer criticsworking shop danger few kent shipyard whom sofiapaper celeste spouse purchase ltd main straight un solomon generally ( enough josis [SEP]']
+[Init] best perm rec loss: 1.3290839195251465 for ['[CLS] sofiaosis ballot katie $working main ( strayick purchase j generally celeste purposes few enough kent officer critics other shipyard solomonking straightpaper ltd monk spouse un whom wise report sell danger fa shop gerard [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.715 (perp=11.971, rec=0.305, cos=0.016), tot_loss_proj:3.674 [t=0.19s]
+prediction: ['[CLS] laurent itselficia miss with formula, reason track chicken dog pigeonton! heroic looked modern was interact kirby theble rather curl mud make pre cat o help for helped female gently. energy country [SEP]']
+[ 100/2000] tot_loss=2.510 (perp=11.400, rec=0.220, cos=0.010), tot_loss_proj:3.863 [t=0.19s]
+prediction: ["[CLS] & relatedic disney so formula, iso equation hunting - chef /ist movie formula that money want discuss kirby the'wasodies formula make extra cat leadic. startedmas.. expression country [SEP]"]
+[ 150/2000] tot_loss=2.258 (perp=10.476, rec=0.158, cos=0.005), tot_loss_proj:3.805 [t=0.19s]
+prediction: ["[CLS] &sicicuity so formula, isosic sheep - movie andic movieic that, want discuss posts the 'imum and formula be extra catriteic. and progression.. location goo [SEP]"]
+[ 200/2000] tot_loss=2.373 (perp=11.181, rec=0.133, cos=0.004), tot_loss_proj:3.814 [t=0.19s]
+prediction: ['[CLS] issicicuity so formula, isosic hunting -sen andic movieic that, want discuss posts the - would and formula be extra catriteic unlike andliga.. location they [SEP]']
+Attempt swap
+Moved sequence
+[ 250/2000] tot_loss=2.355 (perp=11.112, rec=0.128, cos=0.004), tot_loss_proj:3.944 [t=0.19s]
+prediction: ['[CLS] issicicuity so formula, isosic non -sensic andic movie that, want discuss shelf the - would and formula be extra qui largeic quite and,. shelf location day [SEP]']
+[ 300/2000] tot_loss=2.355 (perp=11.157, rec=0.121, cos=0.003), tot_loss_proj:3.818 [t=0.19s]
+prediction: ['[CLS] issicicuity so formula, isosic non thesensic andic movie that, want discuss shelf the - would and formula be extra qui largeved must.,. shelf location day [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.464 (perp=11.207, rec=0.212, cos=0.011), tot_loss_proj:3.481 [t=0.19s]
+prediction: ['[CLS] issicved { so non, countersic non -sensic andic movie that when nearesty store the non would and formula be extra [SEP] voicedic ob., republished schuster location people [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.749 (perp=11.764, rec=0.360, cos=0.036), tot_loss_proj:3.538 [t=0.19s]
+prediction: ['[CLS] wemutedply so formula, isic non anne [CLS]sic,ic movie that unlikeled rod book precedentibility wouldn and formula might less [SEP] authoral ob. the [SEP] be storage - [SEP]']
+[ 450/2000] tot_loss=2.576 (perp=11.258, rec=0.302, cos=0.022), tot_loss_proj:3.632 [t=0.18s]
+prediction: ['[CLS] imuted thinking so formula, il non sq [CLS]ic,ic movie that unlikeled rod did precedentibility wouldn and formula might lessolved authoral ob. the → be location - [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=2.464 (perp=10.880, rec=0.272, cos=0.016), tot_loss_proj:3.643 [t=0.18s]
+prediction: ['[CLS] isicved thinking so [CLS], isic non sq formulaic,ic movie that unlikeled rod book precedent sized wouldn and formula might less caden authoral ob. the → storage location - [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=2.403 (perp=10.696, rec=0.250, cos=0.014), tot_loss_proj:3.594 [t=0.17s]
+prediction: ['[CLS] isic tape thinking so [CLS], isic non sq formulaic,ic movie that unlikeled rod book precedent sized wouldn and formula might less caden pillowed ob. the → be location - [SEP]']
+[ 600/2000] tot_loss=2.401 (perp=10.791, rec=0.231, cos=0.012), tot_loss_proj:3.544 [t=0.17s]
+prediction: ['[CLS] isic tape thinking so [CLS], isic non sq formulaic,ic movie that unlikeled rod book precedent sized wouldn and formula might less caden pillowic ob. the → be location - [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=2.440 (perp=11.052, rec=0.219, cos=0.010), tot_loss_proj:3.361 [t=0.18s]
+prediction: ['[CLS] isic regardless thinking so [CLS], isic non sq formulaic,ic movie that tapeled rod book colts sized wouldn and formula might less caden mindedic ob. theー be location - [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=2.316 (perp=10.481, rec=0.210, cos=0.010), tot_loss_proj:3.585 [t=0.18s]
+prediction: ['[CLS] isic although thinking so testified, isic non sq formulaic,ic movie that tapeled rod book precedent sized wouldn and formula might less empty beic ob. theー minded location - [SEP]']
+[ 750/2000] tot_loss=2.303 (perp=10.481, rec=0.198, cos=0.009), tot_loss_proj:3.610 [t=0.18s]
+prediction: ['[CLS] isic although thinking so testified, isic non sq formulaic,ic movie that tapeled rod book precedent sized wouldn and formula might less empty beic ob. theー minded location - [SEP]']
+Attempt swap
+Moved token
+[ 800/2000] tot_loss=2.214 (perp=10.079, rec=0.191, cos=0.008), tot_loss_proj:3.419 [t=0.18s]
+prediction: ['[CLS] isic not thinking so testified, isic non sq formulaic.ic movie that tapeled rod book colts sized wouldn and formula might less empty beic. theー minded ob location - [SEP]']
+Attempt swap
+Moved token
+[ 850/2000] tot_loss=2.268 (perp=10.325, rec=0.195, cos=0.007), tot_loss_proj:3.631 [t=0.17s]
+prediction: ['[CLS] isic not yes so hired, isic non sq formulasic.ic movie that tapeled rod book precedentthest wouldn and formula might less empty beic. theー ob location - - [SEP]']
+[ 900/2000] tot_loss=2.283 (perp=10.430, rec=0.190, cos=0.007), tot_loss_proj:3.754 [t=0.17s]
+prediction: ['[CLS] isic not yes so hired, isic non sq formulasic.ic movie that tapeled dog book precedentthest wouldn and formula might less gaze beic. theー ob location - - [SEP]']
+Attempt swap
+Swapped tokens
+[ 950/2000] tot_loss=2.242 (perp=10.214, rec=0.193, cos=0.006), tot_loss_proj:3.453 [t=0.18s]
+prediction: ['[CLS] isic not yes so hired, hosic non sq formulasic.ic movie that tapeled dog book precedentthest wouldn and be might less empty formulaic. theー ob location - - [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.185 (perp=9.971, rec=0.184, cos=0.006), tot_loss_proj:3.407 [t=0.18s]
+prediction: ['[CLS] isic not be so hired, hosic non sq formulasic.ic movie that tapeled dog book precedentthest wouldn and yes might less empty formulaic. theー ob location - - [SEP]']
+[1050/2000] tot_loss=2.164 (perp=9.924, rec=0.173, cos=0.006), tot_loss_proj:3.455 [t=0.18s]
+prediction: ['[CLS] isic not be so hired, hosic non sq formulasic.ic movie that tapeled dog book precedentthest wouldn and yes might less study formulaic. theー ob location - - [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=2.123 (perp=9.666, rec=0.184, cos=0.006), tot_loss_proj:3.349 [t=0.18s]
+prediction: ['[CLS] isic not be so hired, hosic non sqーsic.ic movie that tapeled dog book precedentthest wouldn and yes might less study formulaic. the formula ob location - - [SEP]']
+Attempt swap
+Moved token
+[1150/2000] tot_loss=2.145 (perp=9.758, rec=0.187, cos=0.006), tot_loss_proj:3.353 [t=0.19s]
+prediction: ['[CLS] isic not be so hired, isic non sqーsic.icled movie that tape dog book precedentthest wouldn and yes might less study formulaic. the formula ob location minded - [SEP]']
+[1200/2000] tot_loss=2.138 (perp=9.758, rec=0.181, cos=0.006), tot_loss_proj:3.354 [t=0.18s]
+prediction: ['[CLS] isic not be so hired, isic non sqーsic.icled movie that tape dog book precedentthest wouldn and yes might less study formulaic. the formula ob location minded - [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=2.118 (perp=9.698, rec=0.172, cos=0.006), tot_loss_proj:3.302 [t=0.18s]
+prediction: ['[CLS] isic not be so hired, isic non sqーsic thaticled movie. tape dog book precedentthest wouldn and yes might less study formulaic. the formula ob location minded - [SEP]']
+Attempt swap
+Swapped tokens
+[1300/2000] tot_loss=2.053 (perp=9.354, rec=0.176, cos=0.006), tot_loss_proj:3.261 [t=0.18s]
+prediction: ['[CLS] i that not be so hired, isic non sqーsicsicicled movie. tape dog book precedent sized wouldn and yes might less study formulaic. the formula ob location minded - [SEP]']
+[1350/2000] tot_loss=2.115 (perp=9.697, rec=0.170, cos=0.006), tot_loss_proj:3.458 [t=0.18s]
+prediction: ['[CLS] i that not be so hired, isic non sqーsicsicicled movie. tape dog book precedent sized wouldn and yes might less gaze formulaic. the formula ob location sized - [SEP]']
+Attempt swap
+Swapped tokens
+[1400/2000] tot_loss=2.088 (perp=9.551, rec=0.172, cos=0.005), tot_loss_proj:3.405 [t=0.18s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog book precedent sized wouldn and yes might less gaze formulaic. the non ob location sized - [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=2.071 (perp=9.402, rec=0.185, cos=0.006), tot_loss_proj:3.604 [t=0.18s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog book precedent sized yes and wouldn might less gaze formulaic. the non ob location sized - [SEP]']
+[1500/2000] tot_loss=2.059 (perp=9.402, rec=0.173, cos=0.005), tot_loss_proj:3.604 [t=0.18s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog book precedent sized yes and wouldn might less gaze formulaic. the non ob location sized - [SEP]']
+Attempt swap
+Moved token
+[1550/2000] tot_loss=2.029 (perp=9.287, rec=0.167, cos=0.005), tot_loss_proj:3.344 [t=0.20s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location manners - [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.033 (perp=9.287, rec=0.171, cos=0.005), tot_loss_proj:3.347 [t=0.19s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location manners - [SEP]']
+[1650/2000] tot_loss=2.028 (perp=9.287, rec=0.166, cos=0.005), tot_loss_proj:3.351 [t=0.19s]
+prediction: ['[CLS] i that not be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location manners - [SEP]']
+Attempt swap
+Swapped tokens
+[1700/2000] tot_loss=1.997 (perp=9.130, rec=0.166, cos=0.005), tot_loss_proj:3.345 [t=0.17s]
+prediction: ['[CLS] not that i be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location manners - [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.001 (perp=9.130, rec=0.170, cos=0.005), tot_loss_proj:3.343 [t=0.17s]
+prediction: ['[CLS] not that i be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location manners - [SEP]']
+[1800/2000] tot_loss=2.006 (perp=9.185, rec=0.164, cos=0.005), tot_loss_proj:3.328 [t=0.17s]
+prediction: ['[CLS] not that i be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location baseman - [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.013 (perp=9.185, rec=0.171, cos=0.005), tot_loss_proj:3.329 [t=0.17s]
+prediction: ['[CLS] not that i be so hired, isic nonledーsicsicic sq movie. tape dog thought precedent leaf yes and wouldn might gaze less formulaic. the non ob location baseman - [SEP]']
+Attempt swap
+Moved token
+[1900/2000] tot_loss=1.993 (perp=9.053, rec=0.175, cos=0.008), tot_loss_proj:3.204 [t=0.18s]
+prediction: ['[CLS] not that i be so hired, isic nonledーsicsicic sq movie. tape dog thought might precedent leaf yes and wouldn gaze less formulaic. the non ob location baseman - [SEP]']
+[1950/2000] tot_loss=2.148 (perp=9.852, rec=0.171, cos=0.007), tot_loss_proj:3.395 [t=0.18s]
+prediction: ['[CLS] pray that i be so hired, isic nonledーsicsicic sq movie. tape dog thought might precedent leaf yes and wouldn gaze less formulaic. the non ob location baseman - [SEP]']
+Attempt swap
+Swapped tokens
+[2000/2000] tot_loss=2.123 (perp=9.725, rec=0.171, cos=0.007), tot_loss_proj:3.285 [t=0.18s]
+prediction: ['[CLS] pray that i be so hired, isic nonledーsicsicic sq movie. tape dog thought might precedent leaf gaze and wouldn yes less formulaic. the non ob location baseman - [SEP]']
+Done with input #90 of 100.
+reference: 
+========================
+[CLS] the movie is so contrived, nonsensical and formulaic that, come to think of it, the day - old shelf would be a more appropriate location to store it. [SEP]
+========================
+predicted: 
+========================
+[CLS] issicicuity so formula, isosic non -sensic andic movie that, want discuss shelf the - would and formula be extra qui largeic must.,. shelf location day [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 43.636 | p: 46.154 | r: 41.379
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 29.091 | p: 30.769 | r: 27.586
+rougeLsum  | fm: 29.091 | p: 30.769 | r: 27.586
+r1fm+r2fm = 43.636
+
+[Aggregate metrics]:
+rouge1     | fm: 71.088 | p: 70.441 | r: 71.952
+rouge2     | fm: 21.060 | p: 20.876 | r: 21.245
+rougeL     | fm: 49.195 | p: 48.733 | r: 49.843
+rougeLsum  | fm: 49.209 | p: 48.756 | r: 49.809
+r1fm+r2fm = 92.148
+
+input #90 time: 0:07:12 | total time: 12:21:37
+
+
+Running input #91 of 100.
+reference: 
+========================
+julia is played with exasperating blandness by laura regan .
+========================
+average of cosine similarity 0.9991625620846907
+highest_index [0]
+highest [0.9991625620846907]
+Debug: ids_shape = 16, pads = [16]
+Debug: input ids = tensor([[  101,  6423,  2003,  2209,  2007,  4654,  3022,  4842,  5844, 20857,
+          2791,  2011,  6874, 16964,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] julia is played with exasperating blandness by laura regan. [SEP]']
+[Init] best rec loss: 1.8710353374481201 for ['[CLS] virtual pictures = finland police sheep nod icons intonne cole bobby prixect [SEP]']
+[Init] best rec loss: 1.6429706811904907 for ['[CLS] skin gin relieve whereas him aus lima united officer anniversary life johnnie simply ) [SEP]']
+[Init] best rec loss: 1.5541704893112183 for ['[CLS] print consideration barrow committees bandtlement stars troubleested game crack culture seasons home [SEP]']
+[Init] best rec loss: 1.541747808456421 for ['[CLS] togo essential are controlled had passage dock hms fact more imperial hiss devil setting [SEP]']
+[Init] best rec loss: 1.424286127090454 for ['[CLS] like broadcaster faculty god since careful dwarf mortal patients thisject literarytive meyrick [SEP]']
+[Init] best rec loss: 1.3326958417892456 for ['[CLS] disabled else gray ed issued second reactionifying inactivatedme hangingpine literally isn [SEP]']
+[Init] best rec loss: 1.3206346035003662 for ['[CLS] crack blair day roth personnel telvan mort strategic vibrant operation ambassador six times [SEP]']
+[Init] best rec loss: 1.3013670444488525 for ['[CLS]osi restraint like iii chosenfoot invalid saintienhir league damage £ tia [SEP]']
+[Init] best rec loss: 1.1170250177383423 for ['[CLS] run slaughter cantata " poemrricular bag lilyographicere hooker erebidae guns case [SEP]']
+[Init] best perm rec loss: 1.1169428825378418 for ['[CLS]ographic slaughter bag "ere cantata hookerrricular lily poem case run guns erebidae [SEP]']
+[Init] best perm rec loss: 1.1167428493499756 for ['[CLS] case guns run hookerographic poem "rricular cantata bag slaughterere lily erebidae [SEP]']
+[Init] best perm rec loss: 1.1131759881973267 for ['[CLS] lily " guns cantata run hookerererricular poem erebidaeographic bag case slaughter [SEP]']
+[Init] best perm rec loss: 1.1123563051223755 for ['[CLS] hooker gunsographic slaughter cantata caserricular bagere lily " run erebidae poem [SEP]']
+[Init] best perm rec loss: 1.109442114830017 for ['[CLS] slaughter run " guns cantataographic bag poem hookerrricularere lily erebidae case [SEP]']
+[Init] best perm rec loss: 1.109195351600647 for ['[CLS] slaughter cantata " bag poem lily runere hookerographicrricular erebidae guns case [SEP]']
+[Init] best perm rec loss: 1.1063611507415771 for ['[CLS] slaughterrricular run poem cantataographic hookerere " bag lily case erebidae guns [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.630 (perp=11.725, rec=0.274, cos=0.011), tot_loss_proj:3.174 [t=0.17s]
+prediction: ['[CLS] running played julia was bland using duringoja blandness with throughout bland. [SEP]']
+[ 100/2000] tot_loss=2.232 (perp=10.233, rec=0.179, cos=0.006), tot_loss_proj:2.762 [t=0.17s]
+prediction: ['[CLS] played played julia byating with with ex blandness with sexuality bland. [SEP]']
+[ 150/2000] tot_loss=1.946 (perp=9.020, rec=0.136, cos=0.006), tot_loss_proj:2.787 [t=0.17s]
+prediction: ['[CLS] played by julia byating with. ex blandness with rights bland. [SEP]']
+[ 200/2000] tot_loss=2.128 (perp=10.033, rec=0.117, cos=0.004), tot_loss_proj:3.192 [t=0.17s]
+prediction: ['[CLS] played by julia byating withper ex blandness with rights bland. [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=2.064 (perp=9.731, rec=0.114, cos=0.004), tot_loss_proj:2.680 [t=0.17s]
+prediction: ['[CLS] played by julia byating with exper blandness laura laurauising. [SEP]']
+[ 300/2000] tot_loss=1.965 (perp=9.312, rec=0.099, cos=0.003), tot_loss_proj:2.579 [t=0.17s]
+prediction: ['[CLS] played by julia byating with exper blandness laura lauraas. [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=1.962 (perp=9.059, rec=0.144, cos=0.006), tot_loss_proj:2.560 [t=0.17s]
+prediction: ['[CLS] played by julia lauraating with exper blandness beside lauraas. [SEP]']
+Attempt swap
+Moved token
+[ 400/2000] tot_loss=2.019 (perp=9.428, rec=0.128, cos=0.005), tot_loss_proj:2.593 [t=0.17s]
+prediction: ['[CLS] played by laura juliaating with exper blandness beside juliaas. [SEP]']
+[ 450/2000] tot_loss=1.956 (perp=9.198, rec=0.113, cos=0.004), tot_loss_proj:2.588 [t=0.17s]
+prediction: ['[CLS] played by laura juliaating with exper blandness beside julia regan. [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=1.822 (perp=8.574, rec=0.103, cos=0.004), tot_loss_proj:2.465 [t=0.17s]
+prediction: ['[CLS] played by julia juliaating with exper blandness beside laura regan. [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=1.717 (perp=7.964, rec=0.120, cos=0.004), tot_loss_proj:2.336 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+[ 600/2000] tot_loss=1.698 (perp=7.964, rec=0.102, cos=0.003), tot_loss_proj:2.326 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=1.696 (perp=7.964, rec=0.099, cos=0.003), tot_loss_proj:2.327 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=1.691 (perp=7.964, rec=0.095, cos=0.003), tot_loss_proj:2.323 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+[ 750/2000] tot_loss=1.694 (perp=7.964, rec=0.098, cos=0.003), tot_loss_proj:2.321 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=1.686 (perp=7.964, rec=0.089, cos=0.003), tot_loss_proj:2.318 [t=0.17s]
+prediction: ['[CLS] played by juliaating julia with exper blandness beside laura regan. [SEP]']
+Attempt swap
+Moved token
+[ 850/2000] tot_loss=1.598 (perp=7.451, rec=0.104, cos=0.004), tot_loss_proj:2.099 [t=0.17s]
+prediction: ['[CLS] played by julia julia with experating blandness beside laura regan. [SEP]']
+[ 900/2000] tot_loss=1.594 (perp=7.451, rec=0.100, cos=0.003), tot_loss_proj:2.085 [t=0.17s]
+prediction: ['[CLS] played by julia julia with experating blandness beside laura regan. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.579 (perp=7.451, rec=0.086, cos=0.003), tot_loss_proj:2.091 [t=0.17s]
+prediction: ['[CLS] played by julia julia with experating blandness beside laura regan. [SEP]']
+Attempt swap
+Moved token
+[1000/2000] tot_loss=1.694 (perp=7.978, rec=0.095, cos=0.003), tot_loss_proj:2.338 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness situated laura regan. [SEP]']
+[1050/2000] tot_loss=1.693 (perp=7.978, rec=0.094, cos=0.003), tot_loss_proj:2.337 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness situated laura regan. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.694 (perp=7.978, rec=0.095, cos=0.003), tot_loss_proj:2.337 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness situated laura regan. [SEP]']
+Attempt swap
+Swapped tokens
+[1150/2000] tot_loss=1.649 (perp=7.731, rec=0.099, cos=0.003), tot_loss_proj:2.128 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan beside [SEP]']
+[1200/2000] tot_loss=1.641 (perp=7.731, rec=0.092, cos=0.003), tot_loss_proj:2.124 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan beside [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.637 (perp=7.731, rec=0.088, cos=0.003), tot_loss_proj:2.126 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan beside [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.640 (perp=7.731, rec=0.091, cos=0.003), tot_loss_proj:2.135 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan beside [SEP]']
+[1350/2000] tot_loss=1.636 (perp=7.700, rec=0.093, cos=0.003), tot_loss_proj:2.273 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.639 (perp=7.700, rec=0.096, cos=0.003), tot_loss_proj:2.268 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.627 (perp=7.700, rec=0.083, cos=0.003), tot_loss_proj:2.267 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+[1500/2000] tot_loss=1.629 (perp=7.700, rec=0.086, cos=0.003), tot_loss_proj:2.269 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.637 (perp=7.700, rec=0.094, cos=0.003), tot_loss_proj:2.275 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.631 (perp=7.700, rec=0.088, cos=0.003), tot_loss_proj:2.273 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+[1650/2000] tot_loss=1.637 (perp=7.700, rec=0.094, cos=0.003), tot_loss_proj:2.271 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.634 (perp=7.700, rec=0.091, cos=0.003), tot_loss_proj:2.271 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.638 (perp=7.700, rec=0.095, cos=0.003), tot_loss_proj:2.278 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+[1800/2000] tot_loss=1.627 (perp=7.700, rec=0.084, cos=0.003), tot_loss_proj:2.274 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.630 (perp=7.700, rec=0.087, cos=0.003), tot_loss_proj:2.271 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.627 (perp=7.700, rec=0.084, cos=0.003), tot_loss_proj:2.277 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+[1950/2000] tot_loss=1.634 (perp=7.700, rec=0.091, cos=0.003), tot_loss_proj:2.274 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.633 (perp=7.700, rec=0.090, cos=0.003), tot_loss_proj:2.274 [t=0.17s]
+prediction: ['[CLS] julia played by julia with experating blandness. laura regan situated [SEP]']
+Done with input #91 of 100.
+reference: 
+========================
+[CLS] julia is played with exasperating blandness by laura regan. [SEP]
+========================
+predicted: 
+========================
+[CLS] julia played by julia with experating blandness. laura regan situated [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 78.261 | p: 75.000 | r: 81.818
+rouge2     | fm: 19.048 | p: 18.182 | r: 20.000
+rougeL     | fm: 69.565 | p: 66.667 | r: 72.727
+rougeLsum  | fm: 69.565 | p: 66.667 | r: 72.727
+r1fm+r2fm = 97.308
+
+[Aggregate metrics]:
+rouge1     | fm: 71.109 | p: 70.413 | r: 72.046
+rouge2     | fm: 21.074 | p: 20.876 | r: 21.316
+rougeL     | fm: 49.456 | p: 48.970 | r: 50.146
+rougeLsum  | fm: 49.427 | p: 48.954 | r: 50.055
+r1fm+r2fm = 92.183
+
+input #91 time: 0:06:48 | total time: 12:28:25
+
+
+Running input #92 of 100.
+reference: 
+========================
+plays like the old disease-of-the-week small-screen melodramas .
+========================
+average of cosine similarity 0.9991287990672667
+highest_index [0]
+highest [0.9991287990672667]
+Debug: ids_shape = 21, pads = [21]
+Debug: input ids = tensor([[  101,  3248,  2066,  1996,  2214,  4295,  1011,  1997,  1011,  1996,
+          1011,  2733,  2235,  1011,  3898, 11463,  7716, 14672,  2015,  1012,
+           102]], device='cuda:0')
+Debug: ref = ['[CLS] plays like the old disease - of - the - week small - screen melodramas. [SEP]']
+[Init] best rec loss: 1.8755145072937012 for ['[CLS] existing everyone instrument such gaston 車 madeing ; jelly elastic shippeddi electedland ~ brass democrat managed [SEP]']
+[Init] best rec loss: 1.8738536834716797 for ['[CLS]utrg > around segment advantage 2006 voice highitis oracle issue each television channelas then revelation russia [SEP]']
+[Init] best rec loss: 1.7113043069839478 for ['[CLS] var phase mine strong data glen strap curriculum vested ashe trade annieham care w draw ′ officer 社 [SEP]']
+[Init] best rec loss: 1.681282877922058 for ['[CLS] critical mysteries cover stew tables musical fest artistsigen bombsrily culture [SEP]chers hatgen more stick hp [SEP]']
+[Init] best rec loss: 1.6341818571090698 for ['[CLS] syn sorts predatory hillary care asian harristek contents meeting warren indoor health joyah defender grant catholic gaze tags [SEP]']
+[Init] best rec loss: 1.3854049444198608 for ['[CLS] kira - : squeeze never brand display mis auto successful my loyal blast strange. ending supportsgizing ties [SEP]']
+[Init] best rec loss: 1.3322041034698486 for ['[CLS] panthersbalance rank room houghton growingibly arrive threw 0ographer layingff indiasts help rye jo thom [SEP]']
+[Init] best perm rec loss: 1.3234628438949585 for ['[CLS] 0ffographer help threw growing panthersbalance room houghton ryeibly india thom laying ranksts jo arrive [SEP]']
+[Init] best perm rec loss: 1.3197014331817627 for ['[CLS] jo india rank growing helpibly room panthersff houghtonographer laying rye thom arrivebalance threwsts 0 [SEP]']
+[Init] best perm rec loss: 1.3194817304611206 for ['[CLS] rank 0 laying rye growing roomff thombalance houghton helpographer threw panthers arrive jo indiaiblysts [SEP]']
+[Init] best perm rec loss: 1.31851327419281 for ['[CLS] rankographer growing threwbalancests jo arrive help houghtonibly rye india 0ff room laying panthers thom [SEP]']
+[Init] best perm rec loss: 1.316086769104004 for ['[CLS]ff rank panthers arrive thom threwsts jo help houghton 0 growing rye roomographer laying indiaiblybalance [SEP]']
+[Init] best perm rec loss: 1.313907504081726 for ['[CLS] rank panthers thom india room laying threwbalance 0ff houghton growingographersts help jo arrive ryeibly [SEP]']
+[Init] best perm rec loss: 1.3129721879959106 for ['[CLS] laying rankibly ryebalance thom helpsts india threwographerff growing 0 room arrive panthers houghton jo [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.531 (perp=11.285, rec=0.265, cos=0.009), tot_loss_proj:3.424 [t=0.17s]
+prediction: ['[CLS] played playslikeusies old political.ershouse disease like screen ( disease characters disease the based [SEP]']
+[ 100/2000] tot_loss=2.416 (perp=11.379, rec=0.135, cos=0.005), tot_loss_proj:3.680 [t=0.17s]
+prediction: ['[CLS] plays plays me melrama old disease. - week disease like screen mel disease characters disease. the [SEP]']
+[ 150/2000] tot_loss=2.305 (perp=10.955, rec=0.111, cos=0.003), tot_loss_proj:3.705 [t=0.17s]
+prediction: ['[CLS] plays plays me melrama old week - - week disease like screen mel disease bowling tv. the [SEP]']
+[ 200/2000] tot_loss=2.303 (perp=11.071, rec=0.086, cos=0.003), tot_loss_proj:3.604 [t=0.17s]
+prediction: ['[CLS] plays playsup melrama old week - - of disease like screen mel disease lydia tv. the [SEP]']
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=2.128 (perp=10.171, rec=0.091, cos=0.003), tot_loss_proj:3.744 [t=0.17s]
+prediction: ['[CLS] plays plays each melrama old week - - of disease like screen small - disease tv. the [SEP]']
+[ 300/2000] tot_loss=2.125 (perp=10.207, rec=0.081, cos=0.002), tot_loss_proj:3.434 [t=0.17s]
+prediction: ['[CLS] plays playsre melrama old week - - of disease like screen small - disease tv. the [SEP]']
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=1.992 (perp=9.537, rec=0.082, cos=0.002), tot_loss_proj:3.556 [t=0.17s]
+prediction: ['[CLS] playsre plays melrama old week - - of disease like screen small - disease tv. the [SEP]']
+Attempt swap
+Moved token
+[ 400/2000] tot_loss=1.942 (perp=9.305, rec=0.079, cos=0.002), tot_loss_proj:3.080 [t=0.17s]
+prediction: ['[CLS] playsod plays melrama old week - - of disease like screen small - the disease tv. [SEP]']
+[ 450/2000] tot_loss=1.935 (perp=9.305, rec=0.071, cos=0.002), tot_loss_proj:3.074 [t=0.17s]
+prediction: ['[CLS] playsod plays melrama old week - - of disease like screen small - the disease tv. [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=1.842 (perp=8.773, rec=0.085, cos=0.002), tot_loss_proj:3.024 [t=0.17s]
+prediction: ['[CLS] playsod plays melrama old week - - of disease like screen disease - the small road. [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=1.799 (perp=8.480, rec=0.100, cos=0.003), tot_loss_proj:3.235 [t=0.17s]
+prediction: ['[CLS] plays mel plays itrama old week - - of disease like screen disease - the small -. [SEP]']
+[ 600/2000] tot_loss=1.776 (perp=8.494, rec=0.075, cos=0.002), tot_loss_proj:3.335 [t=0.17s]
+prediction: ['[CLS] plays mel plays therama old week - - of disease like screen disease - the smally. [SEP]']
+Attempt swap
+Moved token
+[ 650/2000] tot_loss=1.775 (perp=8.476, rec=0.078, cos=0.002), tot_loss_proj:3.089 [t=0.17s]
+prediction: ['[CLS] plays mel plays therama old week - - of disease like the screens - smally. [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=1.683 (perp=7.986, rec=0.084, cos=0.002), tot_loss_proj:2.844 [t=0.17s]
+prediction: ['[CLS] plays mel plays therama old week - - ofs like the screen disease - smally. [SEP]']
+[ 750/2000] tot_loss=1.673 (perp=7.986, rec=0.074, cos=0.002), tot_loss_proj:2.839 [t=0.17s]
+prediction: ['[CLS] plays mel plays therama old week - - ofs like the screen disease - smally. [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=1.599 (perp=7.639, rec=0.070, cos=0.002), tot_loss_proj:2.600 [t=0.17s]
+prediction: ['[CLS] plays mel - therama old week - - ofs like the screen disease plays small -. [SEP]']
+Attempt swap
+Swapped tokens
+[ 850/2000] tot_loss=1.577 (perp=7.500, rec=0.075, cos=0.002), tot_loss_proj:2.555 [t=0.17s]
+prediction: ['[CLS] plays mel -rama the old week - - ofs like the screen disease plays small -. [SEP]']
+[ 900/2000] tot_loss=1.585 (perp=7.589, rec=0.066, cos=0.002), tot_loss_proj:2.615 [t=0.17s]
+prediction: ['[CLS] plays mel -rama the old week - - ofs like the screen disease - small -. [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=1.526 (perp=7.265, rec=0.071, cos=0.002), tot_loss_proj:2.324 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.522 (perp=7.265, rec=0.067, cos=0.002), tot_loss_proj:2.327 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+[1050/2000] tot_loss=1.527 (perp=7.265, rec=0.072, cos=0.002), tot_loss_proj:2.325 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=1.523 (perp=7.265, rec=0.068, cos=0.002), tot_loss_proj:2.326 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.522 (perp=7.265, rec=0.067, cos=0.002), tot_loss_proj:2.329 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+[1200/2000] tot_loss=1.529 (perp=7.265, rec=0.074, cos=0.002), tot_loss_proj:2.323 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - small -. [SEP]']
+Attempt swap
+Moved sequence
+[1250/2000] tot_loss=1.504 (perp=7.157, rec=0.070, cos=0.002), tot_loss_proj:2.268 [t=0.17s]
+prediction: ['[CLS] plays melrama - the old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.603 (perp=7.634, rec=0.074, cos=0.002), tot_loss_proj:2.283 [t=0.17s]
+prediction: ['[CLS] plays melramay the old week - - ofs like the screen disease - - small. [SEP]']
+[1350/2000] tot_loss=1.592 (perp=7.634, rec=0.064, cos=0.002), tot_loss_proj:2.292 [t=0.17s]
+prediction: ['[CLS] plays melramay the old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+Moved token
+[1400/2000] tot_loss=1.575 (perp=7.534, rec=0.066, cos=0.002), tot_loss_proj:2.375 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.575 (perp=7.534, rec=0.067, cos=0.002), tot_loss_proj:2.377 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+[1500/2000] tot_loss=1.578 (perp=7.534, rec=0.069, cos=0.002), tot_loss_proj:2.372 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.581 (perp=7.534, rec=0.072, cos=0.002), tot_loss_proj:2.375 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.577 (perp=7.534, rec=0.068, cos=0.002), tot_loss_proj:2.371 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+[1650/2000] tot_loss=1.577 (perp=7.534, rec=0.068, cos=0.002), tot_loss_proj:2.375 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+Swapped tokens
+[1700/2000] tot_loss=1.577 (perp=7.534, rec=0.068, cos=0.002), tot_loss_proj:2.370 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.571 (perp=7.534, rec=0.063, cos=0.002), tot_loss_proj:2.360 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+[1800/2000] tot_loss=1.584 (perp=7.534, rec=0.076, cos=0.002), tot_loss_proj:2.366 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+Swapped tokens
+[1850/2000] tot_loss=1.572 (perp=7.534, rec=0.063, cos=0.002), tot_loss_proj:2.369 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.581 (perp=7.534, rec=0.073, cos=0.002), tot_loss_proj:2.372 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+[1950/2000] tot_loss=1.580 (perp=7.534, rec=0.072, cos=0.002), tot_loss_proj:2.372 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Attempt swap
+Swapped tokens
+[2000/2000] tot_loss=1.578 (perp=7.534, rec=0.070, cos=0.002), tot_loss_proj:2.362 [t=0.17s]
+prediction: ['[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]']
+Done with input #92 of 100.
+reference: 
+========================
+[CLS] plays like the old disease - of - the - week small - screen melodramas. [SEP]
+========================
+predicted: 
+========================
+[CLS] plays mel theramay old week - - ofs like the screen disease - - small. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 76.923 | p: 76.923 | r: 76.923
+rouge2     | fm: 16.667 | p: 16.667 | r: 16.667
+rougeL     | fm: 53.846 | p: 53.846 | r: 53.846
+rougeLsum  | fm: 53.846 | p: 53.846 | r: 53.846
+r1fm+r2fm = 93.590
+
+[Aggregate metrics]:
+rouge1     | fm: 71.219 | p: 70.545 | r: 72.140
+rouge2     | fm: 20.941 | p: 20.761 | r: 21.137
+rougeL     | fm: 49.492 | p: 49.003 | r: 50.104
+rougeLsum  | fm: 49.390 | p: 48.934 | r: 50.024
+r1fm+r2fm = 92.160
+
+input #92 time: 0:06:51 | total time: 12:35:17
+
+
+Running input #93 of 100.
+reference: 
+========================
+worse than 'silence of the lambs' better than 'hannibal'
+========================
+average of cosine similarity 0.9994101241168107
+highest_index [0]
+highest [0.9994101241168107]
+Debug: ids_shape = 16, pads = [16]
+Debug: input ids = tensor([[  101,  4788,  2084,  1005,  4223,  1997,  1996, 12559,  2015,  1005,
+          2488,  2084,  1005, 24181,  1005,   102]], device='cuda:0')
+Debug: ref = ["[CLS] worse than'silence of the lambs'better than'hannibal'[SEP]"]
+[Init] best rec loss: 1.9099698066711426 for ['[CLS] 1999 christopher me cologne only indianapolis thing edit bryan taft felt turn either chapter [SEP]']
+[Init] best rec loss: 1.8663301467895508 for ['[CLS] chance website yale latter sue touching come quarterback case⁄₄ act townsend hot produced [SEP]']
+[Init] best rec loss: 1.6759341955184937 for ["[CLS] adrian armenia classical singleffy'aspect henry shifters next headsritan sbs industrial [SEP]"]
+[Init] best rec loss: 1.672961711883545 for ['[CLS] march scratch prize ledger fill latin further gone [CLS] street batmanhorpe zealand not [SEP]']
+[Init] best rec loss: 1.6391818523406982 for ['[CLS] musique music cheeks machinery pronunciation dubbed imperfect mosaic reserved antilles question kentucky neolithic ideal [SEP]']
+[Init] best rec loss: 1.607354998588562 for ['[CLS] vi patent earlier techino gift staggeredtierates ninja adults / ) famous [SEP]']
+[Init] best rec loss: 1.5998884439468384 for ['[CLS] jem capital yetrdy steep women generals departed propertyh front feat protestant kyrgyzstan [SEP]']
+[Init] best rec loss: 1.5524417161941528 for ['[CLS] environment free school expanded rave beginning asylum decided politically tear caucasus chest chain koln [SEP]']
+[Init] best perm rec loss: 1.5453932285308838 for ['[CLS] politically school environment tear asylum decided chain beginning chest caucasus free rave koln expanded [SEP]']
+[Init] best perm rec loss: 1.5440678596496582 for ['[CLS] koln rave school decided beginning caucasus chest expanded chain environment free asylum tear politically [SEP]']
+[Init] best perm rec loss: 1.5436043739318848 for ['[CLS] environment koln tear school decided caucasus rave beginning free chest politically asylum expanded chain [SEP]']
+[Init] best perm rec loss: 1.542176365852356 for ['[CLS] rave decided koln expanded chest beginning chain caucasus free asylum tear environment school politically [SEP]']
+[Init] best perm rec loss: 1.5403425693511963 for ['[CLS] asylum tear decided koln caucasus environment chest free expanded beginning chain rave school politically [SEP]']
+[Init] best perm rec loss: 1.5390067100524902 for ['[CLS] environment tear decided expanded free school chain asylum caucasus chest beginning koln rave politically [SEP]']
+[Init] best perm rec loss: 1.5360966920852661 for ['[CLS] free asylum rave koln school decided chain chest expanded beginning caucasus tear environment politically [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.676 (perp=11.016, rec=0.361, cos=0.111), tot_loss_proj:3.661 [t=0.17s]
+prediction: ["[CLS] of yellow worse better worse less'men less beginning mountain dave ( better [SEP]"]
+[ 100/2000] tot_loss=1.608 (perp=6.744, rec=0.216, cos=0.043), tot_loss_proj:2.594 [t=0.17s]
+prediction: ["[CLS] worse'worse than better than'' worse silence'''better [SEP]"]
+[ 150/2000] tot_loss=1.510 (perp=6.802, rec=0.137, cos=0.012), tot_loss_proj:2.336 [t=0.17s]
+prediction: ["[CLS] worse'worse'better than'' worse silence'hannibal'better [SEP]"]
+[ 200/2000] tot_loss=1.445 (perp=6.638, rec=0.109, cos=0.008), tot_loss_proj:2.295 [t=0.17s]
+prediction: ["[CLS] than'than'better than'' worse silence'hannibal'better [SEP]"]
+Attempt swap
+Moved token
+[ 250/2000] tot_loss=1.489 (perp=6.972, rec=0.087, cos=0.008), tot_loss_proj:2.296 [t=0.17s]
+prediction: ["[CLS] than'of'' better than'worse lamb'hannibal'better [SEP]"]
+[ 300/2000] tot_loss=1.477 (perp=6.972, rec=0.077, cos=0.006), tot_loss_proj:2.302 [t=0.17s]
+prediction: ["[CLS] than'of'' better than'worse lamb'hannibal'better [SEP]"]
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=1.485 (perp=6.657, rec=0.138, cos=0.016), tot_loss_proj:2.232 [t=0.17s]
+prediction: ["[CLS] than'of horses worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=1.313 (perp=6.087, rec=0.092, cos=0.003), tot_loss_proj:2.170 [t=0.17s]
+prediction: ["[CLS] than'of the worse'better'than lamb'hannibal'better [SEP]"]
+[ 450/2000] tot_loss=1.461 (perp=6.849, rec=0.088, cos=0.003), tot_loss_proj:2.321 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better'than lamb'hannibal'better [SEP]"]
+Attempt swap
+Moved sequence
+[ 500/2000] tot_loss=1.452 (perp=6.799, rec=0.089, cos=0.003), tot_loss_proj:2.301 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better'lamb than'hannibal'better [SEP]"]
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=1.393 (perp=6.489, rec=0.091, cos=0.004), tot_loss_proj:2.164 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+[ 600/2000] tot_loss=1.383 (perp=6.489, rec=0.083, cos=0.002), tot_loss_proj:2.157 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[ 650/2000] tot_loss=1.375 (perp=6.489, rec=0.075, cos=0.002), tot_loss_proj:2.163 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[ 700/2000] tot_loss=1.384 (perp=6.489, rec=0.084, cos=0.002), tot_loss_proj:2.166 [t=0.18s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+[ 750/2000] tot_loss=1.376 (perp=6.489, rec=0.076, cos=0.002), tot_loss_proj:2.161 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[ 800/2000] tot_loss=1.366 (perp=6.489, rec=0.066, cos=0.002), tot_loss_proj:2.160 [t=0.17s]
+prediction: ["[CLS] than'silence the worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[ 850/2000] tot_loss=1.303 (perp=6.152, rec=0.071, cos=0.002), tot_loss_proj:2.159 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[ 900/2000] tot_loss=1.301 (perp=6.152, rec=0.069, cos=0.002), tot_loss_proj:2.149 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[ 950/2000] tot_loss=1.319 (perp=6.152, rec=0.087, cos=0.002), tot_loss_proj:2.152 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1000/2000] tot_loss=1.305 (perp=6.152, rec=0.073, cos=0.002), tot_loss_proj:2.156 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1050/2000] tot_loss=1.308 (perp=6.152, rec=0.076, cos=0.002), tot_loss_proj:2.152 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1100/2000] tot_loss=1.309 (perp=6.152, rec=0.077, cos=0.002), tot_loss_proj:2.157 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1150/2000] tot_loss=1.295 (perp=6.152, rec=0.063, cos=0.002), tot_loss_proj:2.157 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1200/2000] tot_loss=1.306 (perp=6.152, rec=0.074, cos=0.002), tot_loss_proj:2.154 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1250/2000] tot_loss=1.297 (perp=6.152, rec=0.065, cos=0.002), tot_loss_proj:2.151 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1300/2000] tot_loss=1.301 (perp=6.152, rec=0.069, cos=0.002), tot_loss_proj:2.151 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1350/2000] tot_loss=1.284 (perp=6.152, rec=0.052, cos=0.002), tot_loss_proj:2.157 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1400/2000] tot_loss=1.310 (perp=6.152, rec=0.078, cos=0.002), tot_loss_proj:2.154 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1450/2000] tot_loss=1.305 (perp=6.152, rec=0.073, cos=0.002), tot_loss_proj:2.153 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1500/2000] tot_loss=1.307 (perp=6.152, rec=0.075, cos=0.002), tot_loss_proj:2.156 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1550/2000] tot_loss=1.311 (perp=6.152, rec=0.079, cos=0.002), tot_loss_proj:2.155 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1600/2000] tot_loss=1.301 (perp=6.152, rec=0.069, cos=0.002), tot_loss_proj:2.157 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1650/2000] tot_loss=1.309 (perp=6.152, rec=0.077, cos=0.002), tot_loss_proj:2.152 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1700/2000] tot_loss=1.299 (perp=6.152, rec=0.067, cos=0.002), tot_loss_proj:2.158 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1750/2000] tot_loss=1.288 (perp=6.152, rec=0.056, cos=0.002), tot_loss_proj:2.155 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1800/2000] tot_loss=1.315 (perp=6.152, rec=0.084, cos=0.002), tot_loss_proj:2.161 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1850/2000] tot_loss=1.302 (perp=6.152, rec=0.070, cos=0.002), tot_loss_proj:2.155 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[1900/2000] tot_loss=1.318 (perp=6.152, rec=0.086, cos=0.002), tot_loss_proj:2.155 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+[1950/2000] tot_loss=1.301 (perp=6.152, rec=0.069, cos=0.002), tot_loss_proj:2.149 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Attempt swap
+[2000/2000] tot_loss=1.296 (perp=6.152, rec=0.064, cos=0.002), tot_loss_proj:2.160 [t=0.17s]
+prediction: ["[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]"]
+Done with input #93 of 100.
+reference: 
+========================
+[CLS] worse than'silence of the lambs'better than'hannibal'[SEP]
+========================
+predicted: 
+========================
+[CLS] than'silences worse'better than'lamb'hannibal'better [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 66.667 | p: 70.000 | r: 63.636
+rouge2     | fm: 10.526 | p: 11.111 | r: 10.000
+rougeL     | fm: 57.143 | p: 60.000 | r: 54.545
+rougeLsum  | fm: 57.143 | p: 60.000 | r: 54.545
+r1fm+r2fm = 77.193
+
+[Aggregate metrics]:
+rouge1     | fm: 71.171 | p: 70.511 | r: 72.049
+rouge2     | fm: 20.737 | p: 20.554 | r: 20.939
+rougeL     | fm: 49.574 | p: 49.086 | r: 50.195
+rougeLsum  | fm: 49.586 | p: 49.099 | r: 50.127
+r1fm+r2fm = 91.908
+
+input #93 time: 0:06:50 | total time: 12:42:07
+
+
+Running input #94 of 100.
+reference: 
+========================
+the powerpuff girls arrive on the big screen with their super-powers , their super-simple animation and their super-dooper-adorability intact .
+========================
+average of cosine similarity 0.9994031228400595
+highest_index [0]
+highest [0.9994031228400595]
+Debug: ids_shape = 35, pads = [35]
+Debug: input ids = tensor([[  101,  1996,  2373, 14289,  4246,  3057,  7180,  2006,  1996,  2502,
+          3898,  2007,  2037,  3565,  1011,  4204,  1010,  2037,  3565,  1011,
+          3722,  7284,  1998,  2037,  3565,  1011, 20160,  4842,  1011,  4748,
+          6525,  8553, 10109,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] the powerpuff girls arrive on the big screen with their super - powers, their super - simple animation and their super - dooper - adorability intact. [SEP]']
+[Init] best rec loss: 1.9164992570877075 for ['[CLS] casting lee 2 symbol age quinn fear habitats tough robotics death alexis helped positivetment crossed suffering chess titanicaaido code ye lane rearview shiplk micah lore he legion bbcroving [SEP]']
+[Init] best rec loss: 1.840591549873352 for ['[CLS] yeah green ai peer versus open whatever end elder grantscu professional villa reflex inherited tyler needle tie race chord extinct swarm & showing left fund kc wolf jet secondary base overcometel [SEP]']
+[Init] best rec loss: 1.8337008953094482 for ['[CLS] ethan building capture fouruce shopping them labor esb playing rein mit turn audience billionaire speeds one herselfᆫ access dan lori provided white sd und farm arena met finding al a [SEP]']
+[Init] best rec loss: 1.8175784349441528 for ['[CLS] earl linda but sunny wilgles spa entirecre print consisting solo lightning carpathian attack mile overhead uponpan lankan live account smackdown stock approached smith advanced exactly - smashwords masters heights brand [SEP]']
+[Init] best rec loss: 1.8129135370254517 for ['[CLS] individuals strongerersward settle race ava trulyoge hadens united contra beaches discovers fellows sheikh core been regulatory variously alt hollymering efficient jamiesibility medalfoot served much innocent pit [SEP]']
+[Init] best rec loss: 1.7778438329696655 for ['[CLS]tree joanct self stench it dairy saucemeo [MASK] trolls church 2016 exhibition deliveredesian bestseller fishing watch rounded forth day poll willsvance quote witness considerably works make already they man [SEP]']
+[Init] best rec loss: 1.7773512601852417 for ['[CLS] fits pure composite strings followed feature tent imported spent stray folkrard species yen heritage theorem poison 2014 non inversetledmoral wordsyna example hall those expulsion arsenic coaches nba visual developed [SEP]']
+[Init] best rec loss: 1.733069658279419 for ['[CLS] bernie etc crazy welfare wage credited dr scream couplelved privyel througharmxford responsible bare turbine sun pop key seller market challenger sympathetic supremersten storey synth got unless two [SEP]']
+[Init] best rec loss: 1.7124301195144653 for ['[CLS] sayingiques artist pp pushes english methodist yin variety else life expression mary grandpa pass work graycent st hunter gan felt for bidding informed it springs imagery ranked takes dress dog i [SEP]']
+[Init] best perm rec loss: 1.705750584602356 for ['[CLS] methodist it pushes grandpa pass workcent english saying expression gan mary dog pp artist ranked elseiques gray i life yin for springs imagery takes hunter st felt dress variety informed bidding [SEP]']
+[Init] best perm rec loss: 1.704466700553894 for ['[CLS] it pushes life expression st ranked work methodist takes biddingcent else hunter i dress yin springs dog felt ppiques pass informed variety saying mary gan gray for artist english grandpa imagery [SEP]']
+[Init] best perm rec loss: 1.7043219804763794 for ['[CLS] mary grandpa pass informed gan for work i it felt english graycent pushesiques artist pp life methodist takes dress imagery saying else yin bidding ranked st hunter expression dog variety springs [SEP]']
+[Init] best perm rec loss: 1.7028017044067383 for ['[CLS] grandpacent saying pass yin imagery artist dog gray i informed takes mary gan methodist expressioniques pushes for dress st variety else hunter life felt springs bidding pp ranked english work it [SEP]']
+[Init] best perm rec loss: 1.7002700567245483 for ['[CLS] expression pushes graycent gan i methodist life dog takes grandpa dress artist sayingiques imagery pp springs hunter else mary informed bidding variety english pass felt work ranked it for st yin [SEP]']
+[Init] best perm rec loss: 1.6968073844909668 for ['[CLS] else expression it artist grandpa hunter life takes felt work st dog springs yin pushes sayingiques pass imagery mary methodist i ranked dress pp biddingcent english informed variety gan for gray [SEP]']
+[Init] best perm rec loss: 1.6947424411773682 for ['[CLS] expression pp mary pass grandpa grayiques pushes for takes dog hunter yin springs dress life bidding sayingcent work gan artist else informed english imagery it felt variety i ranked methodist st [SEP]']
+[Init] best perm rec loss: 1.6889063119888306 for ['[CLS]cent ranked work life hunter pass imagery variety pp methodist it saying gan felt expression springs bidding takes english gray mary dog informed else artist dress for i yin st grandpa pushesiques [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.590 (perp=11.236, rec=0.297, cos=0.045), tot_loss_proj:3.236 [t=0.19s]
+prediction: ['[CLS]ux their performance impact intact started sight intact - intact the weeks big screen animation nfc tournaments arrives the combat -! bai second tattoo super band : un hitler been glue charlie [SEP]']
+[ 100/2000] tot_loss=2.152 (perp=9.676, rec=0.191, cos=0.026), tot_loss_proj:2.905 [t=0.17s]
+prediction: ['[CLS] arrive their performancehesive intact heroes on intact ; intact the their big screen animation tv super puppet with their - powers super - animation super charlie. un high help screen charlie [SEP]']
+[ 150/2000] tot_loss=2.121 (perp=9.819, rec=0.150, cos=0.007), tot_loss_proj:2.780 [t=0.17s]
+prediction: ['[CLS] arrive their their powers intact men on intact, intact the big big screenbilitypre super screen with their - powers your - animation super becky. nos super. big charlie [SEP]']
+[ 200/2000] tot_loss=2.030 (perp=9.487, rec=0.127, cos=0.006), tot_loss_proj:2.892 [t=0.17s]
+prediction: ['[CLS] arrive and their powers intact girls on intact, intact the big big screenbilitype super screen with their - powers super - animation super super. du simple. screen charlie [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=1.942 (perp=8.725, rec=0.177, cos=0.021), tot_loss_proj:3.254 [t=0.17s]
+prediction: ['[CLS] arrive and their visually intact girls on intact, intact the big big screenbility ha super screen with their super powers super - animation super - - sit simple. screen charlie [SEP]']
+[ 300/2000] tot_loss=2.003 (perp=8.989, rec=0.191, cos=0.014), tot_loss_proj:2.615 [t=0.17s]
+prediction: ['[CLS] arrive and their energy intact boys on intact, - the big on screenbility to supercaster with their super powers super - animation super - - superti. screen twinkle [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=1.714 (perp=7.895, rec=0.130, cos=0.005), tot_loss_proj:2.316 [t=0.17s]
+prediction: ['[CLS] arrive and their energy intact boys on intact, - the big on screenbility the super. with their super powers super - animation super - - super la fx screenplex [SEP]']
+Attempt swap
+Moved sequence
+[ 400/2000] tot_loss=1.748 (perp=8.115, rec=0.121, cos=0.004), tot_loss_proj:2.325 [t=0.17s]
+prediction: ['[CLS] intact girls on arrive and their energy intact, their the big on screenbilityff super. with their super powers super - animation super - - super la fx screenplex [SEP]']
+[ 450/2000] tot_loss=1.751 (perp=8.201, rec=0.108, cos=0.003), tot_loss_proj:2.477 [t=0.17s]
+prediction: ['[CLS] intact girls on arrive and their its intact, their the big on screenbilityff super. with their super powers super - animation super - - super la! screen super [SEP]']
+Attempt swap
+Swapped tokens
+[ 500/2000] tot_loss=1.743 (perp=8.162, rec=0.107, cos=0.003), tot_loss_proj:2.445 [t=0.17s]
+prediction: ['[CLS]bility girls on arrive and their the intact, their its big on screenbilityff super. with their super powers super - animation super - - super la! power super [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=1.716 (perp=8.035, rec=0.106, cos=0.004), tot_loss_proj:2.441 [t=0.17s]
+prediction: ['[CLS]bility girls on arrive and the intact, their its big on screenbilityff girls. with their super powers their super - animation super - - superau! power super [SEP]']
+[ 600/2000] tot_loss=1.736 (perp=8.161, rec=0.101, cos=0.003), tot_loss_proj:2.463 [t=0.17s]
+prediction: ['[CLS]bility girls on arrive and the intact, their its big on screenbilityff girls. with their super powers their super - animation super - - superora! power super [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=1.694 (perp=7.985, rec=0.094, cos=0.003), tot_loss_proj:2.458 [t=0.17s]
+prediction: ['[CLS]bility girls on arrive and the intact, their its big on screenbilityff girls. with their super powers their super - animation super power - superora! - super [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=1.644 (perp=7.724, rec=0.096, cos=0.003), tot_loss_proj:2.480 [t=0.17s]
+prediction: ['[CLS] girl girls on arrive and the intact, their simple big on screenbilityff girls. with their super powers their super - animation super power - superorability - super [SEP]']
+[ 750/2000] tot_loss=1.645 (perp=7.724, rec=0.097, cos=0.002), tot_loss_proj:2.478 [t=0.19s]
+prediction: ['[CLS] girl girls on arrive and the intact, their simple big on screenbilityff girls. with their super powers their super - animation super power - superorability - super [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=1.757 (perp=8.329, rec=0.089, cos=0.002), tot_loss_proj:2.628 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple big on screenbilityff girls. with their super powers their superpu girl super power - superorability - super [SEP]']
+Attempt swap
+Moved token
+[ 850/2000] tot_loss=1.703 (perp=8.040, rec=0.092, cos=0.003), tot_loss_proj:2.542 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple big on screenpubilityff girls. with their super powers their super girl super power - superorability - super [SEP]']
+[ 900/2000] tot_loss=1.705 (perp=8.040, rec=0.095, cos=0.002), tot_loss_proj:2.540 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple big on screenpubilityff girls. with their super powers their super girl super power - superorability - super [SEP]']
+Attempt swap
+Moved token
+[ 950/2000] tot_loss=1.553 (perp=7.308, rec=0.089, cos=0.002), tot_loss_proj:2.389 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple bigbility on screenpuff girls. with their super powers their super girl super power - superorability - super [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.586 (perp=7.481, rec=0.088, cos=0.002), tot_loss_proj:2.454 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple bigbility the screenpuff girls. with their super powers their super girl super power - superorability - super [SEP]']
+[1050/2000] tot_loss=1.581 (perp=7.481, rec=0.083, cos=0.002), tot_loss_proj:2.456 [t=0.17s]
+prediction: ['[CLS] animation girls on arrive and the intact, their simple bigbility the screenpuff girls. with their super powers their super girl super power - superorability - super [SEP]']
+Attempt swap
+Moved sequence
+[1100/2000] tot_loss=1.597 (perp=7.512, rec=0.092, cos=0.002), tot_loss_proj:2.446 [t=0.17s]
+prediction: ['[CLS] girls on arrive and the intact, their simple animation bigbility the screenpuff the. with their super powers their super girl super power - superorability - super [SEP]']
+Attempt swap
+Swapped tokens
+[1150/2000] tot_loss=1.575 (perp=7.428, rec=0.087, cos=0.002), tot_loss_proj:2.412 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their super girl super power - superorability - super [SEP]']
+[1200/2000] tot_loss=1.575 (perp=7.428, rec=0.088, cos=0.002), tot_loss_proj:2.409 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their super girl super power - superorability - super [SEP]']
+Attempt swap
+Moved token
+[1250/2000] tot_loss=1.555 (perp=7.375, rec=0.078, cos=0.002), tot_loss_proj:2.434 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super super power - superorability - super [SEP]']
+Attempt swap
+Moved token
+[1300/2000] tot_loss=1.554 (perp=7.360, rec=0.080, cos=0.002), tot_loss_proj:2.421 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+[1350/2000] tot_loss=1.552 (perp=7.360, rec=0.078, cos=0.002), tot_loss_proj:2.424 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.555 (perp=7.360, rec=0.081, cos=0.002), tot_loss_proj:2.423 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.553 (perp=7.360, rec=0.079, cos=0.002), tot_loss_proj:2.421 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+[1500/2000] tot_loss=1.550 (perp=7.360, rec=0.077, cos=0.002), tot_loss_proj:2.425 [t=0.17s]
+prediction: ['[CLS] girls and arrive on the intact, their simple animation bigbility the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=1.513 (perp=7.154, rec=0.081, cos=0.002), tot_loss_proj:2.336 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.513 (perp=7.154, rec=0.081, cos=0.002), tot_loss_proj:2.339 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+[1650/2000] tot_loss=1.518 (perp=7.154, rec=0.085, cos=0.002), tot_loss_proj:2.338 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.512 (perp=7.154, rec=0.079, cos=0.002), tot_loss_proj:2.338 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff the. with their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+Moved token
+[1750/2000] tot_loss=1.480 (perp=7.042, rec=0.070, cos=0.002), tot_loss_proj:2.314 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]']
+[1800/2000] tot_loss=1.495 (perp=7.042, rec=0.085, cos=0.002), tot_loss_proj:2.311 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+Moved token
+[1850/2000] tot_loss=1.461 (perp=6.896, rec=0.080, cos=0.002), tot_loss_proj:2.141 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the big intact, their simple animation girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.452 (perp=6.896, rec=0.071, cos=0.002), tot_loss_proj:2.147 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the big intact, their simple animation girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]']
+[1950/2000] tot_loss=1.453 (perp=6.896, rec=0.072, cos=0.002), tot_loss_proj:2.143 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the big intact, their simple animation girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]']
+Attempt swap
+Moved token
+[2000/2000] tot_loss=1.452 (perp=6.853, rec=0.080, cos=0.002), tot_loss_proj:2.145 [t=0.17s]
+prediction: ['[CLS]bility and arrive on the big intact, their simple animation the screen girlspuff. with the their super powers their girl super power - super superorability - super [SEP]']
+Done with input #94 of 100.
+reference: 
+========================
+[CLS] the powerpuff girls arrive on the big screen with their super - powers, their super - simple animation and their super - dooper - adorability intact. [SEP]
+========================
+predicted: 
+========================
+[CLS]bility and arrive on the intact, their simple animation big girls the screenpuff. with the their super powers their girl super power - super superorability - super [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 78.431 | p: 74.074 | r: 83.333
+rouge2     | fm: 24.490 | p: 23.077 | r: 26.087
+rougeL     | fm: 50.980 | p: 48.148 | r: 54.167
+rougeLsum  | fm: 50.980 | p: 48.148 | r: 54.167
+r1fm+r2fm = 102.921
+
+[Aggregate metrics]:
+rouge1     | fm: 71.203 | p: 70.566 | r: 72.101
+rouge2     | fm: 20.819 | p: 20.637 | r: 21.073
+rougeL     | fm: 49.572 | p: 49.101 | r: 50.228
+rougeLsum  | fm: 49.570 | p: 49.100 | r: 50.207
+r1fm+r2fm = 92.022
+
+input #94 time: 0:06:57 | total time: 12:49:05
+
+
+Running input #95 of 100.
+reference: 
+========================
+the film is so busy making reference to other films and trying to be other films that it fails to have a heart , mind or humor of its own .
+========================
+average of cosine similarity 0.9992315326184027
+highest_index [0]
+highest [0.9992315326184027]
+Debug: ids_shape = 33, pads = [33]
+Debug: input ids = tensor([[  101,  1996,  2143,  2003,  2061,  5697,  2437,  4431,  2000,  2060,
+          3152,  1998,  2667,  2000,  2022,  2060,  3152,  2008,  2009, 11896,
+          2000,  2031,  1037,  2540,  1010,  2568,  2030,  8562,  1997,  2049,
+          2219,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] the film is so busy making reference to other films and trying to be other films that it fails to have a heart, mind or humor of its own. [SEP]']
+[Init] best rec loss: 1.9558727741241455 for ['[CLS] hockey speaker class onght automatically hospital ascot ox enough genre pan shore high juliet research noted pike not orosing roses hasdm addedgins chloe rabbit ask bashme [SEP]']
+[Init] best rec loss: 1.8981722593307495 for ['[CLS] born why en ma doing cancelled hood panchayatwt ins melt socialist keeper leonceae throat billie thank recall desert relay lock hon supply on right memo goldenerehard flipped [SEP]']
+[Init] best rec loss: 1.884426474571228 for ['[CLS] part unconscioussford boundaries hockey engagedchrome drilling deposits preserved jump wordsland voted sc offs stopped al soloist alecix inning hit fire record uber also whole drawing disco defence [SEP]']
+[Init] best rec loss: 1.880757212638855 for ['[CLS] genome regionrin winfield thusimeter department retirement somme lindsey salarynow origins fortune paid contains millimetresura eva tome mistake me part provincial ipod strait assignment tons 2010 jean - [SEP]']
+[Init] best rec loss: 1.7728517055511475 for ['[CLS] spaceship herb puppetncies exhibition opposed influenced infant fourth open crow te racer contributions fuel buteld sheet now paint skepticismeville severalaly union student hoursguard dry monitor cook [SEP]']
+[Init] best rec loss: 1.6586867570877075 for ['[CLS] es course populationtta deadline pouch selectllus russianasi internet retained energy marshall suffering trent nowhere river conquest subdivision forever face strokeeh below calvinnistspar comprehension bald now [SEP]']
+[Init] best rec loss: 1.6484718322753906 for ['[CLS] householdsble graf lowerlies tenure forces necessary closet occasion turned shirley dub id fans holiday sevenlawolved qualifying kincaid not ringₙ collaboration walker there dhabi solely became survive [SEP]']
+[Init] best rec loss: 1.4573415517807007 for ['[CLS] pacific winners his nonene still pawn evangelist covered january equilibrium of ae capital then concept traditional navarro adriance piperarmton ball yang xi = lotteryeter xess [SEP]']
+[Init] best rec loss: 1.403043508529663 for ['[CLS]ulation invented canoe stop banks part repetition presentzed crawled tasha completing higher gravel to churchyard homebby strong dr entirelytext generally railroads bugs torches cells donatedau mary alien [SEP]']
+[Init] best perm rec loss: 1.400253415107727 for ['[CLS] to banksulation part completing bugstextau inventedbby alien mary generally tasha churchyard railroads strong gravel home canoe cells torches higher stop entirely present repetitionzed crawled donated dr [SEP]']
+[Init] best perm rec loss: 1.3929650783538818 for ['[CLS] bugszed entirely tasha mary repetition generallyulation presentbby alienau strong gravel part stop to torches railroads churchyard canoe completing higher invented home crawledtext dr cells banks donated [SEP]']
+[Init] best perm rec loss: 1.392819881439209 for ['[CLS] mary torches present cells homeulation strong churchyardzed part generally completing dr higher canoe stop bugs alien to railroads banks repetition inventedtextbby entirely crawled donatedau tasha gravel [SEP]']
+[Init] best perm rec loss: 1.3883448839187622 for ['[CLS] stop tasha canoe torches bugs generally entirely repetitionbby cells churchyardau home to crawledulation dr present completingzed railroads mary alien invented part banks gravel highertext donated strong [SEP]']
+[Init] best perm rec loss: 1.3873393535614014 for ['[CLS]bby alien churchyard stop bugs maryulation home railroads completing higher bankszed gravel torches dr strongau repetition part invented generally canoe presenttext entirely cells crawled to tasha donated [SEP]']
+[Init] best perm rec loss: 1.3843541145324707 for ['[CLS] tasha alien to donated higher mary cells torches invented railroads home completing present stop gravel bugs entirelyulationtext canoe part crawledzed drau banks generallybby strong repetition churchyard [SEP]']
+[Init] best perm rec loss: 1.379252552986145 for ['[CLS]zed torches railroads generally churchyard mary alienulation higherau to canoe bugs stop tasha invented repetition gravel completing dr strong crawled banks entirelybby cells donated present home parttext [SEP]']
+[Init] best perm rec loss: 1.374705195426941 for ['[CLS] alien higher cells tasha repetition part to canoe dr stopau completing railroads home entirely invented donated bugsbby torches bankstext gravel strong generallyzed present mary churchyardulation crawled [SEP]']
+[Init] best perm rec loss: 1.3702183961868286 for ['[CLS]zed entirely bugs repetition to tasha churchyard dr invented crawled generallytext gravelbby mary homeulation strongau part railroads alien torches canoe banks present higher cells donated stop completing [SEP]']
+[Init] best perm rec loss: 1.3677055835723877 for ['[CLS] donated churchyard home completing strong to bugs crawledulation torches railroads stoptextbby present tasha drzed higher alien gravel part entirely banks canoe invented generally cellsau mary repetition [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.455 (perp=10.394, rec=0.357, cos=0.018), tot_loss_proj:3.081 [t=0.20s]
+prediction: ['[CLS] unfortunately mind film busy filled films which busy sometimeswork crank. town action service him score so court of privilege sexual considerable involvement. fails by minds fails ted. [SEP]']
+[ 100/2000] tot_loss=2.354 (perp=10.361, rec=0.271, cos=0.011), tot_loss_proj:2.958 [t=0.19s]
+prediction: ['[CLS] busy filmed film busy busy films it busy something reference film. and and trying his pu tough having and asrocity advice eyes । fails. failsntation solving. [SEP]']
+[ 150/2000] tot_loss=2.512 (perp=9.770, rec=0.509, cos=0.050), tot_loss_proj:2.894 [t=0.19s]
+prediction: ['[CLS] was all film employees database. it busy speech named go to and氵 worship reactor [CLS]. had and the national. words. fails like hard yet having. [SEP]']
+[ 200/2000] tot_loss=2.293 (perp=9.053, rec=0.450, cos=0.032), tot_loss_proj:2.740 [t=0.19s]
+prediction: ['[CLS] so all film busy database. it busy speech named something point and氵 hannah reactor・. had and the national. lips. fails like hard yet having. [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=2.283 (perp=9.164, rec=0.424, cos=0.026), tot_loss_proj:2.669 [t=0.19s]
+prediction: ['[CLS] so reason film busy database. it busy speech named something point and氵 hannah reactor・. had yet a national. words. fails like hard and having. [SEP]']
+[ 300/2000] tot_loss=2.343 (perp=9.591, rec=0.404, cos=0.021), tot_loss_proj:2.759 [t=0.19s]
+prediction: ['[CLS] so reason film busy hms. it busy speech reference something point and氵 worship reactor・. had yet a national. words. fails like hard. having. [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.292 (perp=9.463, rec=0.379, cos=0.020), tot_loss_proj:2.795 [t=0.19s]
+prediction: ['[CLS] so reason film busy hms. it busy national reference something point and氵 worship reactor ᅢ. had yet a latin. words. fails like hard. having. [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.283 (perp=9.472, rec=0.371, cos=0.018), tot_loss_proj:2.809 [t=0.19s]
+prediction: ['[CLS] so hard film busy hms. it busy national reference something point and氵 worship reactor ᅢ. had yet a latin. words. fails like reason car having. [SEP]']
+[ 450/2000] tot_loss=2.220 (perp=9.238, rec=0.355, cos=0.018), tot_loss_proj:2.781 [t=0.19s]
+prediction: ['[CLS] so hard film busy hms. it busy national reference something point and氵 worship reactor ᅢ. had yet a latin. words. fails of reason car having. [SEP]']
+Attempt swap
+Moved sequence
+[ 500/2000] tot_loss=2.187 (perp=9.140, rec=0.342, cos=0.016), tot_loss_proj:2.723 [t=0.19s]
+prediction: ['[CLS] so hard film fails hms. it busy national reference point film and氵 worship reactor ᅢ. had yet a 香. words. fails of reason car having. [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=2.197 (perp=9.232, rec=0.336, cos=0.015), tot_loss_proj:2.746 [t=0.19s]
+prediction: ['[CLS] so hard film fails archdeacon. it busy national reference point the and氵 worship reactor・. yet had a 香. words. fails of reason car having. [SEP]']
+[ 600/2000] tot_loss=2.190 (perp=9.232, rec=0.329, cos=0.014), tot_loss_proj:2.751 [t=0.19s]
+prediction: ['[CLS] so hard film fails archdeacon. it busy national reference point the and氵 worship reactor・. yet had a 香. words. fails of reason car having. [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=2.101 (perp=8.831, rec=0.321, cos=0.014), tot_loss_proj:2.648 [t=0.19s]
+prediction: ['[CLS] so hard film fails archdeacon, it busy national reference point and the氵 worship reactor・. yet had a 香. words. fails of reason car having. [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=2.104 (perp=8.910, rec=0.309, cos=0.013), tot_loss_proj:2.661 [t=0.19s]
+prediction: ['[CLS] so hard film fails archdeacon. it busy national reference point and the氵 worship reactor ি. having had its 香. words. fails from reason car yet. [SEP]']
+[ 750/2000] tot_loss=2.093 (perp=8.856, rec=0.309, cos=0.013), tot_loss_proj:2.627 [t=0.19s]
+prediction: ['[CLS] so hard film fails spelled, it busy national reference point and the氵 worship reactor ি. having had its 香. words. fails from reason car yet. [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=2.078 (perp=8.832, rec=0.298, cos=0.014), tot_loss_proj:2.631 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy national reference point and the氵 worship reactor ি. having had its 香. words. fails from reason lo diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[ 850/2000] tot_loss=2.045 (perp=8.631, rec=0.305, cos=0.014), tot_loss_proj:2.600 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy northwest reference point and the氵 worship reactor ি from having had its 香. words. fails. reason lo diocese. [SEP]']
+[ 900/2000] tot_loss=2.033 (perp=8.631, rec=0.294, cos=0.013), tot_loss_proj:2.596 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy northwest reference point and the氵 worship reactor ি from having had its 香. words. fails. reason lo diocese. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=2.079 (perp=8.846, rec=0.297, cos=0.013), tot_loss_proj:2.627 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy northwest reference point and the氵 worship reactor ি from having had itsdra. words. fails. reason lo diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.020 (perp=8.591, rec=0.290, cos=0.012), tot_loss_proj:2.552 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy from reference point and the氵 worship reactor・ northwest having had its 香. words. fails. reason lo diocese. [SEP]']
+[1050/2000] tot_loss=2.014 (perp=8.591, rec=0.284, cos=0.012), tot_loss_proj:2.566 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy from reference point and the氵 worship reactor ি northwest having had its latin. words. fails. reason lo diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=2.019 (perp=8.602, rec=0.286, cos=0.012), tot_loss_proj:2.561 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy from reference point and the氵 worship reactor ি northwest having had its latin. tre. fails. reason words diocese. [SEP]']
+Attempt swap
+Moved token
+[1150/2000] tot_loss=1.995 (perp=8.504, rec=0.283, cos=0.011), tot_loss_proj:2.552 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet, it busy from reference point氵 and the worship reactor ি northwest having had its latin. tre. fails. reason words diocese. [SEP]']
+[1200/2000] tot_loss=1.990 (perp=8.460, rec=0.286, cos=0.011), tot_loss_proj:2.536 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. it busy from reference point氵 and the worship reactor ি northwest having had its latin. tre. fails. reason words diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=1.932 (perp=8.233, rec=0.275, cos=0.011), tot_loss_proj:2.468 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. it busy from reference point氵 and the worship reactor ি northwest having had its latin words quite. fails. reason. diocese. [SEP]']
+Attempt swap
+Moved token
+[1300/2000] tot_loss=1.967 (perp=8.377, rec=0.281, cos=0.011), tot_loss_proj:2.487 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. ins busy from reference point氵 and the worship reactor・ visual having had its latin words. quite fails. reason. diocese. [SEP]']
+[1350/2000] tot_loss=1.967 (perp=8.377, rec=0.281, cos=0.010), tot_loss_proj:2.489 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. ins busy from reference point氵 and the worship reactor・ visual having had its latin words. quite fails. reason. diocese. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.896 (perp=8.072, rec=0.271, cos=0.010), tot_loss_proj:2.429 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. it busy from reference point氵 and the worship reactor・ visual having had its latin words. quite fails. reason. diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=1.958 (perp=8.366, rec=0.275, cos=0.010), tot_loss_proj:2.509 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. ins busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails. quite. diocese. [SEP]']
+[1500/2000] tot_loss=1.851 (perp=7.820, rec=0.277, cos=0.010), tot_loss_proj:2.359 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its latin words. reason fails. quite. diocese. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.847 (perp=7.820, rec=0.273, cos=0.010), tot_loss_proj:2.358 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its latin words. reason fails. quite. diocese. [SEP]']
+Attempt swap
+Swapped tokens
+[1600/2000] tot_loss=1.845 (perp=7.843, rec=0.267, cos=0.010), tot_loss_proj:2.413 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails.. quite diocese. [SEP]']
+[1650/2000] tot_loss=1.843 (perp=7.843, rec=0.264, cos=0.010), tot_loss_proj:2.411 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails.. quite diocese. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.846 (perp=7.843, rec=0.268, cos=0.010), tot_loss_proj:2.410 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails.. quite diocese. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.842 (perp=7.843, rec=0.263, cos=0.010), tot_loss_proj:2.413 [t=0.23s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails.. quite diocese. [SEP]']
+[1800/2000] tot_loss=1.845 (perp=7.843, rec=0.267, cos=0.010), tot_loss_proj:2.413 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech words. reason fails.. quite diocese. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.899 (perp=8.069, rec=0.275, cos=0.010), tot_loss_proj:2.453 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its timmy words. reason fails.. quite diocese. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.884 (perp=8.069, rec=0.261, cos=0.010), tot_loss_proj:2.450 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its timmy words. reason fails.. quite diocese. [SEP]']
+[1950/2000] tot_loss=1.843 (perp=7.866, rec=0.261, cos=0.010), tot_loss_proj:2.451 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech heart. reason fails.. quite diocese. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.841 (perp=7.866, rec=0.259, cos=0.010), tot_loss_proj:2.449 [t=0.17s]
+prediction: ['[CLS] so hard film fails yet. so busy from reference point氵 and the worship reactor・ square having had its speech heart. reason fails.. quite diocese. [SEP]']
+Done with input #95 of 100.
+reference: 
+========================
+[CLS] the film is so busy making reference to other films and trying to be other films that it fails to have a heart, mind or humor of its own. [SEP]
+========================
+predicted: 
+========================
+[CLS] busy filmed film busy busy films it busy something reference married. and / trying films pu mind having to asisance advice eyes । fails. failsntation solving. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 45.614 | p: 50.000 | r: 41.935
+rouge2     | fm: 3.636 | p: 4.000 | r: 3.333
+rougeL     | fm: 31.579 | p: 34.615 | r: 29.032
+rougeLsum  | fm: 31.579 | p: 34.615 | r: 29.032
+r1fm+r2fm = 49.250
+
+[Aggregate metrics]:
+rouge1     | fm: 70.900 | p: 70.256 | r: 71.784
+rouge2     | fm: 20.723 | p: 20.559 | r: 20.937
+rougeL     | fm: 49.459 | p: 49.007 | r: 50.010
+rougeLsum  | fm: 49.361 | p: 48.912 | r: 49.909
+r1fm+r2fm = 91.623
+
+input #95 time: 0:07:13 | total time: 12:56:18
+
+
+Running input #96 of 100.
+reference: 
+========================
+self-congratulatory , misguided , and ill-informed , if nonetheless compulsively watchable .
+========================
+average of cosine similarity 0.9991342878120664
+highest_index [0]
+highest [0.9991342878120664]
+Debug: ids_shape = 27, pads = [27]
+Debug: input ids = tensor([[  101,  2969,  1011, 26478,  8609, 20350,  2100,  1010, 28616, 28582,
+          2094,  1010,  1998,  5665,  1011,  6727,  1010,  2065,  9690,  4012,
+         14289,  4877, 14547,  3422,  3085,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] self - congratulatory, misguided, and ill - informed, if nonetheless compulsively watchable. [SEP]']
+[Init] best rec loss: 1.882070779800415 for ['[CLS] foil pollygirl variations bearing asia occasion hilbert else alexander aviv inter botheredel dancing genus one monitors branded chapter release curves agra marked spare [SEP]']
+[Init] best rec loss: 1.8435903787612915 for ['[CLS] catcheramp accessgrave trade than beneath devil print officially secret along off nice laureate admission annually game distanceching clicked governor small senses meals [SEP]']
+[Init] best rec loss: 1.62474524974823 for ['[CLS]h pipels facility theme fuse unified strategic zach dioxide international reader nature physics ministryˈ arsenal grabs ownerd stann fame take new [SEP]']
+[Init] best rec loss: 1.6200380325317383 for ["[CLS] manuscript goods offers'tentatively major iata thereafter solotails duo spent traps bo alex chi ny { par offs fame ownership wound anymore plan [SEP]"]
+[Init] best rec loss: 1.4644333124160767 for ['[CLS] freezing sex ( proposition accompanying nearby beneath fans ito cabin mall grew of thou aces stomach bullregion generation hydra wi parties mccain distances [SEP]']
+[Init] best rec loss: 1.417051076889038 for ['[CLS]fulness exchange acid sportop complexpp sandstone odd style chassis other campeonato alliance jeff got deadly coverage maintenance families sick thin slam revenue campus [SEP]']
+[Init] best rec loss: 1.3526722192764282 for ['[CLS]giesiel everything someone observation finishing angerurst precious day judges theirleigh shadow award empty focus palm mcc names canvas hallmark whyl bath [SEP]']
+[Init] best rec loss: 1.3409771919250488 for ['[CLS] job critics mayor observedenans shit assistant states debutbilis flesh pe holden helsinki attraction ace believing ben ratio feel contractors registration assembly prison [SEP]']
+[Init] best rec loss: 1.3066054582595825 for ['[CLS] rushories churches someplace failure masses spent foundation enrollment just carrot reading corporate near traveling expanded despite acid primary economicrai uh studentder good [SEP]']
+[Init] best rec loss: 1.2897193431854248 for ['[CLS] because meancolorson goal love knock material correctly ago face ham but left parkinson rhys asked talking household family penciltorsh gulf said [SEP]']
+[Init] best perm rec loss: 1.2850956916809082 for ['[CLS] love ago left knock but said goal household face correctly because parkinson meancolorsh material ham gulf talking rhys pencilson asked familytor [SEP]']
+[Init] best perm rec loss: 1.2772510051727295 for ['[CLS] hamtorcolor left pencil gulf asked said ago family face correctly but talking household love because goal parkinsonsh material mean knock rhysson [SEP]']
+[Init] best perm rec loss: 1.2752608060836792 for ['[CLS] mean ham gulf household parkinsonson said ago because left face asked love family correctly knock talkingtor goal pencil materialshcolor but rhys [SEP]']
+[Init] best perm rec loss: 1.2737380266189575 for ['[CLS]son correctly gulf left knocktor household pencil material mean because face rhys goal said asked talkingsh hamcolor parkinson ago but love family [SEP]']
+[Init] best perm rec loss: 1.2709213495254517 for ['[CLS] left knock materialsh but household goal asked pencil familytor because talking love ham mean rhys parkinson gulfcolor said ago face correctlyson [SEP]']
+[Init] best perm rec loss: 1.2675890922546387 for ['[CLS] family knock mean parkinsonson left buttor material pencil because askedcolor gulf household correctly facesh talking ham rhys love ago goal said [SEP]']
+[Init] best perm rec loss: 1.2618860006332397 for ['[CLS] parkinson but gulf said lovesh knock because talking household mean goalson ago asked familycolor rhys pencil ham materialtor face left correctly [SEP]']
+[Init] best perm rec loss: 1.258587121963501 for ['[CLS] left face ham goal asked because household knocktor talking love materialson correctly meanshcolor but ago gulf parkinson family pencil rhys said [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.802 (perp=12.469, rec=0.287, cos=0.022), tot_loss_proj:3.519 [t=0.17s]
+prediction: ['[CLS]less limit ill self leakhat - presentedআ sentinel :less appearance highlyguide eyedness than messages informed?ridersrim sophia mascot [SEP]']
+[ 100/2000] tot_loss=2.712 (perp=12.325, rec=0.233, cos=0.014), tot_loss_proj:3.458 [t=0.17s]
+prediction: ['[CLS] self credit illguide leak - - or mandir ago ill - nor,guide - if if neuronsableable watchedrimcifulguide [SEP]']
+[ 150/2000] tot_loss=2.658 (perp=11.078, rec=0.394, cos=0.049), tot_loss_proj:3.536 [t=0.17s]
+prediction: ['[CLS] choked? billie falkland less : - ten ᶜ always bad -??guide christy, although assumed admitted things intelligent whisper factguide [SEP]']
+[ 200/2000] tot_loss=2.266 (perp=9.574, rec=0.328, cos=0.023), tot_loss_proj:3.183 [t=0.17s]
+prediction: ['[CLS] self? sonia∂ less : - ten cradle nevertheless! -??guide christy, although apparently admitted things intelligent! noneguide [SEP]']
+Attempt swap
+Moved sequence
+[ 250/2000] tot_loss=2.263 (perp=9.746, rec=0.297, cos=0.017), tot_loss_proj:3.473 [t=0.17s]
+prediction: ['[CLS] self? sonia∂ less : - five¨! - stories? cradleguide christy, although apparently always things intelligent!cifulguide [SEP]']
+[ 300/2000] tot_loss=2.467 (perp=10.956, rec=0.264, cos=0.012), tot_loss_proj:3.716 [t=0.18s]
+prediction: ['[CLS] self? sonia∂ less : few five gareth good - stories? cradleguide christy, although apparentlyvable things intelligent!cifulguide [SEP]']
+Attempt swap
+Moved token
+[ 350/2000] tot_loss=2.488 (perp=11.137, rec=0.250, cos=0.010), tot_loss_proj:3.726 [t=0.17s]
+prediction: ['[CLS] self? celeste less∂ : few five gareth good - stories? cradleguide christy, although apparentlyvable things intelligent!cifulguide [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.420 (perp=10.836, rec=0.243, cos=0.009), tot_loss_proj:3.596 [t=0.17s]
+prediction: ['[CLS] self? five less∂ : few mao gareth good - stories? cradleguide christy, although apparentlyvable things intelligent! preferguide [SEP]']
+[ 450/2000] tot_loss=2.389 (perp=10.759, rec=0.229, cos=0.009), tot_loss_proj:3.578 [t=0.17s]
+prediction: ['[CLS] self? five less∂ : fewhini gareth good - stories? cradleguide christy, although apparentlyvable things intelligent! preferguide [SEP]']
+Attempt swap
+Moved token
+[ 500/2000] tot_loss=2.528 (perp=11.474, rec=0.224, cos=0.009), tot_loss_proj:3.755 [t=0.17s]
+prediction: ['[CLS] self? five god∂ :uoushini gareth ill -tively? cradleguide christy, althoughvablerigue intelligent! nevertheless factguide [SEP]']
+Attempt swap
+Moved token
+[ 550/2000] tot_loss=2.586 (perp=11.753, rec=0.227, cos=0.009), tot_loss_proj:4.016 [t=0.18s]
+prediction: ['[CLS] self? five official∂ :uoushini gareth illtively? -leaderguide christy, althoughvablerigue intelligent! nonetheless factguide [SEP]']
+[ 600/2000] tot_loss=2.652 (perp=12.129, rec=0.218, cos=0.008), tot_loss_proj:3.868 [t=0.17s]
+prediction: ['[CLS] self? five official∂ :uoushini structural illtively you -leaderguide christy, althoughvablerigue intelligent! nonethelesscifulguide [SEP]']
+Attempt swap
+Moved token
+[ 650/2000] tot_loss=2.611 (perp=11.953, rec=0.212, cos=0.008), tot_loss_proj:3.816 [t=0.17s]
+prediction: ['[CLS] self? four official∂ :guide structural mis რtively you -leaderguide christy, althoughvablerigue intelligent! nonethelesscifulguide [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=2.568 (perp=11.737, rec=0.212, cos=0.009), tot_loss_proj:3.823 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis რtively you -leader - christy, althoughvablerigue intelligent! nonethelesscifulguide [SEP]']
+[ 750/2000] tot_loss=2.524 (perp=11.561, rec=0.204, cos=0.008), tot_loss_proj:3.734 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis რtively you -leader? christy, althoughvablerigue intelligent! nonethelesscifulguide [SEP]']
+Attempt swap
+Moved token
+[ 800/2000] tot_loss=2.476 (perp=11.335, rec=0.201, cos=0.008), tot_loss_proj:3.722 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis რtively you -leader - christy, althoughvable things nonetheless intelligent!cifulguide [SEP]']
+Attempt swap
+Swapped tokens
+[ 850/2000] tot_loss=2.466 (perp=11.237, rec=0.210, cos=0.009), tot_loss_proj:3.610 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis nrhptively you -leaderciful christy, althoughvablerigue nonetheless intelligent! -guide [SEP]']
+[ 900/2000] tot_loss=2.395 (perp=10.914, rec=0.204, cos=0.008), tot_loss_proj:3.547 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis nrhptively you -leader _ christy, althoughvablerigue nonetheless intelligent! -guide [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=2.385 (perp=10.914, rec=0.195, cos=0.008), tot_loss_proj:3.546 [t=0.17s]
+prediction: ['[CLS] selfguide four official∂ :guide structural mis nrhptively you -leader _ christy, althoughvablerigue nonetheless intelligent! -guide [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.426 (perp=11.039, rec=0.208, cos=0.009), tot_loss_proj:3.603 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural mis nrhptively you -leader _ christy, althoughvablerigue nonetheless intelligent! -guide [SEP]']
+[1050/2000] tot_loss=2.534 (perp=11.619, rec=0.202, cos=0.008), tot_loss_proj:3.776 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural mis nrhptively youguideleader _ christy, althoughvablerigue nonetheless intelligent! -guide [SEP]']
+Attempt swap
+Moved token
+[1100/2000] tot_loss=2.506 (perp=11.516, rec=0.194, cos=0.008), tot_loss_proj:3.745 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural mis nrhptively youguideleader _ christy, althoughvable nonetheless intelligent! -rigueguide [SEP]']
+Attempt swap
+Moved token
+[1150/2000] tot_loss=2.549 (perp=11.718, rec=0.197, cos=0.008), tot_loss_proj:3.655 [t=0.17s]
+prediction: ['[CLS] illguide can official∂ selfguide structural mis nrhptively youguideleader _ christy, althoughvable nonetheless! - intelligentrigueguide [SEP]']
+[1200/2000] tot_loss=2.543 (perp=11.718, rec=0.192, cos=0.008), tot_loss_proj:3.658 [t=0.17s]
+prediction: ['[CLS] illguide can official∂ selfguide structural mis nrhptively youguideleader _ christy, althoughvable nonetheless! - intelligentrigueguide [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=2.506 (perp=11.548, rec=0.189, cos=0.008), tot_loss_proj:3.734 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural although nrhptively,guideleaderciful christy, misvable nonetheless! - intelligentrigueguide [SEP]']
+Attempt swap
+[1300/2000] tot_loss=2.505 (perp=11.548, rec=0.188, cos=0.008), tot_loss_proj:3.733 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural although nrhptively,guideleaderciful christy, misvable nonetheless! - intelligentrigueguide [SEP]']
+[1350/2000] tot_loss=2.507 (perp=11.548, rec=0.190, cos=0.008), tot_loss_proj:3.734 [t=0.17s]
+prediction: ['[CLS] illguide four official∂ selfguide structural although nrhptively,guideleaderciful christy, misvable nonetheless! - intelligentrigueguide [SEP]']
+Attempt swap
+Swapped tokens
+[1400/2000] tot_loss=2.376 (perp=10.892, rec=0.189, cos=0.008), tot_loss_proj:3.996 [t=0.17s]
+prediction: ['[CLS] illguide can official∂ selfguide structuralguide nrhptively, althoughleaderciful christy, misvable nonetheless! - intelligent iguide [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=2.348 (perp=10.780, rec=0.184, cos=0.008), tot_loss_proj:3.701 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ifleaderciful christy, misvable nonetheless! - intelligent i four [SEP]']
+[1500/2000] tot_loss=2.346 (perp=10.780, rec=0.182, cos=0.008), tot_loss_proj:3.696 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ifleaderciful christy, misvable nonetheless! - intelligent i four [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=2.320 (perp=10.603, rec=0.191, cos=0.008), tot_loss_proj:3.664 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - intelligent if four [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.311 (perp=10.603, rec=0.182, cos=0.008), tot_loss_proj:3.664 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - intelligent if four [SEP]']
+[1650/2000] tot_loss=2.358 (perp=10.825, rec=0.185, cos=0.008), tot_loss_proj:3.565 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.353 (perp=10.825, rec=0.180, cos=0.008), tot_loss_proj:3.564 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+Attempt swap
+[1750/2000] tot_loss=2.355 (perp=10.825, rec=0.182, cos=0.008), tot_loss_proj:3.557 [t=0.17s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+[1800/2000] tot_loss=2.350 (perp=10.825, rec=0.178, cos=0.008), tot_loss_proj:3.561 [t=0.18s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.352 (perp=10.825, rec=0.180, cos=0.008), tot_loss_proj:3.563 [t=0.18s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+Attempt swap
+[1900/2000] tot_loss=2.353 (perp=10.825, rec=0.181, cos=0.008), tot_loss_proj:3.563 [t=0.18s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+[1950/2000] tot_loss=2.378 (perp=10.971, rec=0.176, cos=0.008), tot_loss_proj:3.512 [t=0.18s]
+prediction: ['[CLS] illguideguide official∂ selfguide structuralguideulatortively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]']
+Attempt swap
+Swapped tokens
+[2000/2000] tot_loss=2.474 (perp=11.403, rec=0.185, cos=0.008), tot_loss_proj:3.295 [t=0.18s]
+prediction: ['[CLS] illleaderguide official∂ selfguide structuralguideulatortively,raphyguideciful member, misvable nonetheless! - watched if four [SEP]']
+Done with input #96 of 100.
+reference: 
+========================
+[CLS] self - congratulatory, misguided, and ill - informed, if nonetheless compulsively watchable. [SEP]
+========================
+predicted: 
+========================
+[CLS] illguideguide official∂ selfguide structuralguide nrhptively, ileaderciful christy, misvable nonetheless! - watched if four [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 30.769 | p: 28.571 | r: 33.333
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 23.077 | p: 21.429 | r: 25.000
+rougeLsum  | fm: 23.077 | p: 21.429 | r: 25.000
+r1fm+r2fm = 30.769
+
+[Aggregate metrics]:
+rouge1     | fm: 70.515 | p: 69.946 | r: 71.403
+rouge2     | fm: 20.506 | p: 20.343 | r: 20.692
+rougeL     | fm: 49.120 | p: 48.667 | r: 49.755
+rougeLsum  | fm: 49.112 | p: 48.668 | r: 49.704
+r1fm+r2fm = 91.020
+
+input #96 time: 0:07:00 | total time: 13:03:18
+
+
+Running input #97 of 100.
+reference: 
+========================
+rabbit-proof fence will probably make you angry . but it will just as likely make you weep , and it will do so in a way that doesn't make you feel like a sucker .
+========================
+average of cosine similarity 0.9993442431831658
+highest_index [0]
+highest [0.9993442431831658]
+Debug: ids_shape = 41, pads = [41]
+Debug: input ids = tensor([[  101, 10442,  1011,  6947,  8638,  2097,  2763,  2191,  2017,  4854,
+          1012,  2021,  2009,  2097,  2074,  2004,  3497,  2191,  2017, 27874,
+          1010,  1998,  2009,  2097,  2079,  2061,  1999,  1037,  2126,  2008,
+          2987,  1005,  1056,  2191,  2017,  2514,  2066,  1037, 26476,  1012,
+           102]], device='cuda:0')
+Debug: ref = ["[CLS] rabbit - proof fence will probably make you angry. but it will just as likely make you weep, and it will do so in a way that doesn't make you feel like a sucker. [SEP]"]
+[Init] best rec loss: 1.8724321126937866 for ['[CLS] retention parks thorne sodarring picked uniform frontier foundation listen count southern holocaust tannyre equal / agency health wicket growing bertie griffith fleet margaret company pierre / budge away sync skyural hits knew baking pool tibetan [SEP]']
+[Init] best rec loss: 1.8266645669937134 for ['[CLS] correspondent need march fin may cells open better those internal sit moments barnes governor terms supreme loved for beginning tar young je behind capped rock training twice everything annoyedny under scientistend thoughr parallel stalldale ball [SEP]']
+[Init] best perm rec loss: 1.8215054273605347 for ['[CLS] fin training je need marchny moments tar cells internal under sit stall capped those though scientist annoyed twice rockdale governor parallel termsend loved better mayr behind ball correspondent supreme open barnes everything for young beginning [SEP]']
+[Init] best perm rec loss: 1.8212018013000488 for ['[CLS] sit stall moments maydale je young march for training annoyed open behind loved scientist though ball rock under cells parallel thoseend tar finny everything terms internal capped supreme barnes beginning correspondent twicer need better governor [SEP]']
+[Init] best perm rec loss: 1.8201349973678589 for ['[CLS] loved annoyed ball may need beginning under internal correspondent barnes everything twice supreme young sit openr though governor momentsend capped training march cells stall better fin scientist thoseny rockdale for terms je tar parallel behind [SEP]']
+[Init] best perm rec loss: 1.8199610710144043 for ['[CLS] though training those stall may young openend sit cells moments for internal rock behind scientist better correspondent tar everythingny je ball underdale loved barnes march supreme terms need capped twice fin beginningr parallel governor annoyed [SEP]']
+[Init] best perm rec loss: 1.8197991847991943 for ['[CLS] stall supreme rockr barnes loved training for je behind need under parallel sit annoyed cappedend though those momentsny open correspondent scientist governor terms tar ball march fin better beginningdale internal cells may young twice everything [SEP]']
+[Init] best perm rec loss: 1.8193689584732056 for ['[CLS] supreme loved those everything march capped young under annoyed behind ball correspondent stall internal may tardale cells barnes open though twice je parallel beginning sitendny rock for fin scientist moments training termsr better need governor [SEP]']
+[Init] best perm rec loss: 1.8161218166351318 for ['[CLS]end may those scientist barnes better governor everythingnyr supreme sit terms internal stall rockdale training though fin open tar parallel capped need behind march correspondent young je twice under loved for beginning cells moments annoyed ball [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.984 (perp=12.135, rec=0.482, cos=0.076), tot_loss_proj:3.970 [t=0.22s]
+prediction: ['[CLS] surprise iris耳 corinne cruz most water sound toward cool quite smooth₂ therefore sensed always smart kim humanitiesnivorous universe tel supervisoryching [SEP] night april really fear. waiting ring [SEP] counter home, good roses dream [SEP]']
+[ 100/2000] tot_loss=3.945 (perp=10.857, rec=0.873, cos=0.901), tot_loss_proj:3.914 [t=0.17s]
+prediction: ['[CLS] wrap karen penny landon lucas bedroom, * t kiss stumbling wrap into, tonightlby with kim music steven universe night cover kiss taste " only you with like most [MASK] reward spin infinity, night into [MASK] [SEP]']
+[ 150/2000] tot_loss=3.557 (perp=11.470, rec=0.768, cos=0.495), tot_loss_proj:4.116 [t=0.17s]
+prediction: ['[CLS] [SEP] candy card courtney lucas bedroom, * touch human stumbling [MASK] into, six anywhere with touch music flip game tear speed taste 4 " screen you with like next [MASK] 3 * much, night into [MASK] [SEP]']
+[ 200/2000] tot_loss=3.392 (perp=11.505, rec=0.706, cos=0.385), tot_loss_proj:4.158 [t=0.17s]
+prediction: ['[CLS] [SEP] spinning clan courtney lucas bedroom, * touch human stumbling into into, 5 anywhere package " music steven fae night emily tear any " ability you with like most [MASK] 3 * much [SEP] night soul [MASK] [SEP]']
+Attempt swap
+Put prefix at the end
+[ 250/2000] tot_loss=3.275 (perp=11.279, rec=0.689, cos=0.331), tot_loss_proj:4.179 [t=0.17s]
+prediction: ['[CLS] you with like next [MASK] 3 * much s during pin [MASK] [SEP] spinning clanivistis room, * button human stumbling into will so six anywhere package additional music steven [CLS] tear [SEP] tear. " vehicle [SEP]']
+[ 300/2000] tot_loss=3.045 (perp=10.939, rec=0.636, cos=0.222), tot_loss_proj:4.136 [t=0.17s]
+prediction: ['[CLS] you with like everything [MASK] better * much s work pin [MASK] [SEP] zeke clanivistion humming, stop button unseen stumbling into will so six anywhere package additional music steven [CLS] tear [SEP] tear. " event [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.856 (perp=10.388, rec=0.605, cos=0.174), tot_loss_proj:4.005 [t=0.17s]
+prediction: ['[CLS] you with like next [MASK] better * much s rough that [MASK] steven riley pocket courtneyion few, stop buttonctive stumbling into will so the anywhere package sound music [SEP] [CLS] tear [SEP] tear. " event [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=2.620 (perp=9.779, rec=0.561, cos=0.103), tot_loss_proj:3.862 [t=0.17s]
+prediction: ['[CLS] you with like never it better * much s rough that [MASK] steven riley pocket courtneyion few, stop button tear stumbling into will and 5 relatively package sound3 [SEP] [CLS] so [SEP]ctive. " motor [SEP]']
+[ 450/2000] tot_loss=2.518 (perp=9.583, rec=0.520, cos=0.082), tot_loss_proj:3.809 [t=0.17s]
+prediction: ['[CLS] you with like never it better * becoming joe rough that the steven than pocket courtney john building, $ tears tear stumbling into will and the relativelyline please3 [SEP] [CLS] so [SEP]ctive. " motor [SEP]']
+Attempt swap
+Moved token
+[ 500/2000] tot_loss=3.123 (perp=10.625, rec=0.674, cos=0.324), tot_loss_proj:3.861 [t=0.17s]
+prediction: ['[CLS] you with eat love " platinum scott france rock material marc [MASK] " peter she star´s grey mixed wrap : button hip ptolemy [MASK] library, the live planet en 2,, [MASK] daniel purple. release [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=2.913 (perp=10.731, rec=0.596, cos=0.170), tot_loss_proj:3.914 [t=0.17s]
+prediction: ['[CLS] you with platinum warmth " eat flip france rock material marc [MASK] collection matt she star´s grey mix wrapped : button hip face drums west, the live sciences en3,, [MASK] [SEP] purple. drink [SEP]']
+[ 600/2000] tot_loss=2.898 (perp=11.288, rec=0.536, cos=0.104), tot_loss_proj:3.948 [t=0.17s]
+prediction: ['[CLS] you javanese platinum warmth " eat perfect japan rock material marc with ) matt she rancho´s grey hipffin : button shortly a drums west, the live affects en3,, cook [SEP] purple. flipping [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=2.792 (perp=10.846, rec=0.536, cos=0.087), tot_loss_proj:3.873 [t=0.17s]
+prediction: ['[CLS] you javanese platinum warmth, eat version japan cage material marc bang ) reilly she rancho´sion hipffin : helpsway : drums west, the live sounds en3 ", cook [SEP] purple. leaving [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=2.750 (perp=10.908, rec=0.491, cos=0.077), tot_loss_proj:3.948 [t=0.17s]
+prediction: ['[CLS] you sarawak platinum warmth reilly eat version japan cage material marc bang ), she rancho´s rather hipffin : helps route : recorder shakespeare, the live sounds en3 ", cook [SEP] purple. leaving [SEP]']
+[ 750/2000] tot_loss=2.700 (perp=10.829, rec=0.467, cos=0.067), tot_loss_proj:3.943 [t=0.17s]
+prediction: ['[CLS] sure javanese platinum warmth reilly eat version japan cage material marc bang ), she rancho´s rather hipffin : helps hall : recorder shakespeare, a live sounds en3 ", cook [SEP] purple. leaving [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=2.823 (perp=11.475, rec=0.466, cos=0.062), tot_loss_proj:4.158 [t=0.17s]
+prediction: ['[CLS] sure locus platinum warmth reilly generation eat disqualified cage material marc bang ), she rancho´s rather hipffin les helps hall : recorder shakespeare, a live feels en3 ", quad [SEP] purple. leaving [SEP]']
+Attempt swap
+Swapped tokens
+[ 850/2000] tot_loss=2.757 (perp=11.259, rec=0.448, cos=0.057), tot_loss_proj:4.159 [t=0.20s]
+prediction: ['[CLS] sure locus platinum warmth reilly generation eat disqualified cage material marc bang ). she rancho´s rather buildingffin les helps hall : recorder shakespeare, a live chop en3 ", quad [SEP] purple, leaving [SEP]']
+[ 900/2000] tot_loss=2.717 (perp=11.154, rec=0.434, cos=0.052), tot_loss_proj:4.119 [t=0.19s]
+prediction: ['[CLS] sure locus platinum really reilly generation eat pont cage material marc bang ). she rancho´s rather buildingffin jean helps hall : poetry will, a live chop en3 ", quad [SEP] purple, leaving [SEP]']
+Attempt swap
+Swapped tokens
+[ 950/2000] tot_loss=2.761 (perp=11.434, rec=0.424, cos=0.051), tot_loss_proj:4.193 [t=0.19s]
+prediction: ['[CLS] sure locus platinum likely reilly generation eat pont cage material marc bang ). she rancho´s rather buildingffin jean helps\': will poetry, a arrange chop en3 ",scribe [SEP] purple, leaving [SEP]']
+Attempt swap
+Swapped tokens
+[1000/2000] tot_loss=2.693 (perp=11.109, rec=0.425, cos=0.046), tot_loss_proj:4.142 [t=0.19s]
+prediction: ['[CLS] sure locus platinum likely reilly generation eat pont cage material marc bang ). she rancho´s rather buildingffin jean performed\': will poetry, helps arrange chop en3 ",scribe [SEP] purple, used [SEP]']
+[1050/2000] tot_loss=2.744 (perp=11.431, rec=0.415, cos=0.043), tot_loss_proj:4.190 [t=0.20s]
+prediction: ['[CLS] sure locus platinum likely reilly generation eat hardin cage material marc bang ). she rancho´s rather buildingffin jean performed including : will poetry, helps arrange chop en : ",scribe [SEP] purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1100/2000] tot_loss=2.807 (perp=11.771, rec=0.410, cos=0.043), tot_loss_proj:4.270 [t=0.19s]
+prediction: ['[CLS] hardinı platinum likely reilly generation eat sure cage such marc bang ). she rancho´s rather buildingffin jean performed including : willnce, helps arrange chop en3 ",scribe [SEP] purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1150/2000] tot_loss=2.751 (perp=11.472, rec=0.409, cos=0.048), tot_loss_proj:4.206 [t=0.19s]
+prediction: ['[CLS] hardin than platinum likely reilly generation eat sure cage such cape bang ). she rancho´s rather buildingffin jean performed including : willnce, helps arrange doesn en3 " [SEP]scribe, purple, used [SEP]']
+[1200/2000] tot_loss=2.701 (perp=11.302, rec=0.400, cos=0.040), tot_loss_proj:4.173 [t=0.19s]
+prediction: ['[CLS] hardin than platinum likely reilly generation eat sure cage such cape bang ). she rancho´sdo buildingffin jean performed including : willnce, helps arrange doesn en : " [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Moved token
+[1250/2000] tot_loss=2.781 (perp=11.736, rec=0.394, cos=0.040), tot_loss_proj:4.252 [t=0.17s]
+prediction: ['[CLS]amine than platinum likely reilly generation eat sure cage such cape bang. ) she rancho´sdo inffin jean so including : willnce, helps arrange doesn en : " [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1300/2000] tot_loss=2.708 (perp=11.220, rec=0.414, cos=0.050), tot_loss_proj:4.177 [t=0.17s]
+prediction: ['[CLS]3 than official likely reilly generation eat sure cage such cape bang. ) she rancho´sdo inffin titles so including : will poetry, helps arrange doesn enamine " [SEP]scribe, purple, used [SEP]']
+[1350/2000] tot_loss=2.811 (perp=11.892, rec=0.393, cos=0.039), tot_loss_proj:4.312 [t=0.17s]
+prediction: ['[CLS]3ı official likely reilly voices eat sure cage such cape bang. ) she rancho´sdo inffin titles so including : will poetry, helps arrange doesn enamine " [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1400/2000] tot_loss=2.729 (perp=11.444, rec=0.396, cos=0.044), tot_loss_proj:4.212 [t=0.17s]
+prediction: ['[CLS]3 so official likely reilly voices eat sure cage such cape bang. ) she rancho´sdo inffin titles than including : willnce, helps arrange doesn enamine " [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=2.630 (perp=10.973, rec=0.391, cos=0.044), tot_loss_proj:4.108 [t=0.17s]
+prediction: ['[CLS]3 so official likely " voices eat sure cage such cape bang. use she rancho´sdo inffin titles than including : willnce, helps arrange doesn enamine reilly [SEP]scribe, purple, used [SEP]']
+[1500/2000] tot_loss=2.561 (perp=10.671, rec=0.388, cos=0.039), tot_loss_proj:4.063 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape bang. use she rancho´sdo inffin titles likely including : willnce, helps make doesn enamine reilly [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1550/2000] tot_loss=2.517 (perp=10.442, rec=0.388, cos=0.041), tot_loss_proj:4.032 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s. japan she rancho bangdo inffin titles likely including : willnce, helps make doesn enamine reilly [SEP]scribe, purple, used [SEP]']
+Attempt swap
+[1600/2000] tot_loss=2.536 (perp=10.574, rec=0.383, cos=0.038), tot_loss_proj:4.049 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s. e she rancho bangdo inffin titles likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, purple, used [SEP]']
+[1650/2000] tot_loss=2.528 (perp=10.574, rec=0.375, cos=0.038), tot_loss_proj:4.052 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s. e she rancho bangdo inffin titles likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, purple, used [SEP]']
+Attempt swap
+[1700/2000] tot_loss=2.528 (perp=10.574, rec=0.376, cos=0.037), tot_loss_proj:4.048 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s. e she rancho bangdo inffin titles likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, purple, used [SEP]']
+Attempt swap
+Swapped tokens
+[1750/2000] tot_loss=2.532 (perp=10.579, rec=0.378, cos=0.038), tot_loss_proj:4.048 [t=0.17s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s she e. rancho bangdo inffin joan likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, purple, used [SEP]']
+[1800/2000] tot_loss=2.539 (perp=10.652, rec=0.372, cos=0.037), tot_loss_proj:4.048 [t=0.26s]
+prediction: ['[CLS]3 so official likely " generation eat sure cage such cape´s she e. rancho bangdo inffin joan likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, [SEP], used [SEP]']
+Attempt swap
+[1850/2000] tot_loss=2.528 (perp=10.599, rec=0.372, cos=0.036), tot_loss_proj:4.037 [t=0.17s]
+prediction: ['[CLS]3 so official likely " $ eat sure cage such cape´s she e. rancho bangdo inffin joan likely including : willnce, helps make doesn en hardin reilly [SEP]scribe, [SEP], used [SEP]']
+Attempt swap
+Swapped tokens
+[1900/2000] tot_loss=2.502 (perp=10.447, rec=0.375, cos=0.037), tot_loss_proj:4.007 [t=0.17s]
+prediction: ['[CLS]3 so official likely " $ eat sure cage such cape´s she e. rancho reillydo inffin joan likely including : willnce, helps make doesn en hardin bang [SEP]scribe, [SEP], used [SEP]']
+[1950/2000] tot_loss=2.497 (perp=10.447, rec=0.373, cos=0.035), tot_loss_proj:4.009 [t=0.17s]
+prediction: ['[CLS]3 so official likely " $ eat sure cage such cape´s she e. rancho reillydo inffin joan likely including : willnce, helps make doesn en hardin bang [SEP]scribe, [SEP], used [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.514 (perp=10.529, rec=0.372, cos=0.035), tot_loss_proj:4.019 [t=0.17s]
+prediction: ['[CLS]3 so official likely " $ eat sure cage such cape´s she e. contract reillydo inffin joan likely including : willnce, helps make doesn en hardin bang [SEP]scribe, [SEP], used [SEP]']
+Done with input #97 of 100.
+reference: 
+========================
+[CLS] rabbit - proof fence will probably make you angry. but it will just as likely make you weep, and it will do so in a way that doesn't make you feel like a sucker. [SEP]
+========================
+predicted: 
+========================
+[CLS]3 so official likely " $ eat sure cage such cape´s she e. rancho reillydo inffin joan likely including : willnce, helps make doesn en hardin bang [SEP]scribe, [SEP], used [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 17.910 | p: 19.355 | r: 16.667
+rouge2     | fm: 0.000 | p: 0.000 | r: 0.000
+rougeL     | fm: 14.925 | p: 16.129 | r: 13.889
+rougeLsum  | fm: 14.925 | p: 16.129 | r: 13.889
+r1fm+r2fm = 17.910
+
+[Aggregate metrics]:
+rouge1     | fm: 70.077 | p: 69.458 | r: 70.979
+rouge2     | fm: 20.227 | p: 20.079 | r: 20.459
+rougeL     | fm: 48.783 | p: 48.340 | r: 49.385
+rougeLsum  | fm: 48.739 | p: 48.345 | r: 49.357
+r1fm+r2fm = 90.303
+
+input #97 time: 0:07:12 | total time: 13:10:31
+
+
+Running input #98 of 100.
+reference: 
+========================
+cinematic poo .
+========================
+average of cosine similarity 0.9993146946765397
+highest_index [0]
+highest [0.9993146946765397]
+Debug: ids_shape = 6, pads = [6]
+Debug: input ids = tensor([[  101, 21014, 13433,  2080,  1012,   102]], device='cuda:0')
+Debug: ref = ['[CLS] cinematic poo. [SEP]']
+[Init] best rec loss: 1.9721834659576416 for ['[CLS] sac shoulders fantasy cid [SEP]']
+[Init] best rec loss: 1.8655788898468018 for ['[CLS] tokyo might sullivan infancy [SEP]']
+[Init] best rec loss: 1.7510510683059692 for ['[CLS] mayor mail robinonal [SEP]']
+[Init] best rec loss: 1.5898897647857666 for ['[CLS] national campeonato niccolo relationship [SEP]']
+[Init] best rec loss: 1.5611947774887085 for ['[CLS]ishment sees fairyogical [SEP]']
+[Init] best rec loss: 1.4614670276641846 for ['[CLS] opening era reminded believe [SEP]']
+[Init] best rec loss: 1.2661240100860596 for ['[CLS] halfway those week kari [SEP]']
+[Init] best rec loss: 1.224993348121643 for ['[CLS] economics assumestellar gun [SEP]']
+[Init] best rec loss: 1.0379858016967773 for ['[CLS] tortricidae stryker between hooper [SEP]']
+[Init] best perm rec loss: 1.0375789403915405 for ['[CLS] stryker hooper tortricidae between [SEP]']
+[Init] best perm rec loss: 1.035759687423706 for ['[CLS] tortricidae hooper stryker between [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=1.901 (perp=8.090, rec=0.254, cos=0.029), tot_loss_proj:3.156 [t=0.17s]
+prediction: ['[CLS] po poo. [SEP]']
+[ 100/2000] tot_loss=1.772 (perp=8.323, rec=0.099, cos=0.008), tot_loss_proj:1.753 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 150/2000] tot_loss=1.737 (perp=8.323, rec=0.071, cos=0.002), tot_loss_proj:1.755 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 200/2000] tot_loss=1.733 (perp=8.323, rec=0.067, cos=0.002), tot_loss_proj:1.757 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 250/2000] tot_loss=1.732 (perp=8.323, rec=0.062, cos=0.006), tot_loss_proj:1.754 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 300/2000] tot_loss=1.732 (perp=8.323, rec=0.066, cos=0.001), tot_loss_proj:1.752 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 350/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.743 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 400/2000] tot_loss=1.724 (perp=8.323, rec=0.058, cos=0.001), tot_loss_proj:1.744 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 450/2000] tot_loss=1.726 (perp=8.323, rec=0.060, cos=0.002), tot_loss_proj:1.747 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 500/2000] tot_loss=1.728 (perp=8.323, rec=0.062, cos=0.001), tot_loss_proj:1.752 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 550/2000] tot_loss=1.717 (perp=8.323, rec=0.051, cos=0.001), tot_loss_proj:1.750 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 600/2000] tot_loss=1.730 (perp=8.323, rec=0.064, cos=0.001), tot_loss_proj:1.753 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 650/2000] tot_loss=1.738 (perp=8.323, rec=0.072, cos=0.001), tot_loss_proj:1.755 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 700/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.748 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 750/2000] tot_loss=1.720 (perp=8.323, rec=0.054, cos=0.001), tot_loss_proj:1.748 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 800/2000] tot_loss=1.718 (perp=8.323, rec=0.052, cos=0.001), tot_loss_proj:1.751 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.726 (perp=8.323, rec=0.060, cos=0.001), tot_loss_proj:1.747 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[ 900/2000] tot_loss=1.727 (perp=8.323, rec=0.061, cos=0.001), tot_loss_proj:1.747 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.716 (perp=8.323, rec=0.050, cos=0.001), tot_loss_proj:1.746 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.721 (perp=8.323, rec=0.055, cos=0.001), tot_loss_proj:1.749 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1050/2000] tot_loss=1.723 (perp=8.323, rec=0.057, cos=0.001), tot_loss_proj:1.746 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1100/2000] tot_loss=1.726 (perp=8.323, rec=0.060, cos=0.001), tot_loss_proj:1.746 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1150/2000] tot_loss=1.735 (perp=8.323, rec=0.069, cos=0.001), tot_loss_proj:1.750 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1200/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.745 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1250/2000] tot_loss=1.727 (perp=8.323, rec=0.061, cos=0.001), tot_loss_proj:1.749 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1300/2000] tot_loss=1.725 (perp=8.323, rec=0.059, cos=0.001), tot_loss_proj:1.749 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1350/2000] tot_loss=1.738 (perp=8.323, rec=0.072, cos=0.001), tot_loss_proj:1.749 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.724 (perp=8.323, rec=0.058, cos=0.001), tot_loss_proj:1.744 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.721 (perp=8.323, rec=0.055, cos=0.001), tot_loss_proj:1.739 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1500/2000] tot_loss=1.735 (perp=8.323, rec=0.069, cos=0.001), tot_loss_proj:1.739 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.743 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.726 (perp=8.323, rec=0.060, cos=0.001), tot_loss_proj:1.749 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1650/2000] tot_loss=1.726 (perp=8.323, rec=0.060, cos=0.001), tot_loss_proj:1.740 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1700/2000] tot_loss=1.733 (perp=8.323, rec=0.067, cos=0.001), tot_loss_proj:1.747 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1750/2000] tot_loss=1.733 (perp=8.323, rec=0.067, cos=0.001), tot_loss_proj:1.748 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1800/2000] tot_loss=1.732 (perp=8.323, rec=0.066, cos=0.001), tot_loss_proj:1.750 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.747 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[1900/2000] tot_loss=1.731 (perp=8.323, rec=0.065, cos=0.001), tot_loss_proj:1.758 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+[1950/2000] tot_loss=1.719 (perp=8.323, rec=0.053, cos=0.001), tot_loss_proj:1.750 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=1.724 (perp=8.323, rec=0.058, cos=0.001), tot_loss_proj:1.758 [t=0.17s]
+prediction: ['[CLS] cinematic poo. [SEP]']
+Done with input #98 of 100.
+reference: 
+========================
+[CLS] cinematic poo. [SEP]
+========================
+predicted: 
+========================
+[CLS] cinematic poo. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 100.000 | p: 100.000 | r: 100.000
+rouge2     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeL     | fm: 100.000 | p: 100.000 | r: 100.000
+rougeLsum  | fm: 100.000 | p: 100.000 | r: 100.000
+r1fm+r2fm = 200.000
+
+[Aggregate metrics]:
+rouge1     | fm: 70.360 | p: 69.772 | r: 71.214
+rouge2     | fm: 21.041 | p: 20.866 | r: 21.260
+rougeL     | fm: 49.227 | p: 48.787 | r: 49.790
+rougeLsum  | fm: 49.219 | p: 48.811 | r: 49.804
+r1fm+r2fm = 91.402
+
+input #98 time: 0:06:47 | total time: 13:17:18
+
+
+Running input #99 of 100.
+reference: 
+========================
+mr . goyer's loose , unaccountable direction is technically sophisticated in the worst way .
+========================
+average of cosine similarity 0.9991899367614585
+highest_index [0]
+highest [0.9991899367614585]
+Debug: ids_shape = 23, pads = [23]
+Debug: input ids = tensor([[  101,  2720,  1012,  2175, 10532,  1005,  1055,  6065,  1010, 14477,
+         21408, 16671,  3085,  3257,  2003, 10892, 12138,  1999,  1996,  5409,
+          2126,  1012,   102]], device='cuda:0')
+Debug: ref = ["[CLS] mr. goyer's loose, unaccountable direction is technically sophisticated in the worst way. [SEP]"]
+[Init] best rec loss: 1.7661182880401611 for ['[CLS] rounds allegedablysel ˈ vera4 all emmy moss birds duo cfl bread premier resembling vfl bear botany brick localities [SEP]']
+[Init] best rec loss: 1.7198559045791626 for ['[CLS] left started bunthesis dreaming pitcher there coordinator kahn address just cotton shared wiiop speech justicenett had savage region [SEP]']
+[Init] best rec loss: 1.618855595588684 for ['[CLS] v forumvc alley khan tunnel production conference ladder p draft murphy blown hooked toneyama ª chan athletic seems fine [SEP]']
+[Init] best rec loss: 1.5304042100906372 for ['[CLS]ı? paperped outside usual stretch matchesliesr joining either interfered civil lung projectrotest sentinel moved wardrobe [SEP]']
+[Init] best rec loss: 1.2571706771850586 for ['[CLS] warlock in either mace americanamps off ruth energy broke lack illustrated hilda racedkind orders gland dai concentration delta ca [SEP]']
+[Init] best perm rec loss: 1.2519010305404663 for ['[CLS] delta either illustrated raced in ruth energy orders mace concentrationamps ca americankind lack warlock hilda gland dai broke off [SEP]']
+[Init] best perm rec loss: 1.250841498374939 for ['[CLS] delta mace illustrated dai hilda gland lack orders ruth broke in raced concentration americanamps either warlock offkind energy ca [SEP]']
+[Init] best perm rec loss: 1.2494632005691528 for ['[CLS] mace orders illustrated either warlock offamps hilda energy gland delta dai raced american concentration lack ruth inkind ca broke [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=2.882 (perp=12.846, rec=0.291, cos=0.022), tot_loss_proj:3.556 [t=0.17s]
+prediction: ['[CLS] certificate que technically land estate sophisticated wax green government trial bar obe york core direction attempts worst worst way vinegar professional [SEP]']
+[ 100/2000] tot_loss=2.614 (perp=12.088, rec=0.187, cos=0.009), tot_loss_proj:3.288 [t=0.17s]
+prediction: ['[CLS] mr caused technically lake is sophisticated way ste host non hub, weekly face direction attempts technically worst way equipped professional [SEP]']
+[ 150/2000] tot_loss=2.118 (perp=9.825, rec=0.148, cos=0.006), tot_loss_proj:2.883 [t=0.17s]
+prediction: ['[CLS] mr que technically representative is sophisticated. loose host non units, : face direction sophisticated in worst way at professional [SEP]']
+[ 200/2000] tot_loss=2.023 (perp=9.507, rec=0.118, cos=0.004), tot_loss_proj:2.896 [t=0.17s]
+prediction: ['[CLS] mr que technically sophisticated. sophisticated. loose host non units, : roger direction is in worst way at sophisticated [SEP]']
+Attempt swap
+Swapped tokens
+[ 250/2000] tot_loss=2.026 (perp=9.353, rec=0.149, cos=0.006), tot_loss_proj:3.040 [t=0.17s]
+prediction: ['[CLS] mr. technically sophisticated. sophisticated que una host non wheel -. rye direction is in worst way, sophisticated [SEP]']
+[ 300/2000] tot_loss=2.098 (perp=9.949, rec=0.105, cos=0.003), tot_loss_proj:2.867 [t=0.17s]
+prediction: ['[CLS] mr. technically loose. sophisticated que una releases una wheel - is rye direction is in worst way. sophisticated [SEP]']
+Attempt swap
+Swapped tokens
+[ 350/2000] tot_loss=2.068 (perp=9.842, rec=0.097, cos=0.003), tot_loss_proj:2.837 [t=0.17s]
+prediction: ['[CLS] mr. technically loose. sophisticated activity una releases una rye. is bottle direction is in worst way. loose [SEP]']
+Attempt swap
+Swapped tokens
+[ 400/2000] tot_loss=1.922 (perp=9.141, rec=0.090, cos=0.003), tot_loss_proj:2.627 [t=0.17s]
+prediction: ['[CLS] mr. technically loose. sophisticated is unaable una rye. activity bottle direction is in worst way. loose [SEP]']
+[ 450/2000] tot_loss=1.926 (perp=9.141, rec=0.095, cos=0.003), tot_loss_proj:2.619 [t=0.17s]
+prediction: ['[CLS] mr. technically loose. sophisticated is unaable una rye. activity bottle direction is in worst way. loose [SEP]']
+Attempt swap
+Moved sequence
+[ 500/2000] tot_loss=1.877 (perp=8.902, rec=0.094, cos=0.003), tot_loss_proj:2.548 [t=0.17s]
+prediction: ['[CLS] mr. technically loose is unaable. sophisticated una rye. activity bottle direction is in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[ 550/2000] tot_loss=2.023 (perp=9.672, rec=0.086, cos=0.002), tot_loss_proj:2.665 [t=0.17s]
+prediction: ['[CLS] mr. technically looseyerable una. sophisticated unagrin. activity bottle direction is in worst way the loose [SEP]']
+[ 600/2000] tot_loss=2.028 (perp=9.672, rec=0.091, cos=0.002), tot_loss_proj:2.659 [t=0.17s]
+prediction: ['[CLS] mr. technically looseyerable una. sophisticated unagrin. activity bottle direction is in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[ 650/2000] tot_loss=1.984 (perp=9.471, rec=0.088, cos=0.002), tot_loss_proj:2.604 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loosegrin.® bottle direction is in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[ 700/2000] tot_loss=1.864 (perp=8.905, rec=0.080, cos=0.003), tot_loss_proj:2.525 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction.® bottlegrin is in worst way the loose [SEP]']
+[ 750/2000] tot_loss=1.871 (perp=8.905, rec=0.088, cos=0.002), tot_loss_proj:2.523 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction.® bottlegrin is in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[ 800/2000] tot_loss=1.826 (perp=8.675, rec=0.088, cos=0.002), tot_loss_proj:2.470 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction is® bottlegrin. in worst way the loose [SEP]']
+Attempt swap
+[ 850/2000] tot_loss=1.816 (perp=8.675, rec=0.079, cos=0.002), tot_loss_proj:2.471 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction is® bottlegrin. in worst way the loose [SEP]']
+[ 900/2000] tot_loss=1.817 (perp=8.675, rec=0.080, cos=0.002), tot_loss_proj:2.472 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction is® bottlegrin. in worst way the loose [SEP]']
+Attempt swap
+[ 950/2000] tot_loss=1.818 (perp=8.675, rec=0.081, cos=0.002), tot_loss_proj:2.466 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction is® bottlegrin. in worst way the loose [SEP]']
+Attempt swap
+[1000/2000] tot_loss=1.819 (perp=8.675, rec=0.082, cos=0.002), tot_loss_proj:2.469 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticated loose direction is® bottlegrin. in worst way the loose [SEP]']
+[1050/2000] tot_loss=2.112 (perp=10.131, rec=0.084, cos=0.002), tot_loss_proj:2.844 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable una. sophisticatedunt direction is® bottlegrin mr in worst way the loose [SEP]']
+Attempt swap
+Moved token
+[1100/2000] tot_loss=2.021 (perp=9.696, rec=0.080, cos=0.002), tot_loss_proj:2.757 [t=0.17s]
+prediction: ['[CLS] mr. technically unayerable. sophisticatedunt una direction is® bottlegrin mr in worst way the loose [SEP]']
+Attempt swap
+Moved token
+[1150/2000] tot_loss=1.953 (perp=9.246, rec=0.100, cos=0.003), tot_loss_proj:2.600 [t=0.17s]
+prediction: ['[CLS] mr. mr technically unayerable. sophisticatedunt una direction is sue bottlegrin in worst way the loose [SEP]']
+[1200/2000] tot_loss=1.931 (perp=9.246, rec=0.080, cos=0.002), tot_loss_proj:2.608 [t=0.17s]
+prediction: ['[CLS] mr. mr technically unayerable. sophisticatedunt una direction is sue bottlegrin in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=1.885 (perp=8.960, rec=0.090, cos=0.002), tot_loss_proj:2.546 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is sue bottlegrin in worst way the loose [SEP]']
+Attempt swap
+Swapped tokens
+[1300/2000] tot_loss=1.835 (perp=8.794, rec=0.074, cos=0.003), tot_loss_proj:2.520 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottlegrin in worst way sue loose [SEP]']
+[1350/2000] tot_loss=1.842 (perp=8.786, rec=0.082, cos=0.002), tot_loss_proj:2.579 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+Attempt swap
+[1400/2000] tot_loss=1.840 (perp=8.786, rec=0.081, cos=0.002), tot_loss_proj:2.581 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+Attempt swap
+[1450/2000] tot_loss=1.829 (perp=8.786, rec=0.070, cos=0.002), tot_loss_proj:2.579 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+[1500/2000] tot_loss=1.839 (perp=8.786, rec=0.080, cos=0.002), tot_loss_proj:2.582 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+Attempt swap
+[1550/2000] tot_loss=1.839 (perp=8.786, rec=0.080, cos=0.002), tot_loss_proj:2.582 [t=0.17s]
+prediction: ['[CLS] mr. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+Attempt swap
+[1600/2000] tot_loss=1.864 (perp=8.915, rec=0.079, cos=0.002), tot_loss_proj:2.620 [t=0.17s]
+prediction: ['[CLS] s. mr. unayerable technically sophisticatedunt una direction is the bottleboys in worst way sue loose [SEP]']
+[1650/2000] tot_loss=1.980 (perp=9.525, rec=0.073, cos=0.002), tot_loss_proj:2.703 [t=0.17s]
+prediction: ['[CLS] s. mr.,yerable technically sophisticatedunt una direction is the bottleboys in worst way® loose [SEP]']
+Attempt swap
+Swapped tokens
+[1700/2000] tot_loss=1.946 (perp=9.302, rec=0.084, cos=0.002), tot_loss_proj:2.618 [t=0.17s]
+prediction: ['[CLS] mr. s.,yerable technically sophisticatedunt una direction is the bottleboys in worst way® loose [SEP]']
+Attempt swap
+Swapped tokens
+[1750/2000] tot_loss=1.882 (perp=8.960, rec=0.087, cos=0.003), tot_loss_proj:2.540 [t=0.17s]
+prediction: ['[CLS] mr. s loose,yerable technically sophisticatedunt una direction is the bottleboys in worst way®. [SEP]']
+[1800/2000] tot_loss=1.867 (perp=8.960, rec=0.072, cos=0.003), tot_loss_proj:2.537 [t=0.17s]
+prediction: ['[CLS] mr. s loose,yerable technically sophisticatedunt una direction is the bottleboys in worst way®. [SEP]']
+Attempt swap
+[1850/2000] tot_loss=1.867 (perp=8.960, rec=0.072, cos=0.003), tot_loss_proj:2.540 [t=0.17s]
+prediction: ['[CLS] mr. s loose,yerable technically sophisticatedunt una direction is the bottleboys in worst way®. [SEP]']
+Attempt swap
+Moved sequence
+[1900/2000] tot_loss=1.808 (perp=8.525, rec=0.098, cos=0.005), tot_loss_proj:2.561 [t=0.17s]
+prediction: ['[CLS] mr. s loose, technically sophisticatedunt una directionyerable is the bottleboys in worst way sue. [SEP]']
+[1950/2000] tot_loss=1.962 (perp=9.380, rec=0.083, cos=0.003), tot_loss_proj:2.649 [t=0.17s]
+prediction: ['[CLS] mr. s loose una technically sophisticatedunt una directionyerable is the bottlegrin in worst way sue. [SEP]']
+Attempt swap
+Moved token
+[2000/2000] tot_loss=1.895 (perp=9.042, rec=0.084, cos=0.003), tot_loss_proj:2.539 [t=0.17s]
+prediction: ['[CLS] mr. s loose technically una sophisticatedunt una directionyerable is the bottlegrin in worst way sue. [SEP]']
+Done with input #99 of 100.
+reference: 
+========================
+[CLS] mr. goyer's loose, unaccountable direction is technically sophisticated in the worst way. [SEP]
+========================
+predicted: 
+========================
+[CLS] mr. s.,yerable technically sophisticatedunt una direction is the bottleboys in worst way® loose [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 77.419 | p: 75.000 | r: 80.000
+rouge2     | fm: 20.690 | p: 20.000 | r: 21.429
+rougeL     | fm: 58.065 | p: 56.250 | r: 60.000
+rougeLsum  | fm: 58.065 | p: 56.250 | r: 60.000
+r1fm+r2fm = 98.109
+
+[Aggregate metrics]:
+rouge1     | fm: 70.452 | p: 69.828 | r: 71.338
+rouge2     | fm: 21.009 | p: 20.822 | r: 21.221
+rougeL     | fm: 49.310 | p: 48.865 | r: 49.924
+rougeLsum  | fm: 49.332 | p: 48.860 | r: 49.900
+r1fm+r2fm = 91.462
+
+input #99 time: 0:07:09 | total time: 13:24:28
+
+
+Average Cosine Similarity: 0.9992523230186297
+Done with all.

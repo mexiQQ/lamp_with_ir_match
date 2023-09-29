@@ -11,8 +11,8 @@ from nlp_utils import load_gpt2_from_dict
 from transformers import AdamW, AutoConfig, AutoModel, AutoTokenizer, AutoModelForSequenceClassification, LogitsProcessor, BeamSearchScorer
 from init import get_init
 from constants import BERT_CLS_TOKEN, BERT_SEP_TOKEN, BERT_PAD_TOKEN
-from utilities import get_closest_tokens, get_reconstruction_loss_new, get_perplexity, fix_special_tokens, remove_padding, compute_pooler
-from tmp2 import compute_grads
+from utilities import get_closest_tokens, get_reconstruction_loss, get_perplexity, fix_special_tokens, remove_padding, compute_pooler
+from tmp3 import compute_grads
 from data_utils import TextDataset
 from args_factory import get_args
 import time
@@ -28,12 +28,12 @@ if args.neptune:
     neptune.init(api_token=os.getenv('NEPTUNE_API_KEY'), project_qualified_name=args.neptune)
     neptune.create_experiment(args.neptune_label, params=vars(args))
 
-def get_loss(args, lm, model, ids, x_embeds, true_labels, true_grads, create_graph=False, projection=None):
+def get_loss(args, lm, model, ids, x_embeds, true_labels, true_grads, create_graph=False, true_pooler=None):
     perplexity = lm(input_ids=ids, labels=ids).loss
-    rec_loss, cosine_loss = get_reconstruction_loss_new(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph, projection=projection)
+    rec_loss, cosine_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=create_graph, true_pooler=true_pooler)
     return perplexity, rec_loss, cosine_loss, rec_loss + args.coeff_perplexity * perplexity + cosine_loss
 
-def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, projection=None):
+def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None):
     print('Attempt swap', flush=True)
     best_x_embeds, best_tot_loss = None, None
     changed = None
@@ -75,7 +75,7 @@ def swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_g
             new_x_embeds = x_embeds.clone()
             new_x_embeds[sen_id] = x_embeds[sen_id, perm_ids, :]
             
-            _, _, _, new_tot_loss = get_loss(args, lm, model, new_ids, new_x_embeds, true_labels, true_grads, projection=projection)
+            _, _, _, new_tot_loss = get_loss(args, lm, model, new_ids, new_x_embeds, true_labels, true_grads, true_pooler=true_pooler)
 
             if (best_tot_loss is None) or (new_tot_loss < best_tot_loss):
                 best_x_embeds = new_x_embeds
@@ -103,10 +103,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     #################
     #################
     # approximation_pooler = compute_pooler(model, true_embeds, true_labels)
-    true_grads, projection = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True) 
-    approximation_pooler = None
-    cosine_similarity = 0
-    thresholds = None
+    true_grads, approximation_pooler, cosine_similarity, thresholds = compute_grads(model, true_embeds, true_labels, return_pooler=True, debug=True, args=args) 
 
     if args.defense_pct_mask is not None:
         for grad in true_grads:
@@ -182,11 +179,11 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             opt.zero_grad()
             #################
             #################
-            rec_loss, projection_loss = get_reconstruction_loss_new(model, x_embeds, true_labels, true_grads, args, create_graph=True, projection=projection)
+            rec_loss, cosin_loss = get_reconstruction_loss(model, x_embeds, true_labels, true_grads, args, create_graph=True, true_pooler=approximation_pooler, thresholds=thresholds)
             reg_loss = (x_embeds.norm(p=2,dim=2).mean() - args.init_size ).square()
 
             if args.pooler_match_for_optimization == "yes":
-                tot_loss = rec_loss + args.coeff_reg * reg_loss + projection_loss * args.coeff_pooler_match
+                tot_loss = rec_loss + args.coeff_reg * reg_loss + cosin_loss * args.coeff_pooler_match
             else:
                 tot_loss = rec_loss + args.coeff_reg * reg_loss
 
@@ -215,9 +212,9 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             #################
             #################
             if args.pooler_match_for_swap == "yes":
-                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, projection=projection)
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
             else:
-                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, projection=None) 
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None) 
 
         steps_done = it+1
         if steps_done % args.print_every == 0:
@@ -225,8 +222,8 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
             x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
             #################
             #################
-            _, _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, projection=projection)
-            perplexity, rec_loss, cosine_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, projection=projection)
+            _, _, _, tot_loss_proj = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
+            perplexity, rec_loss, cosine_loss, tot_loss = get_loss(args, lm, model, cos_ids, x_embeds, true_labels, true_grads, true_pooler=approximation_pooler)
 
             step_time = time.time() - t_start
             
@@ -245,9 +242,9 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         #################
         for i in range( swap_at_end_it):
             if args.pooler_match_for_swap == "yes":
-                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, projection=projection)
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=approximation_pooler)
             else:
-                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, projection=None)
+                swap_tokens(args, x_embeds, max_len, cos_ids, lm, model, true_labels, true_grads, true_pooler=None)
         
     # Postprocess
     x_embeds.data = best_final_x
@@ -257,7 +254,7 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
     x_embeds_proj = bert_embeddings(cos_ids) * x_embeds.norm(dim=2, p=2, keepdim=True) / bert_embeddings(cos_ids).norm(dim=2, p=2, keepdim=True)
     #################
     #################
-    # _, _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, projection=projection)
+    # _, _, _, best_tot_loss = get_loss(args, lm, model, cos_ids, x_embeds_proj, true_labels, true_grads, true_pooler=approximation_pooler)
     best_ids = cos_ids
     # best_x_embeds_proj = x_embeds_proj
     
@@ -333,8 +330,8 @@ def main():
         else:
             model.classifier.weight.data[:, :768] = state_dict["classifier.weight"]
             model.classifier.bias.data.copy_(state_dict["classifier.bias"])
-            
-        # model.classifier.bias.data.copy_(torch.full((2,), 0))
+        #model.classifier.bias.data.copy_(torch.full((2,), 0))
+
         # add_noise_to_model(model, 0.00001)
 
     model.eval()

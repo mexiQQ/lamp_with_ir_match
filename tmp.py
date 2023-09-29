@@ -45,8 +45,7 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
             return gradients
         
     sub_dimension = args.rd 
-
-    m = args.hd - args.rd 
+    m = args.hd - 768 
     d = sub_dimension
     B = len(x_embeds)
     
@@ -76,7 +75,7 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
 
     new_recX, V = tensor_feature(g, W, 100, B, m, d)
     ######################################################################
-    highest, highest_index = find_highest_indices(B, new_recX, ori_pooler_dense_input)
+    highest, highest_index = find_highest_indices(B, new_recX, ori_pooler_dense_input, args)
     print("average of cosine similarity",sum(highest)/B)
     print("highest_index", highest_index)
     print("highest", highest)
@@ -86,10 +85,10 @@ def compute_grads(model, x_embeds, y_labels, create_graph=False, return_pooler=F
 
     return gradients, pooler_target, sum(highest)/B, highest 
 
-def check_cosine_similarity_for_1_sample(recover, target):
+def check_cosine_similarity_for_1_sample(recover, target, args):
     ######################################################################
     # 768 => 1
-    input = target[:, :100]
+    input = target[:, :args.rd]
     input = input / torch.linalg.norm(input, ord=2, dim=1, keepdim=True)
     input = input.detach().cpu().numpy()
 
@@ -115,7 +114,7 @@ def check_cosine_similarity_for_1_sample(recover, target):
 # recovered truth cosine sim 0.6, 0.7 => loss 1-0.36=0.64 1-0.49=0.51
 # training feature if (training feature and recover truth 间loss高于 0.64 才优化，other wise 不优化)
 
-def find_highest_indices(B, new_recX, ori_pooler_dense_input):
+def find_highest_indices(B, new_recX, ori_pooler_dense_input, args):
     highest = [0] * B
     highest_index = [-1] * B
     index_score_list = []
@@ -128,7 +127,8 @@ def find_highest_indices(B, new_recX, ori_pooler_dense_input):
            
             cosine_similarity = check_cosine_similarity_for_1_sample(
                 recover,
-                target
+                target,
+                args
             )
             index_score_list.append((cosine_similarity, i, j))
 

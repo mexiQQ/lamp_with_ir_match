@@ -165,12 +165,12 @@ def reconstruct(args, device, sample, metric, tokenizer, lm, model):
         max_len = [x_embeds.shape[1]]*x_embeds.shape[0]
     else:
         max_len = pads
-    
+
     # Main loop
     best_final_error, best_final_x = None, x_embeds.detach().clone()
     sequence_length = x_embeds.shape[1]
-    if sequence_length > 10:
-        args.n_steps = 2000
+    # if sequence_length > 10:
+    #     args.n_steps = 2000
 
     for it in range(args.n_steps):
         t_start = time.time()

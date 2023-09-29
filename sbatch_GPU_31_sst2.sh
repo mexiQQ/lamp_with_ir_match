@@ -32,76 +32,210 @@ run_on_gpu() {
 }
 
 # Create output directories
-mkdir -p logs_c31 
+mkdir -p logs_c31-sst2 
 
 # Run the command on GPU 0
-# run_on_gpu 0 "logs_c31/output1.log" 0.1 0.0 "no" "yes" "no" 1 100
+# run_on_gpu 0 "logs_c31-sst2/output1.log" 0.1 0.0 "no" "yes" "no" 1 100
 
 # Run the command on GPU 1
-# run_on_gpu 1 "logs_c31/output2.log" 1 0.0 "no" "yes" "no" 1 100
+# run_on_gpu 1 "logs_c31-sst2/output2.log" 1 0.0 "no" "yes" "no" 1 100
 
 # Run the command on GPU 2 
-# run_on_gpu 2 "logs_c31/output3.log" 5 0.0 "no" "yes" "no" 1 100
+# run_on_gpu 2 "logs_c31-sst2/output3.log" 5 0.0 "no" "yes" "no" 1 100
 
 # Run the command on GPU 3 
-# run_on_gpu 3 "logs_c31/output4.log" 0.0 0.0 "no" "no" "no" 1 100
+# run_on_gpu 3 "logs_c31-sst2/output4.log" 0.0 0.0 "no" "no" "no" 1 100
 
 
 # Run the command on GPU 0
-# run_on_gpu 0 "logs_c31/output5.log" 0.1 0.0 "no" "yes" "no" 2 50
+# run_on_gpu 0 "logs_c31-sst2/output5.log" 0.1 0.0 "no" "yes" "no" 2 50
 
 # Run the command on GPU 1
-# run_on_gpu 1 "logs_c31/output6.log" 0.1 0.0 "no" "yes" "no" 4 25
+# run_on_gpu 1 "logs_c31-sst2/output6.log" 0.1 0.0 "no" "yes" "no" 4 25
 
 # Run the command on GPU 2 
-# run_on_gpu 2 "logs_c31/output7.log" 0.1 0.0 "no" "yes" "no" 8 13
+# run_on_gpu 2 "logs_c31-sst2/output7.log" 0.1 0.0 "no" "yes" "no" 8 13
 
 # Run the command on GPU 3 
-# run_on_gpu 3 "logs_c31/output8.log" 0.0 0.0 "no" "no" "no" 2 50
+# run_on_gpu 3 "logs_c31-sst2/output8.log" 0.0 0.0 "no" "no" "no" 2 50
 
 
 # Run the command on GPU 0
-# run_on_gpu 0 "logs_c31/output9.log" 0.0 0.0 "no" "no" "no" 4 25
+# run_on_gpu 0 "logs_c31-sst2/output9.log" 0.0 0.0 "no" "no" "no" 4 25
 
 # Run the command on GPU 1
-# run_on_gpu 1 "logs_c31/output10.log" 0.0 0.0 "no" "no" "no" 8 13
+# run_on_gpu 1 "logs_c31-sst2/output10.log" 0.0 0.0 "no" "no" "no" 8 13
 
 # Run the command on GPU 2 
-# run_on_gpu 2 "logs_c31/output11.log" 0.0 0.0 "yes" "no" "yes" 1 100
+# run_on_gpu 2 "logs_c31-sst2/output11.log" 0.0 0.0 "yes" "no" "yes" 1 100
 
 # Run the command on GPU 3 
-# run_on_gpu 3 "logs_c31/output12.log" 0.1 0.1 "no" "yes" "no" 1 100
+# run_on_gpu 3 "logs_c31-sst2/output12.log" 0.1 0.1 "no" "yes" "no" 1 100
 
 
 # Run the command on GPU 0
-run_on_gpu 0 "logs_c31/output13.log" 0.1 0.0 "no" "yes" "no" 1 100
+# run_on_gpu 0 "logs_c31-sst2/output13.log" 0.1 0.0 "no" "yes" "no" 1 100
 
 # Run the command on GPU 1
-run_on_gpu 1 "logs_c31/output14.log" 0.1 0.0 "no" "yes" "no" 2 50
+# run_on_gpu 1 "logs_c31-sst2/output14.log" 0.1 0.0 "no" "yes" "no" 2 50
 
 # Run the command on GPU 2
-run_on_gpu 2 "logs_c31/output15.log" 0.1 0.0 "no" "yes" "no" 4 25
+# run_on_gpu 2 "logs_c31-sst2/output15.log" 0.1 0.0 "no" "yes" "no" 4 25
 
 # Run the command on GPU 3
-run_on_gpu 3 "logs_c31/output16.log" 0.1 0.0 "no" "yes" "no" 8 13
+# run_on_gpu 3 "logs_c31-sst2/output16.log" 0.1 0.0 "no" "yes" "no" 8 13
 
 
 # Run the command on GPU 0
-run_on_gpu 0 "logs_c31/output17.log" 0.1 0.1 "no" "yes" "no" 1 100
+# run_on_gpu 0 "logs_c31-sst2/output17.log" 0.1 0.1 "no" "yes" "no" 1 100
 
 # Run the command on GPU 1
-run_on_gpu 1 "logs_c31/output18.log" 0.1 0.1 "no" "yes" "no" 2 50
+# run_on_gpu 1 "logs_c31-sst2/output18.log" 0.1 0.1 "no" "yes" "no" 2 50
 
 # Run the command on GPU 2
-run_on_gpu 2 "logs_c31/output19.log" 0.1 0.1 "no" "yes" "no" 4 25
+# run_on_gpu 2 "logs_c31-sst2/output19.log" 0.1 0.1 "no" "yes" "no" 4 25
 
 # Run the command on GPU 3
-run_on_gpu 3 "logs_c31/output20.log" 0.1 0.1 "no" "yes" "no" 8 13
+# run_on_gpu 3 "logs_c31-sst2/output20.log" 0.1 0.1 "no" "yes" "no" 8 13
 
+
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output21.log" 0.08 0.0 "no" "yes" "no" 2 50 
+
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output22.log" 0.05 0.0 "no" "yes" "no" 2 50
+
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output23.log" 0.03 0.0 "no" "yes" "no" 2 50 
+
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output24.log" 0.01 0.0 "no" "yes" "no" 2 50 
+
+
+# Activation relu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output25.log" 0.1 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation relu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output26.log" 0.5 0.0 "no" "yes" "no" 1 100
+
+
+# Activation relu
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output27.log" 1 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation relu
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output28.log" 5 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation relu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output29.log" 0.08 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation relu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output30.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+
+# Activation relu
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output31.log" 0.03 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation relu
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output32.log" 0.01 0.0 "no" "yes" "no" 1 100 
+
+
+
+# Activation selu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output33.log" 0.1 0.0 "no" "yes" "no" 1 100 
+
+# Activation selu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output34.log" 0.5 0.0 "no" "yes" "no" 1 100
+
+# Activation selu
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output35.log" 1 0.0 "no" "yes" "no" 1 100 
+
+# Activation selu
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output36.log" 0.0 0.0 "no" "no" "no" 1 100 
+
+
+# Activation selu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output37.log" 0.08 0.0 "no" "yes" "no" 1 100 
+
+# Activation selu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output38.log" 0.05 0.0 "no" "yes" "no" 1 100
+
+# Activation selu
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output39.log" 0.03 0.0 "no" "yes" "no" 1 100 
+
+# Activation selu
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output40.log" 0.01 0.0 "no" "yes" "no" 1 100 
+
+
+# Activation selu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output41.log" 0.1 0.0 "no" "yes" "no" 2 50
+
+# Activation selu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output42.log" 0.05 0.0 "no" "yes" "no" 2 50
+
+# Activation selu
+# Run the command on GPU 2
+# run_on_gpu 2 "logs_c31-sst2/output43.log" 0.1 0.0 "no" "yes" "no" 4 25 
+
+# Activation selu
+# Run the command on GPU 3
+# run_on_gpu 3 "logs_c31-sst2/output44.log" 0.05 0.0 "no" "yes" "no" 4 25
+
+
+# Activation selu
+# Run the command on GPU 0
+# run_on_gpu 0 "logs_c31-sst2/output45.log" 0.1 0.0 "no" "yes" "no" 8 13 
+
+# Activation selu
+# Run the command on GPU 1
+# run_on_gpu 1 "logs_c31-sst2/output46.log" 0.05 0.0 "no" "yes" "no" 8 13
+
+# Activation selu
+# Run the command on GPU 0
+# run_on_gpu 2 "logs_c31-sst2/output47.log" 0.08 0.0 "no" "yes" "no" 2 50
+
+# Activation selu
+# Run the command on GPU 1
+# run_on_gpu 3 "logs_c31-sst2/output48.log" 0.03 0.0 "no" "yes" "no" 2 50
+
+# Run the command on GPU 0 
+run_on_gpu 0 "logs_c31-sst2/output49.log" 0.05 0.0 "yes" "yes" "yes" 4 25 
+
+# Run the command on GPU 1 
+run_on_gpu 1 "logs_c31-sst2/output50.log" 0.05 0.0 "yes" "yes" "yes" 2 50 
+
+# Run the command on GPU 2 
+run_on_gpu 2 "logs_c31-sst2/output51.log" 0.05 0.0 "yes" "yes" "yes" 1 100 
+
+# Run the command on GPU 3 
+run_on_gpu 3 "logs_c31-sst2/output52.log" 0.05 0.0 "yes" "yes" "yes" 8 13
 
 # Wait for both commands to complete
 wait
 
 cd ~/GrabGPU
 ./gg 24 72 0,1,2,3
+
 

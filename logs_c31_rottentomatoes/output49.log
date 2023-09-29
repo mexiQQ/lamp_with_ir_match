@@ -1,0 +1,1194 @@
+
+
+
+Command: attack4.py --dataset rotten_tomatoes --split test --loss cos --n_inputs 50 -b 2 --coeff_perplexity 0.2 --coeff_reg 1 --lr 0.01 --lr_decay 0.89 --tag_factor 0.01 --bert_path /home/jli265/projects/lamp_with_ir_match/models/bert-base-finetuned-rotten_tomatoes --n_steps 2000 --coeff_pooler_match 0.00 --coeff_pooler_match_margin 0.0 --pooler_match_for_init no --pooler_match_for_optimization no --pooler_match_for_swap no 
+
+
+
+Using custom data configuration default
+Reusing dataset rotten_tomatoes_movie_review (/home/jli265/.cache/huggingface/datasets/rotten_tomatoes_movie_review/default/1.0.0/40d411e45a6ce3484deed7cc15b82a53dad9a72aafd9f86f8f227134bec5ca46)
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 1491.40it/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at /home/jli265/projects/lamp_with_ir_match/models/bert-base-finetuned-rotten_tomatoes and are newly initialized because the shapes did not match:
+- bert.pooler.dense.weight: found shape torch.Size([768, 768]) in the checkpoint and torch.Size([30000, 768]) in the model instantiated
+- bert.pooler.dense.bias: found shape torch.Size([768]) in the checkpoint and torch.Size([30000]) in the model instantiated
+- classifier.weight: found shape torch.Size([2, 768]) in the checkpoint and torch.Size([2, 30000]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+
+Attacking..
+
+Running input #0 of 50.
+reference: 
+========================
+for anyone who remembers the '60s or is interested in one man's response to stroke , ram dass : fierce grace is worth seeking out .
+========================
+what you end up getting is the vertical limit of surfing movies - memorable stunts with lots of downtime in between .
+========================
+average of cosine similarity 0.9093023996309653
+highest_index [1, 0]
+highest [0.8987013727677347, 0.9199034264941958]
+Debug: ids_shape = 32, pads = [32, 25]
+Debug: input ids = tensor([[  101,  2005,  3087,  2040, 17749,  1996,  1005, 20341,  2030,  2003,
+          4699,  1999,  2028,  2158,  1005,  1055,  3433,  2000,  6909,  1010,
+          8223,  8695,  2015,  1024,  9205,  4519,  2003,  4276,  6224,  2041,
+          1012,   102],
+        [  101,  2054,  2017,  2203,  2039,  2893,  2003,  1996,  7471,  5787,
+          1997, 19967,  5691,  1011, 13432, 28465,  2007,  7167,  1997,  2091,
+          7292,  1999,  2090,  1012,   102,     0,     0,     0,     0,     0,
+             0,     0]], device='cuda:0')
+Debug: ref = ["[CLS] for anyone who remembers the'60s or is interested in one man's response to stroke, ram dass : fierce grace is worth seeking out. [SEP]", '[CLS] what you end up getting is the vertical limit of surfing movies - memorable stunts with lots of downtime in between. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.9093295931816101 for ['[CLS] study showing exchange victorywall same bryant compulsory cl regiments stature merits report make baglary fell paul max rape younger brokenshu cameo curve himself by fines now pleased [SEP]', '[CLS] goo cody seconds changed priory [CLS] renee of storage rally holy elise early call stretch exile rights taylor river touchingify boardmity [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8516126871109009 for ['[CLS] policy free buddhist inchcit collar precision signal sired crusade guilty hawthorne adam associate 98 alikevable variation lots punch baton counter ashton wood insteadrial vocals market bombing ball [SEP]', '[CLS] music located second besides does trans ¹⁄₂ wing °f quan lived formula a dealer ea regiment google chu super great shakes cap seated [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8226539492607117 for ['[CLS] sprayingolic lb white 29 has strict bag kiel martyrs materials bite lunch wrestling moscow parliamentary parents micro argueford emperor archibald everyicative been ra place my winnipeg also [SEP]', '[CLS] incumbent hop egg antarctic between committed oscar 000 :ong hussein griptypical represent berlin tyler borrowed got little goodwill manner disturbance release [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7867739200592041 for ['[CLS] max adult camp sex copies behind everythinglogue compounddor y castes mountainive surrounded rights beta agentin eyebrow ravi place elected happy mob lev spectrum raiders naval strike [SEP]', '[CLS] form darkly level ll each lights once clutches inside drug beetles winectiong giftsrus hawk refused face resort wanted here strangers [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.786444902420044 for ['[CLS]osis militia policy hamburg hound desk accidentally prentice shang hispanic actual brake : perspectiveovenromatic fore x central bear towers status venetian radar mortgage never lighthouse crowd frowninghei [SEP]', '[CLS] mother record var variants ain spotted them detected albumimated simple presidencyground doll hawkins journal golden though oil unless damn few party [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7570776343345642 for ['[CLS] energytick est sense divided acid exit after include compulsory fiscalrite christian operator expresses rink bas clubs cherry ren columbia embarkedlat homestead branch enraged laudedium services grazing [SEP]', '[CLS] gate bust tale ( started hm near royal due state cause handel scientific rising allowed walking rather book peered cause strictly thin appears [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7570648789405823 for ['[CLS] strategy mine draft ; wills tel arm mind line cities republic philosophyunes technology weights leobaimi wee dan heat living strongly oxford lang contemporary shine embodied citizens ab [SEP]', '[CLS] spirited dos country aiden app what assist during woman or weight thought [CLS] supporting kind follow maha blessed { ready nearly pierre mild [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best perm rec loss: 0.7524375915527344 for ['[CLS]ba embodied citizens strongly mine republic wills heat dan living weeunes technology oxford strategy arm leo weights ; contemporary cities philosophyimi tel lang shine ab draft line mind [SEP]', '[CLS] maha [PAD] [PAD] mild dos weight app nearly ready pierre { [CLS] supporting [SEP] spirited assist follow kind aiden [PAD] or thought blessed what [PAD] [PAD] [PAD] country woman during [PAD]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.079 (perp=12.794, rec=0.284, cos=0.236), tot_loss_proj:3.648 [t=0.20s]
+prediction: ['[CLS] unique james recognition with era phoenix hudson elite lauren ever wonders partnership morgan american andrewbaum bennett royal club savior spoken sarah grand national ind, charles source jamie gentle [SEP]', "[CLS] maybe [PAD] [PAD] make tabitha *rky nearly scorpion a uber'effect [SEP] blackmail counter tough films luxury [PAD] guru news text [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]"]
+[ 100/2000] tot_loss=2.968 (perp=12.783, rec=0.220, cos=0.192), tot_loss_proj:3.667 [t=0.23s]
+prediction: ['[CLS] fresh virginia aaron with era phoenix hudson illumination madison ever eureka necklace ethan americans andrew, rebecca south ranch emotional spoken sarah inter sexes arizona, charles source jamie gentle [SEP]', "[CLS] maybe [PAD] [PAD] full besides where memorable near out a of'based [SEP] stunts limit down films down [PAD] guru news book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]"]
+[ 150/2000] tot_loss=2.898 (perp=12.542, rec=0.199, cos=0.191), tot_loss_proj:3.618 [t=0.20s]
+prediction: ['[CLS] fresh virginia recognition with era katherine hudson illumination madison ever queer honorable ethan american andrew, murderer inter ranch prayers spoken william sw pounder firm, charles source jamie gentle [SEP]', "[CLS] maybe [PAD] [PAD] full surfing stunts memorable near it of of'based [SEP] stunts limit down films down [PAD]time news book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]"]
+[ 200/2000] tot_loss=2.866 (perp=12.495, rec=0.188, cos=0.179), tot_loss_proj:3.812 [t=0.24s]
+prediction: ['[CLS] fresh megan recognition person era paris hudson illumination 2017 ever eureka honorable columbus american houston, murderer greater dance prayers heard familiar super undergraduate firm, charles clark jamie gentle [SEP]', "[CLS] what [PAD] [PAD] full surfing stunts memorable near down of limit'based [SEP] stunts limit down films down [PAD]time line book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Moved token
+Moved token
+[ 250/2000] tot_loss=3.014 (perp=13.269, rec=0.172, cos=0.188), tot_loss_proj:3.999 [t=0.23s]
+prediction: ['[CLS] highland megan recognition person era tributaries whitney illuminationcend ever buyers heard honorable columbus 2014 william press having greater among honored familiar peach undergraduater while charles kyle jamie gentle [SEP]', "[CLS] what [PAD] [PAD] full surfing stunts memorable between down of limit'based [SEP] stunts limit down films down [PAD]time line book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]"]
+[ 300/2000] tot_loss=2.996 (perp=13.227, rec=0.160, cos=0.191), tot_loss_proj:3.912 [t=0.20s]
+prediction: ['[CLS] within megan awarded. era tributaries whitney illumination lauderdale evercats heard gifts columbus lynn william, having greater among amongutable peach undergraduatetarian while charles kyle jamie sapphire [SEP]', '[CLS] what [PAD] [PAD] populated surfing stunts memorable between down of of off based [SEP] stunts limit downtime down [PAD]time line book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 350/2000] tot_loss=2.829 (perp=12.496, rec=0.146, cos=0.184), tot_loss_proj:3.946 [t=0.20s]
+prediction: ['[CLS] within gifts megan recognition. era runsnally ipa allmusic )cats heard columbus lynn william, bachelor send among among sponsored super undergraduatetarian alex charles kyle jamie sapphire [SEP]', '[CLS] what [PAD] [PAD] their surfing stunts memorable between down of of off effect [SEP] stunts limit downtime down [PAD] surf ) book [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Moved sequence
+[ 400/2000] tot_loss=2.851 (perp=12.595, rec=0.144, cos=0.187), tot_loss_proj:4.029 [t=0.22s]
+prediction: ['[CLS] tough wanted megan precinct fancy william becamenally ipa allmusic rating wrestlemania heard because partnership era, bachelor send among among sponsored peach undergraduate practitioner alex new kyle jamie sapphire [SEP]', '[CLS] what [PAD] [PAD] their surfing stunts memorable down of lots of off between [SEP] stunts limit downtime down [PAD] surfing films and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 450/2000] tot_loss=2.885 (perp=12.867, rec=0.133, cos=0.178), tot_loss_proj:4.220 [t=0.19s]
+prediction: ['[CLS] stories wanted megan precinct approximately william became bairdrunner allmusic ratingcats heard brianna 2014 era, having send among among melville super undergraduate practitioner while new kyle jamie sapphire [SEP]', '[CLS] what [PAD] [PAD] their surfing stunts memorable down of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Moved sequence
+[ 500/2000] tot_loss=2.864 (perp=12.768, rec=0.131, cos=0.180), tot_loss_proj:3.926 [t=0.22s]
+prediction: ['[CLS] became approximatelyrunner lauderdale stories gifts liam attention. william ) silvio person memories lynn era pressachal send among loves prussian super undergraduate practitioner while new kyle max sapphire [SEP]', '[CLS] what [PAD] [PAD] their surfing stunts memorable down of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.818 (perp=12.584, rec=0.123, cos=0.179), tot_loss_proj:4.031 [t=0.19s]
+prediction: ['[CLS] became approximatelyrunner lauderdaleurance legislator liam stories. william ) silvio - memories oak era pressachal puts among loves prussian peach undergraduate practitioner while new kyle max part [SEP]', '[CLS] what [PAD] [PAD] their surfing stunts memorable down of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 600/2000] tot_loss=2.910 (perp=13.046, rec=0.123, cos=0.178), tot_loss_proj:4.168 [t=0.20s]
+prediction: ['[CLS] became approximatelyrunner lauderdaleurance legislator corbett storieshearted william ) charms - memories oak era pressachal thousand among loves prussian resembling undergraduate practitioner breeds new anthony max part [SEP]', '[CLS] what [PAD] [PAD] lots surfing stunts memorable down of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Moved sequence
+[ 650/2000] tot_loss=2.895 (perp=13.016, rec=0.111, cos=0.180), tot_loss_proj:4.181 [t=0.25s]
+prediction: ['[CLS] received mathiaseet lauderdale beauty want corbett rating tonight - memories comply era pressachal puts valley stories della william loves carlton resembling undergraduate practitioner while new anthony max oceania [SEP]', '[CLS] what [PAD] [PAD] lots surfing stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean and [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Moved sequence
+[ 700/2000] tot_loss=2.880 (perp=12.944, rec=0.112, cos=0.179), tot_loss_proj:4.175 [t=0.26s]
+prediction: ['[CLS] received oneselfeet lauderdale beauty rite corbett rating attracts -. oak era pressachal puts worth greater nara william loves ⁱ while new anthony max resembling undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 750/2000] tot_loss=2.847 (perp=12.802, rec=0.109, cos=0.177), tot_loss_proj:4.272 [t=0.27s]
+prediction: ['[CLS] received oneselfeet lauderdale beauty rite corbett rating attracts - memories oak era pressachal puts among greater nara williamス ⁱ while new anthony max resembling undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing ocean of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 800/2000] tot_loss=2.863 (perp=12.907, rec=0.102, cos=0.180), tot_loss_proj:4.144 [t=0.20s]
+prediction: ['[CLS] received rteeet lauderdale beauty riteckyph attracts - memories oak era pressachal puts among greater nara williamス ⁱ while new anthony max corbett undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 850/2000] tot_loss=2.795 (perp=12.568, rec=0.104, cos=0.177), tot_loss_proj:3.955 [t=0.20s]
+prediction: ['[CLS] received oneselfeet lauderdale beauty wentcky pacific attracts - memories william oak era pressachal puts among greater nara loves ⁱ while new anthony max corbett undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 900/2000] tot_loss=2.815 (perp=12.649, rec=0.110, cos=0.175), tot_loss_proj:4.277 [t=0.21s]
+prediction: ['[CLS] received oneselfeet lauderdale getting ritecky if attracts - ─ william oak era pressachal puts among greater naraスulsion while new christopher max corbett undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable a of with of off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 950/2000] tot_loss=2.817 (perp=12.707, rec=0.097, cos=0.178), tot_loss_proj:4.216 [t=0.20s]
+prediction: ['[CLS] received oneselfeet fellowship lauderdale getting heavenscky [SEP] attracts - ─ william oak era pressachal puts grammy valid naraᴬ while new christopher max dylan undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots movies stunts memorable the of with of off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.749 (perp=12.381, rec=0.098, cos=0.175), tot_loss_proj:4.246 [t=0.23s]
+prediction: ['[CLS] received oneself resembling fellowship lauderdale getting wenteet [SEP] attracts - ─ william oak era pressachal puts grammy valid naraᴬ while new christopher max dylan undergraduate practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots with stunts memorable the of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1050/2000] tot_loss=2.864 (perp=12.930, rec=0.105, cos=0.173), tot_loss_proj:4.399 [t=0.19s]
+prediction: ['[CLS] received oneself resembling fellowship lauderdale getting wenteet [SEP] limit person ─ williamonate era pressachal puts grammy valid racingᴬ while new christopher max dylanroving practitioner part [SEP]', '[CLS] what [PAD] [PAD] lots with stunts memorable the of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1100/2000] tot_loss=2.817 (perp=12.741, rec=0.096, cos=0.173), tot_loss_proj:4.327 [t=0.26s]
+prediction: ['[CLS] received oneself resembling fellowship lauderdale practitioner wenteet if limit - ─ williamonate era pressachal puts grammy valid racingᴬ while new christopher max dylanroving getting segment [SEP]', '[CLS] what [PAD] [PAD] lots with stunts memorable the of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Put prefix at the end
+Swapped tokens
+[1150/2000] tot_loss=2.759 (perp=12.358, rec=0.105, cos=0.182), tot_loss_proj:4.170 [t=0.28s]
+prediction: ['[CLS] getting ofenting mckay resembling loved lauderdale practitioner wenteet isbn limit person ─ williamonate eracheachal puts! valid racingᴬ breeds new christopher max corbettroving [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1200/2000] tot_loss=2.716 (perp=12.211, rec=0.097, cos=0.177), tot_loss_proj:3.891 [t=0.19s]
+prediction: ['[CLS] getting ofenting mckay resembling fellowship lauderdale practitioner heavenseet if limit person ─ williamonate eracheachal puts! valid withᴬ breeds charles christopher max corbettroving [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.746 (perp=12.366, rec=0.096, cos=0.177), tot_loss_proj:4.023 [t=0.27s]
+prediction: ['[CLS] getting of received mckay resembling fellowship phillip practitioner heavenseet if limit person ─ william lauderdale eracheachal puts grammy valid racingᴬ breeds charles christopher max corbettroving [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing movies end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Put prefix at the end
+Put prefix at the end
+[1300/2000] tot_loss=2.710 (perp=12.135, rec=0.103, cos=0.181), tot_loss_proj:3.837 [t=0.26s]
+prediction: ['[CLS] if limit person ─ william lauderdale era pressachal puts! valid racingᴬ breeds charles libertadores max dylanroving getting of received mathias resemblinguring accordance practitioner heavenseet [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1350/2000] tot_loss=2.702 (perp=12.155, rec=0.094, cos=0.177), tot_loss_proj:3.993 [t=0.19s]
+prediction: ['[CLS] if limit person ─ william lauderdale era pressachal applied! valid racingᴬ breeds charles libertadores max dylanroving getting of received mathias resemblinguring accordance practitioner heavenseet [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Moved sequence
+[1400/2000] tot_loss=2.788 (perp=12.595, rec=0.094, cos=0.175), tot_loss_proj:4.129 [t=0.20s]
+prediction: ['[CLS] isbn getting of received mathias resemblinguring limit person ─ william lauderdale era pressachal sudden grammy valid racingᴬ breeds charles libertadores max dylanrovingonate practitioner wenteet [SEP]', '[CLS] what [PAD] [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1450/2000] tot_loss=2.763 (perp=12.482, rec=0.093, cos=0.173), tot_loss_proj:4.129 [t=0.20s]
+prediction: ['[CLS] isbn getting of max rte resemblinguring limit library ─ william lauderdale era pressachal sudden grammy valid racing ᵍ breeds charles libertadores received dylanrovingonate practitioner wenteet [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1500/2000] tot_loss=2.801 (perp=12.662, rec=0.095, cos=0.174), tot_loss_proj:4.149 [t=0.20s]
+prediction: ['[CLS] isbn getting of max rteischesuring limit person ─ william lauderdale era pressachal sudden grammy valid racing ᵍ breeds charles libertadores received dylanrovingonate practitioner wenteet [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical off between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Put prefix at the end
+Put prefix at the end
+[1550/2000] tot_loss=2.736 (perp=12.282, rec=0.100, cos=0.179), tot_loss_proj:3.952 [t=0.21s]
+prediction: ['[CLS] limit person ─ william lauderdale era pressachal polynomial grammy valid racing ᵍ while new libertadores received dylan[onate practitioner heavenseet isbn getting of max oneself resemblinguring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical your between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1600/2000] tot_loss=2.669 (perp=12.042, rec=0.086, cos=0.175), tot_loss_proj:3.929 [t=0.20s]
+prediction: ['[CLS] limit person ─ william lauderdale era pressachal polynomial getting validhearted ᵍ while new libertadores received dylan[onate practitioner heavenseet isbn grace of max oneself resemblinguring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical your between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1650/2000] tot_loss=2.668 (perp=11.989, rec=0.095, cos=0.175), tot_loss_proj:4.124 [t=0.20s]
+prediction: ['[CLS] limit person ─ william lauderdale era pressachal polynomial getting validhearted ᵍ while new libertadores received dylan[onate practitioner wenteet isbntrics of max oneselfischeuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical your between [SEP] stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+[1700/2000] tot_loss=2.611 (perp=11.719, rec=0.092, cos=0.175), tot_loss_proj:4.051 [t=0.21s]
+prediction: ['[CLS] limit person ─ william lauderdale era pressachal polynomial getting validhearted ᵍ while new libertadores received dylan[ maxonate practitioner wenteet isbntrics of oneselfischeuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down [PAD] surfing in end [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+[1750/2000] tot_loss=2.594 (perp=11.622, rec=0.093, cos=0.176), tot_loss_proj:4.030 [t=0.20s]
+prediction: ['[CLS] limitachal - ─ william lauderdale era press polynomial getting validhearted ᵍ while new libertadores received dylan[ maxonate practitioner wenteet isbntrics of oneselfischeuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down end surfing in [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1800/2000] tot_loss=2.569 (perp=11.492, rec=0.095, cos=0.175), tot_loss_proj:4.042 [t=0.25s]
+prediction: ['[CLS] limitachal person ─ william lauderdale era press polynomial getting validhearted ᵍ while new libertadores received dylan[ maxonate practitioner emperorseet isbntrics of oneselfischeuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down end surfing in [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1850/2000] tot_loss=2.552 (perp=11.425, rec=0.092, cos=0.175), tot_loss_proj:3.961 [t=0.19s]
+prediction: ['[CLS] limitachal person ─ william lauderdale xvi polynomial getting validhearted ᵍ while new libertadores received dylan[ maxonate practitioner emperorseet isbntrics of oneselfische pressuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down end surfing in [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1900/2000] tot_loss=2.540 (perp=11.401, rec=0.085, cos=0.175), tot_loss_proj:3.991 [t=0.20s]
+prediction: ['[CLS] limitachal person ─ william lauderdale polynomial era getting validhearted ᵍ while new libertadores received dylan[ maxonate practitioner emperorseet isbntrics of oneselfische pressuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down end surfing in [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1950/2000] tot_loss=2.547 (perp=11.386, rec=0.094, cos=0.175), tot_loss_proj:4.031 [t=0.20s]
+prediction: ['[CLS] limitachal person ─ william lauderdale polynomial era getting validheartedᴬ while new libertadores received dylan[ maxonate practitioner emperorseet isbntrics of oneselfische pressuring [SEP]', '[CLS] what や [PAD] lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime down end surfing in [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+[2000/2000] tot_loss=2.493 (perp=11.104, rec=0.098, cos=0.173), tot_loss_proj:3.825 [t=0.21s]
+prediction: ['[CLS] limitachal[ person ─ william lauderdale polynomial era getting validheartedᴬ while new libertadores received dylan maxonate practitioner emperorseet isbntrics of oneselfische pressuring [SEP]', '[CLS] what や ᆨ lots with the memorable stunts of movies vertical [SEP] between your stunts limit downtime in end surfing down [PAD] [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Done with input #0 of 50.
+reference: 
+========================
+[CLS] for anyone who remembers the'60s or is interested in one man's response to stroke, ram dass : fierce grace is worth seeking out. [SEP]
+========================
+[CLS] what you end up getting is the vertical limit of surfing movies - memorable stunts with lots of downtime in between. [SEP]
+========================
+predicted: 
+========================
+[CLS] limit person ─ william lauderdale era pressachal polynomial getting validhearted ᵍ while new libertadores received dylan[onate practitioner wenteet isbntrics of max oneselfischeuring [SEP]
+========================
+[CLS] what や [PAD] lots with the memorable stunts of movies vertical your between [SEP] stunts limit downtime down [PAD] surfing in end [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 41.859 | p: 41.304 | r: 42.483
+rouge2     | fm: 6.977 | p: 6.818 | r: 7.143
+rougeL     | fm: 24.082 | p: 23.913 | r: 24.301
+rougeLsum  | fm: 24.082 | p: 23.913 | r: 24.301
+r1fm+r2fm = 48.836
+
+[Aggregate metrics]:
+rouge1     | fm: 41.859 | p: 41.304 | r: 42.483
+rouge2     | fm: 6.977 | p: 6.818 | r: 7.143
+rougeL     | fm: 24.082 | p: 23.913 | r: 24.301
+rougeLsum  | fm: 24.082 | p: 23.913 | r: 24.301
+r1fm+r2fm = 48.836
+
+input #0 time: 0:13:14 | total time: 0:13:14
+
+
+Running input #1 of 50.
+reference: 
+========================
+poignant and moving , a walk to remember is an inspirational love story , capturing the innocence and idealism of that first encounter .
+========================
+there are a few laughs and clever sight gags scattered about , but not enough to make this anything more than another big-budget bust .
+========================
+average of cosine similarity 0.9000715854216439
+highest_index [0, 1]
+highest [0.9087408980713809, 0.8914022727719069]
+Debug: ids_shape = 30, pads = [28, 30]
+Debug: input ids = tensor([[  101, 13433, 25593,  1998,  3048,  1010,  1037,  3328,  2000,  3342,
+          2003,  2019, 28676,  2293,  2466,  1010, 11847,  1996, 12660,  1998,
+          7812,  2964,  1997,  2008,  2034,  8087,  1012,   102,     0,     0],
+        [  101,  2045,  2024,  1037,  2261, 11680,  1998, 12266,  4356, 18201,
+          2015,  7932,  2055,  1010,  2021,  2025,  2438,  2000,  2191,  2023,
+          2505,  2062,  2084,  2178,  2502,  1011,  5166, 13950,  1012,   102]],
+       device='cuda:0')
+Debug: ref = ['[CLS] poignant and moving, a walk to remember is an inspirational love story, capturing the innocence and idealism of that first encounter. [SEP] [PAD] [PAD]', '[CLS] there are a few laughs and clever sight gags scattered about, but not enough to make this anything more than another big - budget bust. [SEP]']
+[Init] best rec loss: 1.0067757368087769 for ['[CLS] alone fish meet formats ;nockngmentyahmun indoor hillting about action itself mode only dragons yesterday sick mount born declan dmitri smell [SEP] [PAD] [PAD]', '[CLS] joined hear funny tossed been nearlypath open minor heirresh kaitlyn exhibited fiba advanced surveillance acted reach center number video arm 1999 waiting sunshine slap loss prima [SEP]']
+[Init] best rec loss: 0.9633179306983948 for ['[CLS] ye average leveltad combined professional while oh monument modern dvd toss legally practice flags rate nursesiary edition himself karl southzko sermon median done [SEP] [PAD] [PAD]', '[CLS] flown mckay smiled rfc edwin entire provisional backyard date interference transport hammerhurmei fire jar planned cm colon climax razor calendar fingers reliefmina archbishop born ce [SEP]']
+[Init] best rec loss: 0.959193766117096 for ['[CLS]dating clothes understand programme amy by unity heard accompanied stein wanted runs forces technique facade cotton free global spinning including lines tin knot questionians territorial [SEP] [PAD] [PAD]', '[CLS] to theoretical species directly mor retrievedastic mangarret game technical santiago peerwan ultra losing member whilelogram und regional ko pupils airborne vegas johns all million [SEP]']
+[Init] best rec loss: 0.9528215527534485 for ['[CLS] vote inches originating distinguished kiss peruted impression orb baker thomas much bi sox awarenessdcade numerous rhino accommodate bending pride ode david enteringtative [SEP] [PAD] [PAD]', '[CLS] service then pounds computers figure era towers inherited quarterfinals signed tender officers ∞ somehow turned featuringrot spack ward turn w point precious m performances nyrse [SEP]']
+[Init] best rec loss: 0.9423702955245972 for ['[CLS] lucha dikha lang loungehot call estadio susan forestbridge longitudeging alternative mb association kinda succeedingedance stretching sweat search unit between bondly [SEP] [PAD] [PAD]', '[CLS] flower conisencamp estimated atomic regional him mrs then evillana inspiredalic reef reach ireland am condition tracked car 1993 early dexc c ; grain [SEP]']
+[Init] best rec loss: 0.9410552978515625 for ['[CLS] hundred dam underwentphone jakob promised mountain loan specifically : suspended dumbructured4 newark reid avenue natural television little shipbuilding karen consenttees mae decca [SEP] [PAD] [PAD]', "[CLS] weimar minded abigail serves cost english holidaysscentoca surprise buyttle beinggs turner criticalmar will seam hampson fading... establish'quit mo originally truss [SEP]"]
+[Init] best rec loss: 0.9406779408454895 for ['[CLS] mentioned puzzle anarchy serving collection gallery gives clerk evil married through charge clear [SEP]ified : nay alone burden recogniseand sabah opportunity politics confidenceias [SEP] [PAD] [PAD]', '[CLS] verve season request those upstream spoken countiesacleburg every zoecheft guardians risk mural mechanics st purpose coal ec fled survival jersey age again tightened housing [SEP]']
+[Init] best rec loss: 0.9388694763183594 for ['[CLS] whole cooking social asia studioae earl pulse possibly buffalo ter tribal turf roledent devon been session trackested perform corement weigh recognition lodging [SEP] [PAD] [PAD]', '[CLS] tablet kyle june disaster calling surfacetre socialist give amos off burmese hub kissing branches presidedceiirea meaning air three lucky draw headquarters state c man [SEP]']
+[Init] best rec loss: 0.9381641745567322 for ['[CLS] contentpuəwyn other hardcore nearly hardin claim₊ airborne earl todd latitude policy pigeon jude fade clay bravo hobbs loud callum illinois betterezer [SEP] [PAD] [PAD]', '[CLS] bill good wrestlemaniaener sunglasses takes yese large zoom weekend extended mole retreated volta too social highly screenplay mainly hide them cancer container jamie hi now nathan [SEP]']
+[Init] best rec loss: 0.917719304561615 for ['[CLS] whereupon then wipedffinrica kingdom height law finished children seismic faith gmina placing looks root * taylor promotedathlon riderlyn knocking zero park only [SEP] [PAD] [PAD]', '[CLS] fortune fine risk gillespie best factual kaitlyn tristan history draweconomicselle ra gymnastics hong sweetheart against blossom watched fade breeze lake rex struck contests lineup what single [SEP]']
+[Init] best perm rec loss: 0.9158031344413757 for ['[CLS] faith looks placinglyn finished taylor * then park zero knockingathlon only lawffin [SEP] children whereupon seismic gmina rider wiped kingdom root promoted height [PAD]rica [PAD]', '[CLS]selle hong gymnastics lake history blossom against fine contests struck rex fade lineup tristan gillespie what draw fortuneeconomic ra breeze risk factual sweetheart watched kaitlyn single best [SEP]']
+[Init] best perm rec loss: 0.9144790172576904 for ['[CLS] whereupon riderathlon placing gmina taylor only zerolyn finished park promoted children [SEP] [PAD] height looks root law seismicrica kingdom faith wiped knocking then *ffin [PAD]', '[CLS] fortune breeze fade gymnastics ra blossom lineup struck lake history contests watched draw what single kaitlyn hong sweetheart tristaneconomic best factualselle risk rex fine against gillespie [SEP]']
+[Init] best perm rec loss: 0.9133644700050354 for ['[CLS] taylor zero * then looks law seismic root gmina finished only knocking children heightlyn whereupon promotedathlon [SEP] [PAD]ffin placing kingdom rider wipedrica faith park [PAD]', '[CLS] blossom struck against fine hong tristaneconomic sweetheart ra history lineup rex draw kaitlyn lake fortune watched fade what single gillespie gymnastics factual breeze risk bestselle contests [SEP]']
+[Init] best perm rec loss: 0.9120184779167175 for ['[CLS] height rider only then [PAD] park faith whereupon kingdom knocking finished * placing root looksathlon promoted children seismic wiped zero gmina taylorrica law [SEP]ffinlyn [PAD]', '[CLS] kaitlyn breeze lineup fine single contestsselle fortune factual rex history against gymnastics sweetheart hong fade watched draweconomic risk struck ra blossom best tristan what gillespie lake [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.856 (perp=12.975, rec=0.449, cos=0.813), tot_loss_proj:4.248 [t=0.25s]
+prediction: ['[CLS] him selected thinks giant [PAD] defeated 2010 rutherford frank hug finishing medal multiple henry distinction hills based falls mayor sageph would joe max while [SEP] [SEP] [PAD] [PAD]', '[CLS]fide commander formula meant horizonness engdin cartoons - films communication generally called confluence bust australia remained itsedly except his conquest " screenless since. [SEP]']
+[ 100/2000] tot_loss=3.494 (perp=12.181, rec=0.363, cos=0.695), tot_loss_proj:4.307 [t=0.22s]
+prediction: ['[CLS] him signed means artist [PAD] defeated the♯, tongue finishing medal after meeting lacy good moving shorelinkiaph a joe, while [SEP] [SEP] [PAD] [PAD]', '[CLS]fide commander formula sainte eisenhowerness coverdin oneself? written situated typically called? bust pictured possibly itsedly except no faded a tsarless since. [SEP]']
+[ 150/2000] tot_loss=3.247 (perp=11.300, rec=0.300, cos=0.687), tot_loss_proj:4.114 [t=0.19s]
+prediction: ['[CLS] him dominate means is [PAD] recently a♯, and finishing medal, remember triassic peace attacking mission / andph a influenced true. [SEP] [SEP] [PAD] [PAD]', '[CLS] hemingway commander prototype well eisenhower memorablefi fable oneself? continues situated not called ; bust but not this bust except less faded a tsar not since. [SEP]']
+[ 200/2000] tot_loss=3.133 (perp=10.863, rec=0.279, cos=0.681), tot_loss_proj:4.044 [t=0.20s]
+prediction: ['[CLS] them dominate by is [PAD] recently a♯, - finishing prize, remember triassic tow moving moving / and butterfly a influenced true. [SEP] [SEP] [PAD] [PAD]', '[CLS] hemingway commander crank well recruit memorablefi herzegovina oneself? continues situated not than ; bust but not this bust except less least a tsar not completed. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 250/2000] tot_loss=3.241 (perp=11.480, rec=0.263, cos=0.682), tot_loss_proj:4.224 [t=0.19s]
+prediction: ['[CLS] them successfully by is [PAD] autonomous.♯, lunch finishing prize this remember triassic kate recentlyignant / has butterfly heart influenced true. [SEP] [SEP] [PAD] [PAD]', '[CLS] poet politician土 now seemed innocence heyignant herself? sidekick wounds not than ; bust but not this bust except less stall a hostages not that. [SEP]']
+[ 300/2000] tot_loss=3.165 (perp=11.179, rec=0.255, cos=0.674), tot_loss_proj:4.030 [t=0.19s]
+prediction: ['[CLS] them successfully a is [PAD] autonomous and♯, lunch finishing guns this remember triassic peace recently moving / has butterfly a unusual first.. [SEP] [PAD] [PAD]', '[CLS] poet presidency antagonist ) seemed insults tooth cindy herself? sidekick wounds not called fled bust but enough this bust except less stall a hostages not this. [SEP]']
+Attempt swap
+Moved token
+Swapped tokens
+[ 350/2000] tot_loss=3.135 (perp=11.007, rec=0.253, cos=0.681), tot_loss_proj:3.972 [t=0.26s]
+prediction: ['[CLS] colored a is [PAD] them moving, 書 a lunch romantic guns, remember triassic and recentlyignant / has butterfly a unusual first.. [SEP] [PAD] [PAD]', '[CLS] existence comments／ below seemed presidency toothignant herself? sidekick wounds not called distraction bust but enough this bust except more stall that tsar not this. [SEP]']
+Attempt swap
+Moved sequence
+Moved sequence
+[ 400/2000] tot_loss=3.070 (perp=10.886, rec=0.219, cos=0.674), tot_loss_proj:4.024 [t=0.22s]
+prediction: ['[CLS] colored them moving the is [PAD] a 書, lunch romantic companion a remember fright love recentlyignant / has for a unusual first.. [SEP] [PAD] [PAD]', '[CLS] fascinated comments／ are seemed presidency tooth herzegovina herself? interaction wounds mostly called distraction bust but enough this bust except more stall that tsar not this. [SEP]']
+[ 450/2000] tot_loss=3.113 (perp=11.133, rec=0.211, cos=0.675), tot_loss_proj:3.991 [t=0.23s]
+prediction: ['[CLS] colored them moving the is [PAD] a 書 a lunch romantic breuning a inspirational fright love recentlyignant / has mo a unusual first.. [SEP] [PAD] [PAD]', '[CLS] fascinated comments／ are seem invasion tooth herzegovina herself, gag wounds mostly reinforcements clever bust but enough this bust except more stall that scattered not this. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 500/2000] tot_loss=2.982 (perp=10.526, rec=0.214, cos=0.663), tot_loss_proj:3.834 [t=0.21s]
+prediction: ['[CLS]. them based the is止 a nickname a lunch romantic breuning a inspirational creatures love recentlyignant / has mo a moving first inner. [SEP] [PAD] [PAD]', '[CLS] fascinated comments／ are seem invasion tooth laugh items, gag of mostly reinforcements clever bust but enough another bust with more less that scattered noten. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.971 (perp=10.476, rec=0.206, cos=0.669), tot_loss_proj:3.964 [t=0.20s]
+prediction: ['[CLS]. them based the is止 a nickname a party bounded breuning a inspirational creatures love acquireignant / hasa a moving inner earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments／ are seem invasion tooth laughs items, gag of few reinforcements clever bust but enough another bust making more less that scattered noten. [SEP]']
+[ 600/2000] tot_loss=3.014 (perp=10.749, rec=0.195, cos=0.669), tot_loss_proj:4.036 [t=0.20s]
+prediction: ['[CLS]. them based the is止 a nickname a party romantic breuning a inspirational creatures love acquireignant / hasa a moving inner earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments costume are seem negotiation tooth laughs items, gag of few reinforcements clever bust but enough than bust making more less that scattered noten. [SEP]']
+Attempt swap
+Moved token
+Moved token
+[ 650/2000] tot_loss=2.978 (perp=10.565, rec=0.195, cos=0.670), tot_loss_proj:3.939 [t=0.20s]
+prediction: ['[CLS]. them moving the is止 a nickname a party indication breuning a inspirational greatest loveignant / has acquirea a moving inner earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments costume are seem negotiation hey laughs increasingly, gag of few reinforcements clever bust but enough than bust make more anything this scattered not to. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.900 (perp=10.165, rec=0.200, cos=0.667), tot_loss_proj:3.848 [t=0.23s]
+prediction: ['[CLS] them. moving the is止 a nickname a party indication breuning a inspirational greatest loveignant /.,a a moving inner earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments than are portrayed negotiation hey laughs increasingly, gag of few／ clever bust but enough than bust make more anything this scattered not to. [SEP]']
+[ 750/2000] tot_loss=2.925 (perp=10.338, rec=0.194, cos=0.663), tot_loss_proj:3.910 [t=0.20s]
+prediction: ['[CLS] them.ies the is止 a nickname a party indication breuning a inspirational greatest loveignant /.,a a moving begins earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments than are costs budget hey laughs recited, gag of few／ clever bust but enough than bust make more anything this scattered not to. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 800/2000] tot_loss=2.876 (perp=10.138, rec=0.182, cos=0.666), tot_loss_proj:3.905 [t=0.21s]
+prediction: ['[CLS] them.ies the is止 a nickname a party indication breuning a inspirationalctions love moving moving.,a a / begins earlier. [SEP] [PAD] [PAD]', '[CLS] fascinated comments than are costs budget hey laughs anymore, gag of few／ clever bust but enough than it make more anything this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+Moved token
+[ 850/2000] tot_loss=2.860 (perp=9.959, rec=0.198, cos=0.670), tot_loss_proj:3.807 [t=0.23s]
+prediction: ['[CLS] them.ies止 is the a nickname a party indication breuning a inspirationalctions love moving moving.,a a / begins earlier. [SEP] [PAD] [PAD]', '[CLS] reinforcements fascinated comments are costs budget hey laughs anymore, gag of few／ clever bust but enough than it make more anything this scattered not bust. [SEP]']
+[ 900/2000] tot_loss=2.860 (perp=10.038, rec=0.187, cos=0.665), tot_loss_proj:3.830 [t=0.19s]
+prediction: ['[CLS] them.ies止 is the a nickname a party indication breuning a inspirationalctions love moving moving., mo a / begins earlier. [SEP] [PAD] [PAD]', '[CLS] reinforcements fascinated comments are costs budget hey laughs anymore, gag of few／ clever bust but enough than it make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Swapped tokens
+[ 950/2000] tot_loss=2.774 (perp=9.604, rec=0.186, cos=0.668), tot_loss_proj:3.795 [t=0.20s]
+prediction: ['[CLS] them.ies止 is the a nickname a party indication breuning a inspirational lovections moving moving., mo a / begins earlier. [SEP] [PAD] [PAD]', '[CLS] reinforcements fascinated laughs keep costs clever hey laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.790 (perp=9.658, rec=0.192, cos=0.666), tot_loss_proj:3.791 [t=0.25s]
+prediction: ['[CLS] them.ies止 is a an nickname a party indication breuning a inspirational love / moving moving., mo actions begins earlier. [SEP] [PAD] [PAD]', '[CLS] than fascinated laughs keep costs clever hey laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+[1050/2000] tot_loss=2.732 (perp=9.419, rec=0.184, cos=0.664), tot_loss_proj:3.740 [t=0.20s]
+prediction: ['[CLS] them.ies止 is a a nickname a party indication breuning a inspirational love / moving unusual., mo actions begins remember. [SEP] [PAD] [PAD]', '[CLS] than laughed laughs are costs clever hey laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Moved token
+[1100/2000] tot_loss=2.746 (perp=9.509, rec=0.179, cos=0.665), tot_loss_proj:3.711 [t=0.20s]
+prediction: ['[CLS] them.ies止 is a a nickname a party indication breuning a inspirational love / moving unusual., moctions a begins remember. [SEP] [PAD] [PAD]', '[CLS] than laughed laughs keep costs clever hey laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+[1150/2000] tot_loss=2.785 (perp=9.640, rec=0.189, cos=0.668), tot_loss_proj:3.786 [t=0.26s]
+prediction: ['[CLS] them.ies [PAD] is a a nickname a party indication breuning a inspirational love / moving unusual., moctions a begins remember. [SEP] [PAD] [PAD]', '[CLS] clinic laughed laughs keep costs clever than laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+[1200/2000] tot_loss=2.763 (perp=9.537, rec=0.192, cos=0.664), tot_loss_proj:3.722 [t=0.20s]
+prediction: ['[CLS] parents.ies止 is a a nickname a party indication breuning a inspirational love / moving unusual., mo greatest a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.751 (perp=9.538, rec=0.178, cos=0.665), tot_loss_proj:3.763 [t=0.23s]
+prediction: ['[CLS] parents.ies止 is a a nickname a party indication breuning a inspirational love / moving unusual.ctions mo, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, gag of few／ budget bust but enough than to make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Moved token
+[1300/2000] tot_loss=2.775 (perp=9.600, rec=0.190, cos=0.665), tot_loss_proj:3.716 [t=0.25s]
+prediction: ['[CLS] parents.ies止 is the a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, gag of few／ budget bust but enough than this make more anything this scattered not bust. [SEP]']
+[1350/2000] tot_loss=2.772 (perp=9.594, rec=0.190, cos=0.664), tot_loss_proj:3.714 [t=0.20s]
+prediction: ['[CLS] parents.ies止 is a a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, gag of few／ budget bust but enough than this make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Swapped tokens
+[1400/2000] tot_loss=2.720 (perp=9.403, rec=0.175, cos=0.664), tot_loss_proj:3.698 [t=0.20s]
+prediction: ['[CLS] parents.ies止 a is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than this make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Moved token
+[1450/2000] tot_loss=2.696 (perp=9.243, rec=0.181, cos=0.666), tot_loss_proj:3.642 [t=0.22s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than this make more anything this scattered not bust. [SEP]']
+[1500/2000] tot_loss=2.697 (perp=9.243, rec=0.182, cos=0.666), tot_loss_proj:3.639 [t=0.24s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than this make more anything this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+[1550/2000] tot_loss=2.672 (perp=9.178, rec=0.173, cos=0.664), tot_loss_proj:3.637 [t=0.20s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than make this more anything this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+[1600/2000] tot_loss=2.667 (perp=9.111, rec=0.179, cos=0.665), tot_loss_proj:3.600 [t=0.24s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than make this anything more this scattered not bust. [SEP]']
+[1650/2000] tot_loss=2.664 (perp=9.111, rec=0.178, cos=0.664), tot_loss_proj:3.600 [t=0.19s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than make this anything more this scattered not bust. [SEP]']
+Attempt swap
+Moved sequence
+Moved sequence
+[1700/2000] tot_loss=2.660 (perp=9.054, rec=0.184, cos=0.665), tot_loss_proj:3.618 [t=0.20s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a love / inspirational moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than make this anything more this scattered not bust. [SEP]']
+Attempt swap
+Swapped tokens
+Moved token
+[1750/2000] tot_loss=2.623 (perp=8.868, rec=0.186, cos=0.664), tot_loss_proj:3.576 [t=0.19s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a love / inspirational moving unusual. moctions, a remember begins. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough make this anything more than this scattered not bust. [SEP]']
+[1800/2000] tot_loss=2.615 (perp=8.868, rec=0.176, cos=0.665), tot_loss_proj:3.577 [t=0.19s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a love / inspirational moving unusual. moctions, a remember begins. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough make this anything more than this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+[1850/2000] tot_loss=2.614 (perp=8.840, rec=0.181, cos=0.665), tot_loss_proj:3.590 [t=0.21s]
+prediction: ['[CLS] parents. aies止 is a nickname a party indication breuning a love / inspirational moving unusual. moctions, a remember begins. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs gag anymore, few of／ budget bust but enough make this anything more than this scattered not bust. [SEP]']
+Attempt swap
+Moved token
+Moved token
+[1900/2000] tot_loss=2.613 (perp=8.845, rec=0.177, cos=0.666), tot_loss_proj:3.547 [t=0.23s]
+prediction: ['[CLS] parents. aies止 is a nickname a party ideal breuning is love / inspirational moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs gag anymore, few of／ budget bust but enough make this anything more than this not scattered bust. [SEP]']
+[1950/2000] tot_loss=2.610 (perp=8.845, rec=0.176, cos=0.665), tot_loss_proj:3.551 [t=0.19s]
+prediction: ['[CLS] parents. aies止 is a nickname a party ideal breuning is love / inspirational moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs gag anymore, few of／ budget bust but enough make this anything more than this not scattered bust. [SEP]']
+Attempt swap
+[2000/2000] tot_loss=2.616 (perp=8.845, rec=0.183, cos=0.664), tot_loss_proj:3.546 [t=0.24s]
+prediction: ['[CLS] parents. aies止 is a nickname a party ideal breuning is love / inspirational moving unusual. moctions, a begins remember. [SEP] [PAD] [PAD]', '[CLS] hey laughed laughs keep costs clever than laughs gag anymore, few of／ budget bust but enough make this anything more than this not scattered bust. [SEP]']
+Done with input #1 of 50.
+reference: 
+========================
+[CLS] poignant and moving, a walk to remember is an inspirational love story, capturing the innocence and idealism of that first encounter. [SEP]
+========================
+[CLS] there are a few laughs and clever sight gags scattered about, but not enough to make this anything more than another big - budget bust. [SEP]
+========================
+predicted: 
+========================
+[CLS] parents.ies止 a is a nickname a party indication breuning a inspirational love / moving unusual. moctions, a begins remember. [SEP]
+========================
+[CLS] hey laughed laughs keep costs clever than laughs anymore, few of gag／ budget bust but enough than this make more anything this scattered not bust. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 48.370 | p: 48.677 | r: 48.161
+rouge2     | fm: 6.303 | p: 6.346 | r: 6.273
+rougeL     | fm: 30.617 | p: 30.952 | r: 30.351
+rougeLsum  | fm: 30.617 | p: 30.952 | r: 30.351
+r1fm+r2fm = 54.673
+
+[Aggregate metrics]:
+rouge1     | fm: 45.115 | p: 44.991 | r: 45.322
+rouge2     | fm: 6.640 | p: 6.582 | r: 6.708
+rougeL     | fm: 27.513 | p: 27.433 | r: 27.885
+rougeLsum  | fm: 27.350 | p: 27.433 | r: 27.326
+r1fm+r2fm = 51.755
+
+input #1 time: 0:13:20 | total time: 0:26:35
+
+
+Running input #2 of 50.
+reference: 
+========================
+must-see viewing for anyone involved in the high-tech industry . others may find it migraine-inducing , despite moore's attempts at whimsy and spoon feeding .
+========================
+travels a fascinating arc from hope and euphoria to reality and disillusionment .
+========================
+average of cosine similarity 0.8898982226835046
+highest_index [0, 1]
+highest [0.9057046284571307, 0.8740918169098786]
+Debug: ids_shape = 38, pads = [38, 20]
+Debug: input ids = tensor([[  101,  2442,  1011,  2156, 10523,  2005,  3087,  2920,  1999,  1996,
+          2152,  1011,  6627,  3068,  1012,  2500,  2089,  2424,  2009, 19117,
+         26456,  1011, 29290,  1010,  2750,  5405,  1005,  1055,  4740,  2012,
+          1059, 14341,  6508,  1998, 15642,  8521,  1012,   102],
+        [  101,  7930,  1037, 17160,  8115,  2013,  3246,  1998,  7327,  8458,
+         11069,  2000,  4507,  1998,  4487, 27572, 24117,  3672,  1012,   102,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0]],
+       device='cuda:0')
+Debug: ref = ["[CLS] must - see viewing for anyone involved in the high - tech industry. others may find it migraine - inducing, despite moore's attempts at whimsy and spoon feeding. [SEP]", '[CLS] travels a fascinating arc from hope and euphoria to reality and disillusionment. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8421394228935242 for ['[CLS] already concentration gallery zootter competitions page chain gatesast printing event platinum certain grace top kan point royal confused sarah now nt pound group warden have sentinelism equally save stem color for mole tag [SEP]', '[CLS] owen inchodies holiday out co elementary mythology rat summit for usedaid profile amount diplomacy little before [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.8405299186706543 for ['[CLS] plato skylar competition sometimes bree cc out point best been tongue upon rose raised chronic creep abolished lead chainis portrait framework album syndicate earliest⁄₄ minor small outfit directed hip all culture david ac just [SEP]', '[CLS] _ senior digital & operations added pot slightest audioisanceity wave type library complaint dubois novel livingston [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7741783857345581 for ['[CLS] lauren native prefer girls goldman brasil⁄ meaning needles o ps ri... cult systemiah quarry hesitateea large, hay dedicatedledgin calculus slot on herb ten whom chips anchor cope squares consists [SEP]', '[CLS] =some screen jack officially recall nearly plant battle latin displays eastern parish answered bluesjectedvrondor [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.418 (perp=13.472, rec=0.327, cos=0.397), tot_loss_proj:4.055 [t=0.21s]
+prediction: ['[CLS] traditionalromatic viewing supported wife for dan ellington purple contemporary wrestling barrels jim georgian mcgill香 wizard occasions ke : sight版lo bacterium blanktee gratefulk wiggled studio maryland heavy stress is experiencejee [SEP]', '[CLS] has andes french greatly rico route lab indies to symbolic experiences prize project hours inner expressions of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 100/2000] tot_loss=3.199 (perp=13.564, rec=0.220, cos=0.265), tot_loss_proj:4.034 [t=0.20s]
+prediction: ['[CLS] night watching viewing followed manager for les while retired neutron guitar virtual jim georgian la香 great accompanying cognitive : breuning版, punch publishedtee bok wiggled junction maryland was nausea performance coveragejee [SEP]', '[CLS] upon and fari fascinating novels travels life commonwealth to symbolicalis goal project hours kurt however of [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 150/2000] tot_loss=3.045 (perp=13.004, rec=0.194, cos=0.250), tot_loss_proj:4.067 [t=0.26s]
+prediction: ['[CLS] peer watching viewing see for for les while former seeing guitar pumped jim died la香 great throughout cognitive.tucket版 under punch published must bokwirew maryland smoke▪ analysis fansjee [SEP]', '[CLS] during and work my fascinating rico fascinatingiconology to symbolic puzzles 2005 daniel ; returning methods. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 200/2000] tot_loss=2.926 (perp=12.667, rec=0.169, cos=0.223), tot_loss_proj:3.813 [t=0.20s]
+prediction: ['[CLS] peer seeing viewing see for anyonezz while career seeing punk interrupt jim won may香 greatlismraine. breuning版 ; season published must - onwirew maryland was▪ analysis fans outbreak [SEP]', '[CLS] during and worke fascinating reader fascinating anology of on puzzles 2005 daniel ;.ation. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[ 250/2000] tot_loss=2.778 (perp=12.051, rec=0.156, cos=0.212), tot_loss_proj:3.635 [t=0.20s]
+prediction: ['[CLS] peer seeing viewing see for anyone gothic while career seeing slack virtual jim may香 legend vantageraine. breuning版 won ; vase published must - onwirew maryland rope▪ analysis fans outbreak [SEP]', '[CLS] aation and datae fascinating wished fascinating a arc of and puzzles ray daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 300/2000] tot_loss=2.856 (perp=12.140, rec=0.146, cos=0.282), tot_loss_proj:3.634 [t=0.20s]
+prediction: ['[CLS] peer seeing viewing see for anyone gothic while involved seeing slack virtual jim may香 legend vantageraine. breuning imprisonment won " tissue published must - onwirew maryland rope▪ analysis fans outbreak [SEP]', '[CLS] aation and a vital fascinating wished fascinating a arc of and puzzles 2005 daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+[ 350/2000] tot_loss=2.670 (perp=11.719, rec=0.125, cos=0.201), tot_loss_proj:3.548 [t=0.20s]
+prediction: ['[CLS] peer seeing viewing see for anyone gothic while香 involved seeing craft virtual jim may legend despiteraine. breuning版 won it vase published must - onwire dream maryland roperaine analysis fans outbreak [SEP]', '[CLS] aation and ae fascinating stayed fascinating a arc from malaysia puzzles and daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 400/2000] tot_loss=2.708 (perp=11.841, rec=0.121, cos=0.219), tot_loss_proj:3.499 [t=0.19s]
+prediction: ['[CLS] peer seeing viewing see for anyone gothic others香 involved seeing craft virtual jim may legend despiteraine. breuning版 won it foilraine must - on peeled lines maryland rope published inducing fans outbreak [SEP]', '[CLS] travelsation and a vital fascinating stayed fascinating a arc from malaysia puzzles and daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 450/2000] tot_loss=2.688 (perp=11.739, rec=0.118, cos=0.222), tot_loss_proj:3.510 [t=0.20s]
+prediction: ['[CLS] peer seeing viewing see for anyone gothic others nfc involved see craft virtual jim may legend despiteraine. breuning inducing won it intakeraine must -, peeled lines maryland was published inducing fans outbreak [SEP]', '[CLS] travelsation and a vital fascinating stayed fascinating a arc from upon puzzles and daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Swapped tokens
+[ 500/2000] tot_loss=2.717 (perp=11.877, rec=0.109, cos=0.232), tot_loss_proj:3.478 [t=0.19s]
+prediction: ['[CLS] peer - viewing see for anyone othersney involved see craft virtual jim may gothic legend despiteraine. breuning inducing won it foilraine must -k peeled brood maryland rope published inducing fans outbreak [SEP]', '[CLS] travels camps and data vital fascinating stayed a fascinating arc from upon colleagues and daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.715 (perp=11.989, rec=0.106, cos=0.211), tot_loss_proj:3.502 [t=0.20s]
+prediction: ['[CLS] peer - viewing see for anyone others brood involved see craft virtual jim may gothic legend despiteraine. breuning inducing won it foilraine must -k peeledics habits rope published inducing fans outbreak [SEP]', '[CLS] travels camps and data vital fascinating stayed a fascinating arc from upon parody the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 600/2000] tot_loss=2.727 (perp=12.050, rec=0.110, cos=0.207), tot_loss_proj:3.544 [t=0.20s]
+prediction: ['[CLS] peer - viewing see for anyone others brood involved see craft virtual jim may filipino legend despiteraine. breuning inducing won it foilraine must -, peeledics habits sweat herbert inducing fans outbreak [SEP]', '[CLS] travels camps and hope vital fascinating stayed a fascinating arc from upon colleagues the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 650/2000] tot_loss=2.718 (perp=11.916, rec=0.106, cos=0.228), tot_loss_proj:3.526 [t=0.20s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved see craft pumped jim may filipino legend peerraine. breuning inducing won it childhoodraine must -, peeledics habits sweat herbert inducing fans outbreak [SEP]', '[CLS] travels identity and hope electricity fascinating travels a fascinating arc from xv entropy the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Moved sequence
+[ 700/2000] tot_loss=2.778 (perp=12.222, rec=0.103, cos=0.230), tot_loss_proj:3.617 [t=0.20s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved see involved pumped jim may filipino legend peerraine. breuning inducing won it childhoodraine must - habits peeledicsk sweat herbert inducing observation outbreak [SEP]', '[CLS] travels a hope electricity identity fascinating wished a fascinating arc from xv entropy the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 750/2000] tot_loss=2.723 (perp=12.084, rec=0.097, cos=0.209), tot_loss_proj:3.577 [t=0.23s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved see involved pumped jim may filipino legend peerraine. breuning inducing he it childhoodraine must - habits peeledics,ed herbert inducing observation outbreak [SEP]', '[CLS] travels a hope electricity identity fascinating wished a fascinating arc from xv entropy the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Moved sequence
+[ 800/2000] tot_loss=2.675 (perp=11.813, rec=0.095, cos=0.218), tot_loss_proj:3.440 [t=0.20s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved seeed pumped jim may filipino legend -raine. breuning inducing he it attemptsraine must - maryland peeledics - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from xv entropy the daniel ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 850/2000] tot_loss=2.657 (perp=11.673, rec=0.099, cos=0.223), tot_loss_proj:3.387 [t=0.25s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing he it attemptsraine must - maryland charlieics - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from xv entropy to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[ 900/2000] tot_loss=2.650 (perp=11.747, rec=0.093, cos=0.207), tot_loss_proj:3.395 [t=0.19s]
+prediction: ['[CLS] despite - viewing see for anyone others brood involved seeed pumped peeled may filipino legend -raine. breuning inducing he it attemptsraine must - habits charlieics - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from xvlusion to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 950/2000] tot_loss=2.637 (perp=11.631, rec=0.089, cos=0.222), tot_loss_proj:3.375 [t=0.25s]
+prediction: ['[CLS] habits - viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing he it attemptsraine must - despite charlieics - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from xvlusion to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.647 (perp=11.713, rec=0.097, cos=0.207), tot_loss_proj:3.397 [t=0.20s]
+prediction: ['[CLS] habits - viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing he it attempts mustraine - despite charlieney - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from xv reality to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1050/2000] tot_loss=2.672 (perp=11.865, rec=0.088, cos=0.210), tot_loss_proj:3.533 [t=0.29s]
+prediction: ['[CLS] habits - viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing he it attempts mustraine - despite charlieney - tech herbert inducing observation outbreak [SEP]', '[CLS] travels a fascinating hope electricitylusion stayed a fascinating arc from xv reality to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1100/2000] tot_loss=2.574 (perp=11.392, rec=0.088, cos=0.208), tot_loss_proj:3.407 [t=0.19s]
+prediction: ['[CLS] habits - viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing he it attempts mustraine - despite charlieney observation - tech herbert inducing. [SEP]', '[CLS] travels a fascinating hope electricitylusion stayed a fascinating arc from reality and to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1150/2000] tot_loss=2.565 (perp=11.310, rec=0.093, cos=0.210), tot_loss_proj:3.382 [t=0.20s]
+prediction: ['[CLS] habits he viewing see for anyone others brood involved see sweat pumped peeled may filipino legend -raine. breuning inducing - it attempts mustraine - despite charlieney observation - tech herbert inducing. [SEP]', '[CLS] travels a fascinating hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1200/2000] tot_loss=2.525 (perp=11.149, rec=0.089, cos=0.207), tot_loss_proj:3.213 [t=0.20s]
+prediction: ["[CLS] habits'viewing see for anyone others brood involved see sweat pumped peeled mayworld legend -raine. breuning inducing - it attempts mustraine - despite charlieney observation, tech herbert inducing. [SEP]", '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.512 (perp=11.095, rec=0.086, cos=0.207), tot_loss_proj:3.200 [t=0.20s]
+prediction: ["[CLS]'habits viewing see for anyone others brood involved see sweat pumped peeled mayworld legend -raine. breuning inducing - it attempts mustraine - despite charlieney observation, tech herbert inducing. [SEP]", '[CLS] travels a fascinating hope electricitylusion travels a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1300/2000] tot_loss=2.524 (perp=11.073, rec=0.095, cos=0.215), tot_loss_proj:3.293 [t=0.26s]
+prediction: ["[CLS]'habits viewing see for anyone others brood involved see sweat pumped - mayworld legend peeledraine. breuning inducing - it attempts mustraine - despite charlieney observation, tech herbert inducing. [SEP]", '[CLS] travels and fascinating hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1350/2000] tot_loss=2.521 (perp=11.096, rec=0.089, cos=0.212), tot_loss_proj:3.291 [t=0.20s]
+prediction: ["[CLS]'habits viewing see for anyone others brood involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it attempts mustraine - despite charlieney observation, tech herbert inducing. [SEP]", '[CLS] travels and fascinating hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1400/2000] tot_loss=2.503 (perp=11.014, rec=0.088, cos=0.211), tot_loss_proj:3.350 [t=0.20s]
+prediction: ["[CLS]'habits viewing see for anyone others brood involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it attempts mustraine - tech charlieney observation, despite herbert inducing. [SEP]", '[CLS] travels fascinating and hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1450/2000] tot_loss=2.482 (perp=10.929, rec=0.090, cos=0.206), tot_loss_proj:3.308 [t=0.21s]
+prediction: ["[CLS]'habits viewing see for anyone others brood involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it herbert mustraine - tech charlieney observation, despite attempts inducing. [SEP]", '[CLS] travels fascinating and hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1500/2000] tot_loss=2.520 (perp=11.097, rec=0.087, cos=0.214), tot_loss_proj:3.365 [t=0.20s]
+prediction: ["[CLS]'habits viewing see for anyone others instructions involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it moore mustraine - tech charlieney observation, despite attempts inducing. [SEP]", '[CLS] travels fascinating and hope arclusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1550/2000] tot_loss=2.497 (perp=11.009, rec=0.091, cos=0.204), tot_loss_proj:3.371 [t=0.20s]
+prediction: ["[CLS]'habits viewing see for anyone others instructions involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it moore mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels fascinating and hope arclusion stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+[1600/2000] tot_loss=2.473 (perp=10.920, rec=0.088, cos=0.201), tot_loss_proj:3.320 [t=0.19s]
+prediction: ["[CLS]'habits viewing see for anyone others instructions involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it moore mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels fascinating and hopelusion arc stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1650/2000] tot_loss=2.477 (perp=10.920, rec=0.087, cos=0.207), tot_loss_proj:3.324 [t=0.30s]
+prediction: ["[CLS]'habits viewing see for anyone others instructions involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it moore mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels fascinating and hopelusion arc stayed a fascinating arc from reality xv to reborn ;.. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1700/2000] tot_loss=2.433 (perp=10.638, rec=0.091, cos=0.214), tot_loss_proj:3.352 [t=0.19s]
+prediction: ["[CLS] habits'viewing see for anyone others instructions involved see sweat pumped - mayworld legendleaderraine. breuning inducing - it moore mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels. and hopelusion arc travels a fascinating arc from reality and to reborn ; fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1750/2000] tot_loss=2.430 (perp=10.688, rec=0.088, cos=0.205), tot_loss_proj:3.309 [t=0.20s]
+prediction: ["[CLS] habits'viewing see for anyone others instructions involved see sweat pumped - mayworld quanleader mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels. and hopelusion arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1800/2000] tot_loss=2.442 (perp=10.688, rec=0.094, cos=0.210), tot_loss_proj:3.311 [t=0.19s]
+prediction: ["[CLS] habits'viewing see for anyone others instructions involved see sweat pumped - mayworld quanleader mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travels. and hopelusion arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1850/2000] tot_loss=2.502 (perp=11.014, rec=0.089, cos=0.211), tot_loss_proj:3.358 [t=0.24s]
+prediction: ["[CLS] habits'viewing see for anyone others involved see sweat pumped - may industry regardedleader instructions mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travelsph and hopelusion arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1900/2000] tot_loss=2.484 (perp=10.886, rec=0.096, cos=0.210), tot_loss_proj:3.327 [t=0.23s]
+prediction: ["[CLS] instructions'viewing see for anyone others involved see sweat pumped - may industry regardedleader habits mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travelsph and hopelusion arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+[1950/2000] tot_loss=2.471 (perp=10.886, rec=0.081, cos=0.212), tot_loss_proj:3.328 [t=0.21s]
+prediction: ["[CLS] instructions'viewing see for anyone others involved see sweat pumped - may industry regardedleader habits mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travelsph and hopelusion arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+[2000/2000] tot_loss=2.451 (perp=10.794, rec=0.084, cos=0.208), tot_loss_proj:3.303 [t=0.20s]
+prediction: ["[CLS] instructions'viewing see for anyone others involved see sweat pumped - may industry regardedleader habits mooreraine. breuning inducing - it mustraine - tech charlieney attempts observation, despite inducing. [SEP]", '[CLS] travelsphlusion and hope arc travels a fascinating arc from reality to reborn ; xv fascinating. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]']
+Done with input #2 of 50.
+reference: 
+========================
+[CLS] must - see viewing for anyone involved in the high - tech industry. others may find it migraine - inducing, despite moore's attempts at whimsy and spoon feeding. [SEP]
+========================
+[CLS] travels a fascinating arc from hope and euphoria to reality and disillusionment. [SEP]
+========================
+predicted: 
+========================
+[CLS]'habits viewing see for anyone others brood involved see sweat pumped - mayworld legend peeledraine. breuning inducing - it attempts mustraine - despite charlieney observation, tech herbert inducing. [SEP]
+========================
+[CLS] travels and fascinating hope electricitylusion stayed a fascinating arc from reality xv to reborn ;.. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 60.303 | p: 58.449 | r: 62.500
+rouge2     | fm: 16.173 | p: 15.256 | r: 17.236
+rougeL     | fm: 41.212 | p: 39.815 | r: 42.857
+rougeLsum  | fm: 41.212 | p: 39.815 | r: 42.857
+r1fm+r2fm = 76.476
+
+[Aggregate metrics]:
+rouge1     | fm: 50.189 | p: 49.477 | r: 51.103
+rouge2     | fm: 9.653 | p: 9.281 | r: 9.927
+rougeL     | fm: 31.776 | p: 31.384 | r: 32.449
+rougeLsum  | fm: 32.273 | p: 31.919 | r: 32.875
+r1fm+r2fm = 59.841
+
+input #2 time: 0:13:10 | total time: 0:39:45
+
+
+Running input #3 of 50.
+reference: 
+========================
+paxton's uneven directorial debut fails to unlock the full potential of what is in many ways a fresh and dramatically substantial spin on the genre .
+========================
+cho's fans are sure to be entertained ; it's only fair in the interest of full disclosure to say that -- on the basis of this film alone -- i'm not one of them .
+========================
+average of cosine similarity 0.7869084975044567
+highest_index [1, 0]
+highest [0.6839762355899868, 0.8898407594189266]
+Debug: ids_shape = 45, pads = [30, 45]
+Debug: input ids = tensor([[  101, 27765,  1005,  1055, 17837, 21635,  2834, 11896,  2000, 19829,
+          1996,  2440,  4022,  1997,  2054,  2003,  1999,  2116,  3971,  1037,
+          4840,  1998, 12099,  6937,  6714,  2006,  1996,  6907,  1012,   102,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0],
+        [  101, 16480,  1005,  1055,  4599,  2024,  2469,  2000,  2022, 21474,
+          1025,  2009,  1005,  1055,  2069,  4189,  1999,  1996,  3037,  1997,
+          2440, 19380,  2000,  2360,  2008,  1011,  1011,  2006,  1996,  3978,
+          1997,  2023,  2143,  2894,  1011,  1011,  1045,  1005,  1049,  2025,
+          2028,  1997,  2068,  1012,   102]], device='cuda:0')
+Debug: ref = ["[CLS] paxton's uneven directorial debut fails to unlock the full potential of what is in many ways a fresh and dramatically substantial spin on the genre. [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]", "[CLS] cho's fans are sure to be entertained ; it's only fair in the interest of full disclosure to say that - - on the basis of this film alone - - i'm not one of them. [SEP]"]
+[Init] best rec loss: 0.841564416885376 for ['[CLS] bedside mrancy me sea date hedge job wonder peers aged− regret case her brazil that depends digitaliger too leaving suspicious non rocky stage xbox lower [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]ski thumb sources siding dal punishment conditions [CLS] takes miss saw crystal ⟨ mic double distraction story especially myself case replied somethinxa rob finally penn acquired devil co venture sakepoplaise substrate early mas fund hitsmusic guides experiments swept core [SEP]']
+[Init] best rec loss: 0.8380779027938843 for ['[CLS] regarding him another other cool will ropes clarkcure genre armed - throughout shoulder shift er mob delayed brooke stock feverctable sorry about permanent flat dowager concession [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] linnaeuster insurance medicine variance ago met kong day drinking felicity develop tyler jax 18 rid churchrie contract greek including evidence sent general howling police semi bounded stray provision inter thermal states mischief her it bs systemjected straight self briggsized [SEP]']
+[Init] best rec loss: 0.8278796076774597 for ['[CLS]ith sound maj vocalist airs its byrd clung christopher olympics waterway chang diet community shells maximum sc territory action evans cody integrity test subsidiarycoloryou deck roll [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] result citizens disguised corner steppedsight depart marked armed senator historical (ses melbourne bullying fan remote pond minority wings shade activeum ah only introduction former fang sam drum regarding bust creation bright dogmina swing alignment into truth ; phoenix upper [SEP]']
+[Init] best rec loss: 0.8203222751617432 for ['[CLS] picture strikes military blessing aidschild mo minesgames no behind₁ breast classification album same whitney allie gramnae were piece zee origins bis flying print far [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]ev painter until part madeline include even disc tal position eating anythingness depends without allowahah represented numbering worker fragile ap personalpsy printing amp awarded chef haul hind 1972 am thousand home ] key literature bells barely californiaotype tone [SEP]']
+[Init] best rec loss: 0.8169485330581665 for ['[CLS] present footsteps sportscture current got married memorial savage persia whoue layfly around boy sam decision peanut seminary hardin please captive materials skin commanders port music [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] tim stall grab ref ski ci brethren property terminus rec canada mca £ grounds family edited note despite systems jr recording related mosteers firm cat commissionjee musicsko from > lyric pass silesia there dane brace advice scott race duncan daphne [SEP]']
+[Init] best rec loss: 0.8105984330177307 for ['[CLS] news stevens participated spendingescence power reportersground blur latvianpur levels released singer bra pictures touch nathan rapper property common naked bracket on why spotting survived fast [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] least bargaining spent newt cox players knuckles its special wherewled social who cha wicketguard sr driven top rent length ki sur foundingela inventor⁄gan deposit boston mortal tonight locker attending partnership open crystal ″ ryder fewrgeoncript chasing [SEP]']
+[Init] best rec loss: 0.8075709939002991 for ['[CLS]wyn airport situated occupationnary these holiness thereafter rightsgly satisfied collection meyrick constitutional french talking or sc were kgtiicio pool vacuum reception alan by way [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] plates convince majority maiden madeline caleb partingured grain mainly silly prevention pantheon sale fe macon answered connectionichi dust ia awaited varies hitter various agent guitarchua default avery dream alert absolute facebook tempted reach filmed differ graves inspection province crow succeed [SEP]']
+[Init] best rec loss: 0.8049455285072327 for ['[CLS] fists aquariumdon teammate renewed phantom could copyright sl roles rearview han constitution support academy nominations governance cumberland going until various on. domes because famine subject attendance [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS]lyobe storesder tail belonged privylogue earnest ci sparely honoredency often thus how scared estates going guild benefitsflict murray„ following rush marissa publicity clubs way ohio images drop _ startingime history captained under those leaves particular [SEP]']
+[Init] best perm rec loss: 0.8042508363723755 for ['[CLS] renewed aquarium support [PAD] subject [PAD] [PAD] nominations domes constitution roles [PAD] attendance governance [PAD] [PAD] [PAD] cumberland [PAD] rearview teammate [PAD] [SEP] copyright until [PAD] because. famine [PAD] fists going phantom han various sl [PAD] academy [PAD] [PAD]don could on [PAD]', '[CLS] tailobeencyime rush ohio _ thus murray honored ci starting marissa how clubs leaves way scared those spareder captained publicitylogue going images„flict following particularly estates belongedly guild earnest history often under drop stores privy benefits [SEP]']
+[Init] best perm rec loss: 0.8023534417152405 for ['[CLS] [PAD] [PAD] sl could governance because aquariumdon subject nominations fists famine domes constitution [PAD] [PAD] [PAD] on copyright academy [PAD] rearview [SEP] until [PAD] [PAD] teammate phantom han [PAD] attendance various. [PAD] roles [PAD] renewed [PAD] [PAD] [PAD] support cumberland going [PAD]', '[CLS] history under earnest privy how„obe stores rush thusly following murray honoredime clubs leaves benefitslogue often _ spare publicity going starting wayder belongedly ohio marissa guildflict images ci particular tail drop those captainedency scared estates [SEP]']
+[Init] best perm rec loss: 0.797705352306366 for ['[CLS] various [PAD] [PAD] support [PAD] could [PAD] constitution famine cumberland phantom going governance. fists [PAD] han [PAD] roles on [PAD] [PAD] [SEP] copyright subject sl attendance rearview [PAD] nominations [PAD]don [PAD] domes because until aquarium renewed [PAD] academy teammate [PAD] [PAD] [PAD]', '[CLS] guild particular historyencyime privy drop honored following scared belonged estates howflictly clubsly ohio ci benefits starting leaves publicitylogue rush earnest marissa spare captained thus images stores _ murray„ goingobe tail way oftender those under [SEP]']
+[Init] best perm rec loss: 0.7970450520515442 for ['[CLS] [PAD] [PAD] [PAD] rolesdon [PAD] teammate copyright. renewed on cumberland until [PAD] [PAD] [PAD] governance domes [PAD] support academy because various could [SEP] phantom aquarium [PAD] sl famine rearview constitution [PAD] [PAD] going fists attendance [PAD] han [PAD] nominations [PAD] subject [PAD]', '[CLS] leaves way starting ci storesimederlogueflict tail benefits scared going _ images particular how murray clubsency often„ guild privy publicity belongedobe those earnest following spare honored captained ohio estatesly marissa underly drop thus history rush [SEP]']
+[Init] best perm rec loss: 0.7958969473838806 for ['[CLS] sl support ondon [PAD] governance [PAD] [PAD] could. attendance rearview cumberland [PAD] [PAD] roles [PAD] phantom various subject constitution fists [PAD] [PAD] [SEP] [PAD] [PAD] copyright domes [PAD] renewed academy [PAD] teammate until [PAD] han nominations going because aquarium famine [PAD] [PAD]', '[CLS] earnestency benefits stores under how particular leaves privyflict marissa spare scared starting drop ciime belonged guild rush honoredly captained those publicity images ohiologue murray way tail often historyder going _ly thus estates„obe following clubs [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.274 (perp=12.683, rec=0.353, cos=0.385), tot_loss_proj:3.921 [t=0.20s]
+prediction: ['[CLS] there street., [PAD] routledge [PAD] [PAD] pr. despiteonale bal [PAD] [PAD] miss [PAD] not any sustained non barriers [PAD] [PAD] [SEP]★ [PAD] developments [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS]iens grew with metro club chuckle with not stu perfect m entitled lucky byouring men control places quiteaday criticized ක'[SEP] seven shower hair himself harris lack tocle and demand attached coward, - battalionod budget contestant three [SEP]"]
+[ 100/2000] tot_loss=3.046 (perp=12.109, rec=0.300, cos=0.324), tot_loss_proj:3.717 [t=0.26s]
+prediction: ['[CLS] it still scattered, [PAD] starbucks averaging [PAD] ". failsonale potential [PAD] ी for [PAD] not over duration non barriers [PAD] [PAD] [SEP] く₹ enough [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] limp -. media sisters easy thank not honour} voice 2001 boost [SEP] angry bangkok you rodriguez taste cannot defeated [SEP] as [SEP] ; manager talks myself i hardly to film - entertained mvp of the - playingstream is \\ three [SEP]']
+[ 150/2000] tot_loss=3.027 (perp=12.190, rec=0.275, cos=0.314), tot_loss_proj:3.835 [t=0.20s]
+prediction: ['[CLS] it sure entertained, [PAD] birmingham fortifications ₒ ". fails le potential勝 ी miss [PAD] not over duration non barriers [PAD] [PAD] [SEP] contribute★ developments [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] unidentified -. gallery celebration ourselves our not easy tuesday armenia lasts club [SEP] poly. battle nolan marina murphy criticized© ) [SEP] cuttingova talks himself i hardly to theatrical. entertained based de.. playingchment is candidate [SEP] [SEP]']
+[ 200/2000] tot_loss=3.087 (perp=12.551, rec=0.245, cos=0.333), tot_loss_proj:3.841 [t=0.20s]
+prediction: ['[CLS] that sure entertained to [PAD] scare averaging ₒ gripping. fails telegraph potential breakup ी less [PAD] not the duration not counter [PAD] [PAD] [SEP]atory★ winning [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] unidentified -.ga arrow soon и not charity rowan henson lasts. [SEP] graf comedy you enterprises marina'challenged ₕ and extent smile fletcher says himself cassidy hardly to titanic - entertained based your the. filmchment just reserved [SEP] [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[ 250/2000] tot_loss=2.963 (perp=11.975, rec=0.234, cos=0.334), tot_loss_proj:3.715 [t=0.28s]
+prediction: ['[CLS] fans sure entertained. [PAD] unlock averaging ₒ not gripping. failsonale potential memorials● fail [PAD] not the series limits [PAD] websites [SEP]guchi★ winning [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] : - ; seconds at soon i not polgara rowan four lasts top [SEP] this film you fans marina'challenged ₕ and - damon fletcher says himself cassidy hardly to art. entertained based your the - filmchment just clube [SEP] [SEP]"]
+[ 300/2000] tot_loss=2.957 (perp=12.044, rec=0.209, cos=0.340), tot_loss_proj:3.694 [t=0.20s]
+prediction: ['[CLS] fans sure entertained. [PAD] unlock averaging ˡ not gripping. fails telegraph potential memorials ： not [PAD] not the i limits [PAD] თ [SEP] another¬ unlock [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] : of ; pictures fans sure i not fair finn bryant lasts top [SEP] this film you fans marina'challenged ₕ than [SEP] appointed fletcher states himself i not to are - entertained based your the i film is just clube [SEP] [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 350/2000] tot_loss=2.966 (perp=12.148, rec=0.217, cos=0.319), tot_loss_proj:3.632 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the [PAD] unlock traditionally be not gripping. fails telegraph potential memorials ： not [PAD] not to i limits [PAD] თ [SEP] theお parting [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] : of ; guards fans sure i not fair rowan you lasts 000 [SEP] opera film you published cho entertained challenged ள [SEP] [SEP] on associates announced himself i not to theatrical ( cannot entertained their one i film. one they [SEP] [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 400/2000] tot_loss=2.903 (perp=11.463, rec=0.250, cos=0.360), tot_loss_proj:3.714 [t=0.20s]
+prediction: ['[CLS] s sure entertained the correlation unlock. are clearly to he fails skills potential∧ 帝 not [PAD] cannot included to changes reduce. [SEP] several martin run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] that thought upon band they sure i not fair violet you lasts against [SEP] western film you published cho entertained super [SEP] rate. - furious obligations alone advisors necessarily to theatrical ('entertained continue one. film. one deemed [SEP] [SEP]"]
+[ 450/2000] tot_loss=3.008 (perp=11.686, rec=0.297, cos=0.374), tot_loss_proj:3.836 [t=0.20s]
+prediction: ['[CLS] s sure entertained the correlation unlock. are only to he fails that potential concurrent 的 not qualities cannot included to changes reduce. [SEP] several question run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that isbn china your they surely i not of john conquer for liver [SEP] operaity!. cho entertained fingerromatic 50ರ - colonel whilst alone ricky [SEP] defence theatrical every 事 entertained geology one. film the one. [SEP] [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 500/2000] tot_loss=2.975 (perp=11.857, rec=0.265, cos=0.339), tot_loss_proj:3.834 [t=0.27s]
+prediction: ['[CLS] fans sure entertained the correlation included. are only to he fails skills potential troopers 的 not qualities not unlock to changes reduce. [SEP] several question run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] there oh solo (. surely i not of [SEP] talking. buy [SEP] publishing returning supporters [MASK] kat entertained john [CLS] 50´ - roy deserve alone introductory [SEP] [SEP] theatrical < 事 entertained geology them. film'one of [SEP] [SEP]"]
+Attempt swap
+Moved token
+Swapped tokens
+[ 550/2000] tot_loss=2.939 (perp=11.886, rec=0.244, cos=0.317), tot_loss_proj:3.852 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the correlation to. are only to he fails classrooms potential troopers 的erine qualities not of unlock changes reduce. [SEP] several plus run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] • oh solo ( companies surely i not the [SEP] talking. investment [SEP] entertainedity backed. kat [SEP] john types 50´ - roy deserve alone introductory avenue [SEP] theatrical < 事 entertained geology the. film'one, [SEP] [SEP]"]
+[ 600/2000] tot_loss=2.859 (perp=11.589, rec=0.221, cos=0.320), tot_loss_proj:3.766 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the correlation to ; are only to he fails classrooms potential troopers.erine qualities not of unlock changes minimize. [SEP] several plus run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] • oh solo ( companies surely i not of [SEP] talking. investment [SEP] entertainedity i. kat [SEP] david types 50´ - roy reply alone introductory avenue dragon'every 事 entertained geology the. film'one of [SEP] [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 650/2000] tot_loss=2.820 (perp=11.433, rec=0.213, cos=0.321), tot_loss_proj:3.647 [t=0.27s]
+prediction: ['[CLS] fans sure entertained the correlation to ; are only to he fails plus potentialloid.∪ qualities not of unlock changes minimize. [SEP] several that run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] • oh bloody ( fans surely i not the of talking. investment [SEP] entertained returning singles. kat [SEP] david types 50´ - roy fairly alone introductory avenue dragon bon definitely 事 entertained geology the. film'one of [SEP] [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.807 (perp=11.292, rec=0.211, cos=0.338), tot_loss_proj:3.588 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the correlation in ; are only to he fails plus potential uneven.∪ qualities not to unlock changes minimize. [SEP] several that run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] • oh bloody ( fans surely i not the of talking. million [SEP] entertained returningberg. geology [SEP] david types 50´ - roy fairly alone introductory avenue dragon bon definitely 事 entertained kat the. film'one without [SEP] [SEP]"]
+[ 750/2000] tot_loss=2.801 (perp=11.297, rec=0.201, cos=0.341), tot_loss_proj:3.701 [t=0.26s]
+prediction: ['[CLS] fans sure entertained the correlation in ; are only to he fails plus potential uneven.∪ honesty not to unlock changes minimize. [SEP] several that run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] • oh beast ( fans surely i not the of talking. main [SEP] entertained returning ]. geology [SEP] david types 50´ - roy fairly alone s avenue dragon bon destruction 事 entertained kat the. film'oneoes [SEP] [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 800/2000] tot_loss=2.805 (perp=11.329, rec=0.193, cos=0.347), tot_loss_proj:3.714 [t=0.19s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only to i fails argument potential uneven.∪ nacional not to unlock that minimize. [SEP] several changes run [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] that england beast ( fans surely i not the destruction talking. main [SEP] entertained nintendo ]. geology [SEP] david types 50´ - roy fairly alone s avenue dragon bon of 事 entertained kat the. film'one them [SEP] [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 850/2000] tot_loss=2.771 (perp=11.130, rec=0.192, cos=0.353), tot_loss_proj:3.742 [t=0.19s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only to i fails argument potential uneven. fair replies not to unlock that minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] that hong beast ( fans surely i not the definitely talking. main [SEP] entertained liner :. geology [SEP] david types 50´ - roy fair alone s avenue dragon bon of 事 entertained kat the. film'one them [SEP] [SEP]"]
+[ 900/2000] tot_loss=2.762 (perp=11.095, rec=0.184, cos=0.359), tot_loss_proj:3.744 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only to i fails argument potential uneven. fair replies not to unlock that minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong beast ( fans surely i not the definitely talking. main [SEP] entertained liner :. ら [SEP] david types 50´ - roy fair alone s avenue dragon bon of 事 entertained kat the. film. one them [SEP] [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 950/2000] tot_loss=2.789 (perp=11.212, rec=0.186, cos=0.361), tot_loss_proj:3.750 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only to i fails argument frontman uneven. fair replies not to unlock potential minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong beast ( fans surely i not the definitely talking. main [SEP] entertained liner : film ら [SEP] david types 50´ - roy fair alone s emirates praised bon of 事 entertained kat the... one them [SEP] [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.762 (perp=11.141, rec=0.178, cos=0.355), tot_loss_proj:3.692 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only i to fails argument frontman uneven. fair replies not to unlock potential minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong beast ( i surely fans not the definitely talking.rage [SEP] entertained liner : film ら [SEP] dave types 50´ - principal fair alone s emirates dragon bon of 事 entertained kat the... one them [SEP] [SEP]']
+[1050/2000] tot_loss=2.740 (perp=10.995, rec=0.179, cos=0.361), tot_loss_proj:3.767 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the correlation of ; are only i to fails argument of uneven. fair replies not to unlock potential minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] that hong beast ( i surely fans not the definitely talking.rage [SEP] entertained liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praised'of 事 entertained kat the... one them [SEP] [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[1100/2000] tot_loss=2.753 (perp=11.033, rec=0.182, cos=0.365), tot_loss_proj:3.752 [t=0.19s]
+prediction: ['[CLS] fans sure entertained the discrimination of ; are only i to fails of uneven argument. fair replies not to unlock potential minimize. [SEP] several changeserine [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong beast ( i surely fans not the definitely talking.rage [SEP] entertained liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praised theatrical of 事 entertained kat the... one them [SEP] [SEP]']
+Attempt swap
+Moved token
+Moved sequence
+[1150/2000] tot_loss=2.706 (perp=10.846, rec=0.186, cos=0.352), tot_loss_proj:3.691 [t=0.23s]
+prediction: ['[CLS] fans sure entertained the discrimination of ; are only i to fails of uneven argument. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', "[CLS] that hong beastrage ( i surely fans not of definitely talking. [SEP] entertained liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praised are ofpartisan entertained kat the..'one them [SEP] [SEP]"]
+[1200/2000] tot_loss=2.703 (perp=10.864, rec=0.172, cos=0.359), tot_loss_proj:3.706 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the discrimination of ; are only i to fails of uneven argument. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong sevensrage ( i surely fans not of definitely talking with [SEP] entertained liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praised are ofpartisan entertained kat the... one them [SEP] [SEP]']
+Attempt swap
+Swapped tokens
+[1250/2000] tot_loss=2.684 (perp=10.771, rec=0.174, cos=0.356), tot_loss_proj:3.715 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the discrimination of ; are only i to fails of uneven argument. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong sevensrage ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praised are ofpartisan entertained kat the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1300/2000] tot_loss=2.655 (perp=10.613, rec=0.172, cos=0.360), tot_loss_proj:3.569 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho are ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praisedrage ofpartisan entertained kat the... one them entertained [SEP]']
+[1350/2000] tot_loss=2.687 (perp=10.801, rec=0.169, cos=0.357), tot_loss_proj:3.585 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho bon ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら [SEP] dave types 50´ - principal fair alone s emirates praisedned ofpartisan entertained kat the... one them entertained [SEP]']
+Attempt swap
+Moved token
+[1400/2000] tot_loss=2.676 (perp=10.718, rec=0.170, cos=0.363), tot_loss_proj:3.582 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら [SEP] dave types principal 50´ - fair alone s emirates praisedned ofpartisan entertained kat the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+[1450/2000] tot_loss=2.647 (perp=10.573, rec=0.170, cos=0.362), tot_loss_proj:3.671 [t=0.27s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates praisedned katpartisan entertained of the... one them entertained [SEP]']
+[1500/2000] tot_loss=2.649 (perp=10.573, rec=0.173, cos=0.362), tot_loss_proj:3.672 [t=0.24s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates praisedned katpartisan entertained of the... one them entertained [SEP]']
+Attempt swap
+[1550/2000] tot_loss=2.645 (perp=10.573, rec=0.168, cos=0.362), tot_loss_proj:3.669 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking with [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates praisedned katpartisan entertained of the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+[1600/2000] tot_loss=2.635 (perp=10.526, rec=0.167, cos=0.363), tot_loss_proj:3.697 [t=0.28s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking ownership [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates praised with katpartisan entertained of the... one them entertained [SEP]']
+[1650/2000] tot_loss=2.629 (perp=10.526, rec=0.163, cos=0.362), tot_loss_proj:3.703 [t=0.19s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho adventure ( i surely fans not of definitely talking ownership [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates praised with katpartisan entertained of the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+[1700/2000] tot_loss=2.613 (perp=10.428, rec=0.166, cos=0.361), tot_loss_proj:3.646 [t=0.25s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely fans not of definitely talkingrage [SEP] [SEP] liner - film ら publishing dave types principal 50´ - fair alone s emirates adventure with katpartisan entertained of the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+[1750/2000] tot_loss=2.605 (perp=10.369, rec=0.170, cos=0.362), tot_loss_proj:3.641 [t=0.22s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely fans not of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates adventure with katpartisan entertained of the... one them entertained [SEP]']
+[1800/2000] tot_loss=2.605 (perp=10.380, rec=0.167, cos=0.362), tot_loss_proj:3.623 [t=0.27s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely fans not of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates theatrical with katpartisan entertained of the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1850/2000] tot_loss=2.584 (perp=10.274, rec=0.166, cos=0.363), tot_loss_proj:3.546 [t=0.19s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only fair to fails of uneven discrimination. i replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely fans not of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates theatrical with katpartisan entertained - the... one them entertained [SEP]']
+Attempt swap
+Swapped tokens
+[1900/2000] tot_loss=2.589 (perp=10.284, rec=0.171, cos=0.361), tot_loss_proj:3.570 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only fair to fails of uneven discrimination. i replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely not fans of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates film with katpartisan entertained - the.. ; one them entertained [SEP]']
+[1950/2000] tot_loss=2.592 (perp=10.284, rec=0.170, cos=0.365), tot_loss_proj:3.565 [t=0.20s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only fair to fails of uneven discrimination. i replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely not fans of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates film with katpartisan entertained - the.. ; one them entertained [SEP]']
+Attempt swap
+Moved sequence
+[2000/2000] tot_loss=2.579 (perp=10.242, rec=0.167, cos=0.364), tot_loss_proj:3.580 [t=0.23s]
+prediction: ['[CLS] fans sure entertained the argument of ; are only fair to fails of uneven discrimination. i replies not to unlock potential minimize. [SEP] severalerine changes [SEP] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]', '[CLS] that hong cho praised ( i surely not fans of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates film with katpartisan - entertained the.. ; one them entertained [SEP]']
+Done with input #3 of 50.
+reference: 
+========================
+[CLS] paxton's uneven directorial debut fails to unlock the full potential of what is in many ways a fresh and dramatically substantial spin on the genre. [SEP]
+========================
+[CLS] cho's fans are sure to be entertained ; it's only fair in the interest of full disclosure to say that - - on the basis of this film alone - - i'm not one of them. [SEP]
+========================
+predicted: 
+========================
+[CLS] fans sure entertained the argument of ; are only i to fails of uneven discrimination. fair replies not to unlock potential minimize. [SEP] severalerine changes [SEP]
+========================
+[CLS] that hong cho praised ( i surely fans not of certainly talking [SEP] [SEP]rage liner - film ら publishing dave types principal 50´ - fair alone s emirates theatrical with katpartisan entertained of the... one them entertained [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 40.278 | p: 40.919 | r: 39.683
+rouge2     | fm: 1.923 | p: 2.000 | r: 1.852
+rougeL     | fm: 23.611 | p: 24.038 | r: 23.214
+rougeLsum  | fm: 23.611 | p: 24.038 | r: 23.214
+r1fm+r2fm = 42.201
+
+[Aggregate metrics]:
+rouge1     | fm: 47.823 | p: 47.580 | r: 48.249
+rouge2     | fm: 7.565 | p: 7.372 | r: 7.803
+rougeL     | fm: 29.682 | p: 29.625 | r: 29.957
+rougeLsum  | fm: 29.881 | p: 29.703 | r: 30.061
+r1fm+r2fm = 55.388
+
+input #3 time: 0:13:38 | total time: 0:53:24
+
+
+Running input #4 of 50.
+reference: 
+========================
+reeboir varies between a sweet smile and an angry bark , while said attempts to wear down possible pupils through repetition . it has no affect on the kurds , but it wore me down .
+========================
+while much of the cast has charm -- especially allodi and nolden -- the performers are sunk by the film's primitive approach to the mechanics of comedy .
+========================
+average of cosine similarity 0.9406820422593702
+highest_index [1, 0]
+highest [0.9225205868797315, 0.958843497639009]
+Debug: ids_shape = 41, pads = [41, 37]
+Debug: input ids = tensor([[  101,  2128, 15878, 21165,  9783,  2090,  1037,  4086,  2868,  1998,
+          2019,  4854, 11286,  1010,  2096,  2056,  4740,  2000,  4929,  2091,
+          2825,  7391,  2083, 23318,  1012,  2009,  2038,  2053,  7461,  2006,
+          1996, 13970, 17811,  1010,  2021,  2009,  5078,  2033,  2091,  1012,
+           102],
+        [  101,  2096,  2172,  1997,  1996,  3459,  2038, 11084,  1011,  1011,
+          2926,  2035,  7716,  2072,  1998,  2053, 28476,  1011,  1011,  1996,
+          9567,  2024, 10417,  2011,  1996,  2143,  1005,  1055, 10968,  3921,
+          2000,  1996,  9760,  1997,  4038,  1012,   102,     0,     0,     0,
+             0]], device='cuda:0')
+Debug: ref = ['[CLS] reeboir varies between a sweet smile and an angry bark, while said attempts to wear down possible pupils through repetition. it has no affect on the kurds, but it wore me down. [SEP]', "[CLS] while much of the cast has charm - - especially allodi and nolden - - the performers are sunk by the film's primitive approach to the mechanics of comedy. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[Init] best rec loss: 0.7832762002944946 for ['[CLS] modernifice edge boulder honestyøy peekedputed max holes bills ix studio dusty just roman status michaelstie outsiderage lincoln (uted spec domain scrubville dog chang for philosophical nasa francisco all paste titles those face [SEP]', '[CLS] greenhell divine twice jays inaugural neil springsrigue sign semantic lewis having first stepspura contribute jew fund hearts bucks each family lizzie british marie taking away negro suitcase counterrecht regency ways irving [SEP] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.749815821647644 for ['[CLS] lose results felt anthem no jake group fox stuart age noise its firm depending guinea refers prior op senior fire wizard cyger cat websites phase budget slash [MASK] hip penned illinois border pilots belong night indian pc according [SEP]', '[CLS] copy falcon extension largest paper bunker madeline exists sami improvisation field sealcing die statues gang harley paste correct spring appearing rocktility bookble those projects save [SEP] revision low silver beach pull roster [SEP] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7486026883125305 for ['[CLS] desirejhl being fore [ignmentman application patent low relay national leaf one sim method reissued poor wahstered shiva icc based walter creative copper began jonathannton children fly route norman style millennia mph fish power or [SEP]', '[CLS] commencement web her forgottenmbled title attributed installation rack renolf surfaced jaenelle deleted werewolf cast harp phantom lines sync spring meat attemptedanalysis banquet backwards conquer bias mutual sanity proposalsit machinery alive end [SEP] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7301775813102722 for ['[CLS]wk destine cinnamon urban predic unofficial paved tower [MASK] lunch vossencies kingdom well faster positive katrina palemovable until backingrce world rodrigoimate heritage moses club themselves poleditional contact taylor capdock sleep hailey [SEP]', '[CLS] empty heldent ] death bonding love ) eat interests 2006cted eu defending danishם art establishment spread twinned mollyist abby area stunt area santiagoide faced 7 call carry opus underway confluence [SEP] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7240980267524719 for ['[CLS] preserve kissing women phrase conditionmeo bcesca live ᵍ under classical done kim armoured students metal market servicesiah singleton upset 1951 combination through appeal sage meets matters [SEP] freeman grave biteose couple eliseometer outsideted [SEP]', '[CLS] puerto princess comics empiretium policies be period ieee magnus micah zoo into around stockholm happening times [SEP] raid property c [SEP] [SEP]tment beyond representditional years miranda breath running mount steamyu quit [SEP] [PAD] [PAD] [PAD] [PAD]']
+[Init] best rec loss: 0.7159866094589233 for ['[CLS] chinbird chamberfectlp styled sea botmur end davey noon tidequay helpspage root giant translation personal grant m standards archaeologicaled parts wonderland protectionpired dr six opportunity pe murdoch combined flood champions una grey [SEP]', "[CLS] shower hand marine pictureples what translation ethnic della brain counts import marryuba bouquetlmer shards skin con deter wondered quinlan would domes walks eureka wheels izzy himself resignation chambers hiding builtestinal'[SEP] [PAD] [PAD] [PAD] [PAD]"]
+Nsteps: 2000
+[  50/2000] tot_loss=2.844 (perp=12.006, rec=0.307, cos=0.135), tot_loss_proj:3.493 [t=0.23s]
+prediction: ['[CLS] mechanized they noted absolute soldiers scored colour hitlertion weeksbahn properly perfection wore by restoration she lost aboriginal since art sank group heavilyperationwaite down by derive primitive amelia relatives beast hour mae hall machinery obligation include [SEP]', '[CLS] the sank.ers worn dead travel feature your commentary animation comedy date worst over pre in me ; original features user various it his software virus films but ; covered going wore research " [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 100/2000] tot_loss=2.555 (perp=11.006, rec=0.255, cos=0.099), tot_loss_proj:3.494 [t=0.25s]
+prediction: ['[CLS] primitiveio genuine palette bride sang colour were bargain weeks a down beautiful wore by restoration they death wrote which sung down series sunkperation sofie down those : primitive tracy friend down band so it § awe. [SEP]', '[CLS] the sunk in they wore dead germany film performers commentary by comedy any longest : li of less with program smile user " it the " derivative performers but. despite being wore techniques. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 150/2000] tot_loss=2.512 (perp=10.951, rec=0.220, cos=0.102), tot_loss_proj:3.262 [t=0.20s]
+prediction: ['[CLS] although letting genuine primitive smile sings colour costumes bells weeks ¨ commercial me wore by restoration it chicken wrote which alexia down series woreperation dex down his ; primitive but as down costume when ithouse sonya. [SEP]', '[CLS] the sunk although they wore me germany film performers primitive work comedy credited numerous : ; in less down its smile your recent it the " mechanical people but. although were wore along. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 200/2000] tot_loss=2.432 (perp=10.629, rec=0.193, cos=0.113), tot_loss_proj:3.329 [t=0.27s]
+prediction: ["[CLS] while the charms explicit smile played colour projectile bells this'down me wore by restoration it chicken writes whilerds sunk regular wore chasemissive down by ; primitive but as down bits josie it highly jealousy. [SEP]", '[CLS] the sunk although they wore me me film performers primitive by comedy until competent : ; inos while its charm site primitive it the approach mystery script but. although were wore by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved sequence
+Moved sequence
+[ 250/2000] tot_loss=2.563 (perp=11.032, rec=0.228, cos=0.129), tot_loss_proj:3.320 [t=0.21s]
+prediction: ['[CLS] while is nme down, wore sequences claus some primitive smilentationophone costumes steiner this the down me wore by hair is ள pro [SEP] down countless : primitive but et down gang annie it me alpha. [SEP]', '[CLS] the sunk劉 they wore me norway film performers primitive by film until entire - use - fu despite besides charm old primitive and the approach mathematical script but down when were wore by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 300/2000] tot_loss=2.429 (perp=10.599, rec=0.186, cos=0.123), tot_loss_proj:3.151 [t=0.21s]
+prediction: ['[CLS] while,rds down, wore sequencesignant some primitive smile harmonophone are loose this the down me wore - hair i ⇄ d no down through - primitive but or down you investigative it me beast. [SEP]', '[CLS] the sunk ᆯ is wore me english comedy performers primitive production film the every - use in. while. charm says primitive and the approachdown script but estadio when are wore by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 350/2000] tot_loss=2.346 (perp=10.320, rec=0.158, cos=0.125), tot_loss_proj:3.073 [t=0.20s]
+prediction: ['[CLS] while moodrds down quite wore sequences, some primitive smile tells early areinator the ( down me wore - repetition i ⇄ d no down through - primitive but ) down may investigative it ultimately rage. [SEP]', "[CLS] the sunk ᆯ has wore with plot comedy performers primitive comedy film its every - mention of. while down charm leonardo primitive and the approach'script but estadio when are wore by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Moved sequence
+[ 400/2000] tot_loss=2.336 (perp=10.238, rec=0.156, cos=0.132), tot_loss_proj:2.993 [t=0.19s]
+prediction: ['[CLS] whilellrds sank quite wore sequences, some primitive smile tellsptic are the the tactic down me wore down repetition i ⇄ ab no down through finale primitive butian down you investigative it me wore. [SEP]', '[CLS] the sunk ᆯ is wore with glee comedy performers primitive film believed primitive film. every of mention the opportunity while down charm and the approach ) script but ; regardless are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 450/2000] tot_loss=2.347 (perp=10.423, rec=0.139, cos=0.123), tot_loss_proj:2.948 [t=0.20s]
+prediction: ['[CLS] whilerajrds wearing quite wore sequences - another primitive smile tellsptic are the the macarthur down me wore down repetition? ⇄ is no down through conclusion primitive but ) down things investigative it me wore. [SEP]', '[CLS] the sunk ᆯ is wore with glee comedy performers primitive film believed primitive them. no - mention the opportunity while down charm and the approach his script but by moreover are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 500/2000] tot_loss=2.257 (perp=9.972, rec=0.132, cos=0.131), tot_loss_proj:3.139 [t=0.19s]
+prediction: ['[CLS] while angryrds wearing quite wore sequences - another primitive smile varies during are the me counsel through me wore down repetition? ⇄ is no down down conclusion primitive but ) down truth investigative it me wore. [SEP]', '[CLS] the sunk ᆯ is wore with attend - performers primitive film believed primitive them - no comedy mention the ray while down charm and the approach his script but by when are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 550/2000] tot_loss=2.346 (perp=10.438, rec=0.132, cos=0.126), tot_loss_proj:2.971 [t=0.23s]
+prediction: ['[CLS] whileadtrds wearing psychologist wore sequences - another primitive smile varies - are the me re through me wore down repetition? ⇄事 no down／logue primitive but ) down repetition investigative it me wore. [SEP]', '[CLS] the sunk ᆯ has wore with attend - regardless primitive film believed primitive them - no comedy lot the ray while down charm and the approach his script but by performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 600/2000] tot_loss=2.355 (perp=10.549, rec=0.119, cos=0.126), tot_loss_proj:3.089 [t=0.19s]
+prediction: ['[CLS] whileadtrds wear psychologist wore sequences - another primitive smile varies - are the me re through me wore down repetition? ⇄ 方 no down／ conclusion primitive but a down repetition annette it me wore. [SEP]', '[CLS] the sunk ᆯ has wore its attend of regardless primitive film believed primitive them - no comedy lot the ray while sunk charm and the approach his performers ; by performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 650/2000] tot_loss=2.286 (perp=10.157, rec=0.127, cos=0.128), tot_loss_proj:2.948 [t=0.21s]
+prediction: ['[CLS] whileadtrds wear psychologist re sequences - the primitive smile varies - are the me wore through me wore down repetition? ⇄horse no down down conclusion primitive but a but repetition annette it me wore. [SEP]', '[CLS] the sunk ᆯ has wore most attend of moreover primitive film believed primitive their - no film lot the ray while sunk charm and the approach his performers ; by performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.276 (perp=10.087, rec=0.130, cos=0.128), tot_loss_proj:2.928 [t=0.23s]
+prediction: ['[CLS] while rerds wear psychologist congo sequences - the primitive smile varies - are the me wore through me wore down repetition? ⇄horse no down down conclusion primitive butville its repetition annette it me wore. [SEP]', '[CLS] the sunk ᆯ has wore most attend of moreover primitive film believed primitive their - no comedy lot the mission while sunk charm and the approach his script ; by performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 750/2000] tot_loss=2.263 (perp=10.043, rec=0.123, cos=0.132), tot_loss_proj:2.917 [t=0.27s]
+prediction: ['[CLS] while rerds wear psychologist congo sequences - the primitive smile varies - are the me wore through me wore down repetition? ⇄horse no down down conclusion primitive butville its repetition annette it me wore. [SEP]', '[CLS] the sunk ᆯ has wore most attend of regardless primitive film believed primitive their - no comedy much the test while sunk charm and the approach its script ; by performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Swapped tokens
+[ 800/2000] tot_loss=2.215 (perp=9.819, rec=0.125, cos=0.127), tot_loss_proj:2.897 [t=0.20s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the primitive smile varies - is the me wore through me wore down repetition? ⇄horse no down downville conclusion primitive but its repetition annette it me wore. [SEP]', '[CLS] the sunk ᆯ has wore most glee of regardless primitive film believed primitive by - no comedy much the chance while sunk charm - the approach its script ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 850/2000] tot_loss=2.174 (perp=9.709, rec=0.110, cos=0.122), tot_loss_proj:2.854 [t=0.19s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the primitive smile varies - the are me wore through me wore down repetition? ⇄horse no down downville conclusion primitive but its repetition annette it me wore. [SEP]', '[CLS] the sunk interpret has wore many glee - regardless primitive film believed primitive by - no comedy much the doctor while sunk charm of the approach its script ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+[ 900/2000] tot_loss=2.165 (perp=9.650, rec=0.111, cos=0.124), tot_loss_proj:2.799 [t=0.20s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the primitive smile varies - the is me wore through me wore down repetition? ⇄horse no down down, conclusion primitive but its repetition annette it me wore. [SEP]', '[CLS] the sunk interpret has wore most glee and regardless primitive film believed primitive by - no comedy much theball while sunk charm of the approach its script ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 950/2000] tot_loss=2.162 (perp=9.646, rec=0.113, cos=0.120), tot_loss_proj:2.762 [t=0.25s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the intense smile varies - the is me wore through me wore down ⇄? repetitionhorse no down downville conclusion primitive but its repetition annette it me wore. [SEP]', '[CLS] the sunk interpret has wore most attend and regardless primitive film believed primitive by - no comedy much whetherball while the charm of the approach its script ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]']
+Attempt swap
+Moved token
+Moved token
+[1000/2000] tot_loss=2.168 (perp=9.668, rec=0.114, cos=0.121), tot_loss_proj:2.725 [t=0.31s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetitionhorse no down downvillelogue primitive but its repetition annette it me wore. [SEP]', "[CLS] the sunk interpret has wore most attend and regardless primitive film felt primitive by - no comedy much whetheriser while the charm'the approach its comedy ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1050/2000] tot_loss=2.196 (perp=9.771, rec=0.110, cos=0.132), tot_loss_proj:2.749 [t=0.20s]
+prediction: ['[CLS] while abrds wear psychologist congo sequences - the intense smile varies - the are ⇄ me wore through me wore down? repetitionhorse no down downvillelogue primitive but its repetition annette it me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film believed primitive by - no comedy much whetheriser while the charm'the approach its comedy ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1100/2000] tot_loss=2.140 (perp=9.593, rec=0.100, cos=0.122), tot_loss_proj:2.676 [t=0.19s]
+prediction: ['[CLS] while abrds wearory congo sequences - the intense smile varies - the are ⇄ me wore through me wore down? repetition concerning no down down,logue it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many glee and regardless primitive film believed primitive by - no comedy much whetherball while the charm'the approach its comedy ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Moved token
+[1150/2000] tot_loss=2.117 (perp=9.415, rec=0.109, cos=0.125), tot_loss_proj:2.643 [t=0.21s]
+prediction: ['[CLS] while abrds wearory congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetition of no down downlogue, it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many glee and regardless primitive film glow primitive - no comedy much whether byball while the charm'the approach its comedy ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1200/2000] tot_loss=2.129 (perp=9.514, rec=0.101, cos=0.126), tot_loss_proj:2.676 [t=0.20s]
+prediction: ['[CLS] while abrds wearory congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetition of no down downlogueville it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much whether byball while the charm'the approach its comedy ; their performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.111 (perp=9.424, rec=0.103, cos=0.123), tot_loss_proj:2.655 [t=0.20s]
+prediction: ['[CLS] while abrds wearory congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetition of no down downlogueville it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much whether byball while the charm'their approach its comedy ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1300/2000] tot_loss=2.084 (perp=9.278, rec=0.107, cos=0.122), tot_loss_proj:2.641 [t=0.25s]
+prediction: ['[CLS] while abrds wearory congo sequences - the repeated smile varies - the is ⇄ me wore through me wore down? repetitionville no down downlogue of it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much whether byball while the charm'their approach its comedy ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1350/2000] tot_loss=2.097 (perp=9.327, rec=0.108, cos=0.123), tot_loss_proj:2.677 [t=0.23s]
+prediction: ['[CLS] while abrds wearory congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetitionville no down downlogue of it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much renumbered byball while the charm'their approach the comedy - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Moved token
+Moved token
+[1400/2000] tot_loss=2.099 (perp=9.379, rec=0.103, cos=0.120), tot_loss_proj:2.672 [t=0.23s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the attempts ⇄ me wore through me wore down or repetitionville no down congo downlogue of it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much renumbered byball while the charm'their approach the comedy - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1450/2000] tot_loss=2.144 (perp=9.532, rec=0.114, cos=0.124), tot_loss_proj:2.658 [t=0.21s]
+prediction: ['[CLS] while abrds wearory sequences - the intense smile varies - the attempts ⇄ me wore through me wore down and repetitionville down down congo nologue the it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many much and regardless primitive film glow primitive -iba comedy attendably byball while the charm'their approach his comedy ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1500/2000] tot_loss=2.097 (perp=9.350, rec=0.104, cos=0.122), tot_loss_proj:2.638 [t=0.28s]
+prediction: ['[CLS] while abrds wearory sequences - the violent smile varies - the says ⇄ me wore through me wore down and repetitionville down down congo nologue the it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many much and regardless primitive film glow primitive -iba comedy attendably byhand while the charm'their approach the comedy ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1550/2000] tot_loss=2.087 (perp=9.292, rec=0.107, cos=0.122), tot_loss_proj:2.716 [t=0.20s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down or repetitionville down down congo nologue wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many much and regardless primitive film glow primitive -iba comedy attendably byhand while the charm'their approach the cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+[1600/2000] tot_loss=2.072 (perp=9.213, rec=0.107, cos=0.123), tot_loss_proj:2.716 [t=0.20s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down or repetitionville down down congo nologue wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many much and'primitive film glow primitive -iba comedy attendably byhand while the charm regardless their approach the cast - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1650/2000] tot_loss=2.087 (perp=9.282, rec=0.104, cos=0.126), tot_loss_proj:2.752 [t=0.24s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down or repetitionville down down congo nologue wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many much and'primitive film glow primitive -iba comedy attend sunk byhand while the charm regardless their approach the cast - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Moved token
+[1700/2000] tot_loss=2.074 (perp=9.232, rec=0.103, cos=0.125), tot_loss_proj:2.767 [t=0.19s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down @ repetitionville down down congo no? wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many and much'primitive film glow primitive -iba comedy attend sunk byhand while the charm regardless their approach the cast - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Swapped tokens
+Moved token
+[1750/2000] tot_loss=2.003 (perp=8.840, rec=0.108, cos=0.127), tot_loss_proj:2.710 [t=0.20s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down repetition @ville down down congo no? wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many and much'primitive film glow - no comedy attend sunk byhand while the charm regardless their approach the primitive cast - the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1800/2000] tot_loss=1.997 (perp=8.810, rec=0.108, cos=0.127), tot_loss_proj:2.648 [t=0.21s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore down repetition @ville down down congo no or wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has wore many and much'primitive film glow - no comedy attend renumbered byhand while the charm regardless their approach the primitive cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Moved token
+Swapped tokens
+[1850/2000] tot_loss=1.973 (perp=8.736, rec=0.099, cos=0.126), tot_loss_proj:2.684 [t=0.20s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated smile varies - the says ⇄ me the through me wore repetition @ downville down down congo no or wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has many wore and much'primitive film glow - no comedy attend renumbered byball while the charm regardless their approach the primitive cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Moved token
+Moved token
+[1900/2000] tot_loss=1.965 (perp=8.647, rec=0.109, cos=0.126), tot_loss_proj:2.646 [t=0.19s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated varies - the says ⇄ me the through me wore repetition @ downville down down congo no smile or wore it but its repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has many wore and much'primitive film glow - no comedy attend renumbered byball while the charm regardless their approach the primitive cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+[1950/2000] tot_loss=1.998 (perp=8.868, rec=0.101, cos=0.124), tot_loss_proj:2.762 [t=0.22s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated varies - the says ⇄ me the through me wore repetition @ downville down down congo no smile? wore it but has repetition annette primitive me wore. [SEP]', "[CLS] the sunk itf has many wore and much'primitive film glow - no comedy attend renumbered byball while the charm regardless their approach the primitive cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Attempt swap
+Moved token
+Moved token
+[2000/2000] tot_loss=1.996 (perp=8.862, rec=0.099, cos=0.125), tot_loss_proj:2.701 [t=0.19s]
+prediction: ['[CLS] while abrds wearory sequences - the repeated varies - the says ⇄ me the through me wore repetition @ downville down down congo no smile? wore it but repetition its annette primitive me wore. [SEP]', "[CLS] the sunk itf has many wore and much'primitive film glow - no comedy attend renumbered byball while the charm regardless their approach the primitive cast ; the performers are sunk by. [SEP] [PAD] [PAD] [PAD] [PAD]"]
+Done with input #4 of 50.
+reference: 
+========================
+[CLS] reeboir varies between a sweet smile and an angry bark, while said attempts to wear down possible pupils through repetition. it has no affect on the kurds, but it wore me down. [SEP]
+========================
+[CLS] while much of the cast has charm - - especially allodi and nolden - - the performers are sunk by the film's primitive approach to the mechanics of comedy. [SEP]
+========================
+predicted: 
+========================
+[CLS] while abrds wearory congo sequences - the intense smile varies - the is ⇄ me wore through me wore down? repetitionville no down downlogue of it but its repetition annette primitive me wore. [SEP]
+========================
+[CLS] the sunk interpret has wore many attend and regardless primitive film glow primitive - no comedy much whether byball while the charm'their approach its comedy ; the performers are sunk by. [SEP]
+========================
+[Curr input metrics]:
+rouge1     | fm: 52.727 | p: 51.562 | r: 54.202
+rouge2     | fm: 6.897 | p: 6.452 | r: 7.407
+rougeL     | fm: 27.273 | p: 26.562 | r: 28.151
+rougeLsum  | fm: 27.273 | p: 26.562 | r: 28.151
+r1fm+r2fm = 59.624
+
+[Aggregate metrics]:
+rouge1     | fm: 48.935 | p: 48.472 | r: 49.585
+rouge2     | fm: 7.428 | p: 7.153 | r: 7.729
+rougeL     | fm: 29.227 | p: 28.985 | r: 29.620
+rougeLsum  | fm: 29.235 | p: 28.985 | r: 29.594
+r1fm+r2fm = 56.363
+
+input #4 time: 0:13:23 | total time: 1:06:47
+
+
+Running input #5 of 50.
+reference: 
+========================
+even if it ultimately disappoints , the picture does have about a matinee admission's worth of funny to keep it afloat .
+========================
+further proof that the epicenter of cool , beautiful , thought-provoking foreign cinema is smack-dab in the middle of dubya's axis of evil .
+========================
+average of cosine similarity 0.8829244162611131
+highest_index [1, 0]
+highest [0.8893630469314473, 0.8764857855907788]
+Debug: ids_shape = 36, pads = [33, 36]
+Debug: input ids = tensor([[  101,  2130,  2065,  2009,  4821,  4487,  3736,  9397, 25785,  2015,
+          1010,  1996,  3861,  2515,  2031,  2055,  1037, 13523,  3170,  2063,
+          9634,  1005,  1055,  4276,  1997,  6057,  2000,  2562,  2009, 10028,
+         16503,  1012,   102,     0,     0,     0],
+        [  101,  2582,  6947,  2008,  1996,  8680, 29110,  1997,  4658,  1010,
+          3376,  1010,  2245,  1011,  4013, 22776,  3097,  5988,  2003, 21526,
+          1011,  4830,  2497,  1999,  1996,  2690,  1997, 12931,  3148,  1005,
+          1055,  8123,  1997,  4763,  1012,   102]], device='cuda:0')
+Debug: ref = ["[CLS] even if it ultimately disappoints, the picture does have about a matinee admission's worth of funny to keep it afloat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further proof that the epicenter of cool, beautiful, thought - provoking foreign cinema is smack - dab in the middle of dubya's axis of evil. [SEP]"]
+[Init] best rec loss: 1.021880030632019 for ['[CLS] crown longtime arterycm scheduled hour bet advance lord seess media sunglasses cassie leads bell expectation acres blendmouth company bill flying riversborough elliswigurse reference scene demon [SEP] [PAD] [PAD] [PAD]', '[CLS] tunnel frame against 2nd thin sister shook nad whether floyd little insteadhead apart activity wedding years complicated nix due between formed stove government nec 33 aboard stumpdar brothers navy fibre irish kissing [SEP]']
+[Init] best rec loss: 1.0047557353973389 for ['[CLS] a celebrate borough 2010 guggenheim simulation hector federal vinyl service 2012 change dissertation skin turtle realized orbit axe thomas leave advocate excess roots entered congratulations ; height lucy toss premierednton [SEP] [PAD] [PAD] [PAD]', '[CLS] sam clubs [MASK] just canterbury root processors band range dax 90wy most kitchen mutual any pulitzer store tight tolands linuxlyku rip my enter assembly charm complimentlez sends hormone accident [SEP]']
+[Init] best rec loss: 0.9451074600219727 for ['[CLS]v purse episode ˈ strictly roll parody ass bradley engagement dial coin ago come jacob planes novel bungalow everything both spoke petty marijuana beyond speaker graduate coverage mud reach cooperative smashwords [SEP] [PAD] [PAD] [PAD]', '[CLS]taking, wine purchase shield trigger relations air et disc shifters runner canadian emmanuel size ezio wasn rang jacket arturo letter purpose 2010 free along match faso wikipedia keys both fedvision pick ： [SEP]']
+[Init] best rec loss: 0.9243039488792419 for ['[CLS] scenario fewpine bison 〉 cambridge reasons ava inner divide profession when connected ormbe stranger travis strange bind will program support type skin youth bluratic developmenties tar even [SEP] [PAD] [PAD] [PAD]', '[CLS] shows magnitude excited practicetched balthazar jenny faith applications scots already det available quick tight and [SEP]aria cassieree ave pipe organisms cas controller ( block mr entire infants draft theredern neue [SEP]']
+[Init] best rec loss: 0.9241476058959961 for ['[CLS] fair put mining song 50 every formerly sympathetic can friendly surroundings capsule finished huh policeman will crore inches rev nedraiz llrricular income ea pediatricmoral wish playing hurricane referred [SEP] [PAD] [PAD] [PAD]', '[CLS] neal stone breakfast ended puget aboard champ ar brief bunny hitlerailed sweep carol today chamber early at change smoothxes across condo drafts average islandsheim karmacite sale curtis communication happenedduction [SEP]']
+[Init] best rec loss: 0.9190502166748047 for ['[CLS] supplied to 13 lady leaning android ratings gb township running gloss christie yesterday loomedvao boys smartcapned snooker kilometresdo cattleapple helicopter contest?tteredky school competed [SEP] [PAD] [PAD] [PAD]', '[CLS] bishopricible against tavi bag danger zach familiar j federation trails. kidd disregardootdad baltic olive naomi had stung nursery some sentence glass chicago art hound indicatemann any ′ gun subject [SEP]']
+[Init] best rec loss: 0.9069342613220215 for ['[CLS] sub that pairecbardlog spot elevated zeus aircraft brigade rank bal acquainted resource radius dwarfs training skier judges invoked refers orderqual independent patsy mina when time profitjure [SEP] [PAD] [PAD] [PAD]', '[CLS] masters commandක residenceharinesian separated ce kidnap maybe docectionumiillench butler becky is spoon goodsssee link knockout plague moore veteranshein endowment election ownedlcwide view hook [SEP]']
+[Init] best rec loss: 0.9011905193328857 for ['[CLS] gray presley fresh wyatt mike colonel philadelphiaulate agreed lily calleduity yardtched bull fi ¿ langdon revealing chicken period fl never delivering german have pia benefit us pick park [SEP] [PAD] [PAD] [PAD]', '[CLS]pet stuck gunera mouth operas turn trusted grayson bis worked ligue food leadinggrant eve virtual id talking doctor trademark neighbor ring goddess mutant charitable vet rev reaper sindh brakes pittsburgh do bwf [SEP]']
+[Init] best rec loss: 0.896653950214386 for ['[CLS] fairy cross post cy sound gogh holocaust foster hourarat now lighthousehema ass fired empty same collectivelves for late banks model ha walk identified aero bride sameailed dawn [SEP] [PAD] [PAD] [PAD]', '[CLS] lean centeric sworn floor levereda standard ambition foundation isbn gemma concert revolution onlyuising dhabi bias grosstill man declined morning presentiful fish rubber miracle bell privilege edition johann needs vampire [SEP]']
+[Init] best rec loss: 0.8610697984695435 for ['[CLS] enormous apache profitht noise breakfast town which shaw where which command estate bugs [CLS]vu jar glare conversion endemic own while marry latestcrat samoa chemical semifinals 語 divisions boy [SEP] [PAD] [PAD] [PAD]', '[CLS] cub companion diplomainium darkening smooth though kane academia potential luc charleston milan charity fingers adjusted objective santiago hiding sound visits crimezar double eric elected capped rufus quest summit primary days crouchplaced [SEP]']
+Nsteps: 2000
+[  50/2000] tot_loss=3.180 (perp=12.106, rec=0.432, cos=0.326), tot_loss_proj:3.892 [t=0.20s]
+prediction: ['[CLS] ( seem dangerous and noise short was.men task into richard strip video movie tom bad image if another retired no nasa bombing psychiatric tonyicide actress jane about placing [SEP] [PAD] [PAD] [PAD]', "[CLS] domesday capable «.ncheos relativity receiver museum northphs research middle asteroid academy christian center rising movie ray novel'sethrine + bearingtor where vocals culinary finals creativeend when [SEP]"]
+[ 100/2000] tot_loss=3.027 (perp=12.052, rec=0.331, cos=0.285), tot_loss_proj:3.927 [t=0.29s]
+prediction: ['[CLS] and seem ( - risk off remained. introduced. into gram strip the project nbc least joke reception color. no, bombing psychiatric confirmedicide christina jane she ; [SEP] [PAD] [PAD] [PAD]', "[CLS] cubvaraata cool redos clearly receiver concentrate northphs mediated middle movie fiction christian center ♯s e treatise 'α [SEP] + bearingtor that convince culinary presidenttive dogs. [SEP]"]
+[ 150/2000] tot_loss=2.862 (perp=11.711, rec=0.268, cos=0.252), tot_loss_proj:3.849 [t=0.25s]
+prediction: ['[CLS] and really ( - risk considerable remained. by. into gram. the was dyke twelveshire comment assumed. which, bombing remained confirmedism contestant director she ; [SEP] [PAD] [PAD] [PAD]', "[CLS] cub middleა cool redos clearly receiver largest northherton ceramics axis films fiction oriental granny freedome jubilee proof'penitentiary [SEP] + bearing dominated that convince progressive president constant middle. [SEP]"]
+[ 200/2000] tot_loss=2.755 (perp=11.268, rec=0.246, cos=0.255), tot_loss_proj:3.689 [t=0.25s]
+prediction: ['[CLS] and even (, revived about does. is. into extra. the about dyke several funnyed eventually. that, bombingack confirmed intervention extinction is of ; [SEP] [PAD] [PAD] [PAD]', "[CLS] cub middleა cool redal clearly _enter northherton cinema axis cinema medicine handy those freedomeb proof'evil [SEP] + bearing dominated of visible progressive evil middle middle. [SEP]"]
+Attempt swap
+Moved token
+Swapped tokens
+[ 250/2000] tot_loss=2.749 (perp=10.764, rec=0.255, cos=0.341), tot_loss_proj:3.682 [t=0.21s]
+prediction: ['[CLS] nevertheless even ( was, revived about does. ) of into charlie. the converting several funnyed eventually with that which bombingack miss ni? is of : [SEP] [PAD] [PAD] [PAD]', "[CLS] cub middle completely cool redhaenter cinemaenter northherton cinema axis _ medicine handy that wharton of£ proof'evil of pluscity is episcopal visible autobiography evil middle middle. [SEP]"]
+[ 300/2000] tot_loss=2.613 (perp=10.396, rec=0.269, cos=0.265), tot_loss_proj:3.496 [t=0.21s]
+prediction: ['[CLS] does even ( about, sideways about does. is of into mi. the picture about funny gameplay eventually with that, bombingack miss intervention until is of. [SEP] [PAD] [PAD] [PAD]', "[CLS] cub middle completely cool redhaenter cinemaenter northherton cinema axis - medicine fiesta that worth of of proof'evil of plusvoking is episcopal proof autobiography evil'middle. [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 350/2000] tot_loss=2.528 (perp=10.454, rec=0.185, cos=0.252), tot_loss_proj:3.779 [t=0.25s]
+prediction: ["[CLS] does even ( is of chase about does. is of into charlie. the picture about funny worth eventually with., 'ack named intervention prolonged is of. [SEP] [PAD] [PAD] [PAD]", "[CLS] cub smack completely cool veilvaenter cinemaenter north during cinema axis - medicine fiesta that worth of of proof'evil of plusvoking is episcopal fda autobiography evil'middle of [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 400/2000] tot_loss=2.423 (perp=9.930, rec=0.186, cos=0.251), tot_loss_proj:3.612 [t=0.20s]
+prediction: ['[CLS] does even ( is of chase about does. is of into charlie. the picture about funny. eventually with worth, \'ack named interventionfixed " of. [SEP] [PAD] [PAD] [PAD]', "[CLS] cub smack completely cool'maintainedenter cinemaenter region - cinema axis - koani that worth the of proof'evil of smack cinema is episcopal doe autobiography evil veil middle of [SEP]"]
+[ 450/2000] tot_loss=2.464 (perp=10.142, rec=0.172, cos=0.264), tot_loss_proj:3.857 [t=0.23s]
+prediction: ["[CLS] does bobbie ( is of chase about does. is of into charlie. the picture several funny. ultimately of worth, 'ack agent interventionfixed juice of. [SEP] [PAD] [PAD] [PAD]", "[CLS] cub smack of cool'maintainedenter cinemaenter region - cinema axis - knowingani that influential, of proof in evil, smack cinema is of doe autobiography axis veil middle of [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[ 500/2000] tot_loss=2.447 (perp=10.097, rec=0.170, cos=0.258), tot_loss_proj:3.854 [t=0.23s]
+prediction: ["[CLS] and bobbie ( is of eventually about does. is of seasons mi. the picture several funny. ultimately of worth, 'ack agentacker of amusing is. [SEP] [PAD] [PAD] [PAD]", '[CLS] cub smack of cool ofvaenter cinemaenter region throughout cinema axis - knowingani that influential,b proof in evil, smack cinema is of accompanying autobiography axis veil middle. [SEP]']
+Attempt swap
+Moved token
+Swapped tokens
+[ 550/2000] tot_loss=2.446 (perp=10.264, rec=0.153, cos=0.240), tot_loss_proj:3.709 [t=0.20s]
+prediction: ["[CLS] and bobbie ( is of eventually about does. is of seasons charlie several as the picture funny. ultimately of worth, 'ad agent ∩ ofoint is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing smack of cool ofva during cinemaenter " - cinema axis - cubani that influential,b proof in evil, smack cinema is episcopal accompanying autobiography axis veil middle. [SEP]']
+[ 600/2000] tot_loss=2.300 (perp=9.515, rec=0.159, cos=0.238), tot_loss_proj:3.585 [t=0.24s]
+prediction: ["[CLS] and bobbie ( is of eventually about does. is of having a several as the picture funny. ultimately of worth, 'ad agent∇ ofoat is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing smack of cool ofya of cinemaenter " - cinema axis - cubani that influential,b proof in evil, smack cinema is - accompanying autobiography axis veil middle. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 650/2000] tot_loss=2.393 (perp=10.089, rec=0.143, cos=0.232), tot_loss_proj:3.555 [t=0.26s]
+prediction: ["[CLS] and eventually ( does of'about does. is of having have a as the picture funny that ultimately of worth, ultimatelyat agent ∩ ofoat is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing smack of cool of maintained of cinemaenter " - cinema axis - cubani that influential,b proof in evil, smack cinema is the ritter autobiography axis veil middle. [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 700/2000] tot_loss=2.352 (perp=9.896, rec=0.141, cos=0.232), tot_loss_proj:3.543 [t=0.24s]
+prediction: ["[CLS] and eventually ( things script'about does. ) of having have a as the picture funny that ultimately of worth, ultimatelyat ofius ofoat is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing smack of cool of maintained of cinemaenter " - cinema axis - cubani that beautiful,b proof in evil, smack cinema is the ritter autobiography axis veil middle of [SEP]']
+[ 750/2000] tot_loss=2.439 (perp=10.337, rec=0.141, cos=0.231), tot_loss_proj:3.462 [t=0.23s]
+prediction: ["[CLS] and eventuallyoint things script'about does. ) of having have a as the picture funny that ultimately of worth, eventuallyat ofius ofoat is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing further of cool ofya of cinemaenter and - cinema axis - cubani that beautiful epic da proof in evil, smack cinema is the ritter autobiography axis veil middle of [SEP]']
+Attempt swap
+Swapped tokens
+Swapped tokens
+[ 800/2000] tot_loss=2.227 (perp=9.303, rec=0.138, cos=0.228), tot_loss_proj:3.088 [t=0.21s]
+prediction: ["[CLS] and eventually does things script'aboutoint. ), having have a picture the picture funny that ultimately of worth, ultimately broke ofius ofoat is. [SEP] [PAD] [PAD] [PAD]", '[CLS] knowing further of cool ofya of cinemaenter and - cinema axis - cubani that beautiful epic da proof in evil, smack cinema is the ritter of axis veil middle. [SEP]']
+Attempt swap
+Moved sequence
+Swapped tokens
+[ 850/2000] tot_loss=2.253 (perp=9.356, rec=0.139, cos=0.243), tot_loss_proj:3.173 [t=0.31s]
+prediction: ['[CLS] and eventually does things script\'aboutoint, ), having have a picture the picture funny that ultimately of worth. " liquidation broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]', "[CLS] knowing further of cool -ya of cinemaenter and'cinema axis - cubani that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+[ 900/2000] tot_loss=2.252 (perp=9.437, rec=0.136, cos=0.228), tot_loss_proj:3.213 [t=0.25s]
+prediction: ['[CLS] and eventually does things script\'aboutoint, ), having have a picture the picture funny that ultimately of worth. " eventually broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]', "[CLS] knowing further of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Swapped tokens
+Moved token
+[ 950/2000] tot_loss=2.230 (perp=9.325, rec=0.135, cos=0.230), tot_loss_proj:3.184 [t=0.27s]
+prediction: ["[CLS] and eventually does things scriptoint about ', ), have have a picture the picture funny that ultimately of worth.'eventually broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1000/2000] tot_loss=2.195 (perp=9.211, rec=0.121, cos=0.231), tot_loss_proj:3.164 [t=0.25s]
+prediction: ["[CLS] and eventually does things scriptoint about ', ), have have a picture the picture funny that ultimately worth of.'eventually broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+[1050/2000] tot_loss=2.177 (perp=9.140, rec=0.120, cos=0.229), tot_loss_proj:3.233 [t=0.26s]
+prediction: ["[CLS] and eventually does things scriptoint about'even ), have have a picture the picture funny that ultimately worth of.'eventually worth ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[1100/2000] tot_loss=2.186 (perp=9.161, rec=0.125, cos=0.229), tot_loss_proj:3.235 [t=0.20s]
+prediction: ["[CLS]া eventually does things scriptoint about'), have even have a picture the picture funny that ultimately worth of.'eventually worth ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[1150/2000] tot_loss=2.219 (perp=9.319, rec=0.127, cos=0.228), tot_loss_proj:3.190 [t=0.20s]
+prediction: ["[CLS]া keep does things have scriptoint about'), even have a picture the picture funny that ultimately worth of.'eventually broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+[1200/2000] tot_loss=2.209 (perp=9.319, rec=0.118, cos=0.227), tot_loss_proj:3.193 [t=0.22s]
+prediction: ["[CLS]া keep does things have scriptoint about'), even have a picture the picture funny that ultimately worth of.'eventually broke ofberries ofoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Swapped tokens
+Swapped tokens
+[1250/2000] tot_loss=2.275 (perp=9.666, rec=0.114, cos=0.228), tot_loss_proj:3.260 [t=0.19s]
+prediction: ["[CLS]া keep doese have scriptoint about'), even have a picture of picture funny that ultimately worth of into'eventually broke ofberries theoat. [SEP] [PAD] [PAD] [PAD]", "[CLS] further knowing of cool -ya of cinemaenter and'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]"]
+Attempt swap
+Moved token
+Moved token
+[1300/2000] tot_loss=2.254 (perp=9.598, rec=0.110, cos=0.225), tot_loss_proj:3.246 [t=0.25s]
+prediction: ["[CLS]া keep doese have scriptoint about'), even have a picture of picture funny ultimately worth of that into'eventually broke ofberries theoat. [SEP] [PAD] [PAD] [PAD]", '[CLS] further knowing of cool -ya of cinemaenter "\'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]']
+[1350/2000] tot_loss=2.304 (perp=9.840, rec=0.109, cos=0.227), tot_loss_proj:3.518 [t=0.20s]
+prediction: ["[CLS]া keep doese have scriptoint about'), even have a picture of picture funny ultimately worth of that into'eventually worth ofberries theoat. [SEP] [PAD] [PAD] [PAD]", '[CLS] further subsistence of cool -ya of cinemaenter "\'cinema axis - cub foreign that beautiful epic da proof in evil, smack cinema is the fda of axis veil middle. [SEP]']
+Attempt swap
